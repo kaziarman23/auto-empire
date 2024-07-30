@@ -4,7 +4,9 @@ import HomePageImageThree from "../../public/images/homePageImageThree.jpg";
 import HomePageImageFour from "../../public/images/homePageImageFour.jpg";
 import MercedesBenzSClass from "../../public/images/MercedesBenzSClass.jpg";
 import PorscheGT3 from "../../public/images/PorscheGT3.jpg";
-import HomePageFooterImage from "../../public/images/homePageFooterImage.jpg";
+import FooterImageOne from "../../public/images/footerImageOne.jpg";
+import FooterImageTwo from "../../public/images/footerImageTwo.jpg";
+import FooterImageThree from "../../public/images/footerImageThree.jpg";
 
 export const heroComponent = {
   image: HomePageImageOne,
@@ -51,11 +53,30 @@ export const topSellComponentCards = [
   },
 ];
 
-export const aboutUsComponent = {
-  image: HomePageFooterImage,
-  title: "",
-  discription: "",
-};
+
+export const aboutUsComponent = [
+  {
+    id: "1",
+    image: FooterImageOne,
+    title: "Our Mission",
+    discription:
+      "Our mission is simple, to ignite your passion for automobiles and provide an unparalleled experience for enthusiasts and collectors alike. Whether you're captivated by the opulence of luxury cars, the adrenaline of racing machines, or the versatility of SUVs, we have something to fuel your fascination.",
+  },
+  {
+    id: "2",
+    image: FooterImageTwo,
+    title: "About Us",
+    discription:
+      "Again Welcome to Auto Impire, your premier destination for exploring the world of automotive excellence. At Auto Impire, we celebrate the thrill of car collection across three distinguished categories: Luxury, Racing, and SUV.",
+  },
+  {
+    id: "3",
+    image: FooterImageThree,
+    title: "Our Vision",
+    discription:
+      "At Auto Impire, we believe that every car tells a story. Our goal is to share these stories with you and create a community where car enthusiasts can connect, learn, and celebrate their passion. Whether you're here to browse, learn, or connect with fellow collectors, we are dedicated to providing a comprehensive and engaging experience.",
+  },
+];
 
 export const footertext =
   "Thank you for choosing Auto Impire. We look forward to serving you and making your automotive journey a smooth and enjoyable ride!";

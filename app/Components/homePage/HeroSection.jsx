@@ -9,7 +9,7 @@ function HeroSection() {
         <Image
           src={heroComponent.image}
           alt="hero"
-          layout="fill"
+          quality={100}
           objectFit="cover"
           placeholder="blur"
         />

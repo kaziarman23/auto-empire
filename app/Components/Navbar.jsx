@@ -2,8 +2,8 @@ import Link from "next/link";
 
 function Navbar() {
   return (
-    <nav className="w-full h-20 flex justify-center items-center">
-      <div className="color w-1/2 h-10 rounded-xl bg-zinc-900 z-50 flex justify-evenly items-center">
+    <nav className="w-full h-10 relative flex justify-center items-center">
+      <div className="color w-full h-10 fixed bg-zinc-900 z-50 flex justify-evenly items-center">
         <Link href="/">
           <h3 className="p-3 text-white hover:text-orange-500">
             Home
@@ -31,6 +31,7 @@ function Navbar() {
         </Link>
       </div>
     </nav>
+   
   );
 }
 
