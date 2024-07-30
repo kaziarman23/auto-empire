@@ -1,10 +1,10 @@
-import HomePageImageOne from "../../public/images/homePageImageOne";
-import HomePageImageTwo from "../../public/images/homePageImageTwo";
-import HomePageImageThree from "../../public/images/homePageImageThree";
-import HomePageImageFour from "../../public/images/homePageImageFour";
-import MercedesBenzSClass from "../../public/images/Mercedes-Benz-S-Class";
-import PorscheGT3 from "../../public/images/PorscheGT3";
-import HomePageFooterImage from "../../public/images/homePageFooterImage";
+import HomePageImageOne from "../../public/images/homePageImageOne.jpg";
+import HomePageImageTwo from "../../public/images/homePageImageTwo.jpg";
+import HomePageImageThree from "../../public/images/homePageImageThree.jpg";
+import HomePageImageFour from "../../public/images/homePageImageFour.jpg";
+import MercedesBenzSClass from "../../public/images/MercedesBenzSClass.jpg";
+import PorscheGT3 from "../../public/images/PorscheGT3.jpg";
+import HomePageFooterImage from "../../public/images/homePageFooterImage.jpg";
 
 export const heroComponent = [
   {
@@ -44,7 +44,8 @@ export const topSellComponent = [
 
 export const homePageLastImage = HomePageFooterImage;
 
-export const footerComponent = "Thank you for choosing Auto Impire. We look forward to serving you and making your automotive journey a smooth and enjoyable ride! Drive safely and enjoy the road ahead!"
+export const footertext =
+  "Thank you for choosing Auto Impire. We look forward to serving you and making your automotive journey a smooth and enjoyable ride!";
 
 export const carsPageDiscription = {
   Luxury:
