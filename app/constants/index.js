@@ -6,43 +6,56 @@ import MercedesBenzSClass from "../../public/images/MercedesBenzSClass.jpg";
 import PorscheGT3 from "../../public/images/PorscheGT3.jpg";
 import HomePageFooterImage from "../../public/images/homePageFooterImage.jpg";
 
-export const heroComponent = [
+export const heroComponent = {
+  image: HomePageImageOne,
+  title: "Welcome to Auto Impire!",
+  discription:
+    "We're thrilled to have you here at Auto Impire, your premier destination for all things automotive. Whether you're looking for expert advice, the latest industry trends, or top-notch services to keep your vehicle in peak condition, you've come to the right place.",
+};
+
+export const latestComponent = {
+  title: "Discover Our Latest Arrivals",
+  discription:
+    "At Auto Impire, we’re excited to present three of the most captivating vehicles that are making waves in the automotive world. Explore the epitome of luxury, the thrill of racing, and the power of SUVs with our latest selections",
+};
+
+export const latestComponentImages = [
   {
-    image: HomePageImageOne,
-    title: "Welcome to Auto Impire!",
-    discription:
-      "We're thrilled to have you here at Auto Impire, your premier destination for all things automotive. Whether you're looking for expert advice, the latest industry trends, or top-notch services to keep your vehicle in peak condition, you've come to the right place.",
+    id: "0",
+    image: HomePageImageTwo,
+  },
+  {
+    id: "1",
+    image: HomePageImageThree,
+  },
+  {
+    id: "2",
+    image: HomePageImageFour,
   },
 ];
 
-export const latestComponent = [
+export const topSellComponentCards = [
   {
-    imageOne: HomePageImageTwo,
-    imageTwo: HomePageImageThree,
-    imageThree: HomePageImageFour,
-    title: "Discover Our Latest Arrivals",
-    discription:
-      "At Auto Impire, we’re excited to present three of the most captivating vehicles that are making waves in the automotive world. Explore the epitome of luxury, the thrill of racing, and the power of SUVs with our latest selections",
-  },
-];
-
-export const topSellComponent = [
-  {
-    imageOne: MercedesBenzSClass,
-    imageTwo: PorscheGT3.jpg,
-    title: "Explore Our Top-Selling Vehicles",
-    discription:
-      "At Auto Impire, we’re proud to showcase our top-selling cars, each representing the pinnacle of excellence in their respective categories. Discover why these models have captured the hearts of our customers and continue to lead the way in luxury and performance",
-    modelOne: "Mercedes Benz S Class",
-    modelTwo: "Porsche 911 GT3",
-    modelDetailsOne:
+    id: "1",
+    image: MercedesBenzSClass,
+    model: "Mercedes Benz S Class",
+    modelDetails:
       "The S-Class has consistently been a benchmark for luxury sedans, combining advanced technology, superior comfort, and a prestigious brand reputation.",
-    modelDetailsTwo:
+  },
+  {
+    id: "2",
+    image: PorscheGT3,
+    model: "Porsche 911 GT3",
+    modelDetails:
       "Known for its exceptional track performance, precision engineering, and iconic design, the 911 GT3 has been a top choice among racing enthusiasts and performance car lovers.",
   },
 ];
 
-export const homePageLastImage = HomePageFooterImage;
+export const aboutUsComponent = {
+  image: HomePageFooterImage,
+  title: "",
+  discription: "",
+};
 
 export const footertext =
   "Thank you for choosing Auto Impire. We look forward to serving you and making your automotive journey a smooth and enjoyable ride!";
