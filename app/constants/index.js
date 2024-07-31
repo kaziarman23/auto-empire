@@ -1,12 +1,24 @@
-import HomePageImageOne from "../../public/images/homePageImageOne.jpg";
-import HomePageImageTwo from "../../public/images/homePageImageTwo.jpg";
-import HomePageImageThree from "../../public/images/homePageImageThree.jpg";
-import HomePageImageFour from "../../public/images/homePageImageFour.jpg";
-import MercedesBenzSClass from "../../public/images/MercedesBenzSClass.jpg";
-import PorscheGT3 from "../../public/images/PorscheGT3.jpg";
-import FooterImageOne from "../../public/images/footerImageOne.jpg";
-import FooterImageTwo from "../../public/images/footerImageTwo.jpg";
-import FooterImageThree from "../../public/images/footerImageThree.jpg";
+import HomePageImageOne from "@/public/images/homePageImageOne.jpg";
+import HomePageImageTwo from "@/public/images/homePageImageTwo.jpg";
+import HomePageImageThree from "@/public/images/homePageImageThree.jpg";
+import HomePageImageFour from "@/public/images/homePageImageFour.jpg";
+import MercedesBenzSClass from "@/public/images/MercedesBenzSClass.jpg";
+import PorscheGT3 from "@/public/images/PorscheGT3.jpg";
+import FooterImageOne from "@/public/images/footerImageOne.jpg";
+import FooterImageTwo from "@/public/images/footerImageTwo.jpg";
+import FooterImageThree from "@/public/images/footerImageThree.jpg";
+
+// luxary page impors
+
+import LuxuryWelcomeSectionImage from "@/public/images/LuxuryWelcomeSectionImage.jpg";
+import AboutLuxuryImageOne from "@/public/images/AboutLuxuryImageOne.jpg"
+import AboutLuxuryImageTwo from "@/public/images/AboutLuxuryImageTwo.jpg"
+import AboutLuxuryImageThree from "@/public/images/AboutLuxuryImageThree.jpg"
+import AboutLuxuryImageFour from "@/public/images/AboutLuxuryImageFour.jpg"
+import AboutLuxuryImageFive from "@/public/images/AboutLuxuryImageFive.jpg"
+
+
+// start exporting
 
 export const heroComponent = {
   image: HomePageImageOne,
@@ -53,7 +65,6 @@ export const topSellComponentCards = [
   },
 ];
 
-
 export const aboutUsComponent = [
   {
     id: "1",
@@ -83,8 +94,87 @@ export const footertext =
 
 export const carsPageDiscription = {
   Luxury:
-    "1. Luxury Redefined:[Luxury Car Model] Step into the lap of luxury with the [Luxury Car Model]. This vehicle combines elegance and comfort with cutting-edge technology and unparalleled craftsmanship. Experience a ride that transcends ordinary expectations and indulge in a new standard of sophistication.",
+    "Step into the lap of luxury with the Luxury Car Model. This vehicle combines elegance and comfort with cutting-edge technology and unparalleled craftsmanship. Experience a ride that transcends ordinary expectations and indulge in a new standard of sophistication.",
   Racing:
-    "2. Unleash the Speed: [Racing Car Model]Feel the adrenaline rush with the [Racing Car Model]. Engineered for performance and built for speed, this racing marvel delivers exhilarating power and precision. Designed for those who crave the thrill of the track, it’s where engineering excellence meets high-octane excitement.",
-  SUV: "3. Versatility Meets Power: [SUV Car Model]Conquer any terrain with the [SUV Car Model]. This versatile SUV offers robust performance, advanced safety features, and spacious comfort for all your adventures. Whether you’re navigating city streets or off-road trails, it’s the perfect companion for every journey.",
+    "Feel the adrenaline rush with the [Racing Car Model]. Engineered for performance and built for speed, this racing marvel delivers exhilarating power and precision. Designed for those who crave the thrill of the track, it’s where engineering excellence meets high-octane excitement.",
+  SUV: "Conquer any terrain with the [SUV Car Model]. This versatile SUV offers robust performance, advanced safety features, and spacious comfort for all your adventures. Whether you’re navigating city streets or off-road trails, it’s the perfect companion for every journey.",
 };
+
+// Luxury page constants starts:
+
+export const luxuryPageWelcomeSection = {
+  image: LuxuryWelcomeSectionImage,
+
+  title: "Auto Impire’s Luxury Car Collection",
+  discription:
+    "At Auto Impire, we believe that a luxury car is not just a mode of transportation but a statement of elegance and distinction. Our collection features a curated selection of the finest luxury automobiles, each crafted to offer the ultimate in comfort, style, and cutting-edge technology.",
+
+  question: "Why choose Auto Impire?",
+
+  answerOne: "Curated Excellence:",
+  answerDis:
+    "Each vehicle in our luxury collection is handpicked to ensure it meets the highest standards of quality and craftsmanship.",
+
+  answerTwo: "Personalized Service:",
+  answerDisTwo:
+    "Our expert team is dedicated to providing you with a personalized experience, offering insights and assistance tailored to your unique preferences.",
+
+  answerThree: "Innovative Technology:",
+  answerDisThree:
+    "Experience the latest advancements in automotive technology that enhance your driving pleasure and ensure a seamless journey.",
+
+  answerFour: "Unmatched Comfort:",
+  answerDisFour:
+    "Indulge in the ultimate in luxury and comfort with features designed to make every drive extraordinary.",
+
+  footer:
+    "We invite you to explore our collection and discover the car that perfectly aligns with your lifestyle and aspirations. Our team is here to assist you in finding the ideal vehicle that reflects your personal style and meets your highest expectations.",
+};
+
+export const luxaryAboutSection = {
+  title: "What Makes a Car a Luxury Vehicle?",
+  discription:
+    "Luxury cars are more than just vehicles; they represent a blend of sophisticated design, advanced technology, and unparalleled comfort. But what exactly defines a luxury car?",
+
+  titleTwo: "Why Do Wealthy Individuals Choose Luxury Cars?",
+};
+
+export const luxaryAboutSectionCards = [
+  {
+    id: "1",
+    image: AboutLuxuryImageOne,
+    pointTitle: "Superior Craftsmanship",
+    pointDis:
+      "Luxury vehicles are crafted with meticulous attention to detail. From high-quality materials like leather, exotic woods, and premium metals to cutting-edge design, every element is chosen to enhance both aesthetics and performance. These cars often feature bespoke customization options, allowing owners to personalize their vehicle to their exact preferences.",
+  },
+  {
+    id: "2",
+    image: AboutLuxuryImageTwo,
+    pointTitle: "Advanced Technology",
+    pointDis:
+      "State-of-the-art technology is a hallmark of luxury cars. This includes everything from advanced driver assistance systems and top-tier infotainment to innovative safety features. Luxury cars are often equipped with the latest in connectivity and entertainment technology, ensuring that the driving experience is both engaging and convenient.",
+  },
+  {
+    id: "3",
+    image: AboutLuxuryImageThree,
+    pointTitle: "Exceptional Comfort",
+    pointDis:
+      "Comfort is paramount in luxury vehicles. They are designed to offer a smooth and quiet ride, with features like adaptive suspension systems, climate control, and premium seating. The focus is on providing a serene and pleasurable driving experience, whether you're in the driver’s seat or a passenger.",
+  },
+  {
+    id: "4",
+    image: AboutLuxuryImageFour,
+    pointTitle: "Performance and Precision",
+    pointDis:
+      "Luxury cars typically offer superior performance. They are engineered to deliver a smooth and responsive ride, with powerful engines and precise handling. This blend of power and control provides an exhilarating driving experience that is both safe and enjoyable.",
+  },
+  {
+    id: "5",
+    image: AboutLuxuryImageFive,
+    pointTitle: "Exclusivity and Prestige",
+    pointDis:
+      "Owning a luxury car often comes with a sense of exclusivity. Many luxury brands produce limited runs of their models, creating a sense of rarity and prestige. For many wealthy individuals, owning a luxury car is not just about the vehicle itself but also about the status and recognition it represents",
+  },
+];
+
+// Luxury page constants ends.

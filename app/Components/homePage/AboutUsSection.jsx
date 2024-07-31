@@ -16,7 +16,7 @@ function AboutUsSection() {
                     <Image
                       src={item.image}
                       alt="about us image"
-                      className="object-cover absolute left-0 top-0 transition-opacity duration-300 ease-in-out w-full h-full"
+                      className="w-full h-full object-cover absolute left-0 top-0 transition-opacity duration-300 ease-in-out"
                     />
                   </div>
 

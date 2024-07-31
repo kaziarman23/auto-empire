@@ -1,10 +1,15 @@
+import AboutLuxuryCarSection from "../Components/luxuryPage/AboutLuxuryCarSection";
+import PopularLuxuryCarSection from "../Components/luxuryPage/PopularLuxuryCarSection";
+import WelcomeSection from "../Components/luxuryPage/WelcomeSection";
 
 function page() {
   return (
     <div>
-      this is my luxury component
+      <WelcomeSection />
+      <AboutLuxuryCarSection />
+      <PopularLuxuryCarSection />
     </div>
-  )
+  );
 }
 
-export default page
+export default page;
