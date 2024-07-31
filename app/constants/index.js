@@ -11,11 +11,11 @@ import FooterImageThree from "@/public/images/footerImageThree.jpg";
 // luxary page impors
 
 import LuxuryWelcomeSectionImage from "@/public/images/LuxuryWelcomeSectionImage.jpg";
-import AboutLuxuryImageOne from "@/public/images/AboutLuxuryImageOne.jpg"
-import AboutLuxuryImageTwo from "@/public/images/AboutLuxuryImageTwo.jpg"
-import AboutLuxuryImageThree from "@/public/images/AboutLuxuryImageThree.jpg"
-import AboutLuxuryImageFour from "@/public/images/AboutLuxuryImageFour.jpg"
-import AboutLuxuryImageFive from "@/public/images/AboutLuxuryImageFive.jpg"
+import AboutLuxuryImageOne from "@/public/images/AboutLuxuryImageOne.jpg";
+import AboutLuxuryImageTwo from "@/public/images/AboutLuxuryImageTwo.jpg";
+import AboutLuxuryImageThree from "@/public/images/AboutLuxuryImageThree.jpg";
+import AboutLuxuryImageFour from "@/public/images/AboutLuxuryImageFour.jpg";
+import AboutLuxuryImageFive from "@/public/images/AboutLuxuryImageFive.jpg";
 
 
 // start exporting
@@ -176,5 +176,7 @@ export const luxaryAboutSectionCards = [
       "Owning a luxury car often comes with a sense of exclusivity. Many luxury brands produce limited runs of their models, creating a sense of rarity and prestige. For many wealthy individuals, owning a luxury car is not just about the vehicle itself but also about the status and recognition it represents",
   },
 ];
+
+
 
 // Luxury page constants ends.
