@@ -17,6 +17,24 @@ import AboutLuxuryImageThree from "@/public/images/AboutLuxuryImageThree.jpg";
 import AboutLuxuryImageFour from "@/public/images/AboutLuxuryImageFour.jpg";
 import AboutLuxuryImageFive from "@/public/images/AboutLuxuryImageFive.jpg";
 
+import LuxuryPopularCarOne from "@/public/images/LuxuryPopularCarOne.jpg";
+import LuxuryPopularCarTwo from "@/public/images/LuxuryPopularCarTwo.jpg";
+import LuxuryPopularCarThree from "@/public/images/LuxuryPopularCarThree.jpg";
+import LuxuryPopularCarFour from "@/public/images/LuxuryPopularCarFour.jpg";
+import LuxuryPopularCarFive from "@/public/images/LuxuryPopularCarFive.jpg";
+
+import LuxuryCollactionCarOne from "@/public/images/LuxuryCollactionCarOne.jpg";
+import LuxuryCollactionCarTwo from "@/public/images/LuxuryCollactionCarTwo.jpg";
+import LuxuryCollactionCarThree from "@/public/images/LuxuryCollactionCarThree.jpg";
+import LuxuryCollactionCarFour from "@/public/images/LuxuryCollactionCarFour.jpg";
+import LuxuryCollactionCarFive from "@/public/images/LuxuryCollactionCarFive.jpg";
+import LuxuryCollactionCarSix from "@/public/images/LuxuryCollactionCarSix.jpg";
+import LuxuryCollactionCarSeven from "@/public/images/LuxuryCollactionCarSeven.jpg";
+import LuxuryCollactionCarEight from "@/public/images/LuxuryCollactionCarEight.jpg";
+import LuxuryCollactionCarNine from "@/public/images/LuxuryCollactionCarNine.jpg";
+import LuxuryCollactionCarTen from "@/public/images/LuxuryCollactionCarTen.jpg";
+import LuxuryCollactionCarEleven from "@/public/images/LuxuryCollactionCarEleven.jpg";
+import LuxuryCollactionCarTwelve from "@/public/images/LuxuryCollactionCarTwelve.jpg";
 
 // start exporting
 
@@ -177,6 +195,50 @@ export const luxaryAboutSectionCards = [
   },
 ];
 
+export const LuxuryPopularCars = [
+  {
+    id: "1",
+    image: LuxuryPopularCarOne,
+  },
+  {
+    id: "2",
+    image: LuxuryPopularCarTwo,
+  },
+  {
+    id: "3",
+    image: LuxuryPopularCarThree,
+  },
+  {
+    id: "4",
+    image: LuxuryPopularCarFour,
+  },
+  {
+    id: "5",
+    image: LuxuryPopularCarFive,
+  },
+];
 
+export const CollactionLuxuryCars = [
+  { id: 1, image: LuxuryCollactionCarOne, name: "Hennessey Chevrolet" },
+  { id: "2", image: LuxuryCollactionCarTwo, name: "Mercedes Amg Gt" },
+  { id: "3", image: LuxuryCollactionCarThree, name: "Mercedes-AMG GTC" },
+  { id: "4", image: LuxuryCollactionCarFour, name: "BMW 7 S" },
+  { id: "5", image: LuxuryCollactionCarFive, name: "BMW 7 S Red" },
+  { id: "6", image: LuxuryCollactionCarSix, name: "Modified Jaguar XJ" },
+  { id: "7", image: LuxuryCollactionCarSeven, name: "Audi A8L" },
+  { id: "8", image: LuxuryCollactionCarEight, name: "Audi A8L" },
+  { id: "9", image: LuxuryCollactionCarNine, name: "Porsche Panamera" },
+  { id: "10", image: LuxuryCollactionCarTen, name: "Jaguar XJ220" },
+  {
+    id: "11",
+    image: LuxuryCollactionCarEleven,
+    name: "Porsche Panamera",
+  },
+  {
+    id: "12",
+    image: LuxuryCollactionCarTwelve,
+    name: "Porsche Panamera",
+  },
+];
 
 // Luxury page constants ends.
