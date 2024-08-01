@@ -1,19 +1,9 @@
-"use client";
-
 import Image from "next/image";
 import React from "react";
 import { CollactionLuxuryCars } from "@/app/constants";
-
-// import useEmblaCarousel from "embla-carousel-react";
-// import AutoScroll from "embla-carousel-autoscroll";
+import Link from "next/link";
 
 function CollactionLuxuryCarSection() {
-  // const [emblaRef] = useEmblaCarousel({ loop: true }, [
-  //   AutoScroll({ delay: 1000, stopOnMouseEnter: true, stopOnInteraction: false }),
-  // ]);
-
-  // AutoScroll plugin package in not installing
-
   return (
     <div className="mt-20 mb-10">
       <hr />
@@ -22,49 +12,35 @@ function CollactionLuxuryCarSection() {
           Discover Our Extensive Collection of Luxury Cars
         </h1>
         <p className="w-1/2 mx-auto my-5">
-          At Auto Impire, we pride ourselves on offering a vast and diverse
-          selection of the finest vehicles. From elegant sedans and powerful
-          sports cars to sophisticated SUVs and stunning convertibles, each
-          model in our collection is meticulously curated to meet the highest
-          standards of luxury and craftsmanship.
+        We are thrilled to announce that our showroom now features an exclusive collection of luxury cars, meticulously curated to meet the highest standards of elegance and performance. At Auto Impire, we believe in offering our clients nothing but the best, and our latest collection exemplifies this commitment.
         </p>
 
-        <div className="w-4/5 h-auto mx-auto  grid grid-cols-3 grid-rows-4 gap-5 place-items-center">
-          
-        </div>
-
-
-        {/* {CollactionLuxuryCars.map((item) => (
+        <div className="w-4/5 h-auto  my-5 mx-auto  grid grid-cols-3 grid-rows-4 gap-2 place-items-center">
+          {CollactionLuxuryCars.map((item) => (
             <div
-              className="w-60 h-40 flex justify-center items-center flex-col"
               key={item.id}
+              className="w-full h-full flex justify-center items-center"
             >
-              <div className="w-[80%] h-[80%]">
+              <div className="w-[300px] h-[350px] my-5 overflow-hidden">
                 <Image
                   src={item.image}
-                  alt="Luxury Collaction cars"
-                  className="w-full h-full rounded-xl"
-                  placeholder="blur"
+                  width={300}
+                  height={200}
+                  className="w-[300px] h-[200px] object-cover rounded-tl-xl rounded-tr-xl"
+                  alt={item.name}
                 />
+                <div className="w-full h-[150px] border-t-2 rounded-bl-xl rounded-br-xl  bg-zinc-900 ">
+                  <h1 className="ml-5 my-2">{item.name}</h1>
+                  <h3 className="ml-5">Model : {item.model}</h3>
+                  <p className="ml-5 my-2">Price : {item.price}$</p>
+                  <p className="ml-5 my-2 text-blue-500">
+                    <Link href="/contact-us">Get it Now</Link>
+                  </p>
+                </div>
               </div>
-              <h1 className="text-center p-2">{item.name}</h1>
-              
             </div>
-          ))} */}
-
-
-        {/* <div className="autoScrollDiv w-full h-[200px] my-10">
-          <div className="embla w-full h-full " ref={emblaRef}>
-            <div className="embla__container w-40 h-40 border-2 my-5">
-              {CollactionLuxuryCars.map((item) => (
-                <div key={item.id} className="embla__slide">
-                <Image src={item.image} alt="slider images" className="w-full h-full" />
-              </div>
-              ))}
-            </div>
-          </div>
-        </div> */}
-
+          ))}
+        </div>
         <h1 className="w-1/2 mx-auto my-5">
           Ready to elevate your driving experience? Browse our current
           collection and find the luxury car that’s perfect for you. For more

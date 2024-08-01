@@ -36,6 +36,11 @@ import LuxuryCollactionCarTen from "@/public/images/LuxuryCollactionCarTen.jpg";
 import LuxuryCollactionCarEleven from "@/public/images/LuxuryCollactionCarEleven.jpg";
 import LuxuryCollactionCarTwelve from "@/public/images/LuxuryCollactionCarTwelve.jpg";
 
+
+
+import LuxuryCarReviewOne from "@/public/images/LuxuryCarReviewOne.jpg";
+import LuxuryCarReviewTwo from "@/public/images/LuxuryCarReviewTwo.jpg";
+import LuxuryCarReviewThree from "@/public/images/LuxuryCarReviewThree.jpg";
 // start exporting
 
 export const heroComponent = {
@@ -219,26 +224,115 @@ export const LuxuryPopularCars = [
 ];
 
 export const CollactionLuxuryCars = [
-  { id: 1, image: LuxuryCollactionCarOne, name: "Hennessey Chevrolet" },
-  { id: "2", image: LuxuryCollactionCarTwo, name: "Mercedes Amg Gt" },
-  { id: "3", image: LuxuryCollactionCarThree, name: "Mercedes-AMG GTC" },
-  { id: "4", image: LuxuryCollactionCarFour, name: "BMW 7 S" },
-  { id: "5", image: LuxuryCollactionCarFive, name: "BMW 7 S Red" },
-  { id: "6", image: LuxuryCollactionCarSix, name: "Modified Jaguar XJ" },
-  { id: "7", image: LuxuryCollactionCarSeven, name: "Audi A8L" },
-  { id: "8", image: LuxuryCollactionCarEight, name: "Audi A8L" },
-  { id: "9", image: LuxuryCollactionCarNine, name: "Porsche Panamera" },
-  { id: "10", image: LuxuryCollactionCarTen, name: "Jaguar XJ220" },
+  {
+    id: 1,
+    image: LuxuryCollactionCarOne,
+    name: "Hennessey Chevrolet",
+    model: "Exorcist Camaro ZL1",
+    price: 135000,
+  },
+  {
+    id: "2",
+    image: LuxuryCollactionCarTwo,
+    name: "Mercedes Amg Gt",
+    model: "Mercedes-AMG GT",
+    price: 118600,
+  },
+  {
+    id: "3",
+    image: LuxuryCollactionCarThree,
+    name: "Mercedes-AMG GTC",
+    model: "Mercedes-AMG GT C",
+    price: 150000,
+  },
+  {
+    id: "4",
+    image: LuxuryCollactionCarFour,
+    name: "BMW 7 S",
+    model: "BMW 750i",
+    price: 103000,
+  },
+  {
+    id: "5",
+    image: LuxuryCollactionCarFive,
+    name: "BMW 7 S Red",
+    model: "BMW 750i",
+    price: 103000,
+  },
+  {
+    id: "6",
+    image: LuxuryCollactionCarSix,
+    name: "Modified Jaguar XJ",
+    model: "Jaguar XJ Supercharged",
+    price: 95000,
+  },
+  {
+    id: "7",
+    image: LuxuryCollactionCarSeven,
+    name: "Audi A8L",
+    model: "Audi A8 L 55 TFSI",
+    price: 86000,
+  },
+  {
+    id: "8",
+    image: LuxuryCollactionCarEight,
+    name: "Audi A8L",
+    model: "Audi A8 L 55 TFSI",
+    price: 86000,
+  },
+  {
+    id: "9",
+    image: LuxuryCollactionCarNine,
+    name: "Porsche Panamera",
+    model: "Porsche Panamera 4S",
+    price: 114000,
+  },
+  {
+    id: "10",
+    image: LuxuryCollactionCarTen,
+    name: "Jaguar XJ220",
+    model: "Jaguar XJ220",
+    price: 500000,
+  },
   {
     id: "11",
     image: LuxuryCollactionCarEleven,
     name: "Porsche Panamera",
+    model: "Porsche Panamera 4S",
+    price: 114000,
   },
   {
     id: "12",
     image: LuxuryCollactionCarTwelve,
     name: "Porsche Panamera",
+    model: "Porsche Panamera 4S",
+    price: 114000,
   },
+];
+
+export const ReviewLuxuryCars = [
+  {
+    id: 1,
+    image: LuxuryCarReviewOne,
+    review:
+      "Auto Empire of Luxury Cars provided an unmatched experience. The selection of high-end vehicles is impressive, and the team went above and beyond to ensure I found the perfect car. Driving my new Porsche Panamera feels like a dream come true!",
+    author: "Tom D.",
+  },
+  {
+    id: 2,
+    image: LuxuryCarReviewTwo,
+    review:
+      "The customer service at Auto Empire is top-notch. From the moment I walked in, I felt valued and understood. They listened to my needs and helped me choose a BMW 750i that fits my lifestyle perfectly. Highly recommend!",
+    author: "Sarah L.",
+  },
+  {
+    id: 3,
+    image: LuxuryCarReviewThree,
+    review:
+      "Buying a car has never been easier. Auto Empire made the entire process seamless and stress-free. Their attention to detail and commitment to customer satisfaction is truly commendable. Loving my new Audi A8L!",
+    author: "Mark R.",
+  },
+  
 ];
 
 // Luxury page constants ends.
