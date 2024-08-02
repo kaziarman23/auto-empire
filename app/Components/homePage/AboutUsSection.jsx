@@ -10,7 +10,7 @@ function AboutUsSection() {
           {aboutUsComponent.map((item) => (
             <>
               <div className="w-80 h-80" key={item.id}>
-                <div className="w-full h-full border-2 relative flex flex-col justify-center items-center cursor-not-allowed">
+                <div className="w-full h-full border-2 relative flex flex-col justify-center items-center">
 
                   <div className="opacity-0 hover:opacity-30">
                     <Image

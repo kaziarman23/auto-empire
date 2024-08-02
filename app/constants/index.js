@@ -36,11 +36,13 @@ import LuxuryCollactionCarTen from "@/public/images/LuxuryCollactionCarTen.jpg";
 import LuxuryCollactionCarEleven from "@/public/images/LuxuryCollactionCarEleven.jpg";
 import LuxuryCollactionCarTwelve from "@/public/images/LuxuryCollactionCarTwelve.jpg";
 
-
-
 import LuxuryCarReviewOne from "@/public/images/LuxuryCarReviewOne.jpg";
 import LuxuryCarReviewTwo from "@/public/images/LuxuryCarReviewTwo.jpg";
 import LuxuryCarReviewThree from "@/public/images/LuxuryCarReviewThree.jpg";
+
+// race page impors
+
+
 // start exporting
 
 export const heroComponent = {
@@ -118,8 +120,7 @@ export const footertext =
 export const carsPageDiscription = {
   Luxury:
     "Step into the lap of luxury with the Luxury Car Model. This vehicle combines elegance and comfort with cutting-edge technology and unparalleled craftsmanship. Experience a ride that transcends ordinary expectations and indulge in a new standard of sophistication.",
-  Racing:
-    "Feel the adrenaline rush with the [Racing Car Model]. Engineered for performance and built for speed, this racing marvel delivers exhilarating power and precision. Designed for those who crave the thrill of the track, it’s where engineering excellence meets high-octane excitement.",
+
   SUV: "Conquer any terrain with the [SUV Car Model]. This versatile SUV offers robust performance, advanced safety features, and spacious comfort for all your adventures. Whether you’re navigating city streets or off-road trails, it’s the perfect companion for every journey.",
 };
 
@@ -332,7 +333,74 @@ export const ReviewLuxuryCars = [
       "Buying a car has never been easier. Auto Empire made the entire process seamless and stress-free. Their attention to detail and commitment to customer satisfaction is truly commendable. Loving my new Audi A8L!",
     author: "Mark R.",
   },
-  
 ];
 
 // Luxury page constants ends.
+
+// Race page constants starts.
+
+export const RaceWelcomeSection = [
+  {
+    id: 1,
+    point: "Unmatched Performance:",
+    explaintion:
+      "Racing cars are engineered for speed and agility. With advanced technology and superior craftsmanship.",
+  },
+  {
+    id: 2,
+    point: "Superior Engineering:",
+    explaintion:
+      "Every detail of a racing car is designed to enhance performance. From lightweight materials to high-performance engines.",
+  },
+  {
+    id: 3,
+    point: "Customization Opportunities: ",
+    explaintion:
+      "Racing cars offer endless possibilities for customization. Tailor your vehicle to match your unique style and performance preferences.",
+  },
+  {
+    id: 4,
+    point: "Drive Your Dreams:",
+    explaintion:
+      "There’s nothing quite like the feeling of owning a racing car. It’s a dream for many, and at Auto Impire, we’re here to make that dream a reality.",
+  },
+  {
+    id: 5,
+    point: "Safety Features:",
+    explaintion:
+      "Modern racing cars come equipped with advanced safety features that protect both the driver and passengers. Enjoy the thrill of speed while safety in mind.",
+  },
+];
+
+
+
+export const RaceAboutSection = {
+  title: "What Makes a Car a Luxury Vehicle?",
+  discription:
+    "A car becomes a racing vehicle through a combination of modifications, design elements, and performance characteristics aimed at maximizing speed, handling, and safety in competitive racing environments.",
+
+  pointOne:"Engine and Powertrain",
+  explaintionOne:"High-performance engines with increased horsepower and torque.Advanced transmission systems for rapid gear changes and optimal power delivery.",
+
+  pointTwo:"Aerodynamics",
+  explaintionTwo:"Streamlined bodywork to reduce drag and increase downforce.Features like spoilers, diffusers, and splitters to enhance stability and grip at high speeds.",
+
+  pointThree:"Suspension and Handling",
+  explaintionThree:"Specialized suspension systems for improved handling and stability. Adjustable components to fine-tune performance for different track conditions.",
+
+  pointFour:"Tires and Wheels",
+  explaintionFour:"High-performance racing tires designed for maximum grip and durability. Lightweight and strong wheels for better handling and acceleration.",
+
+  pointFive:"Braking System",
+  explaintionFive:"High-performance brakes with larger rotors and advanced cooling systems for effective stopping power.Use of materials like carbon-ceramic for improved performance and durability."
+};
+
+
+
+
+
+   
+
+// These modifications collectively enhance the vehicle's performance, handling, safety, and durability under the demanding conditions of racing.
+
+// Race page constants ends.
