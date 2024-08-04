@@ -41,6 +41,7 @@ import LuxuryCarReviewTwo from "@/public/images/LuxuryCarImages/LuxuryCarReviewT
 import LuxuryCarReviewThree from "@/public/images/LuxuryCarImages/LuxuryCarReviewThree.jpg";
 
 // race page impors
+
 import R_CollactionOne from "@/public/images/RacingCarImages/R_CollactionOne.jpg";
 import R_CollactionTwo from "@/public/images/RacingCarImages/R_CollactionTwo.jpg";
 import R_CollactionThree from "@/public/images/RacingCarImages/R_CollactionThree.jpg";
@@ -57,6 +58,15 @@ import R_CollactionTwelve from "@/public/images/RacingCarImages/R_CollactionTwel
 import R_ReviewOne from "@/public/images/RacingCarImages/R_ReviewOne.jpg";
 import R_ReviewTwo from "@/public/images/RacingCarImages/R_ReviewTwo.jpg";
 import R_ReviewThree from "@/public/images/RacingCarImages/R_ReviewThree.jpg";
+
+
+// suv page impors
+
+
+import S_AboutOne from "@/public/images/SuvCarImages/S_AboutOne.jpg";
+
+
+
 // start exporting
 
 export const heroComponent = {
@@ -532,4 +542,20 @@ export const RaceReviewSection = [
       "Purchasing a racing car from Auto Empire has been a fantastic experience. The car is a marvel of engineering and delivers a thrilling driving experience. I highly recommend Auto Empire for their impressive selection and professional service.",
   },
 ];
-// Race page constants ends.
+// Race page constants end.
+
+
+// Suv page constants start:
+
+export const SuvAboutSection ={
+  image: S_AboutOne,
+  title: "What is an SUV?",
+  discription: "An SUV, or Sport Utility Vehicle, is a versatile and powerful type of vehicle designed to offer a blend of comfort, performance, and functionality. Originally built for off-road capability, modern SUVs have evolved to meet a variety of needs, making them one of the most popular vehicle choices today.",
+  
+  titleTwo: "What are the Benefits?",
+  discriptionTwo: "Whether you're looking for a vehicle that can handle family road trips, daily commutes, or off-road escapades, an SUV from Auto Impire is designed to meet your needs with style and performance. Explore our collection to find the perfect SUV that matches your lifestyle and discover why so many drivers choose SUVs for their versatility and capability."
+
+}
+
+
+// Suv page constants end.

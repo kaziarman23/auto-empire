@@ -9,14 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "embla-carousel": "^8.1.8",
-    "embla-carousel-autoplay": "^8.1.7",
-    "embla-carousel-react": "^8.1.7",
+    "embla-carousel-autoplay": "^8.1.8",
+    "embla-carousel-react": "^8.1.8",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
+    "daisyui": "^4.12.10",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
     "postcss": "^8",

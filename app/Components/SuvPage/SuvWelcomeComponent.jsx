@@ -1,0 +1,33 @@
+import React from "react";
+
+function SuvWelcomeComponent() {
+  return (
+    <div
+      className="hero min-h-screen"
+      style={{
+        backgroundImage: "url('/images/SuvCarImages/S_WelcomeOne.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="hero-overlay bg-opacity-60"></div>
+      <div className="hero-content text-neutral-content absolute inset-x-0 bottom-0 p-6">
+        <div className="max-w-xl mx-auto">
+          <h1 className="mb-5 text-2xl font-bold text-center">
+            Your Ultimate Destination for Premium SUVs
+          </h1>
+          <p className="mb-5">
+            Discover the perfect blend of power, style, and versatility at Auto
+            Impire. Whether you&#39;re seeking rugged off-road capabilities,
+            luxurious comfort, or advanced technology, we’ve got the SUV that
+            matches your lifestyle. Explore our curated selection of top-rated
+            SUVs from leading brands, and drive with confidence knowing you’ve
+            chosen from the best in the industry.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default SuvWelcomeComponent;

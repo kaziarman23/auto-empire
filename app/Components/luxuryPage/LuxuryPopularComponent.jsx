@@ -24,12 +24,12 @@ function LuxuryPopularComponent() {
       <hr />
       <div className="w-1/2 h-[900] mx-auto">
         <h1 className="text-center text-2xl font-bold p-3">
-        Popular Customized Cars in Auto Impire
+          Popular Customized Cars in Auto Empire
         </h1>
         <div className="w-full h-[400px] my-10">
           <div className="embla">
             <div
-              class="embla__viewport  w-full h-[400px] border-2"
+              className="embla__viewport w-full h-[400px] border-2"
               ref={emblaRef}
             >
               <div className="embla__container w-full h-full">
@@ -37,7 +37,7 @@ function LuxuryPopularComponent() {
                   <div className="embla__slide" key={item.id}>
                     <Image
                       src={item.image}
-                      alt="craousel Image one"
+                      alt={`Carousel Image ${item.id}`}
                       className="w-full h-full object-cover"
                       placeholder="blur"
                     />
