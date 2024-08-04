@@ -41,8 +41,23 @@ import LuxuryCarReviewTwo from "@/public/images/LuxuryCarReviewTwo.jpg";
 import LuxuryCarReviewThree from "@/public/images/LuxuryCarReviewThree.jpg";
 
 // race page impors
+import R_CollactionOne from "@/public/images/RacingCarImages/R_CollactionOne.jpg";
+import R_CollactionTwo from "@/public/images/RacingCarImages/R_CollactionTwo.jpg";
+import R_CollactionThree from "@/public/images/RacingCarImages/R_CollactionThree.jpg";
+import R_CollactionFour from "@/public/images/RacingCarImages/R_CollactionFour.jpg";
+import R_CollactionFive from "@/public/images/RacingCarImages/R_CollactionFive.jpg";
+import R_CollactionSix from "@/public/images/RacingCarImages/R_CollactionSix.jpg";
+import R_CollactionSeven from "@/public/images/RacingCarImages/R_CollactionSeven.jpg";
+import R_CollactionEight from "@/public/images/RacingCarImages/R_CollactionEight.jpg";
+import R_CollactionNine from "@/public/images/RacingCarImages/R_CollactionNine.jpg";
+import R_CollactionTen from "@/public/images/RacingCarImages/R_CollactionTen.jpg";
+import R_CollactionEleven from "@/public/images/RacingCarImages/R_CollactionEleven.jpg";
+import R_CollactionTwelve from "@/public/images/RacingCarImages/R_CollactionTwelve.jpg";
 
 
+import R_ReviewOne from "@/public/images/RacingCarImages/R_ReviewOne.jpg"
+import R_ReviewTwo from "@/public/images/RacingCarImages/R_ReviewTwo.jpg"
+import R_ReviewThree from "@/public/images/RacingCarImages/R_ReviewThree.jpg"
 // start exporting
 
 export const heroComponent = {
@@ -372,35 +387,150 @@ export const RaceWelcomeSection = [
   },
 ];
 
-
-
 export const RaceAboutSection = {
   title: "What Makes a Car a Luxury Vehicle?",
   discription:
     "A car becomes a racing vehicle through a combination of modifications, design elements, and performance characteristics aimed at maximizing speed, handling, and safety in competitive racing environments.",
 
-  pointOne:"Engine and Powertrain",
-  explaintionOne:"High-performance engines with increased horsepower and torque.Advanced transmission systems for rapid gear changes and optimal power delivery.",
+  pointOne: "Engine and Powertrain",
+  explaintionOne:
+    "High-performance engines with increased horsepower and torque.Advanced transmission systems for rapid gear changes and optimal power delivery.",
 
-  pointTwo:"Aerodynamics",
-  explaintionTwo:"Streamlined bodywork to reduce drag and increase downforce.Features like spoilers, diffusers, and splitters to enhance stability and grip at high speeds.",
+  pointTwo: "Aerodynamics",
+  explaintionTwo:
+    "Streamlined bodywork to reduce drag and increase downforce.Features like spoilers, diffusers, and splitters to enhance stability and grip at high speeds.",
 
-  pointThree:"Suspension and Handling",
-  explaintionThree:"Specialized suspension systems for improved handling and stability. Adjustable components to fine-tune performance for different track conditions.",
+  pointThree: "Suspension and Handling",
+  explaintionThree:
+    "Specialized suspension systems for improved handling and stability. Adjustable components to fine-tune performance for different track conditions.",
 
-  pointFour:"Tires and Wheels",
-  explaintionFour:"High-performance racing tires designed for maximum grip and durability. Lightweight and strong wheels for better handling and acceleration.",
+  pointFour: "Tires and Wheels",
+  explaintionFour:
+    "High-performance racing tires designed for maximum grip and durability. Lightweight and strong wheels for better handling and acceleration.",
 
-  pointFive:"Braking System",
-  explaintionFive:"High-performance brakes with larger rotors and advanced cooling systems for effective stopping power.Use of materials like carbon-ceramic for improved performance and durability."
+  pointFive: "Braking System",
+  explaintionFive:
+    "High-performance brakes with larger rotors and advanced cooling systems for effective stopping power.Use of materials like carbon-ceramic for improved performance and durability.",
 };
 
+export const RaceCollactionSection = {
+  title: "Explore Our Racing Car Collection",
+  discription:
+    "At Auto Empire, we pride ourselves on our unparalleled collection of racing cars that are the epitome of speed, performance, and engineering excellence. Our showroom is a haven for racing enthusiasts, featuring an extensive range of iconic racing machines from legendary brands.",
+  about:
+    "At Auto Empire, each car is meticulously maintained and presented in showroom condition. Our collection is constantly evolving, ensuring that we offer the latest and greatest in the world of racing.",
+  ending:
+    "Book an appointment to see these magnificent machines in person and experience the pinnacle of racing excellence. Contact us for more information or follow us on social media for the latest updates.",
+};
 
+export const RaceCollactionSectionCars = [
+  {
+    id: 1,
+    image: R_CollactionOne,
+    name: "Sleek Corvette",
+    model: "Corvette ZR1",
+    price: 120000,
+  },
+  {
+    id: 2,
+    image: R_CollactionTwo,
+    name: "Ford Mustang",
+    model: "Mustang GT500",
+    price: 75000,
+  },
+  {
+    id: 3,
+    image: R_CollactionThree,
+    name: "Porsche",
+    model: "911 Turbo S",
+    price: 200000,
+  },
+  {
+    id: 4,
+    image: R_CollactionFour,
+    name: "Ferrari",
+    model: "F8 Tributo",
+    price: 270000,
+  },
+  {
+    id: 5,
+    image: R_CollactionFive,
+    name: "Lamborghini Huracan",
+    model: "Huracan EVO",
+    price: 300000,
+  },
+  {
+    id: 6,
+    image: R_CollactionSix,
+    name: "McLaren",
+    model: "720S Coupe",
+    price: 305000,
+  },
+  {
+    id: 7,
+    image: R_CollactionSeven,
+    name: "Audi",
+    model: "R8 V10 Plus",
+    price: 190000,
+  },
+  {
+    id: 8,
+    image: R_CollactionEight,
+    name: "Skyline",
+    model: "GT-R 1989",
+    price: 210000,
+  },
+  {
+    id: 9,
+    image: R_CollactionNine,
+    name: "BMW",
+    model: "M4 Competition",
+    price: 85000,
+  },
+  {
+    id: 10,
+    image: R_CollactionTen,
+    name: "Skyline",
+    model: "GT-R34",
+    price: 165000,
+  },
+  {
+    id: 11,
+    image: R_CollactionEleven,
+    name: "Bugatti",
+    model: " W16 Mistral",
+    price: 150000,
+  },
+  {
+    id: 12,
+    image: R_CollactionTwelve,
+    name: "Tesla",
+    model: "Roadster",
+    price: 200000,
+  },
+];
 
-
-
-   
-
-// These modifications collectively enhance the vehicle's performance, handling, safety, and durability under the demanding conditions of racing.
-
+export const RaceReviewSection = [
+  {
+    id: 1,
+    image: R_ReviewOne,
+    author: "Paul Walker",
+    review:
+      "As a true car enthusiast, I am absolutely thrilled with the racing car I purchased from Auto Empire. The performance is outstanding, and the attention to detail is remarkable. The team at Auto Empire truly understands what car lovers want.",
+  },
+  {
+    id: 2,
+    image: R_ReviewTwo,
+    author: "Tom Cruise",
+    review:
+      "Auto Empire offers an extraordinary collection of racing cars. The car I bought exceeded all my expectations in terms of speed, handling, and design. The customer service was exceptional, making the entire buying process smooth and enjoyable.",
+  },
+  {
+    id: 3,
+    image: R_ReviewThree,
+    author: "Jackie Chan",
+    review:
+      "Purchasing a racing car from Auto Empire has been a fantastic experience. The car is a marvel of engineering and delivers a thrilling driving experience. I highly recommend Auto Empire for their impressive selection and professional service.",
+  },
+];
 // Race page constants ends.
