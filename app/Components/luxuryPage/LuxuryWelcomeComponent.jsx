@@ -2,7 +2,7 @@ import { luxuryPageWelcomeSection } from "@/app/constants";
 import Image from "next/image";
 import React from "react";
 
-function welcomeSection() {
+function LuxuryWelcomeComponent() {
   return (
     <>
       <div>
@@ -48,4 +48,4 @@ function welcomeSection() {
   );
 }
 
-export default welcomeSection;
+export default LuxuryWelcomeComponent;

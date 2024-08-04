@@ -6,7 +6,7 @@ import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import { LuxuryPopularCars } from "@/app/constants";
 
-function PopularLuxuryCarSection() {
+function LuxuryPopularComponent() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: 3000, stopOnMouseEnter: true, stopOnInteraction: false }),
   ]);
@@ -71,4 +71,4 @@ function PopularLuxuryCarSection() {
   );
 }
 
-export default PopularLuxuryCarSection;
+export default LuxuryPopularComponent;

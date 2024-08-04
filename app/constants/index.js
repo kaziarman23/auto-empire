@@ -1,44 +1,44 @@
-import HomePageImageOne from "@/public/images/homePageImageOne.jpg";
-import HomePageImageTwo from "@/public/images/homePageImageTwo.jpg";
-import HomePageImageThree from "@/public/images/homePageImageThree.jpg";
-import HomePageImageFour from "@/public/images/homePageImageFour.jpg";
-import MercedesBenzSClass from "@/public/images/MercedesBenzSClass.jpg";
-import PorscheGT3 from "@/public/images/PorscheGT3.jpg";
-import FooterImageOne from "@/public/images/footerImageOne.jpg";
-import FooterImageTwo from "@/public/images/footerImageTwo.jpg";
-import FooterImageThree from "@/public/images/footerImageThree.jpg";
+import HomePageImageOne from "@/public/images/HomePageImages/homePageImageOne.jpg";
+import HomePageImageTwo from "@/public/images/HomePageImages/homePageImageTwo.jpg";
+import HomePageImageThree from "@/public/images/HomePageImages/homePageImageThree.jpg";
+import HomePageImageFour from "@/public/images/HomePageImages/homePageImageFour.jpg";
+import MercedesBenzSClass from "@/public/images/HomePageImages/MercedesBenzSClass.jpg";
+import PorscheGT3 from "@/public/images/HomePageImages/PorscheGT3.jpg";
+import FooterImageOne from "@/public/images/HomePageImages/footerImageOne.jpg";
+import FooterImageTwo from "@/public/images/HomePageImages/footerImageTwo.jpg";
+import FooterImageThree from "@/public/images/HomePageImages/footerImageThree.jpg";
 
 // luxary page impors
 
-import LuxuryWelcomeSectionImage from "@/public/images/LuxuryWelcomeSectionImage.jpg";
-import AboutLuxuryImageOne from "@/public/images/AboutLuxuryImageOne.jpg";
-import AboutLuxuryImageTwo from "@/public/images/AboutLuxuryImageTwo.jpg";
-import AboutLuxuryImageThree from "@/public/images/AboutLuxuryImageThree.jpg";
-import AboutLuxuryImageFour from "@/public/images/AboutLuxuryImageFour.jpg";
-import AboutLuxuryImageFive from "@/public/images/AboutLuxuryImageFive.jpg";
+import LuxuryWelcomeSectionImage from "@/public/images/LuxuryCarImages/LuxuryWelcomeSectionImage.jpg";
+import AboutLuxuryImageOne from "@/public/images/LuxuryCarImages/AboutLuxuryImageOne.jpg";
+import AboutLuxuryImageTwo from "@/public/images/LuxuryCarImages/AboutLuxuryImageTwo.jpg";
+import AboutLuxuryImageThree from "@/public/images/LuxuryCarImages/AboutLuxuryImageThree.jpg";
+import AboutLuxuryImageFour from "@/public/images/LuxuryCarImages/AboutLuxuryImageFour.jpg";
+import AboutLuxuryImageFive from "@/public/images/LuxuryCarImages/AboutLuxuryImageFive.jpg";
 
-import LuxuryPopularCarOne from "@/public/images/LuxuryPopularCarOne.jpg";
-import LuxuryPopularCarTwo from "@/public/images/LuxuryPopularCarTwo.jpg";
-import LuxuryPopularCarThree from "@/public/images/LuxuryPopularCarThree.jpg";
-import LuxuryPopularCarFour from "@/public/images/LuxuryPopularCarFour.jpg";
-import LuxuryPopularCarFive from "@/public/images/LuxuryPopularCarFive.jpg";
+import LuxuryPopularCarOne from "@/public/images/LuxuryCarImages/LuxuryPopularCarOne.jpg";
+import LuxuryPopularCarTwo from "@/public/images/LuxuryCarImages/LuxuryPopularCarTwo.jpg";
+import LuxuryPopularCarThree from "@/public/images/LuxuryCarImages/LuxuryPopularCarThree.jpg";
+import LuxuryPopularCarFour from "@/public/images/LuxuryCarImages/LuxuryPopularCarFour.jpg";
+import LuxuryPopularCarFive from "@/public/images/LuxuryCarImages/LuxuryPopularCarFive.jpg";
 
-import LuxuryCollactionCarOne from "@/public/images/LuxuryCollactionCarOne.jpg";
-import LuxuryCollactionCarTwo from "@/public/images/LuxuryCollactionCarTwo.jpg";
-import LuxuryCollactionCarThree from "@/public/images/LuxuryCollactionCarThree.jpg";
-import LuxuryCollactionCarFour from "@/public/images/LuxuryCollactionCarFour.jpg";
-import LuxuryCollactionCarFive from "@/public/images/LuxuryCollactionCarFive.jpg";
-import LuxuryCollactionCarSix from "@/public/images/LuxuryCollactionCarSix.jpg";
-import LuxuryCollactionCarSeven from "@/public/images/LuxuryCollactionCarSeven.jpg";
-import LuxuryCollactionCarEight from "@/public/images/LuxuryCollactionCarEight.jpg";
-import LuxuryCollactionCarNine from "@/public/images/LuxuryCollactionCarNine.jpg";
-import LuxuryCollactionCarTen from "@/public/images/LuxuryCollactionCarTen.jpg";
-import LuxuryCollactionCarEleven from "@/public/images/LuxuryCollactionCarEleven.jpg";
-import LuxuryCollactionCarTwelve from "@/public/images/LuxuryCollactionCarTwelve.jpg";
+import LuxuryCollactionCarOne from "@/public/images/LuxuryCarImages/LuxuryCollactionCarOne.jpg";
+import LuxuryCollactionCarTwo from "@/public/images/LuxuryCarImages/LuxuryCollactionCarTwo.jpg";
+import LuxuryCollactionCarThree from "@/public/images/LuxuryCarImages/LuxuryCollactionCarThree.jpg";
+import LuxuryCollactionCarFour from "@/public/images/LuxuryCarImages/LuxuryCollactionCarFour.jpg";
+import LuxuryCollactionCarFive from "@/public/images/LuxuryCarImages/LuxuryCollactionCarFive.jpg";
+import LuxuryCollactionCarSix from "@/public/images/LuxuryCarImages/LuxuryCollactionCarSix.jpg";
+import LuxuryCollactionCarSeven from "@/public/images/LuxuryCarImages/LuxuryCollactionCarSeven.jpg";
+import LuxuryCollactionCarEight from "@/public/images/LuxuryCarImages/LuxuryCollactionCarEight.jpg";
+import LuxuryCollactionCarNine from "@/public/images/LuxuryCarImages/LuxuryCollactionCarNine.jpg";
+import LuxuryCollactionCarTen from "@/public/images/LuxuryCarImages/LuxuryCollactionCarTen.jpg";
+import LuxuryCollactionCarEleven from "@/public/images/LuxuryCarImages/LuxuryCollactionCarEleven.jpg";
+import LuxuryCollactionCarTwelve from "@/public/images/LuxuryCarImages/LuxuryCollactionCarTwelve.jpg";
 
-import LuxuryCarReviewOne from "@/public/images/LuxuryCarReviewOne.jpg";
-import LuxuryCarReviewTwo from "@/public/images/LuxuryCarReviewTwo.jpg";
-import LuxuryCarReviewThree from "@/public/images/LuxuryCarReviewThree.jpg";
+import LuxuryCarReviewOne from "@/public/images/LuxuryCarImages/LuxuryCarReviewOne.jpg";
+import LuxuryCarReviewTwo from "@/public/images/LuxuryCarImages/LuxuryCarReviewTwo.jpg";
+import LuxuryCarReviewThree from "@/public/images/LuxuryCarImages/LuxuryCarReviewThree.jpg";
 
 // race page impors
 import R_CollactionOne from "@/public/images/RacingCarImages/R_CollactionOne.jpg";
@@ -54,10 +54,9 @@ import R_CollactionTen from "@/public/images/RacingCarImages/R_CollactionTen.jpg
 import R_CollactionEleven from "@/public/images/RacingCarImages/R_CollactionEleven.jpg";
 import R_CollactionTwelve from "@/public/images/RacingCarImages/R_CollactionTwelve.jpg";
 
-
-import R_ReviewOne from "@/public/images/RacingCarImages/R_ReviewOne.jpg"
-import R_ReviewTwo from "@/public/images/RacingCarImages/R_ReviewTwo.jpg"
-import R_ReviewThree from "@/public/images/RacingCarImages/R_ReviewThree.jpg"
+import R_ReviewOne from "@/public/images/RacingCarImages/R_ReviewOne.jpg";
+import R_ReviewTwo from "@/public/images/RacingCarImages/R_ReviewTwo.jpg";
+import R_ReviewThree from "@/public/images/RacingCarImages/R_ReviewThree.jpg";
 // start exporting
 
 export const heroComponent = {

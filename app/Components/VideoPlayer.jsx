@@ -18,6 +18,7 @@ const VideoPlayer = ({ videoUrl, type, onFinish, className }) => {
       type={type}
       onEnded={handleVideoEnd}
       muted
+      autoPlay
       className={className}
     />
   );

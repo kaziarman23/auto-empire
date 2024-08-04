@@ -2,7 +2,7 @@ import { luxaryAboutSection, luxaryAboutSectionCards } from "@/app/constants";
 import Image from "next/image";
 import React from "react";
 
-function AboutLuxuryCarSection() {
+function LuxuryAboutComponent() {
   return (
     <div className="my-5">
       <hr />
@@ -43,4 +43,4 @@ function AboutLuxuryCarSection() {
   );
 }
 
-export default AboutLuxuryCarSection;
+export default LuxuryAboutComponent;
