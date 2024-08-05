@@ -40,7 +40,7 @@ function RacePopularComponent() {
           )}
         </div>
         <button
-          className=" mx-10 rounded-xl my-5 p-2 bg-blue-500 text-black hover:bg-blue-800 hover:text-black"
+          className="btn btn-outline btn-info mx-10 my-5 p-2"
           onClick={handleVideo}
         >
           Watch Promotion
