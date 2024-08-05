@@ -59,13 +59,32 @@ import R_ReviewOne from "@/public/images/RacingCarImages/R_ReviewOne.jpg";
 import R_ReviewTwo from "@/public/images/RacingCarImages/R_ReviewTwo.jpg";
 import R_ReviewThree from "@/public/images/RacingCarImages/R_ReviewThree.jpg";
 
-
 // suv page impors
-
 
 import S_AboutOne from "@/public/images/SuvCarImages/S_AboutOne.jpg";
 
+import S_PopularOne from "@/public/images/SuvCarImages/S_PopularOne.jpg";
+import S_PopularTwo from "@/public/images/SuvCarImages/S_PopularTwo.jpg";
+import S_PopularThree from "@/public/images/SuvCarImages/S_PopularThree.jpg";
+import S_PopularFour from "@/public/images/SuvCarImages/S_PopularFour.jpg";
+import S_PopularFive from "@/public/images/SuvCarImages/S_PopularFive.jpg";
 
+import S_CollactionOne from "@/public/images/SuvCarImages/S_CollactionOne.jpg";
+import S_CollactionTwo from "@/public/images/SuvCarImages/S_CollactionTwo.jpg";
+import S_CollactionThree from "@/public/images/SuvCarImages/S_CollactionThree.jpg";
+import S_CollactionFour from "@/public/images/SuvCarImages/S_CollactionFour.jpg";
+import S_CollactionFive from "@/public/images/SuvCarImages/S_CollactionFive.jpg";
+import S_CollactionSix from "@/public/images/SuvCarImages/S_CollactionSix.jpg";
+import S_CollactionSeven from "@/public/images/SuvCarImages/S_CollactionSeven.jpg";
+import S_CollactionEight from "@/public/images/SuvCarImages/S_CollactionEight.jpg";
+import S_CollactionNine from "@/public/images/SuvCarImages/S_CollactionNine.jpg";
+import S_CollactionTen from "@/public/images/SuvCarImages/S_CollactionTen.jpg";
+import S_CollactionEleven from "@/public/images/SuvCarImages/S_CollactionEleven.jpg";
+import S_CollactionTwalve from "@/public/images/SuvCarImages/S_CollactionTwalve.jpg";
+
+import S_ReviewOne from "@/public/images/SuvCarImages/S_ReviewOne.jpg";
+import S_ReviewTwo from "@/public/images/SuvCarImages/S_ReviewTwo.jpg";
+import S_ReviewThree from "@/public/images/SuvCarImages/S_ReviewThree.jpg";
 
 // start exporting
 
@@ -544,18 +563,157 @@ export const RaceReviewSection = [
 ];
 // Race page constants end.
 
-
 // Suv page constants start:
 
-export const SuvAboutSection ={
+export const SuvAboutSection = {
   image: S_AboutOne,
   title: "What is an SUV?",
-  discription: "An SUV, or Sport Utility Vehicle, is a versatile and powerful type of vehicle designed to offer a blend of comfort, performance, and functionality. Originally built for off-road capability, modern SUVs have evolved to meet a variety of needs, making them one of the most popular vehicle choices today.",
-  
+  discription:
+    "An SUV, or Sport Utility Vehicle, is a versatile and powerful type of vehicle designed to offer a blend of comfort, performance, and functionality. Originally built for off-road capability, modern SUVs have evolved to meet a variety of needs, making them one of the most popular vehicle choices today.",
+
   titleTwo: "What are the Benefits?",
-  discriptionTwo: "Whether you're looking for a vehicle that can handle family road trips, daily commutes, or off-road escapades, an SUV from Auto Impire is designed to meet your needs with style and performance. Explore our collection to find the perfect SUV that matches your lifestyle and discover why so many drivers choose SUVs for their versatility and capability."
+  discriptionTwo:
+    "Whether you're looking for a vehicle that can handle family road trips, daily commutes, or off-road escapades, an SUV from Auto Impire is designed to meet your needs with style and performance. Explore our collection to find the perfect SUV that matches your lifestyle and discover why so many drivers choose SUVs for their versatility and capability.",
+};
 
-}
+export const SuvPopularSection = [
+  {
+    id: 1,
+    image: S_PopularOne,
+  },
+  {
+    id: 2,
+    image: S_PopularTwo,
+  },
+  {
+    id: 3,
+    image: S_PopularThree,
+  },
+  {
+    id: 4,
+    image: S_PopularFour,
+  },
+  {
+    id: 5,
+    image: S_PopularFive,
+  },
+];
 
+export const SuvCollactionSection = {
+  title: "Discover Our Extensive Collection of Suv Cars",
+  discription:
+    "At Auto Impire, we take pride in offering an extensive range of SUVs to fit every need and lifestyle. From rugged off-roaders to luxurious family haulers, our showroom features an unparalleled selection of top brands and models. Whether you're seeking cutting-edge technology, spacious interiors, or powerful performance, our diverse inventory has something for everyone.",
+};
+
+export const SuvCollactionSectionCars = [
+  {
+    id: 1,
+    name: "Toyota",
+    model: "RAV4",
+    price: 30000,
+    image: S_CollactionOne,
+  },
+  {
+    id: 2,
+    name: "Honda",
+    model: "CR-V",
+    price: 32000,
+    image: S_CollactionTwo,
+  },
+  {
+    id: 3,
+    name: "Ford",
+    model: "Explorer",
+    price: 35000,
+    image: S_CollactionThree,
+  },
+  {
+    id: 4,
+    name: "Chevrolet",
+    model: "Equinox",
+    price: 31000,
+    image: S_CollactionFour,
+  },
+  {
+    id: 5,
+    name: "Nissan",
+    model: "Rogue",
+    price: 34000,
+    image: S_CollactionFive,
+  },
+  {
+    id: 6,
+    name: "BMW",
+    model: "X5",
+    price: 60000,
+    image: S_CollactionSix,
+  },
+  {
+    id: 7,
+    name: "Audi",
+    model: "Q7",
+    price: 65000,
+    image: S_CollactionSeven,
+  },
+  {
+    id: 8,
+    name: "Mercedes-Benz",
+    model: "GLE",
+    price: 67000,
+    image: S_CollactionEight,
+  },
+  {
+    id: 9,
+    name: "Hyundai",
+    model: "Santa Fe",
+    price: 33000,
+    image: S_CollactionNine,
+  },
+  {
+    id: 10,
+    name: "Kia",
+    model: "Sorento",
+    price: 34000,
+    image: S_CollactionTen,
+  },
+  {
+    id: 11,
+    name: "Volkswagen",
+    model: "Atlas",
+    price: 36000,
+    image: S_CollactionEleven,
+  },
+  {
+    id: 12,
+    name: "Subaru",
+    model: "Outback",
+    price: 32000,
+    image: S_CollactionTwalve,
+  },
+];
+
+export const SuvReviewSection = [
+  {
+    id: 1,
+    review:
+      "The Toyota RAV4 offers a perfect blend of comfort and performance. Its spacious interior and smooth ride make it ideal for long drives, though it could use more advanced tech features.",
+    author: "John Doe",
+    image: S_ReviewOne,
+  },
+  {
+    id: 2,
+    review:
+      "The Ford Explorer provides excellent handling and a powerful engine. It's perfect for families needing plenty of space, but the fuel efficiency could be better.",
+    author: "Jane Smith",
+    image: S_ReviewTwo,
+  },
+  {
+    id: 3,
+    review:
+      "The BMW X5 is a luxury SUV with a fantastic interior and strong performance. It offers a premium driving experience, though it comes with a higher price tag.",
+    author: "Emily Johnson",
+    image: S_ReviewThree,
+  },
+];
 
 // Suv page constants end.
