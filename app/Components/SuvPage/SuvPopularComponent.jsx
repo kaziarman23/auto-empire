@@ -6,6 +6,7 @@ import { useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { SuvPopularSection } from "@/app/constants";
+import { motion } from "framer-motion";
 
 function SuvPopularComponent() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
@@ -23,15 +24,44 @@ function SuvPopularComponent() {
   return (
     <div>
       <div className="w-4/5 h-auto mx-auto">
-        <h1 className="text-center text-2xl font-bold p-2">
+        <motion.h1
+        initial={{
+          y:-50,
+          opacity:0
+        }}
+        whileInView={{
+          y:0,
+          opacity:1
+        }}
+        transition={{
+          delay:0.7,
+          ease:"easeInOut",
+          duration:0.8
+        }}
+        className="text-center text-2xl font-bold p-2 hover:text-zinc-700">
           Discover Popular SUVs at Auto Impire
-        </h1>
-        <p>
+        </motion.h1>
+        <motion.p
+        initial={{
+          x:-50,
+          opacity:0
+        }}
+        whileInView={{
+          x:0,
+          opacity:1
+        }}
+        transition={{
+          delay:0.9,
+          ease:"easeInOut",
+          duration:0.9
+        }}
+        className="hover:text-orange-500"
+        >
           where we proudly showcase a curated selection of the most popular SUVs
           on the market today. Whether you’re searching for reliability, style,
           or cutting-edge technology, our showroom is stocked with SUVs that
           redefine driving excellence.
-        </p>
+        </motion.p>
         <div className="my-10 w-full h-full ">
           <div className="embla w-[600px] h-[400px] mx-auto">
             <div
@@ -67,7 +97,21 @@ function SuvPopularComponent() {
             </div>
           </div>
         </div>
-        <p className="text-center mx-20 my-10">We’re thrilled to present these popular luxury cars, but they’re not available just yet. To ensure you don’t miss out, please place a pre-order now!</p>
+        <motion.p
+        initial={{
+          y:50,
+          opacity:0
+        }}
+        whileInView={{
+          y:0,
+          opacity:1
+        }}
+        transition={{
+          delay:0.3,
+          ease:"easeInOut",
+          duration:0.9
+        }}
+        className="text-center mx-20 my-10 hover:text-orange-500">We’re thrilled to present these popular luxury cars, but they’re not available just yet. To ensure you don’t miss out, please place a pre-order now!</motion.p>
       </div>
     </div>
   );

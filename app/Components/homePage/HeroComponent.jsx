@@ -19,7 +19,7 @@ function HeroComponent() {
         <div className="w-full h-28 absolute top-80 p-5 text-white  flex justify-center items-center flex-col gap-2">
           <motion.h1
             initial={{
-              y: -100,
+              y: -50,
               opacity: 0,
             }}
             animate={{
@@ -36,7 +36,7 @@ function HeroComponent() {
           </motion.h1>
           <motion.p 
           initial={{
-            y: 100,
+            y: 50,
             opacity: 0,
           }}
           animate={{

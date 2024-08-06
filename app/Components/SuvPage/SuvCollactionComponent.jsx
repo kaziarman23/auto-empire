@@ -1,26 +1,69 @@
+"use client"
+
+
 import Image from "next/image";
 import React from "react";
-import { SuvCollactionSection, SuvCollactionSectionCars } from "@/app/constants";
+import {
+  SuvCollactionSection,
+  SuvCollactionSectionCars,
+} from "@/app/constants";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 function SuvCollactionComponent() {
   return (
     <div className="mt-20 mb-10">
       <hr />
       <div className="w-full h-[800] mx-auto">
-        <h1 className="text-center text-2xl font-bold p-3 my-5">
-        {SuvCollactionSection.title}
-        </h1>
-        <p className="w-1/2 mx-auto my-5">
-        {SuvCollactionSection.discription}
-        </p>
+        <motion.h1
+          initial={{
+            y: -50,
+            opacity: 0,
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.9,
+            ease: "easeInOut",
+            duration: 0.9,
+          }}
+          className="text-center text-2xl font-bold p-3 my-5 hover:text-zinc-700"
+        >
+          {SuvCollactionSection.title}
+        </motion.h1>
+        <motion.p
+          initial={{
+            x: -50,
+            opacity: 0,
+          }}
+          whileInView={{
+            x: 0,
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.9,
+            ease: "easeInOut",
+            duration: 0.9,
+          }}
+          className="w-1/2 mx-auto my-5 hover:text-orange-500"
+        >
+          {SuvCollactionSection.discription}
+        </motion.p>
         <div className="w-4/5 h-auto  my-5 mx-auto  grid grid-cols-3 grid-rows-4 gap-2 place-items-center">
           {SuvCollactionSectionCars.map((cars) => (
             <div
               key={cars.id}
               className="w-full h-full flex justify-center items-center"
             >
-              <div className="w-[300px] h-[350px] my-5 overflow-hidden">
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.8, ease: "easeInOut" }}
+                className="w-[300px] h-[350px] my-5 overflow-hidden"
+              >
                 <Image
                   src={cars.image}
                   width={300}
@@ -36,19 +79,49 @@ function SuvCollactionComponent() {
                     <Link href="/contact-us">Get it Now</Link>
                   </p>
                 </div>
-              </div>
+              </motion.div>
             </div>
           ))}
         </div>
-        <h1 className="w-1/2 mx-auto my-5">
+        <h1
+          initial={{
+            x: -50,
+            opacity: 0,
+          }}
+          whileInView={{
+            x: 0,
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.9,
+            ease: "easeInOut",
+            duration: 0.9,
+          }}
+          className="w-1/2 mx-auto my-5 hover:text-zinc-700"
+        >
           Ready to elevate your driving experience? Browse our current
           collection and find the luxury car that’s perfect for you. For more
           details or to schedule a private viewing, don’t hesitate to contact
           us.
         </h1>
-        <p className="text-center font-bold text-2xl">
+        <motion.p
+          initial={{
+            x: -50,
+            opacity: 0,
+          }}
+          whileInView={{
+            x: 0,
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.9,
+            ease: "easeInOut",
+            duration: 0.9,
+          }}
+          className="text-center font-bold text-2xl hover:text-orange-500"
+        >
           At Auto Impire, your next luxury car awaits.
-        </p>
+        </motion.p>
       </div>
     </div>
   );
