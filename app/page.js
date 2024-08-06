@@ -1,14 +1,14 @@
 import AboutUsSection from "./Components/homePage/AboutUsSection";
-import HeroSection from "./Components/homePage/HeroSection";
-import LetestSection from "./Components/homePage/LetestSection";
-import TopSellSection from "./Components/homePage/TopSellSection";
+import HeroComponent from "./Components/homePage/HeroComponent";
+import LetestComponent from "./Components/homePage/LetestComponent";
+import TopSellComponent from "./Components/homePage/TopSellComponent";
 
 function Home() {
   return (
     <div>
-      <HeroSection/>
-      <LetestSection/>
-      <TopSellSection />
+      <HeroComponent/>
+      <LetestComponent/>
+      <TopSellComponent />
       <AboutUsSection />
     </div>
   );

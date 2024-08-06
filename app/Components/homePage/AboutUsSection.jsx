@@ -1,6 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import { aboutUsComponent } from "@/app/constants";
+import { motion } from "framer-motion";
+
 function AboutUsSection() {
   return (
     <>
@@ -10,8 +14,22 @@ function AboutUsSection() {
           {aboutUsComponent.map((item) => (
             <>
               <div className="w-80 h-80" key={item.id}>
-                <div className="w-full h-full border-2 relative flex flex-col justify-center items-center">
-
+                <motion.div
+                  initial={{
+                    y: 50,
+                    opacity: 0,
+                  }}
+                  whileInView={{
+                    y: 0,
+                    opacity: 1,
+                  }}
+                  transition={{
+                    delay: 0.8,
+                    duration: 1,
+                    ease: "easeIn",
+                  }}
+                  className="w-full h-full border-2 relative flex flex-col justify-center items-center"
+                >
                   <div className="opacity-0 hover:opacity-30">
                     <Image
                       src={item.image}
@@ -26,8 +44,7 @@ function AboutUsSection() {
                     </h1>
                     <p className="mx-4">{item.discription}</p>
                   </div>
-
-                </div>
+                </motion.div>
               </div>
             </>
           ))}
@@ -38,4 +55,3 @@ function AboutUsSection() {
 }
 
 export default AboutUsSection;
-

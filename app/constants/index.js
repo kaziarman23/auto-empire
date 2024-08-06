@@ -88,20 +88,20 @@ import S_ReviewThree from "@/public/images/SuvCarImages/S_ReviewThree.jpg";
 
 // start exporting
 
-export const heroComponent = {
+export const heroSection = {
   image: HomePageImageOne,
   title: "Welcome to Auto Impire!",
   discription:
     "We're thrilled to have you here at Auto Impire, your premier destination for all things automotive. Whether you're looking for expert advice, the latest industry trends, or top-notch services to keep your vehicle in peak condition, you've come to the right place.",
 };
 
-export const latestComponent = {
+export const latestSection = {
   title: "Discover Our Latest Arrivals",
   discription:
-    "At Auto Impire, we’re excited to present three of the most captivating vehicles that are making waves in the automotive world. Explore the epitome of luxury, the thrill of racing, and the power of SUVs with our latest selections",
+    "At Auto Impire, we’re excited to present three of the most captivating vehicles that are making waves in the automotive world. Explore the epitome of luxury, the thrill of racing, and the power of SUVs with our latest selections.",
 };
 
-export const latestComponentImages = [
+export const latestSectionImages = [
   {
     id: "0",
     image: HomePageImageTwo,
@@ -116,7 +116,7 @@ export const latestComponentImages = [
   },
 ];
 
-export const topSellComponentCards = [
+export const topSellSectionCards = [
   {
     id: "1",
     image: MercedesBenzSClass,
