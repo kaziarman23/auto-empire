@@ -1,19 +1,53 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
-import { RaceCollactionSection, RaceCollactionSectionCars } from "@/app/constants";
+import {
+  RaceCollactionSection,
+  RaceCollactionSectionCars,
+} from "@/app/constants";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 function RaceCollactionComponent() {
   return (
     <div className="mt-20 mb-10">
       <hr />
       <div className="w-full h-[800] mx-auto">
-        <h1 className="text-center text-2xl font-bold p-3 my-5">
+        <motion.h1
+          initial={{
+            y: -100,
+            opacity: 0,
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+          }}
+          transition={{
+            ease: "easeInOut",
+            duration: 1,
+          }}
+          className="text-center text-2xl font-bold p-3 my-5 hover:text-zinc-700"
+        >
           {RaceCollactionSection.title}
-        </h1>
-        <p className="w-1/2 mx-auto my-5">
-        {RaceCollactionSection.discription}
-        </p>
+        </motion.h1>
+        <motion.p
+          initial={{
+            x: -100,
+            opacity: 0,
+          }}
+          whileInView={{
+            x: 0,
+            opacity: 1,
+          }}
+          transition={{
+            ease: "easeInOut",
+            duration: 1,
+          }}
+          className="w-1/2 mx-auto my-5 hover:text-orange-500"
+        >
+          {RaceCollactionSection.discription}
+        </motion.p>
 
         <div className="w-4/5 h-auto  my-5 mx-auto  grid grid-cols-3 grid-rows-4 gap-2 place-items-center">
           {RaceCollactionSectionCars.map((cars) => (
@@ -21,7 +55,13 @@ function RaceCollactionComponent() {
               key={cars.id}
               className="w-full h-full flex justify-center items-center"
             >
-              <div className="w-[300px] h-[350px] my-5 overflow-hidden">
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.8, ease: "easeInOut" }}
+                className="w-[300px] h-[350px] my-5 overflow-hidden"
+              >
                 <Image
                   src={cars.image}
                   width={300}
@@ -37,16 +77,44 @@ function RaceCollactionComponent() {
                     <Link href="/contact-us">Get it Now</Link>
                   </p>
                 </div>
-              </div>
+              </motion.div>
             </div>
           ))}
         </div>
-        <h1 className="w-1/2 mx-auto my-5">
-        {RaceCollactionSection.about}
-        </h1>
-        <p className="text-center font-bold text-2xl">
-        {RaceCollactionSection.ending}
-        </p>
+        <motion.h1
+          initial={{
+            y: -50,
+            opacity: 0,
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+          }}
+          transition={{
+            ease: "easeInOut",
+            duration: 1,
+          }}
+          className="w-1/2 mx-auto my-5 hover:text-zinc-700"
+        >
+          {RaceCollactionSection.about}
+        </motion.h1>
+        <motion.p
+          initial={{
+            y: 50,
+            opacity: 0,
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+          }}
+          transition={{
+            ease: "easeInOut",
+            duration: 1,
+          }}
+          className="text-center font-bold text-2xl hover:text-orange-500"
+        >
+          {RaceCollactionSection.ending}
+        </motion.p>
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import VideoPlayer from "../VideoPlayer";
 import R_PopularOne from "@/public/images/RacingCarImages/R_PopularOne.jpg";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 function RacePopularComponent() {
   const [showPostContent, setShowPostContent] = useState(false);
@@ -19,8 +20,26 @@ function RacePopularComponent() {
   return (
     <div className="my-5">
       <hr />
-      <div className="w-2/3 h-auto mx-auto">
-        <h1 className="text-2xl font-bold text-center p-2">Join the Elite</h1>
+      <div className="w-2/3 h-[790px] mx-auto">
+        <motion.h1
+          initial={{
+            y: 50,
+            opacity: 0,
+          }}
+          viewport={{ once: true }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.5,
+            duration: 0.5,
+            ease: "easeInOut",
+          }}
+          className="text-2xl font-bold text-center p-2 hover:text-zinc-700"
+        >
+          Join the Elite
+        </motion.h1>
         <div className="w-full h-[400px] my-3 pointer-events-none">
           {!showPostContent ? (
             <Image
@@ -45,16 +64,140 @@ function RacePopularComponent() {
         >
           Watch Promotion
         </button>
-        <div className="w-full h-auto my-5 flex gap-2 flex-col">
-          <h1 className="text-lg font-bold mx-10">
+        <div className="w-[500px] h-[225px]my-5 flex gap-2 flex-col">
+          <motion.h1
+            initial={{
+              x: -100,
+              opacity: 0,
+            }}
+            viewport={{ once: true }}
+            whileInView={{
+              x: 0,
+              opacity: 1,
+            }}
+            transition={{
+              delay: 0.5,
+              duration: 0.5,
+              ease: "easeInOut",
+            }}
+            className="text-lg font-bold mx-10 hover:text-zinc-700"
+          >
             Currentlly This is Our Popular Racing car
-          </h1>
-          <h3 className="mx-10 text-lg">Name: Ferrari 296 GT3</h3>
-          <p className="mx-10"> Engine: 3.0L V6</p>
-          <p className="mx-10"> Twin Turbo Hybrid Power: 441 kW / 600 hp</p>
-          <p className="mx-10"> Torque: 712 Nm </p>
-          <p className="mx-10"> kph: 2.9 seconds </p>
-          <p className="mx-10"> Top Speed: 330 kph / 205 mph</p>
+          </motion.h1>
+          <motion.h3
+            initial={{
+              x: -100,
+              opacity: 0,
+            }}
+            viewport={{ once: true }}
+            whileInView={{
+              x: 0,
+              opacity: 1,
+            }}
+            transition={{
+              delay: 0.8,
+              duration: 0.8,
+              ease: "easeInOut",
+            }}
+            className="mx-10 text-lg hover:text-zinc-700"
+          >
+            Name: Ferrari 296 GT3
+          </motion.h3>
+          <motion.p
+            initial={{
+              x: -100,
+              opacity: 0,
+            }}
+            viewport={{ once: true }}
+            whileInView={{
+              x: 0,
+              opacity: 1,
+            }}
+            transition={{
+              delay: 0.9,
+              duration: 1,
+              ease: "easeInOut",
+            }}
+            className="mx-10 hover:text-orange-500"
+          >
+            Engine: 3.0L V6
+          </motion.p>
+          <motion.p
+            initial={{
+              x: -100,
+              opacity: 0,
+            }}
+            viewport={{ once: true }}
+            whileInView={{
+              x: 0,
+              opacity: 1,
+            }}
+            transition={{
+              delay: 1,
+              duration: 1,
+              ease: "easeInOut",
+            }}
+            className="mx-10 hover:text-orange-500"
+          >
+            Twin Turbo Hybrid Power: 441 kW / 600 hp
+          </motion.p>
+          <motion.p
+            initial={{
+              x: -100,
+              opacity: 0,
+            }}
+            viewport={{ once: true }}
+            whileInView={{
+              x: 0,
+              opacity: 1,
+            }}
+            transition={{
+              delay: 1.2,
+              duration: 1.1,
+              ease: "easeInOut",
+            }}
+            className="mx-10 hover:text-orange-500"
+          >
+            Torque: 712 Nm
+          </motion.p>
+          <motion.p
+            initial={{
+              x: -100,
+              opacity: 0,
+            }}
+            viewport={{ once: true }}
+            whileInView={{
+              x: 0,
+              opacity: 1,
+            }}
+            transition={{
+              delay: 1.3,
+              duration: 1.2,
+              ease: "easeInOut",
+            }}
+            className="mx-10 hover:text-orange-500"
+          >
+            kph: 2.9 seconds
+          </motion.p>
+          <motion.p
+            initial={{
+              x: -100,
+              opacity: 0,
+            }}
+            viewport={{ once: true }}
+            whileInView={{
+              x: 0,
+              opacity: 1,
+            }}
+            transition={{
+              delay: 1.4,
+              duration: 1.3,
+              ease: "easeInOut",
+            }}
+            className="mx-10 hover:text-orange-500"
+          >
+            Top Speed: 330 kph / 205 mph
+          </motion.p>
         </div>
       </div>
     </div>
