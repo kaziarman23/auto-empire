@@ -2,17 +2,35 @@
 
 import React from "react";
 import { useForm } from "react-hook-form";
+import emailjs from "emailjs-com";
 
 function ContactUsComponent() {
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
+    reset,
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async (data) => {
+    try {
+      const result = await emailjs.send(
+        "service_10511gd",
+        "template_5kzeo65",
+        data,
+        "IalesJMFLKnrqZHs1"
+      );
+
+      alert(
+        "Thank you for your message. A confirmation email has been sent to you."
+      );
+      reset();
+    } catch (error) {
+      console.error("There was an error!", error);
+      alert("There was a problem sending your message. Please try again.");
+    }
   };
+
   return (
     <div className="w-full h-screen flex justify-center items-center">
       <div className="w-96 h-4/5 rounded-2xl bg-zinc-800">
@@ -29,7 +47,7 @@ function ContactUsComponent() {
             type="text"
             id="name"
             className="mb-3 mt-2 rounded-lg p-2"
-            placeholder="Enter you'r Name"
+            placeholder="name"
             {...register("name", {
               required: "Name is Required",
             })}
@@ -46,14 +64,14 @@ function ContactUsComponent() {
             type="text"
             id="email"
             className="mb-3 mt-2 rounded-lg p-2"
-            placeholder="Enter you'r Email"
+            placeholder="email"
             {...register("email", {
               required: "Email is Required",
               validate: (value) => {
-                if(!value.includes("@")){
-                    return "Email must include @"
+                if (!value.includes("@")) {
+                  return "Email must include @";
                 }
-                return true
+                return true;
               },
             })}
           />
@@ -69,12 +87,12 @@ function ContactUsComponent() {
             type="password"
             id="password"
             className="mt-2 rounded-lg p-2"
-            placeholder="Enter you'r Password"
+            placeholder="password"
             {...register("password", {
               required: "Password is Required",
               minLength: {
                 value: 8,
-                message: "Password have must at least 8 characters"
+                message: "Password have must at least 8 characters",
               },
             })}
           />
@@ -83,7 +101,11 @@ function ContactUsComponent() {
             <div className="text-red-500">{errors.password.message}</div>
           )}
 
-          <button type="submit" disabled={isSubmitting} className="btn btn-outline btn-success mt-5">
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className="btn btn-outline btn-success mt-5"
+          >
             {isSubmitting ? "Loading..." : "Submit"}
           </button>
         </form>
