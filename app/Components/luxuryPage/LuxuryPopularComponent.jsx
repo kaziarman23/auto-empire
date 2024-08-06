@@ -5,6 +5,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import { LuxuryPopularCars } from "@/app/constants";
+import { motion } from "framer-motion";
 
 function LuxuryPopularComponent() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
@@ -23,9 +24,23 @@ function LuxuryPopularComponent() {
     <div className="my-5">
       <hr />
       <div className="w-1/2 h-[900] mx-auto">
-        <h1 className="text-center text-2xl font-bold p-3">
+        <motion.h1
+          initial={{
+            y: -50,
+            opacity: 0,
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+          }}
+          transition={{
+            ease: "easeInOut",
+            duration: 1,
+          }}
+          className="text-center text-2xl font-bold p-3 hover:text-zinc-700"
+        >
           Popular Customized Cars in Auto Empire
-        </h1>
+        </motion.h1>
         <div className="w-full h-[400px] my-10">
           <div className="embla">
             <div
@@ -61,11 +76,25 @@ function LuxuryPopularComponent() {
             </div>
           </div>
         </div>
-        <p className="text-center">
+        <motion.p
+          initial={{
+            y: 100,
+            opacity: 0,
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+          }}
+          transition={{
+            ease: "easeInOut",
+            duration: 1,
+          }}
+          className="text-center hover:text-orange-500"
+        >
           We’re thrilled to present these popular luxury cars, but they’re not
           available just yet. To ensure you don’t miss out, please place a
           pre-order now!
-        </p>
+        </motion.p>
       </div>
     </div>
   );

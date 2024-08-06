@@ -1,4 +1,7 @@
+"use client";
+
 import { ReviewLuxuryCars } from "@/app/constants";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 
@@ -7,12 +10,40 @@ function LuxuryReviewComponent() {
     <div className="my-5">
       <hr />
       <div className="w-3/4 h-[500px] mx-auto">
-        <h1 className="text-center p-5 font-bold text-2xl">
+        <motion.h1
+          initial={{
+            y: -50,
+            opacity: 0,
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.4,
+            duration: 1,
+            ease: "easeIn",
+          }}
+          className="text-center p-5 font-bold text-2xl hover:text-zinc-700"
+        >
           Customer Reviews At Auto Impire
-        </h1>
+        </motion.h1>
         <div className="w-full h-96 gap-4 flex justify-center items-center ">
           {ReviewLuxuryCars.map((review) => (
-            <div
+            <motion.div
+              initial={{
+                y: 50,
+                opacity: 0,
+              }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+              }}
+              transition={{
+                delay: 0.5,
+                duration: 1,
+                ease: "easeIn",
+              }}
               className="w-80 h-[365px] border flex justify-center items-center flex-col"
               key={review.id}
             >
@@ -28,7 +59,7 @@ function LuxuryReviewComponent() {
                 <p className="mx-5 my-2">{review.review}</p>
                 <h3 className="mx-5">{review.author}</h3>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
