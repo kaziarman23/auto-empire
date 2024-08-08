@@ -50,7 +50,7 @@ function Navbar() {
           <div onClick={toggleMenu}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-6 h-6"
+              className="w-6 h-6 cursor-pointer"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -95,7 +95,8 @@ function Navbar() {
 
       {/*mobile disign  */}
       {isOpen && (
-        <div className="w-full h-screen bg-zinc-800 z-50 flex justify-center items-center gap-3 flex-col">
+        <div className="w-full h-screen bg-zinc-800 z-50 flex justify-start items-end gap-3 flex-col">
+          <div className="w-60 h-60 text-right">
           <Link href="/">
             <motion.h3
               initial={{
@@ -200,6 +201,8 @@ function Navbar() {
               Contact Us
             </motion.h3>
           </Link>
+          </div>
+          
         </div>
       )}
     </>
