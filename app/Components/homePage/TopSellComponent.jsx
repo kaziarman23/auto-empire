@@ -32,7 +32,7 @@ function TopSellComponent() {
     <>
       <hr />
       <div className="my-5">
-        <div className="w-1/2 h-auto mx-auto my-10 flex justify-center items-center gap-5 flex-col">
+        <div className="w-4/5 h-[1285px] mx-auto my-10 flex justify-center items-center gap-5 flex-col sm:w-3/4 md:h-[700px] xl:w-4/5 ">
           <motion.h1
             initial={{
               y: 50,
@@ -46,7 +46,7 @@ function TopSellComponent() {
               duration: 0.5,
               ease: "easeIn",
             }}
-            className="font-bold text-2xl"
+            className="font-bold text-sm md:text-md xl:text-2xl"
           >
             Explore Our Top-Selling Vehicles
           </motion.h1>
@@ -63,17 +63,18 @@ function TopSellComponent() {
               duration: 0.5,
               ease: "easeIn",
             }}
-            className="hover:text-orange-500"
+            className="text-sm hover:text-orange-500 sm:mx-10"
           >
             At Auto Impire, we’re proud to showcase our top-selling cars, each
             representing the pinnacle of excellence in their respective
             categories. Discover why these models have captured the hearts of
-            our customers and continue to lead the way in luxury and performance
+            our customers and continue to lead the way in luxury and
+            performance.
           </motion.p>
-          <div className="flex justify-evenly items-center gap-3 my-5">
+          <div className="flex justify-center items-center gap-3 my-5 flex-col md:w-4/5 md:flex-row md:gap-10">
             {topSellSectionCards.map((value, index) => (
               <div key={value.id} className="flex justify-evenly items-center">
-                <div className="w-80 h-[515px] text-center ">
+                <div className="w-80 h-[515px] text-center md:w-60 xl:w-96">
                   <motion.div
                     initial={
                       animetionVariants[index === 0 ? "first" : "second"]
@@ -108,7 +109,7 @@ function TopSellComponent() {
                       duration: 0.5,
                       ease: "easeIn",
                     }}
-                    className="text-lg font-bold my-3"
+                    className="text-lg font-bold my-3 md:text-sm xl:text-xl"
                   >
                     {value.model}
                   </motion.h1>
@@ -126,7 +127,7 @@ function TopSellComponent() {
                       duration: 0.5,
                       ease: "easeIn",
                     }}
-                    className="mx-5 text-justify"
+                    className="mx-5 text-justify md:text-left "
                   >
                     {value.modelDetails}
                   </motion.p>

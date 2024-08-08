@@ -10,11 +10,11 @@ function LetestComponent() {
     one: {
       initial: {
         x: -150,
-        opacity:0
+        opacity: 0,
       },
       whileInView: {
         x: 0,
-        opacity:1
+        opacity: 1,
       },
       transition: {
         ease: "easeInOut",
@@ -25,11 +25,11 @@ function LetestComponent() {
     two: {
       initial: {
         y: 150,
-        opacity:0
+        opacity: 0,
       },
       whileInView: {
         y: 0,
-        opacity:1
+        opacity: 1,
       },
       transition: {
         ease: "easeInOut",
@@ -40,11 +40,11 @@ function LetestComponent() {
     three: {
       initial: {
         x: 150,
-        opacity:0
+        opacity: 0,
       },
       whileInView: {
         x: 0,
-        opacity:1
+        opacity: 1,
       },
       transition: {
         ease: "easeInOut",
@@ -58,8 +58,10 @@ function LetestComponent() {
     <>
       <hr />
       <div className="my-5">
-        <div className="w-4/5 h-[550px] mx-auto my-10 flex justify-center items-center gap-5 flex-col">
-          <h1 className="font-bold text-2xl">{latestSection.title}</h1>
+        <div className="w-[350px] h-[1260px] mx-auto my-10 flex justify-center items-center gap-5 flex-col xl:w-4/5 xl:h-[600px]">
+          <h1 className="font-bold text-md md:text-xl xl:text-2xl">
+            {latestSection.title}
+          </h1>
           <motion.p
             initial={{
               y: 50,
@@ -74,7 +76,7 @@ function LetestComponent() {
           >
             {latestSection.discription}
           </motion.p>
-          <div className="flex justify-evenly items-center gap-3 my-5">
+          <div className="flex justify-center items-center flex-col gap-3 my-5 xl:flex-row">
             {latestSectionImages.map((img, index) => {
               return (
                 <motion.div

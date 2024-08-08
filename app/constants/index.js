@@ -133,7 +133,7 @@ export const topSellSectionCards = [
   },
 ];
 
-export const aboutUsComponent = [
+export const aboutUsSection = [
   {
     id: "1",
     image: FooterImageOne,
