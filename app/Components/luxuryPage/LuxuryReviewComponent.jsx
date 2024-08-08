@@ -9,7 +9,7 @@ function LuxuryReviewComponent() {
   return (
     <div className="my-5">
       <hr />
-      <div className="w-3/4 h-[500px] mx-auto">
+      <div className="w-4/5 h-[1200px] mx-auto lg:h-[500px]">
         <motion.h1
           initial={{
             y: -50,
@@ -24,11 +24,11 @@ function LuxuryReviewComponent() {
             duration: 1,
             ease: "easeIn",
           }}
-          className="text-center p-5 font-bold text-2xl hover:text-zinc-700"
+          className="text-center p-5 font-bold text-sm hover:text-zinc-700 md:text-md lg:text-2xl"
         >
           Customer Reviews At Auto Impire
         </motion.h1>
-        <div className="w-full h-96 gap-4 flex justify-center items-center ">
+        <div className="w-full h-auto gap-4 flex justify-center items-center flex-col lg:flex-row">
           {ReviewLuxuryCars.map((review) => (
             <motion.div
               initial={{
@@ -44,7 +44,7 @@ function LuxuryReviewComponent() {
                 duration: 1,
                 ease: "easeIn",
               }}
-              className="w-80 h-[365px] border flex justify-center items-center flex-col"
+              className="w-80 h-[365px] border flex justify-center items-center flex-col lg:h-[400px]"
               key={review.id}
             >
               <div className="w-full h-32 flex justify-center items-center">
@@ -55,7 +55,7 @@ function LuxuryReviewComponent() {
                 />
               </div>
 
-              <div className="bg-zinc-800 h-[237px]">
+              <div className="bg-zinc-800 h-[237px] lg:h-[300px]">
                 <p className="mx-5 my-2">{review.review}</p>
                 <h3 className="mx-5">{review.author}</h3>
               </div>

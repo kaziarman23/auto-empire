@@ -9,7 +9,7 @@ function LuxuryWelcomeComponent() {
   return (
     <>
       <div>
-        <div className="w-3/4 h-[600px] mx-auto flex justify-evenly items-center flex-col gap-5">
+        <div className="w-4/5 h-[1250px] mx-auto flex justify-center items-center flex-col gap-5 sm:h-[1000px] md:w-4/5 md:h-[920px] lg:w-4/5 lg:h-[800px] xl:h-[600px]">
           <motion.h1
             initial={{
               y: -100,
@@ -24,7 +24,7 @@ function LuxuryWelcomeComponent() {
               duration: 1,
               delay: 0.5,
             }}
-            className="font-bold text-2xl hover:text-zinc-700"
+            className="font-bold my-2 text-sm hover:text-zinc-700 sm:text-md md:text-md lg:text-2xl "
           >
             {luxuryPageWelcomeSection.title}
           </motion.h1>
@@ -42,13 +42,13 @@ function LuxuryWelcomeComponent() {
               duration: 1,
               delay: 0.5,
             }}
-            className="mx-10 hover:text-orange-500"
+            className="mx-10 hover:text-orange-500 text-sm md:mx-20 xl:text-lg"
           >
             {luxuryPageWelcomeSection.discription}
           </motion.p>
 
-          <div className="flex justify-evenly items-center gap-5">
-            <div className="w-[600px] mx-5">
+          <div className="flex justify-center items-center flex-col gap-5 lg:justify-evenly lg:flex-row">
+            <div className="w-4/5 mx-5 lg:w-[300px] xl:w-[600px]">
               <motion.h2
                 initial={{
                   x: 50,
@@ -63,7 +63,7 @@ function LuxuryWelcomeComponent() {
                   duration: 1,
                   delay: 0.6,
                 }}
-                className="text-center font-bold text-xl hover:text-zinc-700"
+                className="text-center font-bold text-md mb-3 hover:text-zinc-700"
               >
                 {luxuryPageWelcomeSection.question}
               </motion.h2>
@@ -237,7 +237,7 @@ function LuxuryWelcomeComponent() {
                 duration: 0.8,
                 delay: 1.2,
               }}
-              className="w-80 h-80"
+              className="w-60 h-60 lg:w-[300px]"
             >
               <Image
                 src={luxuryPageWelcomeSection.image}

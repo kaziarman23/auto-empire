@@ -9,7 +9,7 @@ function LuxuryAboutComponent() {
   return (
     <div className="my-5">
       <hr />
-      <div className="w-4/5 h-[900px] mx-auto">
+      <div className="w-4/5 h-[1950px] mx-auto sm:h-[1450px] lg:h-[900px] xl:h-[750px]">
         <motion.h1
           initial={{
             y: -50,
@@ -23,7 +23,7 @@ function LuxuryAboutComponent() {
             ease: "easeInOut",
             duration: 1,
           }}
-          className="font-bold text-center text-2xl p-5 hover:text-zinc-700"
+          className="font-bold text-center text-sm p-5 hover:text-zinc-700 sm:text-xl xl:text-2xl"
         >
           About Luxury Cars
         </motion.h1>
@@ -41,7 +41,7 @@ function LuxuryAboutComponent() {
               ease: "easeInOut",
               duration: 1,
             }}
-            className="font-bold text-xl my-5 hover:text-zinc-700"
+            className="font-bold text-sm my-5 hover:text-zinc-700 xl:text-lg"
           >
             {luxaryAboutSection.title}
           </motion.h1>
@@ -58,11 +58,11 @@ function LuxuryAboutComponent() {
               ease: "easeInOut",
               duration: 1,
             }}
-            className="hover:text-orange-500"
+            className="text-sm hover:text-orange-500"
           >
             {luxaryAboutSection.discription}
           </motion.p>
-          <div className="w-full h-full grid grid-cols-3 grid-rows-2 gap-5 my-10">
+          <div className="w-4/5 h-full grid grid-cols-1 grid-rows-5 gap-3 my-10 sm:grid-cols-2 sm:grid-rows-3 sm:w-full lg:grid-cols-3 lg:grid-rows-2">
             {luxaryAboutSectionCards.map((value) => (
               <motion.div
                 initial={{
@@ -78,7 +78,7 @@ function LuxuryAboutComponent() {
                   duration: 1,
                 }}
                 key={value.id}
-                className="w-80 h-80"
+                className="w-60 h-80 sm:w-52 sm:h-96 lg:w-60 lg:h-80 xl:w-80 xl:h-60"
               >
                 <div className="w-full h-full relative">
                   <div className="opacity-0 hover:opacity-30">
@@ -91,10 +91,10 @@ function LuxuryAboutComponent() {
                   </div>
 
                   <div className="w-full h-full border-2 bg-black cursor-not-allowed">
-                    <h1 className="text-lg text-center font-bold mt-2">
+                    <h1 className="text-sm text-center font-bold my-2">
                       {value.pointTitle}
                     </h1>
-                    <p className="mx-5">{value.pointDis}</p>
+                    <p className="mx-5 text-sm">{value.pointDis}</p>
                   </div>
                 </div>
               </motion.div>

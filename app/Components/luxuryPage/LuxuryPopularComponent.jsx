@@ -23,7 +23,7 @@ function LuxuryPopularComponent() {
   return (
     <div className="my-5">
       <hr />
-      <div className="w-1/2 h-[900] mx-auto">
+      <div className="w-4/5 h-[450px] mx-auto sm:h-[500px] md:h-[700px] xl:w-1/2 xl:h-[700px]">
         <motion.h1
           initial={{
             y: -50,
@@ -37,14 +37,15 @@ function LuxuryPopularComponent() {
             ease: "easeInOut",
             duration: 1,
           }}
-          className="text-center text-2xl font-bold p-3 hover:text-zinc-700"
+          className="text-center text-sm font-bold p-3 hover:text-zinc-700 md:text-md lg:text-lg xl:text-2xl"
         >
           Popular Customized Cars in Auto Empire
         </motion.h1>
-        <div className="w-full h-[400px] my-10">
+        <div className="w-full h-[200px] my-10 sm:h-[300px] md:h-[500px]">
           <div className="embla">
             <div
-              className="embla__viewport w-full h-[400px] border-2"
+              className="embla__viewport w-full h-[200px] border-2 sm:h-[300px]
+              md:h-[500px]"
               ref={emblaRef}
             >
               <div className="embla__container w-full h-full">
