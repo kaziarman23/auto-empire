@@ -20,7 +20,7 @@ function RacePopularComponent() {
   return (
     <div className="my-5">
       <hr />
-      <div className="w-2/3 h-[790px] mx-auto">
+      <div className="w-full h-[560px] mx-auto md:w-4/5 lg:w-2/3 xl:1/2 xl:h-[700px]">
         <motion.h1
           initial={{
             y: 50,
@@ -36,11 +36,11 @@ function RacePopularComponent() {
             duration: 0.5,
             ease: "easeInOut",
           }}
-          className="text-2xl font-bold text-center p-2 hover:text-zinc-700"
+          className="text-xl font-bold text-center p-2 hover:text-zinc-700 xl:text-2xl"
         >
           Join the Elite
         </motion.h1>
-        <div className="w-full h-[400px] my-3 pointer-events-none">
+        <div className="w-5/6 h-52 mx-auto my-3 pointer-events-none xl:h-80">
           {!showPostContent ? (
             <Image
               src={R_PopularOne}
@@ -80,7 +80,7 @@ function RacePopularComponent() {
               duration: 0.5,
               ease: "easeInOut",
             }}
-            className="text-lg font-bold mx-10 hover:text-zinc-700"
+            className="text-base font-bold mx-10 hover:text-zinc-700 xl:text-lg"
           >
             Currentlly This is Our Popular Racing car
           </motion.h1>
@@ -99,7 +99,7 @@ function RacePopularComponent() {
               duration: 0.8,
               ease: "easeInOut",
             }}
-            className="mx-10 text-lg hover:text-zinc-700"
+            className="mx-10 text-base hover:text-zinc-700 lg:text-lg"
           >
             Name: Ferrari 296 GT3
           </motion.h3>
@@ -118,7 +118,7 @@ function RacePopularComponent() {
               duration: 1,
               ease: "easeInOut",
             }}
-            className="mx-10 hover:text-orange-500"
+            className="mx-10 text-sm hover:text-orange-500"
           >
             Engine: 3.0L V6
           </motion.p>
@@ -137,7 +137,7 @@ function RacePopularComponent() {
               duration: 1,
               ease: "easeInOut",
             }}
-            className="mx-10 hover:text-orange-500"
+            className="mx-10 text-sm hover:text-orange-500"
           >
             Twin Turbo Hybrid Power: 441 kW / 600 hp
           </motion.p>
@@ -156,7 +156,7 @@ function RacePopularComponent() {
               duration: 1.1,
               ease: "easeInOut",
             }}
-            className="mx-10 hover:text-orange-500"
+            className="mx-10 text-sm hover:text-orange-500"
           >
             Torque: 712 Nm
           </motion.p>
@@ -175,7 +175,7 @@ function RacePopularComponent() {
               duration: 1.2,
               ease: "easeInOut",
             }}
-            className="mx-10 hover:text-orange-500"
+            className="mx-10 text-sm hover:text-orange-500"
           >
             kph: 2.9 seconds
           </motion.p>
@@ -194,7 +194,7 @@ function RacePopularComponent() {
               duration: 1.3,
               ease: "easeInOut",
             }}
-            className="mx-10 hover:text-orange-500"
+            className="mx-10 text-sm hover:text-orange-500"
           >
             Top Speed: 330 kph / 205 mph
           </motion.p>

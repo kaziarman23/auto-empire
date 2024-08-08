@@ -13,7 +13,7 @@ function RaceCollactionComponent() {
   return (
     <div className="mt-20 mb-10">
       <hr />
-      <div className="w-full h-[800] mx-auto">
+      <div className="w-full h-[5300px] mx-auto sm:h-[5100px] lg:h-[2800px] xl:h-[2000px]">
         <motion.h1
           initial={{
             y: -100,
@@ -27,7 +27,7 @@ function RaceCollactionComponent() {
             ease: "easeInOut",
             duration: 1,
           }}
-          className="text-center text-2xl font-bold p-3 my-5 hover:text-zinc-700"
+          className="text-center text-base font-bold p-3 my-5 hover:text-zinc-700 lg:text-lg xl:text-2xl"
         >
           {RaceCollactionSection.title}
         </motion.h1>
@@ -44,12 +44,12 @@ function RaceCollactionComponent() {
             ease: "easeInOut",
             duration: 1,
           }}
-          className="w-1/2 mx-auto my-5 hover:text-orange-500"
+          className="w-full h-40 text-sm mx-2 my-5 hover:text-orange-500 sm:w-4/5  sm:mx-auto sm:h-20 lg:text-lg xl:text-xl"
         >
           {RaceCollactionSection.discription}
         </motion.p>
 
-        <div className="w-4/5 h-auto  my-5 mx-auto  grid grid-cols-3 grid-rows-4 gap-2 place-items-center">
+        <div className="w-4/5 h-auto  my-5 mx-auto grid grid-cols-1 grid-rows-12 gap-2 place-items-center lg:grid-cols-2 lg:grid-rows-6 xl:grid-rows-4 xl:grid-cols-3">
           {RaceCollactionSectionCars.map((cars) => (
             <div
               key={cars.id}
@@ -94,7 +94,7 @@ function RaceCollactionComponent() {
             ease: "easeInOut",
             duration: 1,
           }}
-          className="w-1/2 mx-auto my-5 hover:text-zinc-700"
+          className="w-4/5 text-sm mx-auto my-5 hover:text-orange-500  lg:text-lg xl:text-xl"
         >
           {RaceCollactionSection.about}
         </motion.h1>
@@ -111,7 +111,7 @@ function RaceCollactionComponent() {
             ease: "easeInOut",
             duration: 1,
           }}
-          className="text-center font-bold text-2xl hover:text-orange-500"
+          className="font-bold w-4/5 mx-auto text-sm hover:text-zinc-700  lg:text-lg xl:text-xl"
         >
           {RaceCollactionSection.ending}
         </motion.p>
