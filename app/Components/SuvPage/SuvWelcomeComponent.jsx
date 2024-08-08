@@ -29,7 +29,7 @@ function SuvWelcomeComponent() {
               duration: 0.9,
               ease: "easeInOut",
             }}
-            className="mb-5 text-2xl font-bold text-center"
+            className="mb-5 text-sm font-bold text-center sm:text-base md:text-lg xl:text-2xl"
           >
             Your Ultimate Destination for Premium SUVs
           </motion.h1>
@@ -46,7 +46,7 @@ function SuvWelcomeComponent() {
               duration: 0.9,
               ease: "easeInOut",
             }}
-            className="mb-5"
+            className="text-sm"
           >
             Discover the perfect blend of power, style, and versatility at Auto
             Impire. Whether you&#39;re seeking rugged off-road capabilities,

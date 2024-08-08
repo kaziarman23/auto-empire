@@ -14,7 +14,7 @@ function SuvCollactionComponent() {
   return (
     <div className="mt-20 mb-10">
       <hr />
-      <div className="w-full h-[800] mx-auto">
+      <div className="w-full h-[5195px] mx-auto sm:h-[5100px] md:h-[2800px] lg:h-[1950px]">
         <motion.h1
           initial={{
             y: -50,
@@ -29,7 +29,7 @@ function SuvCollactionComponent() {
             ease: "easeInOut",
             duration: 0.9,
           }}
-          className="text-center text-2xl font-bold p-3 my-5 hover:text-zinc-700"
+          className="text-center text-sm font-bold p-3 my-5 hover:text-zinc-700 sm:text-base lg:text-lg xl:text-2xl"
         >
           {SuvCollactionSection.title}
         </motion.h1>
@@ -47,11 +47,11 @@ function SuvCollactionComponent() {
             ease: "easeInOut",
             duration: 0.9,
           }}
-          className="w-1/2 mx-auto my-5 hover:text-orange-500"
+          className="w-4/5 mx-10 my-5 text-sm hover:text-orange-500 sm:mx-auto"
         >
           {SuvCollactionSection.discription}
         </motion.p>
-        <div className="w-4/5 h-auto  my-5 mx-auto  grid grid-cols-3 grid-rows-4 gap-2 place-items-center">
+        <div className="w-4/5 h-auto  my-5 mx-auto  grid grid-cols-1 grid-rows-12 gap-2 place-items-center md:w-full md:gap-5 md:grid-cols-2 md:grid-rows-6 lg:w-4/5 lg:gap-5 lg:grid-cols-3 lg:grid-rows-4">
           {SuvCollactionSectionCars.map((cars) => (
             <div
               key={cars.id}
@@ -97,7 +97,7 @@ function SuvCollactionComponent() {
             ease: "easeInOut",
             duration: 0.9,
           }}
-          className="w-1/2 mx-auto my-5 hover:text-zinc-700"
+          className="w-4/5 text-sm mx-auto my-5 hover:text-zinc-700 lg:text-lg"
         >
           Ready to elevate your driving experience? Browse our current
           collection and find the luxury car that’s perfect for you. For more
@@ -118,7 +118,7 @@ function SuvCollactionComponent() {
             ease: "easeInOut",
             duration: 0.9,
           }}
-          className="text-center font-bold text-2xl hover:text-orange-500"
+          className="text-center font-bold text-sm hover:text-orange-500 sm:text-base lg:text-lg xl:text-xl"
         >
           At Auto Impire, your next luxury car awaits.
         </motion.p>
