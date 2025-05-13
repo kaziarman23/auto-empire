@@ -1,5 +1,5 @@
 {
-  "name": "auto-impire",
+  "name": "auto-empire",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -14,7 +14,7 @@
     "embla-carousel-autoplay": "^8.1.8",
     "embla-carousel-react": "^8.1.8",
     "framer-motion": "^11.3.21",
-    "next": "14.2.5",
+    "next": "^14.2.28",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.52.2"
