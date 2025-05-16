@@ -6,24 +6,25 @@ import { heroSection } from "@/app/constants";
 function HeroComponent() {
   return (
     <>
-      <div className="mx-auto grid h-[100vh] w-4/5 grid-cols-5 grid-rows-6">
-        <div className="col-span-2 row-span-4 flex w-full flex-col items-center justify-center gap-2 p-5">
-          <h1 className="text-2xl font-bold">{heroSection.title}</h1>
+      <div className="mx-auto flex h-[100vh] w-4/5">
+        <div className="flex w-full flex-col items-center justify-center gap-10 p-5">
+          <h1 className="text-4xl text-stone-600 font-bold">{heroSection.title}</h1>
           <span className="cursor-text text-left text-lg hover:text-orange-500">
-            {heroSection.discription}
+            {heroSection.description}
           </span>
+          <span className="cursor-text text-left text-lg hover:text-orange-500">
+            {heroSection.secondDescription}
+          </span>
+          <h3 className="text-lg text-center text-stone-600 font-bold">{heroSection.subtitle}</h3>
         </div>
-        <div className="col-span-3 col-start-3 row-span-4 h-full w-full p-5">
+        <div className="flex h-full w-full items-center justify-center">
           <Image
             src={heroSection.image}
             alt="hero section image"
             quality={100}
-            className="rounded-xl object-cover"
+            className="object-cover"
             placeholder="blur"
           />
-        </div>
-        <div className="col-span-5 row-span-2 row-start-5 border border-blue-500">
-          3
         </div>
       </div>
     </>
