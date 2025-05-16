@@ -44,7 +44,7 @@ function Navbar() {
         <div className="w-full h-10 fixed bg-zinc-900 z-50 flex justify-evenly items-center sm:hidden md:hidden lg:hidden xl:hidden">
           <div>
             <h1 className="font-bold text-sm">
-              <Link href="/">Auto Impire</Link>
+              <Link href="/">Auto empire</Link>
             </h1>
           </div>
           <div onClick={toggleMenu}>

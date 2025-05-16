@@ -25,7 +25,7 @@ function RaceWelcomeComponent() {
             }}
             className="font-bold text-sm  hover:text-zinc-700 md:text-base lg:text-2xl"
           >
-            Auto Impire’s Racing Car Collection
+            Auto empire’s Racing Car Collection
           </motion.h1>
           <motion.p
             initial={{

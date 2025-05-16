@@ -65,7 +65,7 @@ function TopSellComponent() {
             }}
             className="text-sm hover:text-orange-500 sm:mx-10"
           >
-            At Auto Impire, we’re proud to showcase our top-selling cars, each
+            At Auto empire, we’re proud to showcase our top-selling cars, each
             representing the pinnacle of excellence in their respective
             categories. Discover why these models have captured the hearts of
             our customers and continue to lead the way in luxury and

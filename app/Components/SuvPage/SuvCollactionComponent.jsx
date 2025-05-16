@@ -120,7 +120,7 @@ function SuvCollactionComponent() {
           }}
           className="text-center font-bold text-sm hover:text-orange-500 sm:text-base lg:text-lg xl:text-xl"
         >
-          At Auto Impire, your next luxury car awaits.
+          At Auto empire, your next luxury car awaits.
         </motion.p>
       </div>
     </div>

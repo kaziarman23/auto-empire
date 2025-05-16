@@ -45,7 +45,7 @@ function LuxuryCollactionComponent() {
         >
           We are thrilled to announce that our showroom now features an
           exclusive collection of luxury cars, meticulously curated to meet the
-          highest standards of elegance and performance. At Auto Impire, we
+          highest standards of elegance and performance. At Auto empire, we
           believe in offering our clients nothing but the best, and our latest
           collection exemplifies this commitment.
         </motion.p>
@@ -117,7 +117,7 @@ function LuxuryCollactionComponent() {
           }}
           className="text-center font-bold text-sm hover:text-zinc-700 md:text-lg"
         >
-          At Auto Impire, your next luxury car awaits.
+          At Auto empire, your next luxury car awaits.
         </motion.p>
       </div>
     </div>

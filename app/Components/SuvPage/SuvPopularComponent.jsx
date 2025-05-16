@@ -40,7 +40,7 @@ function SuvPopularComponent() {
           }}
           className="text-center text-sm font-bold p-2 hover:text-zinc-700 md:text-base xl:text-2xl"
         >
-          Discover Popular SUVs at Auto Impire
+          Discover Popular SUVs at Auto empire
         </motion.h1>
         <motion.p
           initial={{

@@ -49,7 +49,7 @@ function SuvWelcomeComponent() {
             className="text-sm"
           >
             Discover the perfect blend of power, style, and versatility at Auto
-            Impire. Whether you&#39;re seeking rugged off-road capabilities,
+            empire. Whether you&#39;re seeking rugged off-road capabilities,
             luxurious comfort, or advanced technology, we’ve got the SUV that
             matches your lifestyle. Explore our curated selection of top-rated
             SUVs from leading brands, and drive with confidence knowing you’ve

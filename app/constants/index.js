@@ -1,4 +1,4 @@
-import HomePageImageOne from "@/public/images/HomePageImages/homePageImageOne.jpg";
+import HomePageImageOne from "@/public/images/HomePageImages/homePageImageOne.jpeg";
 import HomePageImageTwo from "@/public/images/HomePageImages/homePageImageTwo.jpg";
 import HomePageImageThree from "@/public/images/HomePageImages/homePageImageThree.jpg";
 import HomePageImageFour from "@/public/images/HomePageImages/homePageImageFour.jpg";
@@ -90,15 +90,15 @@ import S_ReviewThree from "@/public/images/SuvCarImages/S_ReviewThree.jpg";
 
 export const heroSection = {
   image: HomePageImageOne,
-  title: "Welcome to Auto Impire!",
+  title: "Welcome to Auto empire!",
   discription:
-    "We're thrilled to have you here at Auto Impire, your premier destination for all things automotive. Whether you're looking for expert advice, the latest industry trends, or top-notch services to keep your vehicle in peak condition, you've come to the right place.",
+    "We're thrilled to have you here at Auto empire, your premier destination for all things automotive. Whether you're looking for expert advice, the latest industry trends, or top-notch services to keep your vehicle in peak condition, you've come to the right place.",
 };
 
 export const latestSection = {
   title: "Discover Our Latest Arrivals",
   discription:
-    "At Auto Impire, we’re excited to present three of the most captivating vehicles that are making waves in the automotive world. Explore the epitome of luxury, the thrill of racing, and the power of SUVs with our latest selections.",
+    "At Auto empire, we’re excited to present three of the most captivating vehicles that are making waves in the automotive world. Explore the epitome of luxury, the thrill of racing, and the power of SUVs with our latest selections.",
 };
 
 export const latestSectionImages = [
@@ -146,19 +146,19 @@ export const aboutUsSection = [
     image: FooterImageTwo,
     title: "About Us",
     discription:
-      "Again Welcome to Auto Impire, your premier destination for exploring the world of automotive excellence. At Auto Impire, we celebrate the thrill of car collection across three distinguished categories: Luxury, Racing, and SUV.",
+      "Again Welcome to Auto empire, your premier destination for exploring the world of automotive excellence. At Auto empire, we celebrate the thrill of car collection across three distinguished categories: Luxury, Racing, and SUV.",
   },
   {
     id: "3",
     image: FooterImageThree,
     title: "Our Vision",
     discription:
-      "At Auto Impire, we believe that every car tells a story. Our goal is to share these stories with you and create a community where car enthusiasts can connect, learn, and celebrate their passion. Whether you're here to browse, learn, or connect with fellow collectors, we are dedicated to providing a comprehensive and engaging experience.",
+      "At Auto empire, we believe that every car tells a story. Our goal is to share these stories with you and create a community where car enthusiasts can connect, learn, and celebrate their passion. Whether you're here to browse, learn, or connect with fellow collectors, we are dedicated to providing a comprehensive and engaging experience.",
   },
 ];
 
 export const footertext =
-  "Thank you for choosing Auto Impire. We look forward to serving you and making your automotive journey a smooth and enjoyable ride!";
+  "Thank you for choosing Auto empire. We look forward to serving you and making your automotive journey a smooth and enjoyable ride!";
 
 export const carsPageDiscription = {
   Luxury:
@@ -172,11 +172,11 @@ export const carsPageDiscription = {
 export const luxuryPageWelcomeSection = {
   image: LuxuryWelcomeSectionImage,
 
-  title: "Auto Impire’s Luxury Car Collection",
+  title: "Auto empire’s Luxury Car Collection",
   discription:
-    "At Auto Impire, we believe that a luxury car is not just a mode of transportation but a statement of elegance and distinction. Our collection features a curated selection of the finest luxury automobiles, each crafted to offer the ultimate in comfort, style, and cutting-edge technology.",
+    "At Auto empire, we believe that a luxury car is not just a mode of transportation but a statement of elegance and distinction. Our collection features a curated selection of the finest luxury automobiles, each crafted to offer the ultimate in comfort, style, and cutting-edge technology.",
 
-  question: "Why choose Auto Impire?",
+  question: "Why choose Auto empire?",
 
   answerOne: "Curated Excellence:",
   answerDis:
@@ -405,7 +405,7 @@ export const RaceWelcomeSection = [
     id: 4,
     point: "Drive Your Dreams:",
     explaintion:
-      "There’s nothing quite like the feeling of owning a racing car. It’s a dream for many, and at Auto Impire, we’re here to make that dream a reality.",
+      "There’s nothing quite like the feeling of owning a racing car. It’s a dream for many, and at Auto empire, we’re here to make that dream a reality.",
   },
   {
     id: 5,
@@ -573,7 +573,7 @@ export const SuvAboutSection = {
 
   titleTwo: "What are the Benefits?",
   discriptionTwo:
-    "Whether you're looking for a vehicle that can handle family road trips, daily commutes, or off-road escapades, an SUV from Auto Impire is designed to meet your needs with style and performance. Explore our collection to find the perfect SUV that matches your lifestyle and discover why so many drivers choose SUVs for their versatility and capability.",
+    "Whether you're looking for a vehicle that can handle family road trips, daily commutes, or off-road escapades, an SUV from Auto empire is designed to meet your needs with style and performance. Explore our collection to find the perfect SUV that matches your lifestyle and discover why so many drivers choose SUVs for their versatility and capability.",
 };
 
 export const SuvPopularSection = [
@@ -602,7 +602,7 @@ export const SuvPopularSection = [
 export const SuvCollactionSection = {
   title: "Discover Our Extensive Collection of Suv Cars",
   discription:
-    "At Auto Impire, we take pride in offering an extensive range of SUVs to fit every need and lifestyle. From rugged off-roaders to luxurious family haulers, our showroom features an unparalleled selection of top brands and models. Whether you're seeking cutting-edge technology, spacious interiors, or powerful performance, our diverse inventory has something for everyone.",
+    "At Auto empire, we take pride in offering an extensive range of SUVs to fit every need and lifestyle. From rugged off-roaders to luxurious family haulers, our showroom features an unparalleled selection of top brands and models. Whether you're seeking cutting-edge technology, spacious interiors, or powerful performance, our diverse inventory has something for everyone.",
 };
 
 export const SuvCollactionSectionCars = [

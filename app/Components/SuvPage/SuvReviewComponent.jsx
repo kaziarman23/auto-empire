@@ -26,7 +26,7 @@ function RaceReviewComponent() {
           }}
           className="text-center p-5 font-bold text-sm hover:text-zinc-700 sm:text-base md:text-lg lg:text-xl xl:text-2xl"
         >
-          Customer Reviews At Auto Impire
+          Customer Reviews At Auto empire
         </motion.h1>
         <div className="w-full h-auto gap-4 flex justify-center items-center flex-col lg:w-full lg:flex-row">
           {SuvReviewSection.map((review) => (
