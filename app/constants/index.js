@@ -1,9 +1,9 @@
 import HomePageImageOne from "@/public/images/HomePageImages/homePageImageOne.jpeg";
-import HomePageImageTwo from "@/public/images/HomePageImages/homePageImageTwo.jpg";
-import HomePageImageThree from "@/public/images/HomePageImages/homePageImageThree.jpg";
-import HomePageImageFour from "@/public/images/HomePageImages/homePageImageFour.jpg";
-import MercedesBenzSClass from "@/public/images/HomePageImages/MercedesBenzSClass.jpg";
-import PorscheGT3 from "@/public/images/HomePageImages/PorscheGT3.jpg";
+import LatestCarOne from "@/public/images/HomePageImages/LatestCarOne.jpg";
+import LatestCarTwo from "@/public/images/HomePageImages/LatestCarTwo.jpg";
+import LatestCarThree from "@/public/images/HomePageImages/LatestCarThree.jpg";
+import TopSellCarOne from "@/public/images/HomePageImages/TopSellCarOne.jpeg";
+import TopSellCarTwo from "@/public/images/HomePageImages/TopSellCarTwo.jpg";
 import FooterImageOne from "@/public/images/HomePageImages/footerImageOne.jpg";
 import FooterImageTwo from "@/public/images/HomePageImages/footerImageTwo.jpg";
 import FooterImageThree from "@/public/images/HomePageImages/footerImageThree.jpg";
@@ -91,7 +91,8 @@ import S_ReviewThree from "@/public/images/SuvCarImages/S_ReviewThree.jpg";
 export const heroSection = {
   image: HomePageImageOne,
   title: "Welcome to Auto Empire!",
-  subtitle:"Stay informed, stay inspired, and stay ahead with Auto Empire — where your journey begins.",
+  subtitle:
+    "Stay informed, stay inspired, and stay ahead with Auto Empire — where your journey begins.",
   description:
     "We're thrilled to have you here at Auto empire, your premier destination for all things automotive. Whether you're looking for expert advice, the latest industry trends, or top-notch services to keep your vehicle in peak condition, you've come to the right place.",
   secondDescription:
@@ -100,36 +101,42 @@ export const heroSection = {
 
 export const latestSection = {
   title: "Discover Our Latest Arrivals",
-  discription:
+  description:
     "At Auto empire, we’re excited to present three of the most captivating vehicles that are making waves in the automotive world. Explore the epitome of luxury, the thrill of racing, and the power of SUVs with our latest selections.",
 };
 
 export const latestSectionImages = [
   {
     id: "0",
-    image: HomePageImageTwo,
+    image: LatestCarOne,
   },
   {
     id: "1",
-    image: HomePageImageThree,
+    image: LatestCarTwo,
   },
   {
     id: "2",
-    image: HomePageImageFour,
+    image: LatestCarThree,
   },
 ];
+
+export const topSellSection = {
+  title: "Explore Our Top-Selling Vehicles.",
+  description:
+    "At Auto empire, we’re proud to showcase our top-selling cars, each representing the pinnacle of excellence in their respective categories. Discover why these models have captured the hearts of our customers and continue to lead the way in luxury and performance.",
+};
 
 export const topSellSectionCards = [
   {
     id: "1",
-    image: MercedesBenzSClass,
+    image: TopSellCarOne,
     model: "Mercedes Benz S Class",
     modelDetails:
       "The S-Class has consistently been a benchmark for luxury sedans, combining advanced technology, superior comfort, and a prestigious brand reputation.",
   },
   {
     id: "2",
-    image: PorscheGT3,
+    image: TopSellCarTwo,
     model: "Porsche 911 GT3",
     modelDetails:
       "Known for its exceptional track performance, precision engineering, and iconic design, the 911 GT3 has been a top choice among racing enthusiasts and performance car lovers.",
