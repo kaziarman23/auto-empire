@@ -8,7 +8,7 @@ function LetestComponent() {
     <>
       <div>
         <div className="mx-auto my-10 flex h-screen w-4/5 flex-col items-center justify-center gap-5">
-          <h1 className="text-md text-stone-600 font-bold md:text-xl xl:text-5xl">
+          <h1 className="text-md text-stone-600 font-bold md:text-xl xl:text-5xl italic">
             {latestSection.title}
           </h1>
           <span className="text-lg cursor-text text-left hover:text-orange-500">

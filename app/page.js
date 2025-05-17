@@ -1,15 +1,15 @@
-import AboutUsSection from "./Components/homePage/AboutUsComponent";
 import HeroComponent from "./Components/homePage/HeroComponent";
 import LetestComponent from "./Components/homePage/LetestComponent";
-import TopSellComponent from "../public/images/Other_Images/TopSellComponent";
+import SpotlightComponent from './Components/homePage/SpotlightComponent';
+import TopSellComponent from "./Components/homePage/TopSellComponent";
 
 function Home() {
   return (
     <div>
-      <HeroComponent/>
-      <LetestComponent/>
+      <HeroComponent />
+      <LetestComponent />
       <TopSellComponent />
-      <AboutUsSection />
+      <SpotlightComponent />
     </div>
   );
 }
