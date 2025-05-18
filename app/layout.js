@@ -1,9 +1,9 @@
 import "./globals.css";
-import { Outfit } from "next/font/google";
+import { Poppins } from "next/font/google";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 
-const outfit = Outfit({
+const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "700"],
   display: "swap",
@@ -17,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={outfit.className}>
+      <body className={poppins.className}>
         <Navbar />
         {children}
         <Footer />

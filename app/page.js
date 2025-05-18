@@ -1,3 +1,4 @@
+import EmpireServiceComponent from './Components/homePage/EmpireServiceComponent';
 import HeroComponent from "./Components/homePage/HeroComponent";
 import LetestComponent from "./Components/homePage/LetestComponent";
 import SpotlightComponent from './Components/homePage/SpotlightComponent';
@@ -10,6 +11,7 @@ function Home() {
       <LetestComponent />
       <TopSellComponent />
       <SpotlightComponent />
+      <EmpireServiceComponent />
     </div>
   );
 }

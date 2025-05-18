@@ -1,10 +1,16 @@
-import HomePageImageOne from "@/public/images/HomePageImages/homePageImageOne.jpeg";
+import HeroSectionCar from "@/public/images/HomePageImages/HeroSectionCar.jpeg";
 import LatestCarOne from "@/public/images/HomePageImages/LatestCarOne.jpg";
 import LatestCarTwo from "@/public/images/HomePageImages/LatestCarTwo.jpg";
 import LatestCarThree from "@/public/images/HomePageImages/LatestCarThree.jpg";
 import TopSellCarOne from "@/public/images/HomePageImages/TopSellCarOne.jpg";
 import TopSellCarTwo from "@/public/images/HomePageImages/TopSellCarTwo.jpg";
 import SpotlightImageOne from "@/public/images/HomePageImages/SpotlightImageOne.png";
+import ServiceSectionCarOne from "@/public/images/HomePageImages/ServiceSectionCarOne.jpg";
+import ServiceSectionCarTwo from "@/public/images/HomePageImages/ServiceSectionCarTwo.jpg";
+import ServiceSectionCarThree from "@/public/images/HomePageImages/ServiceSectionCarThree.jpg";
+import ServiceSectionCarFour from "@/public/images/HomePageImages/ServiceSectionCarFour.jpg";
+import ServiceSectionCarFive from "@/public/images/HomePageImages/ServiceSectionCarFive.jpg";
+import ServiceSectionCarSix from "@/public/images/HomePageImages/ServiceSectionCarSix.jpg";
 import FooterImageOne from "@/public/images/HomePageImages/footerImageOne.jpg";
 import FooterImageTwo from "@/public/images/HomePageImages/footerImageTwo.jpg";
 import FooterImageThree from "@/public/images/HomePageImages/footerImageThree.jpg";
@@ -90,7 +96,7 @@ import S_ReviewThree from "@/public/images/SuvCarImages/S_ReviewThree.jpg";
 // start exporting
 
 export const heroSection = {
-  image: HomePageImageOne,
+  image: HeroSectionCar,
   title: "Welcome to Auto Empire!",
   subtitle:
     "Stay informed, stay inspired, and stay ahead with Auto Empire — where your journey begins.",
@@ -155,6 +161,19 @@ export const SpotlightSection = {
     "This digital showroom isn't just about specs and stats it's about storytelling. From in depth reviews and cutting edge news to lifestyle features and expert insights, Auto Empire puts you in the driver’s seat of a high-octane journey. Our top news coverage tracks global unveilings, motorsport victories, tech innovations, and luxury trends that define the future of driving.",
   descriptionThree:
     "What sets Auto Empire apart is its sharp focus on quality content, exclusive coverage, and a visually immersive experience. Whether you're browsing the latest concept car reveal or diving into the performance breakdown of a race day icon, you'll find every detail curated with care.",
+};
+
+export const EmpireServiceSection = {
+  title: "Empire Service Hubs",
+  heading: "Where Precision Meets Performance",
+  descriptionOne:
+    "Discover Auto Empire’s elite network of certified service hubs, built to deliver unmatched care for your luxury, racing, and SUV vehicles. From routine maintenance to advanced diagnostics, your ride is in expert hands.",
+  ImageOne: ServiceSectionCarOne,
+  ImageTwo: ServiceSectionCarTwo,
+  ImageThree: ServiceSectionCarThree,
+  ImageFour: ServiceSectionCarFour,
+  ImageFive: ServiceSectionCarFive,
+  ImageSix: ServiceSectionCarSix,
 };
 
 export const aboutUsSection = [
