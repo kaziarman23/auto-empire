@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -20,6 +19,8 @@
 body {
   color: white;
   background: black;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 @layer utilities {

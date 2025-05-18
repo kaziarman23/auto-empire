@@ -11,9 +11,7 @@ import ServiceSectionCarThree from "@/public/images/HomePageImages/ServiceSectio
 import ServiceSectionCarFour from "@/public/images/HomePageImages/ServiceSectionCarFour.jpg";
 import ServiceSectionCarFive from "@/public/images/HomePageImages/ServiceSectionCarFive.jpg";
 import ServiceSectionCarSix from "@/public/images/HomePageImages/ServiceSectionCarSix.jpg";
-import FooterImageOne from "@/public/images/HomePageImages/footerImageOne.jpg";
-import FooterImageTwo from "@/public/images/HomePageImages/footerImageTwo.jpg";
-import FooterImageThree from "@/public/images/HomePageImages/footerImageThree.jpg";
+
 
 // luxary page impors
 
@@ -176,32 +174,11 @@ export const EmpireServiceSection = {
   ImageSix: ServiceSectionCarSix,
 };
 
-export const aboutUsSection = [
-  {
-    id: "1",
-    image: FooterImageOne,
-    title: "Our Mission",
-    discription:
-      "Our mission is simple, to ignite your passion for automobiles and provide an unparalleled experience for enthusiasts and collectors alike. Whether you're captivated by the opulence of luxury cars, the adrenaline of racing machines, or the versatility of SUVs, we have something to fuel your fascination.",
-  },
-  {
-    id: "2",
-    image: FooterImageTwo,
-    title: "About Us",
-    discription:
-      "Again Welcome to Auto empire, your premier destination for exploring the world of automotive excellence. At Auto empire, we celebrate the thrill of car collection across three distinguished categories: Luxury, Racing, and SUV.",
-  },
-  {
-    id: "3",
-    image: FooterImageThree,
-    title: "Our Vision",
-    discription:
-      "At Auto empire, we believe that every car tells a story. Our goal is to share these stories with you and create a community where car enthusiasts can connect, learn, and celebrate their passion. Whether you're here to browse, learn, or connect with fellow collectors, we are dedicated to providing a comprehensive and engaging experience.",
-  },
-];
-
-export const footertext =
-  "Thank you for choosing Auto empire. We look forward to serving you and making your automotive journey a smooth and enjoyable ride!";
+export const FooterSection = {
+  title:"Auto Empire",
+  description:
+    "Discover a curated selection of high-end vehicles from top-tier dealers and private collectors. Whether you're acquiring your next luxury car or showcasing your prized model, experience an elevated standard of automotive excellence.",
+};
 
 export const carsPageDiscription = {
   Luxury:

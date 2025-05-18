@@ -3,13 +3,13 @@ import { EmpireServiceSection } from "../../constants";
 
 function EmpireServiceComponent() {
   return (
-    <div className="mx-auto h-[100vh] w-4/5 border border-white">
+    <div className="mx-auto h-[100vh] w-4/5">
       <h1 className="my-5 text-center text-4xl font-bold italic text-stone-600">
         {EmpireServiceSection.title}
       </h1>
 
       {/* grid section */}
-      <div className="grid h-[85%] grid-cols-5 grid-rows-2 gap-2 border border-blue-500">
+      <div className="grid h-[85%] grid-cols-5 grid-rows-2 gap-2">
         <div className="col-span-2 space-y-3 p-5">
           <h1 className="text-4xl">{EmpireServiceSection.heading}</h1>
           <p className="cursor-text text-base hover:text-orange-500">
@@ -23,7 +23,7 @@ function EmpireServiceComponent() {
             alt="service Image"
             quality={100}
             placeholder="blur"
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover rounded-xl"
           />
         </div>
         <div className="col-start-5">
@@ -32,7 +32,7 @@ function EmpireServiceComponent() {
             alt="service Image"
             quality={100}
             placeholder="blur"
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover rounded-xl"
           />
         </div>
         <div className="row-start-2 h-full w-full">
@@ -41,7 +41,7 @@ function EmpireServiceComponent() {
             alt="service Image"
             quality={100}
             placeholder="blur"
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover rounded-xl"
           />
         </div>
         <div className="row-start-2 h-full w-full">
@@ -50,7 +50,7 @@ function EmpireServiceComponent() {
             alt="service Image"
             quality={100}
             placeholder="blur"
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover rounded-xl"
           />
         </div>
         <div className="row-start-2 h-full w-full">
@@ -59,7 +59,7 @@ function EmpireServiceComponent() {
             alt="service Image"
             quality={100}
             placeholder="blur"
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover rounded-xl"
           />
         </div>
         <div className="col-span-2 row-start-2 h-full w-full">
