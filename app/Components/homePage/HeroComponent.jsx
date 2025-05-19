@@ -6,7 +6,7 @@ import { heroSection } from "@/app/constants";
 function HeroComponent() {
   return (
     <>
-      <div className="mx-auto flex h-[100vh] w-4/5">
+      <div id='hero' className="mx-auto flex h-[100vh] w-4/5">
         <div className="flex w-full flex-col items-center justify-center gap-10 p-5">
           <h1 className="text-4xl font-playWrite text-stone-600 font-bold italic">{heroSection.title}</h1>
           <span className="cursor-text text-left text-lg hover:text-orange-500">

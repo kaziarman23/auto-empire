@@ -28,7 +28,7 @@ function TopSellComponent() {
               </div>
               <div className="h-1/3 w-full">
                 <h1 className="my-3 text-lg font-bold">{value.model}</h1>
-                <p className="text-left text-lg hover:text-orange-500">
+                <p className="text-left text-sm hover:text-orange-500">
                   {value.modelDetails}
                 </p>
               </div>

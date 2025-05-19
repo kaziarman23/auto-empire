@@ -1,4 +1,5 @@
 import { FooterSection } from "@/app/constants";
+import Link from "next/link";
 
 function Footer() {
   return (
@@ -6,10 +7,12 @@ function Footer() {
       <div className="mx-auto w-4/5 py-10">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
           <div>
-            <h1 className="text-left text-3xl font-bold italic text-stone-600">
-              {FooterSection.title}
-            </h1>
-            <p className="hover:text-orange-600 mt-6 text-sm md:text-base">
+            <Link href="#hero">
+              <h1 className="text-left text-3xl font-bold italic text-stone-600">
+                {FooterSection.title}
+              </h1>
+            </Link>
+            <p className="mt-6 text-sm hover:text-orange-600 md:text-base">
               {FooterSection.description}
             </p>
           </div>
@@ -21,7 +24,7 @@ function Footer() {
               <ul className="mt-8 space-y-4 text-sm">
                 <li>
                   <a
-                    className="text-velo-gray hover:text-orange-600 transition"
+                    className="text-velo-gray transition hover:text-orange-600"
                     href="#"
                   >
                     Company History
@@ -30,7 +33,7 @@ function Footer() {
 
                 <li>
                   <a
-                    className="text-velo-gray hover:text-orange-600 transition"
+                    className="text-velo-gray transition hover:text-orange-600"
                     href="#"
                   >
                     Meet the Team
@@ -39,7 +42,7 @@ function Footer() {
 
                 <li>
                   <a
-                    className="text-velo-gray hover:text-orange-600 transition"
+                    className="text-velo-gray transition hover:text-orange-600"
                     href="#"
                   >
                     Employee Handbook
@@ -48,7 +51,7 @@ function Footer() {
 
                 <li>
                   <a
-                    className="text-velo-gray hover:text-orange-600 transition"
+                    className="text-velo-gray transition hover:text-orange-600"
                     href="#"
                   >
                     {" "}
@@ -64,7 +67,7 @@ function Footer() {
               <ul className="mt-8 space-y-4 text-sm">
                 <li>
                   <a
-                    className="text-velo-gray hover:text-orange-600 transition"
+                    className="text-velo-gray transition hover:text-orange-600"
                     href="#"
                   >
                     {" "}
@@ -74,7 +77,7 @@ function Footer() {
 
                 <li>
                   <a
-                    className="text-velo-gray hover:text-orange-600 transition"
+                    className="text-velo-gray transition hover:text-orange-600"
                     href="#"
                   >
                     {" "}
@@ -87,7 +90,7 @@ function Footer() {
                     className="group flex gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
                     href="#"
                   >
-                    <span className="text-velo-gray group-hover:text-orange-600 transition">
+                    <span className="text-velo-gray transition group-hover:text-orange-600">
                       Live Chat
                     </span>
 
@@ -124,7 +127,7 @@ function Footer() {
                       />
                     </svg>
 
-                    <span className="hover:text-orange-600 flex-1">
+                    <span className="flex-1 hover:text-orange-600">
                       AutoEmpire@gmail.com
                     </span>
                   </a>
@@ -150,7 +153,9 @@ function Footer() {
                       />
                     </svg>
 
-                    <span className="hover:text-orange-600 flex-1">0148456089</span>
+                    <span className="flex-1 hover:text-orange-600">
+                      0148456089
+                    </span>
                   </a>
                 </li>
                 <li className="flex">
@@ -178,7 +183,7 @@ function Footer() {
                       />
                     </svg>
 
-                    <span className="hover:text-orange-600 flex-1">
+                    <span className="flex-1 hover:text-orange-600">
                       132 Uttara, Dhaka, Bangladesh
                     </span>
                   </a>
@@ -188,7 +193,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <hr />
+      <hr className="border-b border-gray-700" />
       <p className="pb-2.5 pt-2 text-center font-semibold">
         <small>
           © {new Date().getFullYear()} Auto Empire. All rights reserved.

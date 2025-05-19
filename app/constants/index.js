@@ -156,9 +156,7 @@ export const SpotlightSection = {
   descriptionOne:
     "Auto Empire has officially hit the road your new go to destination for all things automotive, where passion meets performance across three distinct worlds: Luxury, Racing, and SUVs. Whether you're captivated by the handcrafted elegance of a Mercedes-Benz S-Class, the raw speed of a Porsche 911 GTR, or the commanding presence of a high end SUV, Auto Empire delivers a premium experience tailored to car lovers of every kind.",
   descriptionTwo:
-    "This digital showroom isn't just about specs and stats it's about storytelling. From in depth reviews and cutting edge news to lifestyle features and expert insights, Auto Empire puts you in the driver’s seat of a high-octane journey. Our top news coverage tracks global unveilings, motorsport victories, tech innovations, and luxury trends that define the future of driving.",
-  descriptionThree:
-    "What sets Auto Empire apart is its sharp focus on quality content, exclusive coverage, and a visually immersive experience. Whether you're browsing the latest concept car reveal or diving into the performance breakdown of a race day icon, you'll find every detail curated with care.",
+    "This digital showroom isn't just about specs and stats it's about storytelling. From in depth reviews and cutting edge news to lifestyle features and expert insights, Auto Empire puts you in the driver’s seat of a high-octane journey. Our top news coverage tracks global unveilings, motorsport victories, tech innovations, and luxury trends that define the future of driving."
 };
 
 export const EmpireServiceSection = {

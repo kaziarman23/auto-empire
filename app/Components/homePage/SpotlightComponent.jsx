@@ -17,9 +17,6 @@ function SpotlightComponent() {
           <p className="hover:text-orange-500 cursor-text">
             {SpotlightSection.descriptionTwo}
           </p>
-          <p className="hover:text-orange-500 cursor-text">
-            {SpotlightSection.descriptionThree}
-          </p>
         </div>
 
         {/* image section */}
