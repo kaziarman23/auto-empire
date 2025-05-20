@@ -14,11 +14,12 @@ import ServiceSectionCarSix from "@/public/images/HomePageImages/ServiceSectionC
 
 // about page imports
 import AboutSignatureSectionImage from "@/public/images/AboutPageImages/AboutSignatureSectionImage.jpg";
+import AboutHeroSectionImageOne from "@/public/images/AboutPageImages/AboutHeroSectionImageOne.jpg";
+import AboutHeroSectionImageTwo from "@/public/images/AboutPageImages/AboutHeroSectionImageTwo.jpg";
 
 // contact page imports
 
 import ContactLocationImage from "@/public/images/ContactPageImages/LocationImage.png";
-
 
 // luxary page imports
 import AboutLuxuryImageOne from "@/public/images/LuxuryCarImages/AboutLuxuryImageOne.jpg";
@@ -185,6 +186,17 @@ export const FooterSection = {
 
 // About page constants starts:
 
+export const AboutHeroSection = {
+  imageOne: AboutHeroSectionImageOne,
+  title: "Precision. Power. Prestige.",
+  description:
+    "At Auto Empire, we unite the elegance of luxury with the thrill of performance. Our showroom features a handpicked selection of the world’s most coveted luxury cars and adrenaline-charged racing machines — each chosen to ignite passion in every kind of driver. From refined cruisers to track-ready beasts, we deliver vehicles that turn heads and dominate roads.",
+  descriptionTwo:
+    "Every vehicle in our collection is meticulously selected for its design, engineering excellence, and undeniable presence. We source only from the most respected manufacturers and ensure that each model reflects our standards of quality, performance, and exclusivity. From high-end cruisers designed for comfort and status to track-ready beasts built for speed and control, Auto Empire caters to drivers who refuse to compromise.",
+  descriptionThree:
+    "But what truly sets us apart is the experience. Our team of knowledgeable enthusiasts is here to guide you through every step — whether you're selecting your dream car, customizing performance packages, or seeking expert advice. We believe buying a vehicle should be as exhilarating as driving one.",
+};
+
 export const AboutSignatureSection = {
   image: AboutSignatureSectionImage,
 
@@ -214,7 +226,6 @@ export const AboutSignatureSection = {
     "We invite you to explore our collection and discover the car that perfectly aligns with your lifestyle and aspirations. Our team is here to assist you in finding the ideal vehicle that reflects your personal style and meets your highest expectations.",
 };
 
-
 export const ContactHeroSection = {
   image: ContactLocationImage,
 
@@ -225,8 +236,6 @@ export const ContactHeroSection = {
   openDay: "🕒 Monday–Saturday: 9:00 AM – 7:00 PM",
   Appointment: "🕒 Sunday: By Appointment Only",
 };
-
-
 
 export const CollactionLuxuryCars = [
   {
@@ -488,4 +497,3 @@ export const SuvCollactionSectionCars = [
     image: S_CollactionTwalve,
   },
 ];
-

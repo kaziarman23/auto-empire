@@ -1,5 +1,4 @@
-import React from "react";
-import ContactPageHeroSection from "../Components/aboutPage/ContactPageHeroSection";
+import ContactPageHeroSection from '../Components/contactPage/ContactPageHeroSection';
 
 function page() {
   return (
