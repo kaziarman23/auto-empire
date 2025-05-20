@@ -15,7 +15,7 @@ const Navbar = () => {
   // Links for navigation
   const navLinks = [
     { path: "/", name: "Home" },
-    { path: "/all-cars", name: "All Cars" },
+    { path: "/inventory", name: "Inventory" },
     { path: "/about", name: "About Us" },
     { path: "/contact", name: "Contact Us" },
   ];
@@ -82,7 +82,7 @@ const Navbar = () => {
               width={30}
               height={30}
             />
-            <p className='text-3xl font-bold'>Auto Empire</p>
+            <p className="text-3xl font-bold">Auto Empire</p>
           </div>
         </Link>
 

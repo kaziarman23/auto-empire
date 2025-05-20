@@ -12,10 +12,15 @@ import ServiceSectionCarFour from "@/public/images/HomePageImages/ServiceSection
 import ServiceSectionCarFive from "@/public/images/HomePageImages/ServiceSectionCarFive.jpg";
 import ServiceSectionCarSix from "@/public/images/HomePageImages/ServiceSectionCarSix.jpg";
 
+// about page imports
+import AboutSignatureSectionImage from "@/public/images/AboutPageImages/AboutSignatureSectionImage.jpg";
 
-// luxary page impors
+// contact page imports
 
-import LuxuryWelcomeSectionImage from "@/public/images/LuxuryCarImages/LuxuryWelcomeSectionImage.jpg";
+import ContactLocationImage from "@/public/images/ContactPageImages/LocationImage.png";
+
+
+// luxary page imports
 import AboutLuxuryImageOne from "@/public/images/LuxuryCarImages/AboutLuxuryImageOne.jpg";
 import AboutLuxuryImageTwo from "@/public/images/LuxuryCarImages/AboutLuxuryImageTwo.jpg";
 import AboutLuxuryImageThree from "@/public/images/LuxuryCarImages/AboutLuxuryImageThree.jpg";
@@ -156,7 +161,7 @@ export const SpotlightSection = {
   descriptionOne:
     "Auto Empire has officially hit the road your new go to destination for all things automotive, where passion meets performance across three distinct worlds: Luxury, Racing, and SUVs. Whether you're captivated by the handcrafted elegance of a Mercedes-Benz S-Class, the raw speed of a Porsche 911 GTR, or the commanding presence of a high end SUV, Auto Empire delivers a premium experience tailored to car lovers of every kind.",
   descriptionTwo:
-    "This digital showroom isn't just about specs and stats it's about storytelling. From in depth reviews and cutting edge news to lifestyle features and expert insights, Auto Empire puts you in the driver’s seat of a high-octane journey. Our top news coverage tracks global unveilings, motorsport victories, tech innovations, and luxury trends that define the future of driving."
+    "This digital showroom isn't just about specs and stats it's about storytelling. From in depth reviews and cutting edge news to lifestyle features and expert insights, Auto Empire puts you in the driver’s seat of a high-octane journey. Our top news coverage tracks global unveilings, motorsport victories, tech innovations, and luxury trends that define the future of driving.",
 };
 
 export const EmpireServiceSection = {
@@ -173,26 +178,19 @@ export const EmpireServiceSection = {
 };
 
 export const FooterSection = {
-  title:"Auto Empire",
+  title: "Auto Empire",
   description:
     "Discover a curated selection of high-end vehicles from top-tier dealers and private collectors. Whether you're acquiring your next luxury car or showcasing your prized model, experience an elevated standard of automotive excellence.",
 };
 
-export const carsPageDiscription = {
-  Luxury:
-    "Step into the lap of luxury with the Luxury Car Model. This vehicle combines elegance and comfort with cutting-edge technology and unparalleled craftsmanship. Experience a ride that transcends ordinary expectations and indulge in a new standard of sophistication.",
+// About page constants starts:
 
-  SUV: "Conquer any terrain with the [SUV Car Model]. This versatile SUV offers robust performance, advanced safety features, and spacious comfort for all your adventures. Whether you’re navigating city streets or off-road trails, it’s the perfect companion for every journey.",
-};
+export const AboutSignatureSection = {
+  image: AboutSignatureSectionImage,
 
-// Luxury page constants starts:
-
-export const luxuryPageWelcomeSection = {
-  image: LuxuryWelcomeSectionImage,
-
-  title: "Auto empire’s Luxury Car Collection",
+  title: "Auto Empire’s Signature Collection",
   discription:
-    "At Auto empire, we believe that a luxury car is not just a mode of transportation but a statement of elegance and distinction. Our collection features a curated selection of the finest luxury automobiles, each crafted to offer the ultimate in comfort, style, and cutting-edge technology.",
+    "At Auto Empire, we don’t just sell luxury cars we deliver a driving experience defined by elegance, innovation, and prestige. Our signature collection represents a fusion of world class engineering and refined design, offering vehicles that embody status, sophistication, and uncompromising performance.",
 
   question: "Why choose Auto empire?",
 
@@ -216,74 +214,19 @@ export const luxuryPageWelcomeSection = {
     "We invite you to explore our collection and discover the car that perfectly aligns with your lifestyle and aspirations. Our team is here to assist you in finding the ideal vehicle that reflects your personal style and meets your highest expectations.",
 };
 
-export const luxaryAboutSection = {
-  title: "What Makes a Car a Luxury Vehicle?",
-  discription:
-    "Luxury cars are more than just vehicles; they represent a blend of sophisticated design, advanced technology, and unparalleled comfort. But what exactly defines a luxury car?",
 
-  titleTwo: "Why Do Wealthy Individuals Choose Luxury Cars?",
+export const ContactHeroSection = {
+  image: ContactLocationImage,
+
+  title: "Visit Auto Empire",
+  discription:
+    "Located in the heart of Rome, Auto Empire offers a premium showroom experience where luxury meets convenience. Whether you're stopping by to explore our exclusive car collection or to speak with our expert team, our doors are always open.",
+  subtitle: "Opening Hours:",
+  openDay: "🕒 Monday–Saturday: 9:00 AM – 7:00 PM",
+  Appointment: "🕒 Sunday: By Appointment Only",
 };
 
-export const luxaryAboutSectionCards = [
-  {
-    id: "1",
-    image: AboutLuxuryImageOne,
-    pointTitle: "Superior Craftsmanship",
-    pointDis:
-      "Luxury vehicles are crafted with meticulous attention to detail. From high-quality materials like leather, exotic woods, and premium metals to cutting-edge design, every element is chosen to enhance both aesthetics and performance. These cars often feature bespoke customization options, allowing owners to personalize their vehicle to their exact preferences.",
-  },
-  {
-    id: "2",
-    image: AboutLuxuryImageTwo,
-    pointTitle: "Advanced Technology",
-    pointDis:
-      "State-of-the-art technology is a hallmark of luxury cars. This includes everything from advanced driver assistance systems and top-tier infotainment to innovative safety features. Luxury cars are often equipped with the latest in connectivity and entertainment technology, ensuring that the driving experience is both engaging and convenient.",
-  },
-  {
-    id: "3",
-    image: AboutLuxuryImageThree,
-    pointTitle: "Exceptional Comfort",
-    pointDis:
-      "Comfort is paramount in luxury vehicles. They are designed to offer a smooth and quiet ride, with features like adaptive suspension systems, climate control, and premium seating. The focus is on providing a serene and pleasurable driving experience, whether you're in the driver’s seat or a passenger.",
-  },
-  {
-    id: "4",
-    image: AboutLuxuryImageFour,
-    pointTitle: "Performance and Precision",
-    pointDis:
-      "Luxury cars typically offer superior performance. They are engineered to deliver a smooth and responsive ride, with powerful engines and precise handling. This blend of power and control provides an exhilarating driving experience that is both safe and enjoyable.",
-  },
-  {
-    id: "5",
-    image: AboutLuxuryImageFive,
-    pointTitle: "Exclusivity and Prestige",
-    pointDis:
-      "Owning a luxury car often comes with a sense of exclusivity. Many luxury brands produce limited runs of their models, creating a sense of rarity and prestige. For many wealthy individuals, owning a luxury car is not just about the vehicle itself but also about the status and recognition it represents",
-  },
-];
 
-export const LuxuryPopularCars = [
-  {
-    id: "1",
-    image: LuxuryPopularCarOne,
-  },
-  {
-    id: "2",
-    image: LuxuryPopularCarTwo,
-  },
-  {
-    id: "3",
-    image: LuxuryPopularCarThree,
-  },
-  {
-    id: "4",
-    image: LuxuryPopularCarFour,
-  },
-  {
-    id: "5",
-    image: LuxuryPopularCarFive,
-  },
-];
 
 export const CollactionLuxuryCars = [
   {
@@ -372,103 +315,6 @@ export const CollactionLuxuryCars = [
   },
 ];
 
-export const ReviewLuxuryCars = [
-  {
-    id: 1,
-    image: LuxuryCarReviewOne,
-    review:
-      "Auto Empire of Luxury Cars provided an unmatched experience. The selection of high-end vehicles is impressive, and the team went above and beyond to ensure I found the perfect car. Driving my new Porsche Panamera feels like a dream come true!",
-    author: "Tom D.",
-  },
-  {
-    id: 2,
-    image: LuxuryCarReviewTwo,
-    review:
-      "The customer service at Auto Empire is top-notch. From the moment I walked in, I felt valued and understood. They listened to my needs and helped me choose a BMW 750i that fits my lifestyle perfectly. Highly recommend!",
-    author: "Sarah L.",
-  },
-  {
-    id: 3,
-    image: LuxuryCarReviewThree,
-    review:
-      "Buying a car has never been easier. Auto Empire made the entire process seamless and stress-free. Their attention to detail and commitment to customer satisfaction is truly commendable. Loving my new Audi A8L!",
-    author: "Mark R.",
-  },
-];
-
-// Luxury page constants ends.
-
-// Race page constants starts.
-
-export const RaceWelcomeSection = [
-  {
-    id: 1,
-    point: "Unmatched Performance:",
-    explaintion:
-      "Racing cars are engineered for speed and agility. With advanced technology and superior craftsmanship.",
-  },
-  {
-    id: 2,
-    point: "Superior Engineering:",
-    explaintion:
-      "Every detail of a racing car is designed to enhance performance. From lightweight materials to high-performance engines.",
-  },
-  {
-    id: 3,
-    point: "Customization Opportunities: ",
-    explaintion:
-      "Racing cars offer endless possibilities for customization. Tailor your vehicle to match your unique style and performance preferences.",
-  },
-  {
-    id: 4,
-    point: "Drive Your Dreams:",
-    explaintion:
-      "There’s nothing quite like the feeling of owning a racing car. It’s a dream for many, and at Auto empire, we’re here to make that dream a reality.",
-  },
-  {
-    id: 5,
-    point: "Safety Features:",
-    explaintion:
-      "Modern racing cars come equipped with advanced safety features that protect both the driver and passengers. Enjoy the thrill of speed while safety in mind.",
-  },
-];
-
-export const RaceAboutSection = {
-  title: "What Makes a Car a Luxury Vehicle?",
-  discription:
-    "A car becomes a racing vehicle through a combination of modifications, design elements, and performance characteristics aimed at maximizing speed, handling, and safety in competitive racing environments.",
-
-  pointOne: "Engine and Powertrain",
-  explaintionOne:
-    "High-performance engines with increased horsepower and torque.Advanced transmission systems for rapid gear changes and optimal power delivery.",
-
-  pointTwo: "Aerodynamics",
-  explaintionTwo:
-    "Streamlined bodywork to reduce drag and increase downforce.Features like spoilers, diffusers, and splitters to enhance stability and grip at high speeds.",
-
-  pointThree: "Suspension and Handling",
-  explaintionThree:
-    "Specialized suspension systems for improved handling and stability. Adjustable components to fine-tune performance for different track conditions.",
-
-  pointFour: "Tires and Wheels",
-  explaintionFour:
-    "High-performance racing tires designed for maximum grip and durability. Lightweight and strong wheels for better handling and acceleration.",
-
-  pointFive: "Braking System",
-  explaintionFive:
-    "High-performance brakes with larger rotors and advanced cooling systems for effective stopping power.Use of materials like carbon-ceramic for improved performance and durability.",
-};
-
-export const RaceCollactionSection = {
-  title: "Explore Our Racing Car Collection",
-  discription:
-    "At Auto Empire, we pride ourselves on our unparalleled collection of racing cars that are the epitome of speed, performance, and engineering excellence. Our showroom is a haven for racing enthusiasts, featuring an extensive range of iconic racing machines from legendary brands.",
-  about:
-    "At Auto Empire, each car is meticulously maintained and presented in showroom condition. Our collection is constantly evolving, ensuring that we offer the latest and greatest in the world of racing.",
-  ending:
-    "Book an appointment to see these magnificent machines in person and experience the pinnacle of racing excellence. Contact us for more information or follow us on social media for the latest updates.",
-};
-
 export const RaceCollactionSectionCars = [
   {
     id: 1,
@@ -555,73 +401,6 @@ export const RaceCollactionSectionCars = [
     price: 200000,
   },
 ];
-
-export const RaceReviewSection = [
-  {
-    id: 1,
-    image: R_ReviewOne,
-    author: "Paul Walker",
-    review:
-      "As a true car enthusiast, I am absolutely thrilled with the racing car I purchased from Auto Empire. The performance is outstanding, and the attention to detail is remarkable. The team at Auto Empire truly understands what car lovers want.",
-  },
-  {
-    id: 2,
-    image: R_ReviewTwo,
-    author: "Tom Cruise",
-    review:
-      "Auto Empire offers an extraordinary collection of racing cars. The car I bought exceeded all my expectations in terms of speed, handling, and design. The customer service was exceptional, making the entire buying process smooth and enjoyable.",
-  },
-  {
-    id: 3,
-    image: R_ReviewThree,
-    author: "Jackie Chan",
-    review:
-      "Purchasing a racing car from Auto Empire has been a fantastic experience. The car is a marvel of engineering and delivers a thrilling driving experience. I highly recommend Auto Empire for their impressive selection and professional service.",
-  },
-];
-// Race page constants end.
-
-// Suv page constants start:
-
-export const SuvAboutSection = {
-  image: S_AboutOne,
-  title: "What is an SUV?",
-  discription:
-    "An SUV, or Sport Utility Vehicle, is a versatile and powerful type of vehicle designed to offer a blend of comfort, performance, and functionality. Originally built for off-road capability, modern SUVs have evolved to meet a variety of needs, making them one of the most popular vehicle choices today.",
-
-  titleTwo: "What are the Benefits?",
-  discriptionTwo:
-    "Whether you're looking for a vehicle that can handle family road trips, daily commutes, or off-road escapades, an SUV from Auto empire is designed to meet your needs with style and performance. Explore our collection to find the perfect SUV that matches your lifestyle and discover why so many drivers choose SUVs for their versatility and capability.",
-};
-
-export const SuvPopularSection = [
-  {
-    id: 1,
-    image: S_PopularOne,
-  },
-  {
-    id: 2,
-    image: S_PopularTwo,
-  },
-  {
-    id: 3,
-    image: S_PopularThree,
-  },
-  {
-    id: 4,
-    image: S_PopularFour,
-  },
-  {
-    id: 5,
-    image: S_PopularFive,
-  },
-];
-
-export const SuvCollactionSection = {
-  title: "Discover Our Extensive Collection of Suv Cars",
-  discription:
-    "At Auto empire, we take pride in offering an extensive range of SUVs to fit every need and lifestyle. From rugged off-roaders to luxurious family haulers, our showroom features an unparalleled selection of top brands and models. Whether you're seeking cutting-edge technology, spacious interiors, or powerful performance, our diverse inventory has something for everyone.",
-};
 
 export const SuvCollactionSectionCars = [
   {
@@ -710,28 +489,3 @@ export const SuvCollactionSectionCars = [
   },
 ];
 
-export const SuvReviewSection = [
-  {
-    id: 1,
-    review:
-      "The Toyota RAV4 offers a perfect blend of comfort and performance. Its spacious interior and smooth ride make it ideal for long drives, though it could use more advanced tech features.",
-    author: "John Doe",
-    image: S_ReviewOne,
-  },
-  {
-    id: 2,
-    review:
-      "The Ford Explorer provides excellent handling and a powerful engine. It's perfect for families needing plenty of space, but the fuel efficiency could be better.",
-    author: "Jane Smith",
-    image: S_ReviewTwo,
-  },
-  {
-    id: 3,
-    review:
-      "The BMW X5 is a luxury SUV with a fantastic interior and strong performance. It offers a premium driving experience, though it comes with a higher price tag.",
-    author: "Emily Johnson",
-    image: S_ReviewThree,
-  },
-];
-
-// Suv page constants end.
