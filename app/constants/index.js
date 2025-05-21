@@ -15,7 +15,12 @@ import ServiceSectionCarSix from "@/public/images/HomePageImages/ServiceSectionC
 // about page imports
 import AboutSignatureSectionImage from "@/public/images/AboutPageImages/AboutSignatureSectionImage.jpg";
 import AboutHeroSectionImageOne from "@/public/images/AboutPageImages/AboutHeroSectionImageOne.jpg";
-import AboutHeroSectionImageTwo from "@/public/images/AboutPageImages/AboutHeroSectionImageTwo.jpg";
+import AboutStorySectionImageOne from "@/public/images/AboutPageImages/AboutStorySectionImageOne.jpg";
+import AboutFounderImageOne from "@/public/images/AboutPageImages/AboutFounderImageOne.jpg";
+
+import AboutTeamSectionImageOne from "@/public/images/AboutPageImages/AboutTeamSectionImageOne.jpg";
+import AboutTeamSectionImageTwo from "@/public/images/AboutPageImages/AboutTeamSectionImageTwo.jpg";
+import AboutTeamSectionImageThree from "@/public/images/AboutPageImages/AboutTeamSectionImageThree.jpg";
 
 // contact page imports
 
@@ -163,6 +168,8 @@ export const SpotlightSection = {
     "Auto Empire has officially hit the road your new go to destination for all things automotive, where passion meets performance across three distinct worlds: Luxury, Racing, and SUVs. Whether you're captivated by the handcrafted elegance of a Mercedes-Benz S-Class, the raw speed of a Porsche 911 GTR, or the commanding presence of a high end SUV, Auto Empire delivers a premium experience tailored to car lovers of every kind.",
   descriptionTwo:
     "This digital showroom isn't just about specs and stats it's about storytelling. From in depth reviews and cutting edge news to lifestyle features and expert insights, Auto Empire puts you in the driver’s seat of a high-octane journey. Our top news coverage tracks global unveilings, motorsport victories, tech innovations, and luxury trends that define the future of driving.",
+  descriptionThree:
+    "Auto Empire redefines the digital showroom experience—where every car has a story, and every story fuels your passion for the road. Dive into immersive reviews, breaking automotive news, and curated lifestyle content that connects innovation with aspiration. From international debuts to elite motorsport moments and the latest in luxury and tech, we bring you the pulse of the automotive world in motion.",
 };
 
 export const EmpireServiceSection = {
@@ -199,8 +206,7 @@ export const AboutHeroSection = {
 
 export const AboutSignatureSection = {
   image: AboutSignatureSectionImage,
-
-  title: "Auto Empire’s Signature Collection",
+  title: "Auto Empire’s Signature",
   discription:
     "At Auto Empire, we don’t just sell luxury cars we deliver a driving experience defined by elegance, innovation, and prestige. Our signature collection represents a fusion of world class engineering and refined design, offering vehicles that embody status, sophistication, and uncompromising performance.",
 
@@ -226,6 +232,39 @@ export const AboutSignatureSection = {
     "We invite you to explore our collection and discover the car that perfectly aligns with your lifestyle and aspirations. Our team is here to assist you in finding the ideal vehicle that reflects your personal style and meets your highest expectations.",
 };
 
+export const AboutStorySection = {
+  heading: "Our Story",
+  image: AboutStorySectionImageOne,
+  title: "Born from Passion, Built for Drivers",
+  description:
+    "Auto Empire was founded with a simple yet powerful idea: to create a space where automotive passion meets purpose. Frustrated by soulless spec sheets and shallow reviews, our team of car enthusiasts, storytellers, and industry insiders came together to launch a platform that goes beyond the basics. We set out to capture the thrill, emotion, and innovation that fuel the automotive world bringing you not just information, but inspiration. Auto Empire is more than a destination; it’s the start of every great drive.",
+};
+
+export const AboutFounderSection = {
+  title: "A Word From Our Founder",
+  Image: AboutFounderImageOne,
+  author: "Jaxon Reeve, Founder of Auto Empire",
+  description:
+    "I didn’t just grow up loving cars I grew up living them. From late-night races on back roads to early mornings reading every auto magazine I could find, the spark was always there. But as the industry evolved, I noticed something missing: a place where real passion, deep insights, and bold storytelling could come together. That’s why I started Auto Empire.This isn’t just a platform it’s a movement. A digital garage for dreamers, drivers, and disruptors. Whether you're chasing speed, design, innovation, or heritage, you're one of us. Welcome to Auto Empire. Let’s ride into the future together.",
+};
+
+export const AboutFaceSection = {
+  title: "Faces of the Empire",
+  postOne: "Chief Driving Visionary",
+  roleOne: "Founder or Head of Brand Strategy",
+  postTwo: "Motor Culture Curator",
+  roleTwo: "Content Director / Lifestyle Editor",
+  postThree: "Speed & Style Ambassador",
+  roleThree: "Brand Ambassador / Public Face of the Brand",
+  imageOne: AboutTeamSectionImageOne,
+  imageTwo: AboutTeamSectionImageTwo,
+  imageThree: AboutTeamSectionImageThree,
+};
+
+// About page constants ends:
+
+// Contact page constants starts:
+
 export const ContactHeroSection = {
   image: ContactLocationImage,
 
@@ -236,6 +275,8 @@ export const ContactHeroSection = {
   openDay: "🕒 Monday–Saturday: 9:00 AM – 7:00 PM",
   Appointment: "🕒 Sunday: By Appointment Only",
 };
+
+// Contact page constants ends:
 
 export const CollactionLuxuryCars = [
   {
