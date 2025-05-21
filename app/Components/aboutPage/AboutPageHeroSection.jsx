@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function AboutPageHeroSection() {
   return (
-    <div className="mx-auto h-screen w-4/5 overflow-hidden">
+    <div id='about' className="mx-auto h-screen w-4/5 overflow-hidden">
       <div className="mt-16 flex h-full w-full items-center justify-center">
         <div className="w-1/2 space-y-3 p-4">
           <h1 className="text-5xl">{AboutHeroSection.title}</h1>

@@ -3,7 +3,7 @@ import { AboutStorySection } from "../../constants";
 
 function AboutPageStorySection() {
   return (
-    <div className="mx-auto h-screen w-4/5">
+    <div id="story" className="mx-auto h-screen w-4/5">
       <h1 className="mb-5 text-center text-5xl font-bold italic text-stone-600">
         {AboutStorySection.heading}
       </h1>

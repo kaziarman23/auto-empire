@@ -248,14 +248,17 @@ export const AboutFounderSection = {
     "I didn’t just grow up loving cars I grew up living them. From late-night races on back roads to early mornings reading every auto magazine I could find, the spark was always there. But as the industry evolved, I noticed something missing: a place where real passion, deep insights, and bold storytelling could come together. That’s why I started Auto Empire.This isn’t just a platform it’s a movement. A digital garage for dreamers, drivers, and disruptors. Whether you're chasing speed, design, innovation, or heritage, you're one of us. Welcome to Auto Empire. Let’s ride into the future together.",
 };
 
-export const AboutFaceSection = {
+export const AboutTeamSection = {
   title: "Faces of the Empire",
+  nameOne:"Henry Cavill",
   postOne: "Chief Driving Visionary",
-  roleOne: "Founder or Head of Brand Strategy",
+  roleOne: "Head of Brand Strategy",
+  nameTwo:"Benedict Cumberbatch",
   postTwo: "Motor Culture Curator",
-  roleTwo: "Content Director / Lifestyle Editor",
+  roleTwo: "Content Director",
+  nameThree:"Andrew Garfield",
   postThree: "Speed & Style Ambassador",
-  roleThree: "Brand Ambassador / Public Face of the Brand",
+  roleThree: "Brand Ambassador",
   imageOne: AboutTeamSectionImageOne,
   imageTwo: AboutTeamSectionImageTwo,
   imageThree: AboutTeamSectionImageThree,

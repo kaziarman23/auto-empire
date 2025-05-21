@@ -3,7 +3,7 @@ import { AboutFounderSection } from "../../constants";
 
 function AboutPageFounderSection() {
   return (
-    <div className="mx-auto flex h-screen w-4/5 flex-col items-center justify-center">
+    <div id='founder' className="mx-auto flex h-screen w-4/5 flex-col items-center justify-center">
       <h1 className="text-center text-4xl font-bold italic text-stone-600">
         {AboutFounderSection.title}
       </h1>

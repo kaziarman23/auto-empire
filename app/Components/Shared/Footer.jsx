@@ -23,40 +23,39 @@ function Footer() {
 
               <ul className="mt-8 space-y-4 text-sm">
                 <li>
-                  <a
+                  <Link
                     className="text-velo-gray transition hover:text-orange-600"
-                    href="#"
+                    href="#story"
                   >
                     Company History
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
+                  <Link
                     className="text-velo-gray transition hover:text-orange-600"
-                    href="#"
+                    href="#team"
                   >
                     Meet the Team
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
+                  <Link
                     className="text-velo-gray transition hover:text-orange-600"
-                    href="#"
+                    href="#founder"
                   >
-                    Employee Handbook
-                  </a>
+                    Founder Face
+                  </Link>
                 </li>
 
                 <li>
-                  <a
+                  <Link
                     className="text-velo-gray transition hover:text-orange-600"
-                    href="#"
+                    href="#about"
                   >
-                    {" "}
-                    Careers{" "}
-                  </a>
+                    What is it About
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -80,8 +79,7 @@ function Footer() {
                     className="text-velo-gray transition hover:text-orange-600"
                     href="#"
                   >
-                    {" "}
-                    Support{" "}
+                    Support
                   </a>
                 </li>
 
