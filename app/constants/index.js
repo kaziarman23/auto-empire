@@ -250,13 +250,13 @@ export const AboutFounderSection = {
 
 export const AboutTeamSection = {
   title: "Faces of the Empire",
-  nameOne:"Henry Cavill",
+  nameOne: "Henry Cavill",
   postOne: "Chief Driving Visionary",
   roleOne: "Head of Brand Strategy",
-  nameTwo:"Benedict Cumberbatch",
+  nameTwo: "Benedict Cumberbatch",
   postTwo: "Motor Culture Curator",
   roleTwo: "Content Director",
-  nameThree:"Andrew Garfield",
+  nameThree: "Andrew Garfield",
   postThree: "Speed & Style Ambassador",
   roleThree: "Brand Ambassador",
   imageOne: AboutTeamSectionImageOne,
@@ -277,6 +277,13 @@ export const ContactHeroSection = {
   subtitle: "Opening Hours:",
   openDay: "🕒 Monday–Saturday: 9:00 AM – 7:00 PM",
   Appointment: "🕒 Sunday: By Appointment Only",
+};
+
+export const ContactMessageSection = {
+  title: "Get in Touch",
+  subtitle:"We’re Just a Message Away",
+  description:
+    "Looking to book a service, schedule a test drive, or have questions about a vehicle? Our team is here to help just send us a message and we’ll respond shortly.",
 };
 
 // Contact page constants ends:
