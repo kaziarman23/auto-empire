@@ -7,7 +7,7 @@ function AboutPageSignatureSection() {
         <h1 className="sm:text-md md:text-md text-sm font-bold text-stone-600 italic lg:text-4xl mt-5">
           {AboutSignatureSection.title}
         </h1>
-        <p className="mx-10 text-sm hover:text-orange-500 md:mx-20 xl:text-lg">
+        <p className="mx-10 text-sm hover:text-orange-500">
           {AboutSignatureSection.discription}
         </p>
 

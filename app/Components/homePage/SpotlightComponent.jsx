@@ -9,15 +9,15 @@ function SpotlightComponent() {
       </h1>
 
       <div className="flex items-start justify-center gap-5">
-        <div className="h-full w-4/6 space-y-10">
+        <div className="h-full w-4/6 space-y-5">
           <h1 className="text-4xl font-bold">{SpotlightSection.headline}</h1>
-          <p className="cursor-text hover:text-orange-500">
+          <p className="cursor-text text-sm hover:text-orange-500">
             {SpotlightSection.descriptionOne}
           </p>
-          <p className="cursor-text hover:text-orange-500">
+          <p className="cursor-text text-sm hover:text-orange-500">
             {SpotlightSection.descriptionTwo}
           </p>
-          <p className="cursor-text hover:text-orange-500">
+          <p className="cursor-text text-sm hover:text-orange-500">
             {SpotlightSection.descriptionThree}
           </p>
         </div>

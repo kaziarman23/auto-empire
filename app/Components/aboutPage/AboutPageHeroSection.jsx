@@ -7,14 +7,14 @@ function AboutPageHeroSection() {
     <div id='about' className="mx-auto h-screen w-4/5 overflow-hidden">
       <div className="mt-16 flex h-full w-full items-center justify-center">
         <div className="w-1/2 space-y-3 p-4">
-          <h1 className="text-5xl">{AboutHeroSection.title}</h1>
-          <p className="hover:text-orange-600">
+          <h1 className="text-4xl">{AboutHeroSection.title}</h1>
+          <p className="hover:text-orange-600 text-sm">
             {AboutHeroSection.description}
           </p>
-          <p className="hover:text-orange-600">
+          <p className="hover:text-orange-600 text-sm">
             {AboutHeroSection.descriptionTwo}
           </p>
-          <p className="hover:text-orange-600">
+          <p className="hover:text-orange-600 text-sm">
             {AboutHeroSection.descriptionThree}
           </p>
         </div>
