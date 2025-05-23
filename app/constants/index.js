@@ -12,6 +12,15 @@ import ServiceSectionCarFour from "@/public/images/HomePageImages/ServiceSection
 import ServiceSectionCarFive from "@/public/images/HomePageImages/ServiceSectionCarFive.jpg";
 import ServiceSectionCarSix from "@/public/images/HomePageImages/ServiceSectionCarSix.jpg";
 
+// inventory page imports
+
+import InventoryHeroSectionImageOne from "@/public/images/InventoryPageImages/InventoryHeroSectionImageOne.jpg"
+import InventoryHeroSectionImageTwo from "@/public/images/InventoryPageImages/InventoryHeroSectionImageTwo.jpg"
+import InventoryHeroSectionImageThree from "@/public/images/InventoryPageImages/InventoryHeroSectionImageThree.jpg"
+import InventoryHeroSectionImageFour from "@/public/images/InventoryPageImages/InventoryHeroSectionImageFour.jpg"
+import InventoryHeroSectionImageFive from "@/public/images/InventoryPageImages/InventoryHeroSectionImageFive.jpg"
+
+
 // about page imports
 import AboutSignatureSectionImage from "@/public/images/AboutPageImages/AboutSignatureSectionImage.jpg";
 import AboutHeroSectionImageOne from "@/public/images/AboutPageImages/AboutHeroSectionImageOne.jpg";
@@ -190,6 +199,21 @@ export const FooterSection = {
   description:
     "Discover a curated selection of high-end vehicles from top-tier dealers and private collectors. Whether you're acquiring your next luxury car or showcasing your prized model, experience an elevated standard of automotive excellence.",
 };
+
+// Inventory page constants starts:
+
+export const InventoryHeroSection ={
+  title:"Product Inventory",
+  description:"Easily track, organize, and manage all your products in one place. This section provides real-time insights into stock levels, item details, and inventory movements to help you stay on top of your supply chain and make informed decisions.",
+  imageOne:InventoryHeroSectionImageOne,
+  imageFive:InventoryHeroSectionImageTwo,
+  imageThree:InventoryHeroSectionImageThree,
+  imageFour:InventoryHeroSectionImageFour,
+  imageTwo:InventoryHeroSectionImageFive,
+
+}
+
+// Inventory page constants ends:
 
 // About page constants starts:
 
