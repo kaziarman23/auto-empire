@@ -14,12 +14,12 @@ import ServiceSectionCarSix from "@/public/images/HomePageImages/ServiceSectionC
 
 // inventory page imports
 
-import InventoryHeroSectionImageOne from "@/public/images/InventoryPageImages/InventoryHeroSectionImageOne.jpg"
-import InventoryHeroSectionImageTwo from "@/public/images/InventoryPageImages/InventoryHeroSectionImageTwo.jpg"
-import InventoryHeroSectionImageThree from "@/public/images/InventoryPageImages/InventoryHeroSectionImageThree.jpg"
-import InventoryHeroSectionImageFour from "@/public/images/InventoryPageImages/InventoryHeroSectionImageFour.jpg"
-import InventoryHeroSectionImageFive from "@/public/images/InventoryPageImages/InventoryHeroSectionImageFive.jpg"
-
+import InventoryHeroSectionImageOne from "@/public/images/InventoryPageImages/InventoryHeroSectionImageOne.jpg";
+import InventoryHeroSectionImageTwo from "@/public/images/InventoryPageImages/InventoryHeroSectionImageTwo.jpg";
+import InventoryHeroSectionImageThree from "@/public/images/InventoryPageImages/InventoryHeroSectionImageThree.jpg";
+import InventoryHeroSectionImageFour from "@/public/images/InventoryPageImages/InventoryHeroSectionImageFour.jpg";
+import InventoryHeroSectionImageFive from "@/public/images/InventoryPageImages/InventoryHeroSectionImageFive.jpg";
+import InventoryStockSectionImageOne from "@/public/images/InventoryPageImages/InventoryStockSectionImageOne.png";
 
 // about page imports
 import AboutSignatureSectionImage from "@/public/images/AboutPageImages/AboutSignatureSectionImage.jpg";
@@ -202,16 +202,25 @@ export const FooterSection = {
 
 // Inventory page constants starts:
 
-export const InventoryHeroSection ={
-  title:"Product Inventory",
-  description:"Easily track, organize, and manage all your products in one place. This section provides real-time insights into stock levels, item details, and inventory movements to help you stay on top of your supply chain and make informed decisions.",
-  imageOne:InventoryHeroSectionImageOne,
-  imageFive:InventoryHeroSectionImageTwo,
-  imageThree:InventoryHeroSectionImageThree,
-  imageFour:InventoryHeroSectionImageFour,
-  imageTwo:InventoryHeroSectionImageFive,
+export const InventoryHeroSection = {
+  title: "Inventory Treasure",
+  description:
+    "Easily track, organize, and manage all your products in one place. This section provides real-time insights into stock levels, item details, and inventory movements to help you stay on top of your supply chain and make informed decisions.",
+  imageOne: InventoryHeroSectionImageOne,
+  imageFive: InventoryHeroSectionImageTwo,
+  imageThree: InventoryHeroSectionImageThree,
+  imageFour: InventoryHeroSectionImageFour,
+  imageTwo: InventoryHeroSectionImageFive,
+};
 
-}
+export const InventoryStockSection = {
+  title: "Smart Stock",
+  description:
+    "SmartStock is the heart of Auto Empire, powering our curated collection of luxury and racing cars. With precision inventory management, we keep every masterpiece from supercars to track legends ready to move.",
+  descriptionTwo:
+    "It's the engine behind Auto Empire’s success — a robust inventory system that ensures our lineup of luxury and racing vehicles is always current, accurate, and ready for sale. From acquisition to delivery, our stock is managed with precision to meet the highest standards of automotive excellence.",
+  imageOne: InventoryStockSectionImageOne,
+};
 
 // Inventory page constants ends:
 
@@ -305,7 +314,7 @@ export const ContactHeroSection = {
 
 export const ContactMessageSection = {
   title: "Get in Touch",
-  subtitle:"We’re Just a Message Away",
+  subtitle: "We’re Just a Message Away",
   description:
     "Looking to book a service, schedule a test drive, or have questions about a vehicle? Our team is here to help just send us a message and we’ll respond shortly.",
 };
