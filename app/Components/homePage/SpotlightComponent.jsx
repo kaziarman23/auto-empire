@@ -4,7 +4,7 @@ import { SpotlightSection } from "../../constants";
 function SpotlightComponent() {
   return (
     <div className="mx-auto h-[100vh] w-4/5">
-      <h1 className="my-5 text-center text-4xl font-bold italic text-stone-600">
+      <h1 className="mt-12 mb-6 text-center text-4xl font-bold italic text-stone-600">
         {SpotlightSection.title}
       </h1>
 

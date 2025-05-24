@@ -1,5 +1,5 @@
 import AboutPageFounderSection from "../Components/aboutPage/AboutPageFounderSection";
-import AboutPageHeroSection from "../Components/aboutPage/AboutPageHeroSection";
+import AboutPagePrestigeSection from "../Components/aboutPage/AboutPagePrestigeSection";
 import AboutPageSignatureSection from "../Components/aboutPage/AboutPageSignatureSection";
 import AboutPageStorySection from "../Components/aboutPage/AboutPageStorySection";
 import AboutPageTeamSection from '../Components/aboutPage/AboutPageTeamSection';
@@ -7,7 +7,7 @@ import AboutPageTeamSection from '../Components/aboutPage/AboutPageTeamSection';
 function page() {
   return (
     <div>
-      <AboutPageHeroSection />
+      <AboutPagePrestigeSection />
       <AboutPageSignatureSection />
       <AboutPageStorySection />
       <AboutPageFounderSection />

@@ -4,6 +4,11 @@ import LatestCarTwo from "@/public/images/HomePageImages/LatestCarTwo.jpg";
 import LatestCarThree from "@/public/images/HomePageImages/LatestCarThree.jpg";
 import TopSellCarOne from "@/public/images/HomePageImages/TopSellCarOne.jpg";
 import TopSellCarTwo from "@/public/images/HomePageImages/TopSellCarTwo.jpg";
+import TreasureComponentImageOne from "@/public/images/HomePageImages/TreasureComponentImageOne.jpg";
+import TreasureComponentImageTwo from "@/public/images/HomePageImages/TreasureComponentImageTwo.jpg";
+import TreasureComponentImageThree from "@/public/images/HomePageImages/TreasureComponentImageThree.jpg";
+import TreasureComponentImageFour from "@/public/images/HomePageImages/TreasureComponentImageFour.jpg";
+import TreasureComponentImageFive from "@/public/images/HomePageImages/TreasureComponentImageFive.jpg";
 import SpotlightImageOne from "@/public/images/HomePageImages/SpotlightImageOne.png";
 import ServiceSectionCarOne from "@/public/images/HomePageImages/ServiceSectionCarOne.jpg";
 import ServiceSectionCarTwo from "@/public/images/HomePageImages/ServiceSectionCarTwo.jpg";
@@ -11,19 +16,13 @@ import ServiceSectionCarThree from "@/public/images/HomePageImages/ServiceSectio
 import ServiceSectionCarFour from "@/public/images/HomePageImages/ServiceSectionCarFour.jpg";
 import ServiceSectionCarFive from "@/public/images/HomePageImages/ServiceSectionCarFive.jpg";
 import ServiceSectionCarSix from "@/public/images/HomePageImages/ServiceSectionCarSix.jpg";
+import StockComponentImageOne from "@/public/images/HomePageImages/StockComponentImageOne.png";
 
 // inventory page imports
 
-import InventoryHeroSectionImageOne from "@/public/images/InventoryPageImages/InventoryHeroSectionImageOne.jpg";
-import InventoryHeroSectionImageTwo from "@/public/images/InventoryPageImages/InventoryHeroSectionImageTwo.jpg";
-import InventoryHeroSectionImageThree from "@/public/images/InventoryPageImages/InventoryHeroSectionImageThree.jpg";
-import InventoryHeroSectionImageFour from "@/public/images/InventoryPageImages/InventoryHeroSectionImageFour.jpg";
-import InventoryHeroSectionImageFive from "@/public/images/InventoryPageImages/InventoryHeroSectionImageFive.jpg";
-import InventoryStockSectionImageOne from "@/public/images/InventoryPageImages/InventoryStockSectionImageOne.png";
-
 // about page imports
 import AboutSignatureSectionImage from "@/public/images/AboutPageImages/AboutSignatureSectionImage.jpg";
-import AboutHeroSectionImageOne from "@/public/images/AboutPageImages/AboutHeroSectionImageOne.jpg";
+import AboutPrestigeSectionImageOne from "@/public/images/AboutPageImages/AboutPrestigeSectionImageOne.jpg";
 import AboutStorySectionImageOne from "@/public/images/AboutPageImages/AboutStorySectionImageOne.jpg";
 import AboutFounderImageOne from "@/public/images/AboutPageImages/AboutFounderImageOne.jpg";
 
@@ -168,6 +167,17 @@ export const TopSellSectionCards = [
   },
 ];
 
+export const TreasureSection = {
+  title: "Empire Treasure",
+  description:
+    "Easily track, organize, and manage all your products in one place. This section provides real-time insights into stock levels, item details, and inventory movements to help you stay on top of your supply chain and make informed decisions.",
+  imageOne: TreasureComponentImageOne,
+  imageFive: TreasureComponentImageTwo,
+  imageThree: TreasureComponentImageThree,
+  imageFour: TreasureComponentImageFour,
+  imageTwo: TreasureComponentImageFive,
+};
+
 export const SpotlightSection = {
   title: "Empire Spotlight",
   ImageOne: SpotlightImageOne,
@@ -194,6 +204,15 @@ export const EmpireServiceSection = {
   ImageSix: ServiceSectionCarSix,
 };
 
+export const StockSection = {
+  title: "Smart Stock",
+  description:
+    "SmartStock is the heart of Auto Empire, powering our curated collection of luxury and racing cars. With precision inventory management, we keep every masterpiece from supercars to track legends ready to move.",
+  descriptionTwo:
+    "It's the engine behind Auto Empire’s success — a robust inventory system that ensures our lineup of luxury and racing vehicles is always current, accurate, and ready for sale. From acquisition to delivery, our stock is managed with precision to meet the highest standards of automotive excellence.",
+  imageOne: StockComponentImageOne,
+};
+
 export const FooterSection = {
   title: "Auto Empire",
   description:
@@ -202,32 +221,15 @@ export const FooterSection = {
 
 // Inventory page constants starts:
 
-export const InventoryHeroSection = {
-  title: "Inventory Treasure",
-  description:
-    "Easily track, organize, and manage all your products in one place. This section provides real-time insights into stock levels, item details, and inventory movements to help you stay on top of your supply chain and make informed decisions.",
-  imageOne: InventoryHeroSectionImageOne,
-  imageFive: InventoryHeroSectionImageTwo,
-  imageThree: InventoryHeroSectionImageThree,
-  imageFour: InventoryHeroSectionImageFour,
-  imageTwo: InventoryHeroSectionImageFive,
-};
 
-export const InventoryStockSection = {
-  title: "Smart Stock",
-  description:
-    "SmartStock is the heart of Auto Empire, powering our curated collection of luxury and racing cars. With precision inventory management, we keep every masterpiece from supercars to track legends ready to move.",
-  descriptionTwo:
-    "It's the engine behind Auto Empire’s success — a robust inventory system that ensures our lineup of luxury and racing vehicles is always current, accurate, and ready for sale. From acquisition to delivery, our stock is managed with precision to meet the highest standards of automotive excellence.",
-  imageOne: InventoryStockSectionImageOne,
-};
 
 // Inventory page constants ends:
 
 // About page constants starts:
 
-export const AboutHeroSection = {
-  imageOne: AboutHeroSectionImageOne,
+export const AboutPrestigeSection = {
+  imageOne: AboutPrestigeSectionImageOne,
+  heading: "Legacy of Prestige",
   title: "Precision. Power. Prestige.",
   description:
     "At Auto Empire, we unite the elegance of luxury with the thrill of performance. Our showroom features a handpicked selection of the world’s most coveted luxury cars and adrenaline-charged racing machines — each chosen to ignite passion in every kind of driver. From refined cruisers to track-ready beasts, we deliver vehicles that turn heads and dominate roads.",
