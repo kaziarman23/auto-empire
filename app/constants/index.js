@@ -20,6 +20,22 @@ import StockComponentImageOne from "@/public/images/HomePageImages/StockComponen
 
 // inventory page imports
 
+import InventorySectionImageOne from "@/public/images/InventoryPageImages/InventorySectionImageOne.jpg";
+import InventorySectionImageTwo from "@/public/images/InventoryPageImages/InventorySectionImageTwo.jpg";
+import InventorySectionImageThree from "@/public/images/InventoryPageImages/InventorySectionImageThree.jpg";
+import InventorySectionImageFour from "@/public/images/InventoryPageImages/InventorySectionImageFour.jpg";
+import InventorySectionImageFive from "@/public/images/InventoryPageImages/InventorySectionImageFive.jpg";
+import InventorySectionImageSix from "@/public/images/InventoryPageImages/InventorySectionImageSix.jpg";
+import InventorySectionImageSeven from "@/public/images/InventoryPageImages/InventorySectionImageSeven.jpg";
+import InventorySectionImageEight from "@/public/images/InventoryPageImages/InventorySectionImageEight.jpg";
+import InventorySectionImageNine from "@/public/images/InventoryPageImages/InventorySectionImageNine.jpg";
+import InventorySectionImageTen from "@/public/images/InventoryPageImages/InventorySectionImageTen.jpg";
+import InventorySectionImageEleven from "@/public/images/InventoryPageImages/InventorySectionImageEleven.jpg";
+import InventorySectionImageTwelve from "@/public/images/InventoryPageImages/InventorySectionImageTwelve.jpg";
+import InventorySectionImageThirteen from "@/public/images/InventoryPageImages/InventorySectionImageThirteen.jpg";
+import InventorySectionImageFourteen from "@/public/images/InventoryPageImages/InventorySectionImageFourteen.jpg";
+import InventorySectionImageFifteen from "@/public/images/InventoryPageImages/InventorySectionImageFifteen.jpg";
+
 // about page imports
 import AboutSignatureSectionImage from "@/public/images/AboutPageImages/AboutSignatureSectionImage.jpg";
 import AboutPrestigeSectionImageOne from "@/public/images/AboutPageImages/AboutPrestigeSectionImageOne.jpg";
@@ -33,82 +49,6 @@ import AboutTeamSectionImageThree from "@/public/images/AboutPageImages/AboutTea
 // contact page imports
 
 import ContactLocationImage from "@/public/images/ContactPageImages/LocationImage.png";
-
-// luxary page imports
-import AboutLuxuryImageOne from "@/public/images/LuxuryCarImages/AboutLuxuryImageOne.jpg";
-import AboutLuxuryImageTwo from "@/public/images/LuxuryCarImages/AboutLuxuryImageTwo.jpg";
-import AboutLuxuryImageThree from "@/public/images/LuxuryCarImages/AboutLuxuryImageThree.jpg";
-import AboutLuxuryImageFour from "@/public/images/LuxuryCarImages/AboutLuxuryImageFour.jpg";
-import AboutLuxuryImageFive from "@/public/images/LuxuryCarImages/AboutLuxuryImageFive.jpg";
-
-import LuxuryPopularCarOne from "@/public/images/LuxuryCarImages/LuxuryPopularCarOne.jpg";
-import LuxuryPopularCarTwo from "@/public/images/LuxuryCarImages/LuxuryPopularCarTwo.jpg";
-import LuxuryPopularCarThree from "@/public/images/LuxuryCarImages/LuxuryPopularCarThree.jpg";
-import LuxuryPopularCarFour from "@/public/images/LuxuryCarImages/LuxuryPopularCarFour.jpg";
-import LuxuryPopularCarFive from "@/public/images/LuxuryCarImages/LuxuryPopularCarFive.jpg";
-
-import LuxuryCollactionCarOne from "@/public/images/LuxuryCarImages/LuxuryCollactionCarOne.jpg";
-import LuxuryCollactionCarTwo from "@/public/images/LuxuryCarImages/LuxuryCollactionCarTwo.jpg";
-import LuxuryCollactionCarThree from "@/public/images/LuxuryCarImages/LuxuryCollactionCarThree.jpg";
-import LuxuryCollactionCarFour from "@/public/images/LuxuryCarImages/LuxuryCollactionCarFour.jpg";
-import LuxuryCollactionCarFive from "@/public/images/LuxuryCarImages/LuxuryCollactionCarFive.jpg";
-import LuxuryCollactionCarSix from "@/public/images/LuxuryCarImages/LuxuryCollactionCarSix.jpg";
-import LuxuryCollactionCarSeven from "@/public/images/LuxuryCarImages/LuxuryCollactionCarSeven.jpg";
-import LuxuryCollactionCarEight from "@/public/images/LuxuryCarImages/LuxuryCollactionCarEight.jpg";
-import LuxuryCollactionCarNine from "@/public/images/LuxuryCarImages/LuxuryCollactionCarNine.jpg";
-import LuxuryCollactionCarTen from "@/public/images/LuxuryCarImages/LuxuryCollactionCarTen.jpg";
-import LuxuryCollactionCarEleven from "@/public/images/LuxuryCarImages/LuxuryCollactionCarEleven.jpg";
-import LuxuryCollactionCarTwelve from "@/public/images/LuxuryCarImages/LuxuryCollactionCarTwelve.jpg";
-
-import LuxuryCarReviewOne from "@/public/images/LuxuryCarImages/LuxuryCarReviewOne.jpg";
-import LuxuryCarReviewTwo from "@/public/images/LuxuryCarImages/LuxuryCarReviewTwo.jpg";
-import LuxuryCarReviewThree from "@/public/images/LuxuryCarImages/LuxuryCarReviewThree.jpg";
-
-// race page impors
-
-import R_CollactionOne from "@/public/images/RacingCarImages/R_CollactionOne.jpg";
-import R_CollactionTwo from "@/public/images/RacingCarImages/R_CollactionTwo.jpg";
-import R_CollactionThree from "@/public/images/RacingCarImages/R_CollactionThree.jpg";
-import R_CollactionFour from "@/public/images/RacingCarImages/R_CollactionFour.jpg";
-import R_CollactionFive from "@/public/images/RacingCarImages/R_CollactionFive.jpg";
-import R_CollactionSix from "@/public/images/RacingCarImages/R_CollactionSix.jpg";
-import R_CollactionSeven from "@/public/images/RacingCarImages/R_CollactionSeven.jpg";
-import R_CollactionEight from "@/public/images/RacingCarImages/R_CollactionEight.jpg";
-import R_CollactionNine from "@/public/images/RacingCarImages/R_CollactionNine.jpg";
-import R_CollactionTen from "@/public/images/RacingCarImages/R_CollactionTen.jpg";
-import R_CollactionEleven from "@/public/images/RacingCarImages/R_CollactionEleven.jpg";
-import R_CollactionTwelve from "@/public/images/RacingCarImages/R_CollactionTwelve.jpg";
-
-import R_ReviewOne from "@/public/images/RacingCarImages/R_ReviewOne.jpg";
-import R_ReviewTwo from "@/public/images/RacingCarImages/R_ReviewTwo.jpg";
-import R_ReviewThree from "@/public/images/RacingCarImages/R_ReviewThree.jpg";
-
-// suv page impors
-
-import S_AboutOne from "@/public/images/SuvCarImages/S_AboutOne.jpg";
-
-import S_PopularOne from "@/public/images/SuvCarImages/S_PopularOne.jpg";
-import S_PopularTwo from "@/public/images/SuvCarImages/S_PopularTwo.jpg";
-import S_PopularThree from "@/public/images/SuvCarImages/S_PopularThree.jpg";
-import S_PopularFour from "@/public/images/SuvCarImages/S_PopularFour.jpg";
-import S_PopularFive from "@/public/images/SuvCarImages/S_PopularFive.jpg";
-
-import S_CollactionOne from "@/public/images/SuvCarImages/S_CollactionOne.jpg";
-import S_CollactionTwo from "@/public/images/SuvCarImages/S_CollactionTwo.jpg";
-import S_CollactionThree from "@/public/images/SuvCarImages/S_CollactionThree.jpg";
-import S_CollactionFour from "@/public/images/SuvCarImages/S_CollactionFour.jpg";
-import S_CollactionFive from "@/public/images/SuvCarImages/S_CollactionFive.jpg";
-import S_CollactionSix from "@/public/images/SuvCarImages/S_CollactionSix.jpg";
-import S_CollactionSeven from "@/public/images/SuvCarImages/S_CollactionSeven.jpg";
-import S_CollactionEight from "@/public/images/SuvCarImages/S_CollactionEight.jpg";
-import S_CollactionNine from "@/public/images/SuvCarImages/S_CollactionNine.jpg";
-import S_CollactionTen from "@/public/images/SuvCarImages/S_CollactionTen.jpg";
-import S_CollactionEleven from "@/public/images/SuvCarImages/S_CollactionEleven.jpg";
-import S_CollactionTwalve from "@/public/images/SuvCarImages/S_CollactionTwalve.jpg";
-
-import S_ReviewOne from "@/public/images/SuvCarImages/S_ReviewOne.jpg";
-import S_ReviewTwo from "@/public/images/SuvCarImages/S_ReviewTwo.jpg";
-import S_ReviewThree from "@/public/images/SuvCarImages/S_ReviewThree.jpg";
 
 // start exporting
 
@@ -221,7 +161,158 @@ export const FooterSection = {
 
 // Inventory page constants starts:
 
-
+export const InventorySection = [
+  {
+    id: 1,
+    brand_name: "Mercedes-Benz",
+    car_name: "S-Class",
+    model_name: "S 580 4MATIC",
+    price: 55000000,
+    release_year: 2023,
+    stock_available: 3,
+    image: InventorySectionImageOne,
+  },
+  {
+    id: 2,
+    brand_name: "BMW",
+    car_name: "7 Series",
+    model_name: "740i M Sport",
+    price: 49000000,
+    release_year: 2023,
+    stock_available: 5,
+    image_url: InventorySectionImageTwo,
+  },
+  {
+    id: 3,
+    brand_name: "Audi",
+    car_name: "A8",
+    model_name: "A8 L 60 TFSI quattro",
+    price: 47000000,
+    release_year: 2023,
+    stock_available: 2,
+    image_url: InventorySectionImageThree,
+  },
+  {
+    id: 4,
+    brand_name: "Lexus",
+    car_name: "LS",
+    model_name: "LS 500h Executive",
+    price: 46000000,
+    release_year: 2022,
+    stock_available: 4,
+    image_url: InventorySectionImageFour,
+  },
+  {
+    id: 5,
+    brand_name: "Jaguar",
+    car_name: "XJ",
+    model_name: "XJL Portfolio",
+    price: 42000000,
+    release_year: 2021,
+    stock_available: 1,
+    image_url: InventorySectionImageFive,
+  },
+  {
+    id: 6,
+    brand_name: "Porsche",
+    car_name: "Panamera",
+    model_name: "Panamera 4 E-Hybrid",
+    price: 53000000,
+    release_year: 2023,
+    stock_available: 2,
+    image_url: InventorySectionImageSix,
+  },
+  {
+    id: 7,
+    brand_name: "Tesla",
+    car_name: "Model S",
+    model_name: "Plaid",
+    price: 48000000,
+    release_year: 2023,
+    stock_available: 6,
+    image_url: InventorySectionImageSeven,
+  },
+  {
+    id: 8,
+    brand_name: "Bentley",
+    car_name: "Flying Spur",
+    model_name: "V8",
+    price: 75000000,
+    release_year: 2023,
+    stock_available: 2,
+    image_url: InventorySectionImageEight,
+  },
+  {
+    id: 9,
+    brand_name: "Rolls-Royce",
+    car_name: "Ghost",
+    model_name: "Ghost Extended",
+    price: 120000000,
+    release_year: 2024,
+    stock_available: 1,
+    image_url: InventorySectionImageNine,
+  },
+  {
+    id: 10,
+    brand_name: "Aston Martin",
+    car_name: "Rapide",
+    model_name: "Rapide AMR",
+    price: 68000000,
+    release_year: 2022,
+    stock_available: 1,
+    image_url: InventorySectionImageTen,
+  },
+  {
+    id: 11,
+    brand_name: "Maserati",
+    car_name: "Quattroporte",
+    model_name: "Trofeo",
+    price: 59000000,
+    release_year: 2023,
+    stock_available: 3,
+    image_url: InventorySectionImageEleven,
+  },
+  {
+    id: 12,
+    brand_name: "Genesis",
+    car_name: "G90",
+    model_name: "G90 3.5T E-SC",
+    price: 43000000,
+    release_year: 2023,
+    stock_available: 4,
+    image_url: InventorySectionImageTwelve,
+  },
+  {
+    id: 13,
+    brand_name: "Cadillac",
+    car_name: "CT6",
+    model_name: "CT6 Platinum",
+    price: 41000000,
+    release_year: 2021,
+    stock_available: 2,
+    image_url: InventorySectionImageThirteen,
+  },
+  {
+    id: 14,
+    brand_name: "Infiniti",
+    car_name: "Q70",
+    model_name: "Q70L 5.6 V8",
+    price: 39500000,
+    release_year: 2020,
+    stock_available: 2,
+    image_url: InventorySectionImageFourteen,
+  },
+  {
+    id: 15,
+    brand_name: "Lucid",
+    car_name: "Air",
+    model_name: "Grand Touring",
+    price: 69000000,
+    release_year: 2024,
+    stock_available: 2,
+    image_url: InventorySectionImageFifteen,
+  },
+];
 
 // Inventory page constants ends:
 
@@ -322,264 +413,3 @@ export const ContactMessageSection = {
 };
 
 // Contact page constants ends:
-
-export const CollactionLuxuryCars = [
-  {
-    id: 1,
-    image: LuxuryCollactionCarOne,
-    name: "Hennessey Chevrolet",
-    model: "Exorcist Camaro ZL1",
-    price: 135000,
-  },
-  {
-    id: "2",
-    image: LuxuryCollactionCarTwo,
-    name: "Mercedes Amg Gt",
-    model: "Mercedes-AMG GT",
-    price: 118600,
-  },
-  {
-    id: "3",
-    image: LuxuryCollactionCarThree,
-    name: "Mercedes-AMG GTC",
-    model: "Mercedes-AMG GT C",
-    price: 150000,
-  },
-  {
-    id: "4",
-    image: LuxuryCollactionCarFour,
-    name: "BMW 7 S",
-    model: "BMW 750i",
-    price: 103000,
-  },
-  {
-    id: "5",
-    image: LuxuryCollactionCarFive,
-    name: "BMW 7 S Red",
-    model: "BMW 750i",
-    price: 103000,
-  },
-  {
-    id: "6",
-    image: LuxuryCollactionCarSix,
-    name: "Modified Jaguar XJ",
-    model: "Jaguar XJ Supercharged",
-    price: 95000,
-  },
-  {
-    id: "7",
-    image: LuxuryCollactionCarSeven,
-    name: "Audi A8L",
-    model: "Audi A8 L 55 TFSI",
-    price: 86000,
-  },
-  {
-    id: "8",
-    image: LuxuryCollactionCarEight,
-    name: "Audi A8L",
-    model: "Audi A8 L 55 TFSI",
-    price: 86000,
-  },
-  {
-    id: "9",
-    image: LuxuryCollactionCarNine,
-    name: "Porsche Panamera",
-    model: "Porsche Panamera 4S",
-    price: 114000,
-  },
-  {
-    id: "10",
-    image: LuxuryCollactionCarTen,
-    name: "Jaguar XJ220",
-    model: "Jaguar XJ220",
-    price: 500000,
-  },
-  {
-    id: "11",
-    image: LuxuryCollactionCarEleven,
-    name: "Porsche Panamera",
-    model: "Porsche Panamera 4S",
-    price: 114000,
-  },
-  {
-    id: "12",
-    image: LuxuryCollactionCarTwelve,
-    name: "Porsche Panamera",
-    model: "Porsche Panamera 4S",
-    price: 114000,
-  },
-];
-
-export const RaceCollactionSectionCars = [
-  {
-    id: 1,
-    image: R_CollactionOne,
-    name: "Sleek Corvette",
-    model: "Corvette ZR1",
-    price: 120000,
-  },
-  {
-    id: 2,
-    image: R_CollactionTwo,
-    name: "Ford Mustang",
-    model: "Mustang GT500",
-    price: 75000,
-  },
-  {
-    id: 3,
-    image: R_CollactionThree,
-    name: "Porsche",
-    model: "911 Turbo S",
-    price: 200000,
-  },
-  {
-    id: 4,
-    image: R_CollactionFour,
-    name: "Ferrari",
-    model: "F8 Tributo",
-    price: 270000,
-  },
-  {
-    id: 5,
-    image: R_CollactionFive,
-    name: "Lamborghini Huracan",
-    model: "Huracan EVO",
-    price: 300000,
-  },
-  {
-    id: 6,
-    image: R_CollactionSix,
-    name: "McLaren",
-    model: "720S Coupe",
-    price: 305000,
-  },
-  {
-    id: 7,
-    image: R_CollactionSeven,
-    name: "Audi",
-    model: "R8 V10 Plus",
-    price: 190000,
-  },
-  {
-    id: 8,
-    image: R_CollactionEight,
-    name: "Skyline",
-    model: "GT-R 1989",
-    price: 210000,
-  },
-  {
-    id: 9,
-    image: R_CollactionNine,
-    name: "BMW",
-    model: "M4 Competition",
-    price: 85000,
-  },
-  {
-    id: 10,
-    image: R_CollactionTen,
-    name: "Skyline",
-    model: "GT-R34",
-    price: 165000,
-  },
-  {
-    id: 11,
-    image: R_CollactionEleven,
-    name: "Bugatti",
-    model: " W16 Mistral",
-    price: 150000,
-  },
-  {
-    id: 12,
-    image: R_CollactionTwelve,
-    name: "Tesla",
-    model: "Roadster",
-    price: 200000,
-  },
-];
-
-export const SuvCollactionSectionCars = [
-  {
-    id: 1,
-    name: "Toyota",
-    model: "RAV4",
-    price: 30000,
-    image: S_CollactionOne,
-  },
-  {
-    id: 2,
-    name: "Honda",
-    model: "CR-V",
-    price: 32000,
-    image: S_CollactionTwo,
-  },
-  {
-    id: 3,
-    name: "Ford",
-    model: "Explorer",
-    price: 35000,
-    image: S_CollactionThree,
-  },
-  {
-    id: 4,
-    name: "Chevrolet",
-    model: "Equinox",
-    price: 31000,
-    image: S_CollactionFour,
-  },
-  {
-    id: 5,
-    name: "Nissan",
-    model: "Rogue",
-    price: 34000,
-    image: S_CollactionFive,
-  },
-  {
-    id: 6,
-    name: "BMW",
-    model: "X5",
-    price: 60000,
-    image: S_CollactionSix,
-  },
-  {
-    id: 7,
-    name: "Audi",
-    model: "Q7",
-    price: 65000,
-    image: S_CollactionSeven,
-  },
-  {
-    id: 8,
-    name: "Mercedes-Benz",
-    model: "GLE",
-    price: 67000,
-    image: S_CollactionEight,
-  },
-  {
-    id: 9,
-    name: "Hyundai",
-    model: "Santa Fe",
-    price: 33000,
-    image: S_CollactionNine,
-  },
-  {
-    id: 10,
-    name: "Kia",
-    model: "Sorento",
-    price: 34000,
-    image: S_CollactionTen,
-  },
-  {
-    id: 11,
-    name: "Volkswagen",
-    model: "Atlas",
-    price: 36000,
-    image: S_CollactionEleven,
-  },
-  {
-    id: 12,
-    name: "Subaru",
-    model: "Outback",
-    price: 32000,
-    image: S_CollactionTwalve,
-  },
-];
