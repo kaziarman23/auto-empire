@@ -20,22 +20,6 @@ import StockComponentImageOne from "@/public/images/HomePageImages/StockComponen
 
 // inventory page imports
 
-import InventorySectionImageOne from "@/public/images/InventoryPageImages/InventorySectionImageOne.jpg";
-import InventorySectionImageTwo from "@/public/images/InventoryPageImages/InventorySectionImageTwo.jpg";
-import InventorySectionImageThree from "@/public/images/InventoryPageImages/InventorySectionImageThree.jpg";
-import InventorySectionImageFour from "@/public/images/InventoryPageImages/InventorySectionImageFour.jpg";
-import InventorySectionImageFive from "@/public/images/InventoryPageImages/InventorySectionImageFive.jpg";
-import InventorySectionImageSix from "@/public/images/InventoryPageImages/InventorySectionImageSix.jpg";
-import InventorySectionImageSeven from "@/public/images/InventoryPageImages/InventorySectionImageSeven.jpg";
-import InventorySectionImageEight from "@/public/images/InventoryPageImages/InventorySectionImageEight.jpg";
-import InventorySectionImageNine from "@/public/images/InventoryPageImages/InventorySectionImageNine.jpg";
-import InventorySectionImageTen from "@/public/images/InventoryPageImages/InventorySectionImageTen.jpg";
-import InventorySectionImageEleven from "@/public/images/InventoryPageImages/InventorySectionImageEleven.jpg";
-import InventorySectionImageTwelve from "@/public/images/InventoryPageImages/InventorySectionImageTwelve.jpg";
-import InventorySectionImageThirteen from "@/public/images/InventoryPageImages/InventorySectionImageThirteen.jpg";
-import InventorySectionImageFourteen from "@/public/images/InventoryPageImages/InventorySectionImageFourteen.jpg";
-import InventorySectionImageFifteen from "@/public/images/InventoryPageImages/InventorySectionImageFifteen.jpg";
-
 // about page imports
 import AboutSignatureSectionImage from "@/public/images/AboutPageImages/AboutSignatureSectionImage.jpg";
 import AboutPrestigeSectionImageOne from "@/public/images/AboutPageImages/AboutPrestigeSectionImageOne.jpg";
@@ -170,7 +154,8 @@ export const InventorySection = [
     price: 55000000,
     release_year: 2023,
     stock_available: 3,
-    image: InventorySectionImageOne,
+    image:
+      "https://i.pinimg.com/736x/8e/4b/1c/8e4b1c4bde26596bdbc5e856d4ad1e96.jpg",
   },
   {
     id: 2,
@@ -180,7 +165,8 @@ export const InventorySection = [
     price: 49000000,
     release_year: 2023,
     stock_available: 5,
-    image_url: InventorySectionImageTwo,
+    image_url:
+      "https://i.pinimg.com/736x/8a/e3/e4/8ae3e44e7158140838f29148592bbc43.jpg",
   },
   {
     id: 3,
@@ -190,7 +176,8 @@ export const InventorySection = [
     price: 47000000,
     release_year: 2023,
     stock_available: 2,
-    image_url: InventorySectionImageThree,
+    image_url:
+      "https://i.pinimg.com/736x/63/55/15/635515c87c8a45152466c9ee0936ddcb.jpg",
   },
   {
     id: 4,
@@ -200,7 +187,8 @@ export const InventorySection = [
     price: 46000000,
     release_year: 2022,
     stock_available: 4,
-    image_url: InventorySectionImageFour,
+    image_url:
+      "https://i.pinimg.com/736x/a5/09/1e/a5091eea29ce7b73f23df662d9f00e79.jpg",
   },
   {
     id: 5,
@@ -210,7 +198,8 @@ export const InventorySection = [
     price: 42000000,
     release_year: 2021,
     stock_available: 1,
-    image_url: InventorySectionImageFive,
+    image_url:
+      "https://i.pinimg.com/736x/94/7b/15/947b15cbd1282a0434e04e7d35437456.jpg",
   },
   {
     id: 6,
@@ -220,7 +209,8 @@ export const InventorySection = [
     price: 53000000,
     release_year: 2023,
     stock_available: 2,
-    image_url: InventorySectionImageSix,
+    image_url:
+      "https://i.pinimg.com/736x/7a/70/00/7a700013de3b7dbe6d7df7e9f5d9d1f7.jpg",
   },
   {
     id: 7,
@@ -230,7 +220,8 @@ export const InventorySection = [
     price: 48000000,
     release_year: 2023,
     stock_available: 6,
-    image_url: InventorySectionImageSeven,
+    image_url:
+      "https://i.pinimg.com/736x/64/d4/da/64d4daec943260c734023be29a7027f1.jpg",
   },
   {
     id: 8,
@@ -240,7 +231,8 @@ export const InventorySection = [
     price: 75000000,
     release_year: 2023,
     stock_available: 2,
-    image_url: InventorySectionImageEight,
+    image_url:
+      "https://i.pinimg.com/736x/db/a6/ac/dba6ac62bb2f5bf0361545c2e816298d.jpg",
   },
   {
     id: 9,
@@ -250,7 +242,8 @@ export const InventorySection = [
     price: 120000000,
     release_year: 2024,
     stock_available: 1,
-    image_url: InventorySectionImageNine,
+    image_url:
+      "https://i.pinimg.com/736x/a1/1b/8c/a11b8c0a18d994190098b2ca05eb690c.jpg",
   },
   {
     id: 10,
@@ -260,7 +253,8 @@ export const InventorySection = [
     price: 68000000,
     release_year: 2022,
     stock_available: 1,
-    image_url: InventorySectionImageTen,
+    image_url:
+      "https://i.pinimg.com/736x/20/29/6b/20296b205c88cb42b93b80f00f84a15f.jpg",
   },
   {
     id: 11,
@@ -270,7 +264,8 @@ export const InventorySection = [
     price: 59000000,
     release_year: 2023,
     stock_available: 3,
-    image_url: InventorySectionImageEleven,
+    image_url:
+      "https://i.pinimg.com/736x/e0/e8/9f/e0e89fe08ed39ee347b89bbb73565cbf.jpg",
   },
   {
     id: 12,
@@ -280,7 +275,8 @@ export const InventorySection = [
     price: 43000000,
     release_year: 2023,
     stock_available: 4,
-    image_url: InventorySectionImageTwelve,
+    image_url:
+      "https://i.pinimg.com/736x/06/31/47/063147d92f78a5b692ba49e5fcaba827.jpg",
   },
   {
     id: 13,
@@ -290,7 +286,8 @@ export const InventorySection = [
     price: 41000000,
     release_year: 2021,
     stock_available: 2,
-    image_url: InventorySectionImageThirteen,
+    image_url:
+      "https://i.pinimg.com/736x/07/3a/ea/073aea2719eb3da6499cd1ef6ac36f89.jpg",
   },
   {
     id: 14,
@@ -300,7 +297,8 @@ export const InventorySection = [
     price: 39500000,
     release_year: 2020,
     stock_available: 2,
-    image_url: InventorySectionImageFourteen,
+    image_url:
+      "https://i.pinimg.com/736x/bb/f9/5a/bbf95ab174f92846d5f696b499647536.jpg",
   },
   {
     id: 15,
@@ -310,7 +308,158 @@ export const InventorySection = [
     price: 69000000,
     release_year: 2024,
     stock_available: 2,
-    image_url: InventorySectionImageFifteen,
+    image_url:
+      "https://i.pinimg.com/736x/b6/56/70/b656701a902c0bf7830bce16e67bb82a.jpg",
+  },
+  {
+    id: 16,
+    brand_name: "Ferrari",
+    car_name: "488 GT3",
+    model_name: "Evo 2020",
+    price_bdt: 95000000,
+    release_year: 2020,
+    stock_available: 2,
+    image_url: "https://i.pinimg.com/736x/68/e2/d5/68e2d57bbb51cf28c66f4b72ea9b8804.jpg",
+  },
+  {
+    id: 17,
+    brand_name: "Lamborghini",
+    car_name: "Hurac\u00e1n",
+    model_name: "Super Trofeo EVO2",
+    price_bdt: 102000000,
+    release_year: 2022,
+    stock_available: 3,
+    image_url: "https://i.pinimg.com/736x/3f/f7/a1/3ff7a1158b6fd6f66d26f5fd24ce7df9.jpg",
+  },
+  {
+    id: 18,
+    brand_name: "Porsche",
+    car_name: "911 GT3 Cup",
+    model_name: "992",
+    price_bdt: 85000000,
+    release_year: 2021,
+    stock_available: 4,
+    image_url: "https://i.pinimg.com/736x/85/0a/ca/850aca7cd77c110e99ab20862aef14cf.jpg",
+  },
+  {
+    id: 19,
+    brand_name: "McLaren",
+    car_name: "720S GT3",
+    model_name: "2023 Edition",
+    price_bdt: 98000000,
+    release_year: 2023,
+    stock_available: 1,
+    image_url: "https://i.pinimg.com/736x/71/45/99/7145995c2f7fd5389f7e22612f502a60.jpg",
+  },
+  {
+    id: 20,
+    brand_name: "Aston Martin",
+    car_name: "Vantage GT3",
+    model_name: "2022",
+    price_bdt: 89000000,
+    release_year: 2022,
+    stock_available: 2,
+    image_url: "https://i.pinimg.com/736x/20/29/6b/20296b205c88cb42b93b80f00f84a15f.jpg",
+  },
+  {
+    id: 21,
+    brand_name: "BMW",
+    car_name: "M4 GT3",
+    model_name: "G82",
+    price_bdt: 87000000,
+    release_year: 2022,
+    stock_available: 3,
+    image_url: "https://i.pinimg.com/736x/67/e8/ef/67e8efc60881f3ab396e26c29e8fd71a.jpg",
+  },
+  {
+    id: 22,
+    brand_name: "Audi",
+    car_name: "R8 LMS",
+    model_name: "GT3 Evo II",
+    price_bdt: 88000000,
+    release_year: 2022,
+    stock_available: 2,
+    image_url: "https://i.pinimg.com/736x/5d/88/d1/5d88d18850dda888a480a0a2501e4f05.jpg",
+  },
+  {
+    id: 23,
+    brand_name: "Mercedes-AMG",
+    car_name: "GT3",
+    model_name: "2023",
+    price_bdt: 93000000,
+    release_year: 2023,
+    stock_available: 1,
+    image_url: "https://i.pinimg.com/736x/de/5a/6f/de5a6fa3a3bee0544e97b14d39de8dc3.jpg",
+  },
+  {
+    id: 24,
+    brand_name: "Nissan",
+    car_name: "GT-R",
+    model_name: "NISMO GT3",
+    price_bdt: 86000000,
+    release_year: 2020,
+    stock_available: 2,
+    image_url: "https://i.pinimg.com/736x/f4/5e/97/f45e9763c34cc624978d7f5ec3d2fa99.jpg",
+  },
+  {
+    id: 25,
+    brand_name: "Chevrolet",
+    car_name: "Corvette C8.R",
+    model_name: "GTLM",
+    price_bdt: 82000000,
+    release_year: 2021,
+    stock_available: 2,
+    image_url: "https://i.pinimg.com/736x/b7/bf/0a/b7bf0a103253034dc337e6bf9d876e2e.jpg",
+  },
+  {
+    id: 26,
+    brand_name: "Ford",
+    car_name: "GT",
+    model_name: "LM GTE-Pro",
+    price_bdt: 90000000,
+    release_year: 2020,
+    stock_available: 1,
+    image_url: "https://i.pinimg.com/736x/1f/07/9d/1f079d0d5bc79b1b692a46d1b41382f3.jpg",
+  },
+  {
+    id: 27,
+    brand_name: "Toyota",
+    car_name: "GR Supra GT4",
+    model_name: "2023",
+    price_bdt: 78000000,
+    release_year: 2023,
+    stock_available: 3,
+    image_url: "https://i.pinimg.com/736x/5a/3e/08/5a3e080456e964ca42afc6a8fe849b8e.jpg",
+  },
+  {
+    id: 28,
+    brand_name: "Subaru",
+    car_name: "WRX STI",
+    model_name: "NR4",
+    price_bdt: 75000000,
+    release_year: 2022,
+    stock_available: 2,
+    image_url: "https://i.pinimg.com/736x/f3/8c/99/f38c99e77b9bcb432f1fa00632d5795f.jpg",
+  },
+  {
+    id: 29,
+    brand_name: "Peugeot",
+    car_name: "9X8",
+    model_name: "Hypercar",
+    price_bdt: 105000000,
+    release_year: 2023,
+    stock_available: 1,
+    image_url: "https://i.pinimg.com/736x/c9/c3/0d/c9c30d0cddf316d9e0d249800f7a3097.jpg",
+  },
+  {
+    id: 30,
+    brand_name: "Mazda",
+    car_name: "RT24-P",
+    model_name: "DPi",
+    price_bdt: 80000000,
+    release_year: 2021,
+    stock_available: 1,
+    image_url: "https://i.pinimg.com/736x/47/9f/1c/479f1caf4f87219917db6dc7c6824d5d.jpg",
   },
 ];
 
