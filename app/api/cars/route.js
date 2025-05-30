@@ -5,9 +5,14 @@ import connectDB from "@/app/lib/connectDB";
 export async function GET(request) {
   try {
     await connectDB();
+
+    // querying the all cars
     const cars = await Car.find({});
+
+    // sending a successfull response
     return NextResponse.json(cars, { status: 200 });
   } catch (error) {
+    // sending an errorI response
     console.error("Error fetching cars data:", error);
     return NextResponse.json(
       { message: "Failed to fetch cars" },
@@ -19,30 +24,123 @@ export async function GET(request) {
 export async function POST(request) {
   try {
     await connectDB();
+    const body = await request.json();
+
+    const {
+      brand,
+      carName,
+      modelName,
+      price,
+      releaseYear,
+      stockAvailable,
+      image,
+    } = body;
+
+    // car property validation
+    if (
+      !brand ||
+      !carName ||
+      !modelName ||
+      !price ||
+      !releaseYear ||
+      !stockAvailable ||
+      !image
+    ) {
+      return NextResponse.json(
+        { message: "Missing required car data fields" },
+        { status: 400 },
+      );
+    }
 
     const newCar = await Car.create({
-      brand: "Mercedes-Benz",
-      carName: "S-Class",
-      modelName: "S 580 4MATIC",
-      price: 55000000,
-      releaseYear: 2023,
-      stockAvailable: 3,
-      image:
-        "https://i.pinimg.com/736x/8e/4b/1c/8e4b1c4bde26596bdbc5e856d4ad1e96.jpg",
+      brand,
+      carName,
+      modelName,
+      price,
+      releaseYear,
+      stockAvailable,
+      image,
     });
 
-    console.log("working: ", newCar);
-
+    // sending a successfull response
     return NextResponse.json(newCar, { status: 201 });
   } catch (error) {
-    console.error("Error creating hardcoded car:", error);
+    // sending an error response
+    console.error("Error creating a car data:", error);
     return NextResponse.json(
-      { message: "Failed to insert car" },
+      { message: "Failed to create car" },
       { status: 500 },
     );
   }
 }
 
-export async function PATCH(request) {}
+export async function PATCH(request) {
+  try {
+    await connectDB();
+    const body = await request.json();
+    const { id, ...updates } = body;
 
-export async function DELETE(request) {}
+    // id validation
+    if (!id) {
+      return NextResponse.json(
+        { message: "Car ID is not found in the body" },
+        { status: 400 },
+      );
+    }
+
+    // updating the car
+    const updatedCar = await Car.findByIdAndUpdate(id, updates, {
+      new: true,
+      runValidators: true,
+    });
+
+    if (!updatedCar) {
+      return NextResponse.json({ message: "Car not found" }, { status: 404 });
+    }
+
+    // sending a successfull message
+    return NextResponse.json(updatedCar, { status: 200 });
+  } catch (error) {
+    // sending an error message
+    console.error("Error updating car:", error);
+    return NextResponse.json(
+      { message: "Failed to update the car" },
+      { status: 500 },
+    );
+  }
+}
+
+export async function DELETE(request) {
+  try {
+    await connectDB();
+    const { id } = await request.json();
+
+    // id validation
+    if (!id) {
+      return NextResponse.json(
+        { message: "Car ID not found in the body" },
+        { status: 400 },
+      );
+    }
+
+    const deletedCar = await Car.findByIdAndDelete(id);
+
+    // car validation
+    if (!deletedCar) {
+      return NextResponse.json({ message: "Car not found" }, { status: 404 });
+    }
+
+    // sending a successfull response
+    return NextResponse.json(
+      { message: "Car deleted successfully" },
+      { status: 200 },
+    );
+  } catch (error) {
+    // sending an error response
+    console.error("Error deleting car:", error);
+    return NextResponse.json(
+      { message: "Failed to delete car" },
+      { status: 500 },
+    );
+  }
+}
