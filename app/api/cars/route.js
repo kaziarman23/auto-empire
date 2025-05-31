@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import Car from "@/app/models/car.model";
 import connectDB from "@/app/lib/connectDB";
 
+// GET: Fetch all users
 export async function GET(request) {
   try {
     await connectDB();
@@ -21,6 +22,7 @@ export async function GET(request) {
   }
 }
 
+// POST: Create a new user
 export async function POST(request) {
   try {
     await connectDB();
@@ -74,6 +76,7 @@ export async function POST(request) {
   }
 }
 
+// PATCH: Update a user by ID
 export async function PATCH(request) {
   try {
     await connectDB();
@@ -110,6 +113,7 @@ export async function PATCH(request) {
   }
 }
 
+// DELETE: Delete a user by ID
 export async function DELETE(request) {
   try {
     await connectDB();
