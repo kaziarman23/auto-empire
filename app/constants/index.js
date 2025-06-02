@@ -128,6 +128,24 @@ export const EmpireServiceSection = {
   ImageSix: ServiceSectionCarSix,
 };
 
+export const StockCardSection = [
+  {
+    cardTitle: "Real-Time Inventory Sync",
+    cardDescription:
+      "Stay ahead with live updates. Our system ensures that every luxury and racing vehicle in our collection is tracked in real time no delays, no guesswork",
+  },
+  {
+    cardTitle: "Precision Vehicle Management",
+    cardDescription:
+      "From exotic supercars to track ready legends, each car is logged, detailed, and managed with unmatched accuracy, ensuring your dream ride is always within reach.",
+  },
+  {
+    cardTitle: "Acquisition to Delivery",
+    cardDescription:
+      "SmartStock handles every stage sourcing, inspection, storage, and handover with the same care and precision you'd expect from a luxury automotive brand.",
+  },
+];
+
 export const StockSection = {
   title: "Smart Stock",
   description:
