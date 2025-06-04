@@ -38,7 +38,7 @@ import ContactLocationImage from "@/public/images/ContactPageImages/LocationImag
 
 export const heroSection = {
   image: HeroSectionCar,
-  title: "Welcome to Auto Empire!",
+  title: "Welcome to Auto Empire",
   subtitle:
     "Stay informed, stay inspired, and stay ahead with Auto Empire — where your journey begins.",
   description:
@@ -69,7 +69,7 @@ export const latestSectionImages = [
 ];
 
 export const TopSellSection = {
-  title: "Explore Our Top-Selling Vehicles.",
+  title: "Explore Our Top-Selling Vehicles",
   description:
     "At Auto empire, we’re proud to showcase our top-selling cars, each representing the pinnacle of excellence in their respective categories. Discover why these models have captured the hearts of our customers and continue to lead the way in luxury and performance.",
 };
@@ -132,7 +132,7 @@ export const StockCardSection = [
   {
     cardTitle: "Real-Time Inventory Sync",
     cardDescription:
-      "Stay ahead with live updates. Our system ensures that every luxury and racing vehicle in our collection is tracked in real time no delays, no guesswork",
+      "Stay ahead with live updates. Our system ensures that every luxury and racing vehicle in our collection is tracked in real time no delays, no guesswork.",
   },
   {
     cardTitle: "Precision Vehicle Management",
