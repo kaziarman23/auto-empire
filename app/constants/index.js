@@ -20,6 +20,8 @@ import StockComponentImageOne from "@/public/images/HomePageImages/StockComponen
 
 // inventory page imports
 
+// import InventorySectionImageOne from "@/public/images/InventoryPageImages/InventorySectionImageOne.avif";
+
 // about page imports
 import AboutSignatureSectionImage from "@/public/images/AboutPageImages/AboutSignatureSectionImage.jpg";
 import AboutPrestigeSectionImageOne from "@/public/images/AboutPageImages/AboutPrestigeSectionImageOne.jpg";
