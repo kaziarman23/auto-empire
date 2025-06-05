@@ -11,7 +11,7 @@ function InventoryPage() {
         {InventorySection.map((card, i) => (
           <div
             key={i}
-            className="card h-[28rem] w-full overflow-hidden rounded-xl border-2 border-white bg-base-100 shadow-sm"
+            className="card bg-base-100 h-[28rem] w-full overflow-hidden rounded-xl border-2 border-white shadow-sm"
           >
             <figure className="h-1/2 w-full">
               <Image

@@ -5,12 +5,13 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { HiMenu } from "react-icons/hi";
 import { MdOutlineSpaceDashboard } from "react-icons/md";
-import { LucideIdCard } from "lucide-react";
+import { FileLock, FileLock2, LucideIdCard } from "lucide-react";
 import Button from "./Button";
 import Image from "next/image";
 
 const Navbar = () => {
   const pathname = usePathname();
+  const user = false;
 
   // Links for navigation
   const navLinks = [
@@ -111,7 +112,7 @@ const Navbar = () => {
               <LucideIdCard className="text-white" size={18} />
               Account
             </Button>
-            {menuOpen && (
+            {user && menuOpen ? (
               <ul className="absolute right-0 mt-2 w-40 space-y-2 rounded-md border border-gray-700 bg-black p-2 shadow-lg">
                 <li>
                   <Link
@@ -126,7 +127,22 @@ const Navbar = () => {
                   <Button className="w-full text-sm">Logout</Button>
                 </li>
               </ul>
-            )}
+            ) : menuOpen ? (
+              <ul className="absolute right-0 mt-2 w-40 space-y-2 rounded-md border border-gray-700 bg-black p-2 shadow-lg">
+                <li>
+                  <Button className="flex w-full items-center gap-2 text-sm hover:gap-3 hover:font-bold">
+                    <FileLock className="text-white" size={18} />
+                    Login
+                  </Button>
+                </li>
+                <li>
+                  <Button className="flex w-full items-center gap-2 text-sm hover:gap-3 hover:font-bold">
+                    <FileLock2 className="text-white" size={18} />
+                    Register
+                  </Button>
+                </li>
+              </ul>
+            ) : null}
           </div>
         </div>
 
@@ -136,7 +152,7 @@ const Navbar = () => {
             <HiMenu className="text-2xl text-white" />
           </Button>
 
-          {mobileMenuOpen && (
+          {user && mobileMenuOpen ? (
             <div className="absolute right-0 z-50 mt-2 w-44 rounded-lg bg-black p-3 shadow-lg">
               {navLinks.map(({ path, name }) => (
                 <Link
@@ -160,7 +176,32 @@ const Navbar = () => {
               </Link>
               <Button className="mt-2 w-full text-sm">Logout</Button>
             </div>
-          )}
+          ) : mobileMenuOpen ? (
+            <div className="absolute right-0 z-50 mt-2 w-44 rounded-lg bg-black p-3 shadow-lg">
+              {navLinks.map(({ path, name }) => (
+                <Link
+                  key={path}
+                  href={path}
+                  onClick={toggleMobileMenu}
+                  className={`block rounded-md px-3 py-2 text-white transition hover:bg-orange-500 ${
+                    pathname === path ? "bg-orange-500" : ""
+                  }`}
+                >
+                  {name}
+                </Link>
+              ))}
+              <div className="my-2 border-t border-gray-700" />
+
+              <Button className="flex w-full items-center gap-2 text-sm hover:gap-3 hover:font-bold">
+                    <FileLock className="text-white" size={18} />
+                    Login
+                  </Button>
+              <Button className="flex w-full items-center gap-2 text-sm hover:gap-3 hover:font-bold">
+                    <FileLock2 className="text-white" size={18} />
+                    Register
+                  </Button>
+            </div>
+          ) : null}
         </div>
       </div>
     </header>
