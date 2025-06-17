@@ -7,11 +7,9 @@ function AuthinticationSection() {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <div className="flex h-screen flex-col items-center justify-center bg-gradient-to-r from-gray-200 to-indigo-100 font-[Montserrat]">
+    <div className="flex h-screen flex-col items-center justify-center bg-black">
       <div
-        className={`relative min-h-[480px] w-[768px] max-w-full overflow-hidden rounded-[30px] bg-white shadow-[0_5px_15px_rgba(0,0,0,0.35)] ${
-          isActive ? "active" : ""
-        }`}
+        className={`relative min-h-[480px] w-[768px] max-w-full overflow-hidden rounded-[30px] border-2 border-white bg-black ${isActive ? "active" : ""}`}
       >
         {/* Sign Up */}
         <div
@@ -19,39 +17,33 @@ function AuthinticationSection() {
             isActive ? "z-[5] translate-x-full opacity-100" : "z-[1] opacity-0"
           }`}
         >
-          <form className="flex h-full flex-col items-center justify-center bg-white px-10">
+          <form className="flex h-full flex-col items-center justify-center bg-black px-10">
             <h1 className="text-xl font-bold">Create Account</h1>
             <div className="my-5 flex">
-              <a
-                href="#"
-                className="mx-1 flex h-10 w-10 items-center justify-center rounded-[20%] border border-gray-300"
-              >
+              <button className="mx-1 flex h-10 w-10 items-center justify-center rounded-[20%] border border-gray-300 hover:bg-white hover:text-black">
                 <FaFacebook />
-              </a>
-              <a
-                href="#"
-                className="mx-1 flex h-10 w-10 items-center justify-center rounded-[20%] border border-gray-300"
-              >
+              </button>
+              <button className="mx-1 flex h-10 w-10 items-center justify-center rounded-[20%] border border-gray-300 hover:bg-white hover:text-black">
                 <FaGithub />
-              </a>
+              </button>
             </div>
             <span className="text-xs">or use your email for registration</span>
             <input
               type="text"
               placeholder="Name"
-              className="my-2 w-full rounded-md border-none bg-gray-200 px-4 py-2 text-sm outline-none"
+              className="my-2 w-full rounded-md border-none bg-gray-200 px-4 py-2 text-sm text-black outline-none"
             />
             <input
               type="email"
               placeholder="Email"
-              className="my-2 w-full rounded-md border-none bg-gray-200 px-4 py-2 text-sm outline-none"
+              className="my-2 w-full rounded-md border-none bg-gray-200 px-4 py-2 text-sm text-black outline-none"
             />
             <input
               type="password"
               placeholder="Password"
-              className="my-2 w-full rounded-md border-none bg-gray-200 px-4 py-2 text-sm outline-none"
+              className="my-2 w-full rounded-md border-none bg-gray-200 px-4 py-2 text-sm text-black outline-none"
             />
-            <button className="mt-2 rounded-md border border-transparent bg-indigo-800 px-[45px] py-2 text-xs font-semibold uppercase tracking-wider text-white">
+            <button className="mt-2 rounded-md border border-white bg-black px-[45px] py-2 text-xs font-semibold uppercase tracking-wider text-white hover:bg-white hover:text-black">
               Sign Up
             </button>
           </form>
@@ -63,37 +55,28 @@ function AuthinticationSection() {
             isActive ? "translate-x-full" : ""
           }`}
         >
-          <form className="flex h-full flex-col items-center justify-center bg-white px-10">
+          <form className="flex h-full flex-col items-center justify-center bg-black px-10">
             <h1 className="text-xl font-bold">Sign In</h1>
-             <div className="my-5 flex">
-              <a
-                href="#"
-                className="mx-1 flex h-10 w-10 items-center justify-center rounded-[20%] border border-gray-300"
-              >
+            <div className="my-5 flex">
+              <button className="mx-1 flex h-10 w-10 items-center justify-center rounded-[20%] border border-gray-300 hover:bg-white hover:text-black">
                 <FaFacebook />
-              </a>
-              <a
-                href="#"
-                className="mx-1 flex h-10 w-10 items-center justify-center rounded-[20%] border border-gray-300"
-              >
+              </button>
+              <button className="mx-1 flex h-10 w-10 items-center justify-center rounded-[20%] border border-gray-300 hover:bg-white hover:text-black">
                 <FaGithub />
-              </a>
+              </button>
             </div>
             <span className="text-xs">or use your email password</span>
             <input
               type="email"
               placeholder="Email"
-              className="my-2 w-full rounded-md border-none bg-gray-200 px-4 py-2 text-sm outline-none"
+              className="my-2 w-full rounded-md border-none bg-gray-200 px-4 py-2 text-sm text-black outline-none"
             />
             <input
               type="password"
               placeholder="Password"
               className="my-2 w-full rounded-md border-none bg-gray-200 px-4 py-2 text-sm outline-none"
             />
-            <a href="#" className="mb-2 mt-4 text-sm text-gray-700">
-              Forget Your Password?
-            </a>
-            <button className="mt-2 rounded-md border border-transparent bg-indigo-800 px-[45px] py-2 text-xs font-semibold uppercase tracking-wider text-white">
+            <button className="mt-2 rounded-md border border-white bg-black px-[45px] py-2 text-xs font-semibold uppercase tracking-wider text-white hover:bg-white hover:text-black">
               Sign In
             </button>
           </form>
@@ -101,12 +84,15 @@ function AuthinticationSection() {
 
         {/* Toggle Container */}
         <div
-          className={`absolute left-1/2 top-0 z-[1000] h-full w-1/2 overflow-hidden rounded-[150px_0_0_100px] transition-all duration-[600ms] ease-in-out ${
-            isActive ? "-translate-x-full rounded-[0_150px_100px_0]" : ""
+          className={`absolute left-1/2 top-0 z-[1000] h-full w-1/2 overflow-hidden transition-all duration-[600ms] ease-in-out ${
+            isActive ? "-translate-x-full" : ""
           }`}
+          style={{
+            borderRadius: isActive ? "0 150px 100px 0" : "150px 0 0 100px",
+          }}
         >
           <div
-            className={`relative -left-full h-full w-[200%] bg-gradient-to-r from-indigo-400 to-indigo-800 text-white transition-all duration-[600ms] ease-in-out ${
+            className={`relative -left-full h-full w-[200%] bg-white text-black transition-all duration-[600ms] ease-in-out ${
               isActive ? "translate-x-1/2" : ""
             }`}
           >
@@ -121,7 +107,7 @@ function AuthinticationSection() {
                 Enter your personal details to use all of site features
               </p>
               <button
-                className="mt-2 rounded-md border border-white bg-transparent px-[45px] py-2 text-xs font-semibold uppercase tracking-wider text-white"
+                className="mt-2 cursor-pointer rounded-md border-2 border-black bg-black px-[45px] py-2 text-xs font-semibold uppercase tracking-wider text-white hover:bg-white hover:text-black"
                 id="login"
                 onClick={() => setIsActive(false)}
               >
@@ -140,7 +126,7 @@ function AuthinticationSection() {
                 Register with your personal details to use all of site features
               </p>
               <button
-                className="mt-2 rounded-md border border-white bg-transparent px-[45px] py-2 text-xs font-semibold uppercase tracking-wider text-white"
+                className="mt-2 cursor-pointer rounded-md border-2 border-black bg-black px-[45px] py-2 text-xs font-semibold uppercase tracking-wider text-white hover:bg-white hover:text-black"
                 id="register"
                 onClick={() => setIsActive(true)}
               >
