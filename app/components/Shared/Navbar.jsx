@@ -130,16 +130,20 @@ const Navbar = () => {
             ) : menuOpen ? (
               <ul className="absolute right-0 mt-2 w-40 space-y-2 rounded-md border border-gray-700 bg-black p-2 shadow-lg">
                 <li>
-                  <Button className="flex w-full items-center gap-2 text-sm hover:gap-3 hover:font-bold">
-                    <FileLock className="text-white" size={18} />
-                    Login
-                  </Button>
+                  <Link href="/authintication">
+                    <Button className="flex w-full items-center gap-2 text-sm hover:gap-3 hover:font-bold">
+                      <FileLock className="text-white" size={18} />
+                      Login
+                    </Button>
+                  </Link>
                 </li>
                 <li>
-                  <Button className="flex w-full items-center gap-2 text-sm hover:gap-3 hover:font-bold">
-                    <FileLock2 className="text-white" size={18} />
-                    Register
-                  </Button>
+                  <Link href="/authintication">
+                    <Button className="flex w-full items-center gap-2 text-sm hover:gap-3 hover:font-bold">
+                      <FileLock2 className="text-white" size={18} />
+                      Register
+                    </Button>
+                  </Link>
                 </li>
               </ul>
             ) : null}
@@ -192,14 +196,18 @@ const Navbar = () => {
               ))}
               <div className="my-2 border-t border-gray-700" />
 
-              <Button className="flex w-full items-center gap-2 text-sm hover:gap-3 hover:font-bold">
-                    <FileLock className="text-white" size={18} />
-                    Login
-                  </Button>
-              <Button className="flex w-full items-center gap-2 text-sm hover:gap-3 hover:font-bold">
-                    <FileLock2 className="text-white" size={18} />
-                    Register
-                  </Button>
+              <Link href="/authintication">
+                <Button className="flex w-full items-center gap-2 text-sm hover:gap-3 hover:font-bold">
+                  <FileLock className="text-white" size={18} />
+                  Login
+                </Button>
+              </Link>
+              <Link href="/authintication">
+                <Button className="flex w-full items-center gap-2 text-sm hover:gap-3 hover:font-bold">
+                  <FileLock2 className="text-white" size={18} />
+                  Register
+                </Button>
+              </Link>
             </div>
           ) : null}
         </div>
