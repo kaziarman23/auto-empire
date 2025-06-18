@@ -4,7 +4,27 @@ import React, { useState } from "react";
 import { FaFacebook, FaGithub } from "react-icons/fa";
 
 function AuthinticationSection() {
+  // states
   const [isActive, setIsActive] = useState(false);
+  const [signInData, setSignInData] = useState({ email: "", password: "" });
+  const [signUpData, setSignUpData] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+
+  // forms
+  const handleSignIn = (e) => {
+    e.preventDefault();
+    console.log("Sign In Data:", signInData);
+    // Perform sign in logic here (e.g., API call)
+  };
+
+  const handleSignUp = (e) => {
+    e.preventDefault();
+    console.log("Sign Up Data:", signUpData);
+    // Perform sign up logic here (e.g., API call)
+  };
 
   return (
     <div className="flex h-screen flex-col items-center justify-center bg-black">
@@ -17,7 +37,10 @@ function AuthinticationSection() {
             isActive ? "z-[5] translate-x-full opacity-100" : "z-[1] opacity-0"
           }`}
         >
-          <form className="flex h-full flex-col items-center justify-center bg-black px-10">
+          <form
+            onSubmit={handleSignUp}
+            className="flex h-full flex-col items-center justify-center bg-black px-10"
+          >
             <h1 className="text-xl font-bold">Create Account</h1>
             <div className="my-5 flex">
               <button className="mx-1 flex h-10 w-10 items-center justify-center rounded-[20%] border border-gray-300 hover:bg-white hover:text-black">
@@ -31,16 +54,28 @@ function AuthinticationSection() {
             <input
               type="text"
               placeholder="Name"
+              value={signUpData.name}
+              onChange={(e) =>
+                setSignUpData({ ...signUpData, name: e.target.value })
+              }
               className="my-2 w-full rounded-md border-none bg-gray-200 px-4 py-2 text-sm text-black outline-none"
             />
             <input
               type="email"
               placeholder="Email"
+              value={signUpData.email}
+              onChange={(e) =>
+                setSignUpData({ ...signUpData, email: e.target.value })
+              }
               className="my-2 w-full rounded-md border-none bg-gray-200 px-4 py-2 text-sm text-black outline-none"
             />
             <input
               type="password"
               placeholder="Password"
+              value={signUpData.password}
+              onChange={(e) =>
+                setSignUpData({ ...signUpData, password: e.target.value })
+              }
               className="my-2 w-full rounded-md border-none bg-gray-200 px-4 py-2 text-sm text-black outline-none"
             />
             <button className="mt-2 rounded-md border border-white bg-black px-[45px] py-2 text-xs font-semibold uppercase tracking-wider text-white hover:bg-white hover:text-black">
@@ -55,7 +90,10 @@ function AuthinticationSection() {
             isActive ? "translate-x-full" : ""
           }`}
         >
-          <form className="flex h-full flex-col items-center justify-center bg-black px-10">
+          <form
+            onSubmit={handleSignIn}
+            className="flex h-full flex-col items-center justify-center bg-black px-10"
+          >
             <h1 className="text-xl font-bold">Sign In</h1>
             <div className="my-5 flex">
               <button className="mx-1 flex h-10 w-10 items-center justify-center rounded-[20%] border border-gray-300 hover:bg-white hover:text-black">
@@ -69,11 +107,19 @@ function AuthinticationSection() {
             <input
               type="email"
               placeholder="Email"
+              value={signInData.email}
+              onChange={(e) =>
+                setSignInData({ ...signInData, email: e.target.value })
+              }
               className="my-2 w-full rounded-md border-none bg-gray-200 px-4 py-2 text-sm text-black outline-none"
             />
             <input
               type="password"
               placeholder="Password"
+              value={signInData.password}
+              onChange={(e) =>
+                setSignInData({ ...signInData, password: e.target.value })
+              }
               className="my-2 w-full rounded-md border-none bg-gray-200 px-4 py-2 text-sm outline-none"
             />
             <button className="mt-2 rounded-md border border-white bg-black px-[45px] py-2 text-xs font-semibold uppercase tracking-wider text-white hover:bg-white hover:text-black">

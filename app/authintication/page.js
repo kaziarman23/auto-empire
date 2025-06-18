@@ -1,12 +1,12 @@
-import React from 'react'
-import AuthinticationSection from '../components/authinticationPage/AuthinticationSection'
+import React from "react";
+import AuthinticationSection from "../components/authinticationPage/AuthinticationSection";
 
 function page() {
   return (
     <div>
-        <AuthinticationSection/>
+      <AuthinticationSection />
     </div>
-  )
+  );
 }
 
-export default page
+export default page;
