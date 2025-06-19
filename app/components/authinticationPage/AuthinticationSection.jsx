@@ -1,29 +1,39 @@
 "use client";
 
 import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 import { FaFacebook, FaGithub } from "react-icons/fa";
 
 function AuthinticationSection() {
-  // states
+  // State
   const [isActive, setIsActive] = useState(false);
-  const [signInData, setSignInData] = useState({ email: "", password: "" });
-  const [signUpData, setSignUpData] = useState({
-    name: "",
-    email: "",
-    password: "",
-  });
 
-  // forms
-  const handleSignIn = (e) => {
-    e.preventDefault();
-    console.log("Sign In Data:", signInData);
-    // Perform sign in logic here (e.g., API call)
+  // React Hook Form - Sign In
+  const {
+    register: registerSignIn,
+    handleSubmit: handleSignIn,
+    formState: { errors: signInErrors },
+    reset: resetSignIn,
+  } = useForm();
+
+  // React Hook Form - Sign Up
+  const {
+    register: registerSignUp,
+    handleSubmit: handleSignUp,
+    formState: { errors: signUpErrors },
+    reset: resetSignUp,
+  } = useForm();
+
+  // Handle Form Submit- Sign In
+  const onSignIn = (data) => {
+    console.log("Sign In Data:", data);
+    resetSignIn();
   };
 
-  const handleSignUp = (e) => {
-    e.preventDefault();
-    console.log("Sign Up Data:", signUpData);
-    // Perform sign up logic here (e.g., API call)
+  // Handle Form Submit- Sign Up
+  const onSignUp = (data) => {
+    console.log("Sign Up Data:", data);
+    resetSignUp();
   };
 
   return (
@@ -38,7 +48,7 @@ function AuthinticationSection() {
           }`}
         >
           <form
-            onSubmit={handleSignUp}
+            onSubmit={handleSignUp(onSignUp)}
             className="flex h-full flex-col items-center justify-center bg-black px-10"
           >
             <h1 className="text-xl font-bold">Create Account</h1>
@@ -51,33 +61,52 @@ function AuthinticationSection() {
               </button>
             </div>
             <span className="text-xs">or use your email for registration</span>
+            {/* Signup Inputs */}
             <input
               type="text"
               placeholder="Name"
-              value={signUpData.name}
-              onChange={(e) =>
-                setSignUpData({ ...signUpData, name: e.target.value })
-              }
               className="my-2 w-full rounded-md border-none bg-gray-200 px-4 py-2 text-sm text-black outline-none"
+              {...registerSignUp("name", { required: "Name is required" })}
             />
+            {signUpErrors.name && (
+              <p className="text-xs text-red-500">
+                {signUpErrors.name.message}
+              </p>
+            )}
             <input
               type="email"
               placeholder="Email"
-              value={signUpData.email}
-              onChange={(e) =>
-                setSignUpData({ ...signUpData, email: e.target.value })
-              }
               className="my-2 w-full rounded-md border-none bg-gray-200 px-4 py-2 text-sm text-black outline-none"
+              {...registerSignUp("email", {
+                required: "Email is required",
+                pattern: {
+                  value: /^\S+@\S+$/i,
+                  message: "Invalid email address",
+                },
+              })}
             />
+            {signUpErrors.email && (
+              <p className="text-xs text-red-500">
+                {signUpErrors.email.message}
+              </p>
+            )}
             <input
               type="password"
               placeholder="Password"
-              value={signUpData.password}
-              onChange={(e) =>
-                setSignUpData({ ...signUpData, password: e.target.value })
-              }
               className="my-2 w-full rounded-md border-none bg-gray-200 px-4 py-2 text-sm text-black outline-none"
+              {...registerSignUp("password", {
+                required: "Password is required",
+                minLength: {
+                  value: 6,
+                  message: "Password must be at least 6 characters",
+                },
+              })}
             />
+            {signUpErrors.password && (
+              <p className="text-xs text-red-500">
+                {signUpErrors.password.message}
+              </p>
+            )}
             <button className="mt-2 rounded-md border border-white bg-black px-[45px] py-2 text-xs font-semibold uppercase tracking-wider text-white hover:bg-white hover:text-black">
               Sign Up
             </button>
@@ -91,7 +120,7 @@ function AuthinticationSection() {
           }`}
         >
           <form
-            onSubmit={handleSignIn}
+            onSubmit={handleSignIn(onSignIn)}
             className="flex h-full flex-col items-center justify-center bg-black px-10"
           >
             <h1 className="text-xl font-bold">Sign In</h1>
@@ -104,24 +133,40 @@ function AuthinticationSection() {
               </button>
             </div>
             <span className="text-xs">or use your email password</span>
+            {/* Signin Inputs */}
             <input
-              type="email"
               placeholder="Email"
-              value={signInData.email}
-              onChange={(e) =>
-                setSignInData({ ...signInData, email: e.target.value })
-              }
               className="my-2 w-full rounded-md border-none bg-gray-200 px-4 py-2 text-sm text-black outline-none"
+              {...registerSignIn("email", {
+                required: "Email is required",
+                pattern: {
+                  value: /^\S+@\S+$/i,
+                  message: "Invalid email format",
+                },
+              })}
             />
+            {signInErrors.email && (
+              <p className="text-xs text-red-500">
+                {signInErrors.email.message}
+              </p>
+            )}
             <input
+              {...registerSignIn("password", {
+                required: "Password is required",
+                minLength: {
+                  value: 6,
+                  message: "Password must be at least 6 characters",
+                },
+              })}
               type="password"
               placeholder="Password"
-              value={signInData.password}
-              onChange={(e) =>
-                setSignInData({ ...signInData, password: e.target.value })
-              }
-              className="my-2 w-full rounded-md border-none bg-gray-200 px-4 py-2 text-sm outline-none"
+              className="my-2 w-full rounded-md border-none bg-gray-200 px-4 py-2 text-sm text-black outline-none"
             />
+            {signInErrors.password && (
+              <p className="text-xs text-red-500">
+                {signInErrors.password.message}
+              </p>
+            )}
             <button className="mt-2 rounded-md border border-white bg-black px-[45px] py-2 text-xs font-semibold uppercase tracking-wider text-white hover:bg-white hover:text-black">
               Sign In
             </button>
