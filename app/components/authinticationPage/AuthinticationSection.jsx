@@ -2,11 +2,26 @@
 
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { FaFacebook, FaGithub } from "react-icons/fa";
+import { FaGithub, FaGoogle } from "react-icons/fa";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useAddUserMutation } from "../../redux/api/usersApi";
+import useBWToast from "../Shared/useCustomToast";
+import { useDispatch } from "react-redux";
+import {
+  createUser,
+  googleSignIn,
+  loginUser,
+} from "../../redux/slices/userSlice";
 
 function AuthinticationSection() {
   // State
   const [isActive, setIsActive] = useState(false);
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const from = searchParams.get("from") || "/";
+  const dispatch = useDispatch();
+  const [addUser] = useAddUserMutation();
+  const { showSuccess, showError } = useBWToast();
 
   // React Hook Form - Sign In
   const {
@@ -26,14 +41,86 @@ function AuthinticationSection() {
 
   // Handle Form Submit- Sign In
   const onSignIn = (data) => {
-    console.log("Sign In Data:", data);
-    resetSignIn();
+    dispatch(loginUser(data))
+      .unwrap()
+      .then(() => {
+        // clearing the form
+        resetSignIn();
+
+        // navigating the user
+        router.push(from);
+
+        // showing an alert
+        showSuccess("Sign-In Successfull!");
+      })
+      .catch((error) => {
+        console.log("Error While Doing Signin:", error);
+
+        // showing an alert
+        showError("Error In Signin Process, Try Again!");
+      });
   };
 
   // Handle Form Submit- Sign Up
   const onSignUp = (data) => {
-    console.log("Sign Up Data:", data);
-    resetSignUp();
+    // updating the user information by dispatch
+    dispatch(createUser(data))
+      .unwrap()
+      .then(() => {
+        // sending data in the server
+        const userInfo = {
+          userName: data.userName,
+          userEmail: data.userEmail,
+          userPhoto:
+            "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.miraheze.org%2Fwindowswallpaperwiki%2F9%2F9c%2FDefaultAccountTile_(Windows_11).png&f=1&nofb=1&ipt=71744ba8b68c06ca1915a38e2c2907aa42f60522b2bf9be45b0981af30e0fc4b",
+          userIsVerified: false,
+          userRole: "user",
+        };
+
+        addUser(userInfo);
+
+        // clearing the form
+        resetSignUp();
+
+        // navigating the user
+        router.push("/");
+
+        // showing an alert
+        showSuccess("Sign-Up Successfull!");
+      })
+      .catch((error) => {
+        console.log("Error While Doing Register:", error);
+
+        // showing an alert
+        showError("Error In Signup Process, Try Again!");
+      });
+  };
+
+  // Handle Google Authintication
+  const handleGoogleAuthintication = () => {
+    dispatch(googleSignIn())
+      .unwrap()
+      .then(() => {
+        // clearing the form
+        resetSignIn();
+        resetSignUp();
+
+        // navigating the user
+        router.push(from);
+
+        // showing an alert
+        showSuccess("Sign-Up Successfull!");
+      })
+      .catch((error) => {
+        console.log("Error :", error);
+
+        // clearing all inputs
+        resetSignIn();
+        resetSignUp();
+
+        // showing an alert
+        showError("Error In Signup Process, Try Again!");
+      });
   };
 
   return (
@@ -53,8 +140,11 @@ function AuthinticationSection() {
           >
             <h1 className="text-xl font-bold">Create Account</h1>
             <div className="my-5 flex">
-              <button className="mx-1 flex h-10 w-10 items-center justify-center rounded-[20%] border border-gray-300 hover:bg-white hover:text-black">
-                <FaFacebook />
+              <button
+                onClick={handleGoogleAuthintication}
+                className="mx-1 flex h-10 w-10 items-center justify-center rounded-[20%] border border-gray-300 hover:bg-white hover:text-black"
+              >
+                <FaGoogle />
               </button>
               <button className="mx-1 flex h-10 w-10 items-center justify-center rounded-[20%] border border-gray-300 hover:bg-white hover:text-black">
                 <FaGithub />
@@ -66,18 +156,18 @@ function AuthinticationSection() {
               type="text"
               placeholder="Name"
               className="my-2 w-full rounded-md border-none bg-gray-200 px-4 py-2 text-sm text-black outline-none"
-              {...registerSignUp("name", { required: "Name is required" })}
+              {...registerSignUp("userName", { required: "Name is required" })}
             />
-            {signUpErrors.name && (
+            {signUpErrors.userName && (
               <p className="text-xs text-red-500">
-                {signUpErrors.name.message}
+                {signUpErrors.userName.message}
               </p>
             )}
             <input
               type="email"
               placeholder="Email"
               className="my-2 w-full rounded-md border-none bg-gray-200 px-4 py-2 text-sm text-black outline-none"
-              {...registerSignUp("email", {
+              {...registerSignUp("userEmail", {
                 required: "Email is required",
                 pattern: {
                   value: /^\S+@\S+$/i,
@@ -85,16 +175,16 @@ function AuthinticationSection() {
                 },
               })}
             />
-            {signUpErrors.email && (
+            {signUpErrors.userEmail && (
               <p className="text-xs text-red-500">
-                {signUpErrors.email.message}
+                {signUpErrors.userEmail.message}
               </p>
             )}
             <input
               type="password"
               placeholder="Password"
               className="my-2 w-full rounded-md border-none bg-gray-200 px-4 py-2 text-sm text-black outline-none"
-              {...registerSignUp("password", {
+              {...registerSignUp("userPassword", {
                 required: "Password is required",
                 minLength: {
                   value: 6,
@@ -102,7 +192,7 @@ function AuthinticationSection() {
                 },
               })}
             />
-            {signUpErrors.password && (
+            {signUpErrors.userPassword && (
               <p className="text-xs text-red-500">
                 {signUpErrors.password.message}
               </p>
@@ -125,8 +215,11 @@ function AuthinticationSection() {
           >
             <h1 className="text-xl font-bold">Sign In</h1>
             <div className="my-5 flex">
-              <button className="mx-1 flex h-10 w-10 items-center justify-center rounded-[20%] border border-gray-300 hover:bg-white hover:text-black">
-                <FaFacebook />
+              <button
+                onClick={handleGoogleAuthintication}
+                className="mx-1 flex h-10 w-10 items-center justify-center rounded-[20%] border border-gray-300 hover:bg-white hover:text-black"
+              >
+                <FaGoogle />
               </button>
               <button className="mx-1 flex h-10 w-10 items-center justify-center rounded-[20%] border border-gray-300 hover:bg-white hover:text-black">
                 <FaGithub />
@@ -137,7 +230,7 @@ function AuthinticationSection() {
             <input
               placeholder="Email"
               className="my-2 w-full rounded-md border-none bg-gray-200 px-4 py-2 text-sm text-black outline-none"
-              {...registerSignIn("email", {
+              {...registerSignIn("userEmail", {
                 required: "Email is required",
                 pattern: {
                   value: /^\S+@\S+$/i,
@@ -145,13 +238,13 @@ function AuthinticationSection() {
                 },
               })}
             />
-            {signInErrors.email && (
+            {signInErrors.userEmail && (
               <p className="text-xs text-red-500">
-                {signInErrors.email.message}
+                {signInErrors.userEmail.message}
               </p>
             )}
             <input
-              {...registerSignIn("password", {
+              {...registerSignIn("userPassword", {
                 required: "Password is required",
                 minLength: {
                   value: 6,
@@ -162,9 +255,9 @@ function AuthinticationSection() {
               placeholder="Password"
               className="my-2 w-full rounded-md border-none bg-gray-200 px-4 py-2 text-sm text-black outline-none"
             />
-            {signInErrors.password && (
+            {signInErrors.userPassword && (
               <p className="text-xs text-red-500">
-                {signInErrors.password.message}
+                {signInErrors.userPassword.message}
               </p>
             )}
             <button className="mt-2 rounded-md border border-white bg-black px-[45px] py-2 text-xs font-semibold uppercase tracking-wider text-white hover:bg-white hover:text-black">

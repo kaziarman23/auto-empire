@@ -26,10 +26,12 @@ export async function POST(request) {
     await connectDB();
     const body = await request.json();
 
-    const { name, email, password, image, role } = body;
+    console.log("body-Info: ", body);
+
+    const { userName, userEmail, userPhoto, userRole, userIsVerified } = body;
 
     // Validate required fields
-    if (!name || !email || !password || !image) {
+    if (!userName || !userEmail || !userPhoto) {
       return NextResponse.json(
         { message: "Missing required user fields" },
         { status: 400 },
@@ -37,12 +39,13 @@ export async function POST(request) {
     }
 
     const newUser = await User.create({
-      name,
-      email,
-      password,
-      image,
-      role, // defaults to "user" if not provided
+      userName,
+      userEmail,
+      userPhoto,
+      userIsVerified,
+      userRole,
     });
+    console.log("new User : ", newUser);
 
     return NextResponse.json(newUser, { status: 201 });
   } catch (error) {

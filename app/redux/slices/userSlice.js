@@ -1,6 +1,15 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  updateProfile,
+} from "firebase/auth";
 import auth from "../../firebase/firebase.config";
+
+// provider
+const googleProvider = new GoogleAuthProvider();
 
 const initialState = {
   userName: "",
@@ -28,8 +37,8 @@ export const createUser = createAsyncThunk(
 
     return {
       userName: data.user.displayName,
-      userPhoto: data.user.photoURL,
       userEmail: data.user.email,
+      userPhoto: data.user.photoURL,
     };
   },
 );
@@ -45,8 +54,22 @@ export const loginUser = createAsyncThunk(
     );
     return {
       userName: data.user.displayName,
-      userPhoto: data.user.photoURL,
       userEmail: data.user.email,
+      userPhoto: data.user.photoURL,
+    };
+  },
+);
+
+// creating user with google
+export const googleSignIn = createAsyncThunk(
+  "userSlice/googleSignIn",
+  async () => {
+    const data = await signInWithPopup(auth, googleProvider);
+
+    return {
+      userName: data.user.displayName,
+      userEmail: data.user.email,
+      userPhoto: data.user.photoURL,
     };
   },
 );
@@ -57,64 +80,64 @@ const userSlice = createSlice({
   reducers: {
     setUser: (state, { payload }) => {
       state.userName = payload.userName;
-      state.userPhoto = payload.userPhoto;
       state.userEmail = payload.userEmail;
+      state.userPhoto = payload.userPhoto;
     },
     toggleLoading: (state, { payload }) => {
       state.isLoading = payload;
     },
     logoutUser: (state) => {
       state.userName = "";
-      state.userPhoto = "";
       state.userEmail = "";
+      state.userPhoto = "";
     },
   },
   extraReducers: (builder) => {
     builder
       .addCase(createUser.pending, (state) => {
         state.userName = "";
-        state.userPhoto = "";
         state.userEmail = "";
+        state.userPhoto = "";
         state.isLoading = true;
         state.isError = false;
         state.error = "";
       })
       .addCase(createUser.fulfilled, (state, { payload }) => {
         state.userName = payload.userName;
-        state.userPhoto = payload.userPhoto;
         state.userEmail = payload.userEmail;
+        state.userPhoto = payload.userPhoto;
         state.isLoading = false;
         state.isError = false;
         state.error = false;
       })
       .addCase(createUser.rejected, (state, action) => {
         state.userName = "";
-        state.userPhoto = "";
         state.userEmail = "";
+        state.userPhoto = "";
         state.isLoading = false;
         state.isError = true;
         state.error = action.error.message;
       }) // google singIn
       .addCase(googleSignIn.pending, (state) => {
         state.userName = "";
-        state.userPhoto = "";
         state.userEmail = "";
+        state.userPhoto = "";
         state.isLoading = true;
         state.isError = false;
         state.error = "";
       })
       .addCase(googleSignIn.fulfilled, (state, { payload }) => {
         state.userName = payload.userName;
-        state.userPhoto = payload.userPhoto;
         state.userEmail = payload.userEmail;
+        state.userPhoto = payload.userPhoto;
         state.isLoading = false;
         state.isError = false;
         state.error = false;
       })
       .addCase(googleSignIn.rejected, (state, action) => {
         state.userName = "";
-        state.userPhoto = "";
         state.userEmail = "";
+        state.userPhoto = "";
         state.isLoading = false;
         state.isError = true;
         state.error = action.error.message;
