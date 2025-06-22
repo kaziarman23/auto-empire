@@ -20,4 +20,4 @@ function Home() {
   );
 }
 
-export default wrapper.withRedux(Home);;
+export default Home;
