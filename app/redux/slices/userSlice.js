@@ -33,12 +33,15 @@ export const createUser = createAsyncThunk(
       displayName: userName,
       photoURL: userPhoto,
     });
-    console.log(data);
+
+    const updatedUser = auth.currentUser;
+
+    console.log("updatedUser: ", updatedUser);
 
     return {
-      userName: data.user.displayName,
-      userEmail: data.user.email,
-      userPhoto: data.user.photoURL,
+      userName: updatedUser.displayName,
+      userEmail: updatedUser.email,
+      userPhoto: updatedUser.photoURL,
     };
   },
 );
@@ -66,10 +69,12 @@ export const googleSignIn = createAsyncThunk(
   async () => {
     const data = await signInWithPopup(auth, googleProvider);
 
+    console.log("googleSignInData: ", data);
     return {
       userName: data.user.displayName,
       userEmail: data.user.email,
       userPhoto: data.user.photoURL,
+      userIsVerified: data.user.emailVerified,
     };
   },
 );
@@ -103,6 +108,7 @@ const userSlice = createSlice({
         state.error = "";
       })
       .addCase(createUser.fulfilled, (state, { payload }) => {
+        console.log("createUser payload: ", payload);
         state.userName = payload.userName;
         state.userEmail = payload.userEmail;
         state.userPhoto = payload.userPhoto;

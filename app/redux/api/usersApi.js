@@ -8,7 +8,7 @@ const usersApi = baseApi.injectEndpoints({
     }),
     addUser: builder.mutation({
       query: (user) => ({
-        url: "/api//users",
+        url: "/api/users",
         method: "POST",
         body: user,
       }),
@@ -16,7 +16,7 @@ const usersApi = baseApi.injectEndpoints({
     }),
     updateUserProfile: builder.mutation({
       query: (userInfo) => ({
-        url: "/api//users",
+        url: "/api/users",
         method: "PATCH",
         body: userInfo,
       }),
@@ -24,7 +24,7 @@ const usersApi = baseApi.injectEndpoints({
     }),
     promoteUserRole: builder.mutation({
       query: (userInfo) => ({
-        url: "/api//users",
+        url: "/api/users",
         method: "PUT",
         body: userInfo,
       }),
@@ -32,7 +32,7 @@ const usersApi = baseApi.injectEndpoints({
     }),
     demoteUserRole: builder.mutation({
       query: (userInfo) => ({
-        url: "/api//users",
+        url: "/api/users",
         method: "PUT",
         body: userInfo,
       }),
@@ -40,12 +40,19 @@ const usersApi = baseApi.injectEndpoints({
     }),
     deleteUser: builder.mutation({
       query: (userInfo) => ({
-        url: "/api//users",
+        url: "/api/users",
         method: "DELETE",
         body: userInfo,
       }),
       invalidatesTags: ["Users"],
     }),
+    deleteAllUsers: builder.mutation({
+      query: () => ({
+        url: "/api/users",
+        method: "DELETE"
+      }),
+      invalidatesTags: ["Users"],
+    })
   }),
 });
 

@@ -26,8 +26,6 @@ export async function POST(request) {
     await connectDB();
     const body = await request.json();
 
-    console.log("body-Info: ", body);
-
     const { userName, userEmail, userPhoto, userRole, userIsVerified } = body;
 
     // Validate required fields
@@ -38,6 +36,15 @@ export async function POST(request) {
       );
     }
 
+    // Check if user already exists
+    const existingUser = await User.findOne({ userEmail });
+
+    if (existingUser) {
+      console.log("User already exists:", existingUser);
+      return NextResponse.json(existingUser, { status: 200 });
+    }
+
+    // Creating user
     const newUser = await User.create({
       userName,
       userEmail,
@@ -45,7 +52,6 @@ export async function POST(request) {
       userIsVerified,
       userRole,
     });
-    console.log("new User : ", newUser);
 
     return NextResponse.json(newUser, { status: 201 });
   } catch (error) {
@@ -94,29 +100,44 @@ export async function PATCH(request) {
 export async function DELETE(request) {
   try {
     await connectDB();
-    const { id } = await request.json();
 
-    if (!id) {
+    let id = null;
+    try {
+      const body = await request.json();
+      id = body?.id;
+    } catch (err) {
+      // If There is no id found then it will be null
+      id = null;
+    }
+
+    if (id) {
+      // Delete single user by ID
+      const deletedUser = await User.findByIdAndDelete(id);
+
+      if (!deletedUser) {
+        return NextResponse.json(
+          { message: "User not found" },
+          { status: 404 },
+        );
+      }
+
       return NextResponse.json(
-        { message: "User ID not found in the body" },
-        { status: 400 },
+        { message: "User deleted successfully" },
+        { status: 200 },
+      );
+    } else {
+      // Delete all users
+      const result = await User.deleteMany({});
+      console.log(result);
+      return NextResponse.json(
+        { message: "All users deleted", count: result.deletedCount },
+        { status: 200 },
       );
     }
-
-    const deletedUser = await User.findByIdAndDelete(id);
-
-    if (!deletedUser) {
-      return NextResponse.json({ message: "User not found" }, { status: 404 });
-    }
-
-    return NextResponse.json(
-      { message: "User deleted successfully" },
-      { status: 200 },
-    );
   } catch (error) {
-    console.error("Error deleting user:", error);
+    console.error("Error deleting user(s):", error);
     return NextResponse.json(
-      { message: "Failed to delete user" },
+      { message: "Failed to delete user(s)" },
       { status: 500 },
     );
   }

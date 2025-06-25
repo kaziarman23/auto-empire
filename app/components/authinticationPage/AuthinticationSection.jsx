@@ -46,6 +46,7 @@ function AuthinticationSection() {
       .then(() => {
         // clearing the form
         resetSignIn();
+        resetSignUp();
 
         // navigating the user
         router.push(from);
@@ -80,6 +81,7 @@ function AuthinticationSection() {
         addUser(userInfo);
 
         // clearing the form
+        resetSignIn();
         resetSignUp();
 
         // navigating the user
@@ -100,7 +102,19 @@ function AuthinticationSection() {
   const handleGoogleAuthintication = () => {
     dispatch(googleSignIn())
       .unwrap()
-      .then(() => {
+      .then((data) => {
+        console.log("google data:", data);
+        // sending data in the server
+        const userInfo = {
+          userName: data.userName,
+          userEmail: data.userEmail,
+          userPhoto: data.userPhoto,
+          userIsVerified: data.userIsVerified,
+          userRole: "user",
+        };
+
+        addUser(userInfo);
+
         // clearing the form
         resetSignIn();
         resetSignUp();
@@ -194,7 +208,7 @@ function AuthinticationSection() {
             />
             {signUpErrors.userPassword && (
               <p className="text-xs text-red-500">
-                {signUpErrors.password.message}
+                {signUpErrors.userPassword.message}
               </p>
             )}
             <button className="mt-2 rounded-md border border-white bg-black px-[45px] py-2 text-xs font-semibold uppercase tracking-wider text-white hover:bg-white hover:text-black">
