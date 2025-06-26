@@ -1,17 +1,27 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { HiMenu } from "react-icons/hi";
 import { MdOutlineSpaceDashboard } from "react-icons/md";
 import { FileLock, FileLock2, LucideIdCard } from "lucide-react";
+import auth from "../../firebase/firebase.config";
+import Link from "next/link";
 import Button from "./Button";
 import Image from "next/image";
+import useBWToast from "./useCustomToast";
+import { useDispatch, useSelector } from "react-redux";
+import { logoutUser } from "../../redux/slices/userSlice";
+import { signOut } from "firebase/auth";
 
 const Navbar = () => {
   const pathname = usePathname();
-  const user = false;
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.user.userName);
+  const router = useRouter();
+  const { showSuccess } = useBWToast();
+
+  console.log("user:", user);
 
   // Links for navigation
   const navLinks = [
@@ -65,6 +75,21 @@ const Navbar = () => {
 
   // Toggle mobile menu
   const toggleMobileMenu = () => setMobileMenuOpen((prev) => !prev);
+
+  // handle logout
+  const handleLogout = () => {
+    // signing out the user
+    signOut(auth);
+
+    // removing the user from redux store
+    dispatch(logoutUser());
+
+    // showing alert
+    showSuccess("Logout Successfull!");
+
+    // navigating the user
+    router.push("/");
+  };
 
   return (
     <header
@@ -124,7 +149,9 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Button className="w-full text-sm">Logout</Button>
+                  <Button onClick={handleLogout} className="w-full text-sm">
+                    Logout
+                  </Button>
                 </li>
               </ul>
             ) : menuOpen ? (
@@ -178,7 +205,9 @@ const Navbar = () => {
               >
                 Dashboard
               </Link>
-              <Button className="mt-2 w-full text-sm">Logout</Button>
+              <Button onClick={handleLogout} className="mt-2 w-full text-sm">
+                Logout
+              </Button>
             </div>
           ) : mobileMenuOpen ? (
             <div className="absolute right-0 z-50 mt-2 w-44 rounded-lg bg-black p-3 shadow-lg">

@@ -3,7 +3,7 @@ import { Poppins } from "next/font/google";
 import Navbar from "./components/Shared/Navbar";
 import Footer from "./components/Shared/Footer";
 import ReduxProvider from "./providers/ReduxProvider";
-
+import AuthStateProvider from "./providers/AuthStateProvider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -20,11 +20,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={poppins.className}>
-          <ReduxProvider>
+        <ReduxProvider>
+          <AuthStateProvider>
             <Navbar />
             {children}
             <Footer />
-          </ReduxProvider>
+          </AuthStateProvider>
+        </ReduxProvider>
       </body>
     </html>
   );
