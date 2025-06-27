@@ -9,6 +9,7 @@ import useBWToast from "../Shared/useCustomToast";
 import { useDispatch } from "react-redux";
 import {
   createUser,
+  githubSignIn,
   googleSignIn,
   loginUser,
 } from "../../redux/slices/userSlice";
@@ -54,8 +55,7 @@ function AuthinticationSection() {
         // showing an alert
         showSuccess("Sign-In Successfull!");
       })
-      .catch((error) => {
-        console.log("Error While Doing Signin:", error);
+      .catch(() => {
 
         // showing an alert
         showError("Error In Signin Process, Try Again!");
@@ -90,8 +90,7 @@ function AuthinticationSection() {
         // showing an alert
         showSuccess("Sign-Up Successfull!");
       })
-      .catch((error) => {
-        console.log("Error While Doing Register:", error);
+      .catch(() => {
 
         // showing an alert
         showError("Error In Signup Process, Try Again!");
@@ -103,7 +102,7 @@ function AuthinticationSection() {
     dispatch(googleSignIn())
       .unwrap()
       .then((data) => {
-        console.log("google data:", data);
+
         // sending data in the server
         const userInfo = {
           userName: data.userName,
@@ -126,7 +125,43 @@ function AuthinticationSection() {
         showSuccess("Sign-Up Successfull!");
       })
       .catch((error) => {
-        console.log("Error :", error);
+
+        // clearing all inputs
+        resetSignIn();
+        resetSignUp();
+
+        // showing an alert
+        showError("Error In Signup Process, Try Again!");
+      });
+  };
+
+  // Handle Github Authintication
+  const handleGithubAuthintication = () => {
+    dispatch(githubSignIn())
+      .unwrap()
+      .then((data) => {
+        // sending data in the server
+        const userInfo = {
+          userName: data.userName,
+          userEmail: data.userEmail,
+          userPhoto: data.userPhoto,
+          userIsVerified: data.userIsVerified,
+          userRole: "user",
+        };
+
+        addUser(userInfo);
+
+        // clearing the form
+        resetSignIn();
+        resetSignUp();
+
+        // navigating the user
+        router.push(from);
+
+        // showing an alert
+        showSuccess("Sign-Up Successfull!");
+      })
+      .catch(() => {
 
         // clearing all inputs
         resetSignIn();
@@ -160,7 +195,10 @@ function AuthinticationSection() {
               >
                 <FaGoogle />
               </button>
-              <button className="mx-1 flex h-10 w-10 items-center justify-center rounded-[20%] border border-gray-300 hover:bg-white hover:text-black">
+              <button
+                onClick={handleGithubAuthintication}
+                className="mx-1 flex h-10 w-10 items-center justify-center rounded-[20%] border border-gray-300 hover:bg-white hover:text-black"
+              >
                 <FaGithub />
               </button>
             </div>
@@ -235,7 +273,10 @@ function AuthinticationSection() {
               >
                 <FaGoogle />
               </button>
-              <button className="mx-1 flex h-10 w-10 items-center justify-center rounded-[20%] border border-gray-300 hover:bg-white hover:text-black">
+              <button
+                onClick={handleGithubAuthintication}
+                className="mx-1 flex h-10 w-10 items-center justify-center rounded-[20%] border border-gray-300 hover:bg-white hover:text-black"
+              >
                 <FaGithub />
               </button>
             </div>

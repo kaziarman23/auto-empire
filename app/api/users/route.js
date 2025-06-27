@@ -40,7 +40,6 @@ export async function POST(request) {
     const existingUser = await User.findOne({ userEmail });
 
     if (existingUser) {
-      console.log("User already exists:", existingUser);
       return NextResponse.json(existingUser, { status: 200 });
     }
 
@@ -128,7 +127,6 @@ export async function DELETE(request) {
     } else {
       // Delete all users
       const result = await User.deleteMany({});
-      console.log(result);
       return NextResponse.json(
         { message: "All users deleted", count: result.deletedCount },
         { status: 200 },

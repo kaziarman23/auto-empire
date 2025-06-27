@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import {
   createUserWithEmailAndPassword,
+  GithubAuthProvider,
   GoogleAuthProvider,
   signInWithEmailAndPassword,
   signInWithPopup,
@@ -10,6 +11,7 @@ import auth from "../../firebase/firebase.config";
 
 // provider
 const googleProvider = new GoogleAuthProvider();
+const githubProvider = new GithubAuthProvider();
 
 const initialState = {
   userName: "",
@@ -36,7 +38,6 @@ export const createUser = createAsyncThunk(
 
     const updatedUser = auth.currentUser;
 
-    console.log("updatedUser: ", updatedUser);
 
     return {
       userName: updatedUser.displayName,
@@ -69,7 +70,21 @@ export const googleSignIn = createAsyncThunk(
   async () => {
     const data = await signInWithPopup(auth, googleProvider);
 
-    console.log("googleSignInData: ", data);
+    return {
+      userName: data.user.displayName,
+      userEmail: data.user.email,
+      userPhoto: data.user.photoURL,
+      userIsVerified: data.user.emailVerified,
+    };
+  },
+);
+
+// creating user with github
+export const githubSignIn = createAsyncThunk(
+  "userSlice/githubSignIn",
+  async () => {
+    const data = await signInWithPopup(auth, githubProvider);
+
     return {
       userName: data.user.displayName,
       userEmail: data.user.email,
@@ -108,7 +123,6 @@ const userSlice = createSlice({
         state.error = "";
       })
       .addCase(createUser.fulfilled, (state, { payload }) => {
-        console.log("createUser payload: ", payload);
         state.userName = payload.userName;
         state.userEmail = payload.userEmail;
         state.userPhoto = payload.userPhoto;
@@ -141,6 +155,30 @@ const userSlice = createSlice({
         state.error = false;
       })
       .addCase(googleSignIn.rejected, (state, action) => {
+        state.userName = "";
+        state.userEmail = "";
+        state.userPhoto = "";
+        state.isLoading = false;
+        state.isError = true;
+        state.error = action.error.message;
+      }) // github singIn
+      .addCase(githubSignIn.pending, (state) => {
+        state.userName = "";
+        state.userEmail = "";
+        state.userPhoto = "";
+        state.isLoading = true;
+        state.isError = false;
+        state.error = "";
+      })
+      .addCase(githubSignIn.fulfilled, (state, { payload }) => {
+        state.userName = payload.userName;
+        state.userEmail = payload.userEmail;
+        state.userPhoto = payload.userPhoto;
+        state.isLoading = false;
+        state.isError = false;
+        state.error = false;
+      })
+      .addCase(githubSignIn.rejected, (state, action) => {
         state.userName = "";
         state.userEmail = "";
         state.userPhoto = "";

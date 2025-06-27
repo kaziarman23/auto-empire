@@ -21,7 +21,6 @@ const Navbar = () => {
   const router = useRouter();
   const { showSuccess } = useBWToast();
 
-  console.log("user:", user);
 
   // Links for navigation
   const navLinks = [
