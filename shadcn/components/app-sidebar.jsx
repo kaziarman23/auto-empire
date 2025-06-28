@@ -1,14 +1,11 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 import {
   ArrowUpCircleIcon,
   BarChartIcon,
   CameraIcon,
-  ClipboardListIcon,
-  DatabaseIcon,
   FileCodeIcon,
-  FileIcon,
   FileTextIcon,
   FolderIcon,
   HelpCircleIcon,
@@ -17,12 +14,11 @@ import {
   SearchIcon,
   SettingsIcon,
   UsersIcon,
-} from "lucide-react"
+} from "lucide-react";
 
-import { NavDocuments } from "@/shadcn/components/nav-documents"
-import { NavMain } from "@/shadcn/components/nav-main"
-import { NavSecondary } from "@/shadcn/components/nav-secondary"
-import { NavUser } from "@/shadcn/components/nav-user"
+import { NavMain } from "@/shadcn/components/nav-main";
+import { NavSecondary } from "@/shadcn/components/nav-secondary";
+import { NavUser } from "@/shadcn/components/nav-user";
 import {
   Sidebar,
   SidebarContent,
@@ -31,14 +27,10 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/shadcn/components/ui/sidebar"
+} from "@/shadcn/components/ui/sidebar";
+import { useSelector } from "react-redux";
 
 const data = {
-  user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
-  },
   navMain: [
     {
       title: "Dashboard",
@@ -131,34 +123,28 @@ const data = {
       icon: SearchIcon,
     },
   ],
-  documents: [
-    {
-      name: "Data Library",
-      url: "#",
-      icon: DatabaseIcon,
-    },
-    {
-      name: "Reports",
-      url: "#",
-      icon: ClipboardListIcon,
-    },
-    {
-      name: "Word Assistant",
-      url: "#",
-      icon: FileIcon,
-    },
-  ],
-}
+};
 
-export function AppSidebar({
-  ...props
-}) {
+export function AppSidebar({ ...props }) {
+  const user = useSelector((state) => state.user);
+
+  const userData = {
+    name: user.userName,
+    email: user.userEmail,
+    avatar:
+      user?.userPhoto ||
+      "https://i.pinimg.com/736x/b1/29/06/b12906975778b10f8a64557289d058e5.jpg",
+  };
+
   return (
     <Sidebar collapsible="offcanvas" {...props}>
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton asChild className="data-[slot=sidebar-menu-button]:!p-1.5">
+            <SidebarMenuButton
+              asChild
+              className="data-[slot=sidebar-menu-button]:!p-1.5"
+            >
               <a href="#">
                 <ArrowUpCircleIcon className="h-5 w-5" />
                 <span className="text-base font-semibold">Acme Inc.</span>
@@ -169,11 +155,10 @@ export function AppSidebar({
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavDocuments items={data.documents} />
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarFooter>
-        <NavUser user={data.user} />
+        <NavUser user={userData} />
       </SidebarFooter>
     </Sidebar>
   );

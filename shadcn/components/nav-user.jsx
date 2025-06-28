@@ -1,39 +1,54 @@
-"use client"
+"use client";
 
-import {
-  BellIcon,
-  CreditCardIcon,
-  LogOutIcon,
-  MoreVerticalIcon,
-  UserCircleIcon,
-} from "lucide-react"
+import { LogOutIcon, MoreVerticalIcon } from "lucide-react";
 
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/shadcn/components/ui/avatar"
+} from "@/shadcn/components/ui/avatar";
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/shadcn/components/ui/dropdown-menu"
+} from "@/shadcn/components/ui/dropdown-menu";
 import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@/shadcn/components/ui/sidebar"
+} from "@/shadcn/components/ui/sidebar";
+import { Button } from "./ui/button";
+import { signOut } from 'firebase/auth';
+import auth from '../../app/firebase/firebase.config';
+import { logoutUser } from '../../app/redux/slices/userSlice';
+import { useDispatch } from 'react-redux';
+import { useRouter } from 'next/navigation';
+import useBWToast from '../../app/components/Shared/useCustomToast';
 
-export function NavUser({
-  user
-}) {
-  const { isMobile } = useSidebar()
+export function NavUser({ user }) {
+  const { isMobile } = useSidebar();
+  const router = useRouter();
+  const { showSuccess } = useBWToast();
+  const dispatch = useDispatch();
 
+
+  const handleLogout= ()=>{
+    // signing out the user
+    signOut(auth);
+
+    // removing the user from redux store
+    dispatch(logoutUser());
+
+    // showing alert
+    showSuccess("Logout Successfull!");
+
+    // navigating the user
+    router.push("/");
+  }
   return (
     <SidebarMenu>
       <SidebarMenuItem>
@@ -41,10 +56,15 @@ export function NavUser({
           <DropdownMenuTrigger asChild>
             <SidebarMenuButton
               size="lg"
-              className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground">
+              className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
+            >
               <Avatar className="h-8 w-8 rounded-lg grayscale">
-                <AvatarImage src={user.avatar} alt={user.name} />
-                <AvatarFallback className="rounded-lg">CN</AvatarFallback>
+                <AvatarImage
+                  src={user.avatar}
+                  alt={user.name}
+                  onError={() => setSrc(fallbackImage)}
+                />
+                <AvatarFallback className="rounded-lg">AE</AvatarFallback>
               </Avatar>
               <div className="grid flex-1 text-left text-sm leading-tight">
                 <span className="truncate font-medium">{user.name}</span>
@@ -59,12 +79,13 @@ export function NavUser({
             className="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-lg"
             side={isMobile ? "bottom" : "right"}
             align="end"
-            sideOffset={4}>
+            sideOffset={4}
+          >
             <DropdownMenuLabel className="p-0 font-normal">
               <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
                 <Avatar className="h-8 w-8 rounded-lg">
                   <AvatarImage src={user.avatar} alt={user.name} />
-                  <AvatarFallback className="rounded-lg">CN</AvatarFallback>
+                  <AvatarFallback className="rounded-lg">AE</AvatarFallback>
                 </Avatar>
                 <div className="grid flex-1 text-left text-sm leading-tight">
                   <span className="truncate font-medium">{user.name}</span>
@@ -74,25 +95,12 @@ export function NavUser({
                 </div>
               </div>
             </DropdownMenuLabel>
-            <DropdownMenuSeparator />
-            <DropdownMenuGroup>
-              <DropdownMenuItem>
-                <UserCircleIcon />
-                Account
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <CreditCardIcon />
-                Billing
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <BellIcon />
-                Notifications
-              </DropdownMenuItem>
-            </DropdownMenuGroup>
+
             <DropdownMenuSeparator />
             <DropdownMenuItem>
-              <LogOutIcon />
-              Log out
+              <Button variant="ghost" onClick={handleLogout}>
+                <LogOutIcon /> Log out
+              </Button>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

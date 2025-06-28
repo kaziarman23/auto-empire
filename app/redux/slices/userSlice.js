@@ -31,13 +31,17 @@ export const createUser = createAsyncThunk(
       userEmail,
       userPassword,
     );
+
+    const photo =
+      userPhoto ||
+      "https://i.pinimg.com/736x/90/d0/ad/90d0ad3daae6db158d099f7a6723ec3f.jpg";
+
     await updateProfile(auth.currentUser, {
       displayName: userName,
-      photoURL: userPhoto,
+      photoURL: photo,
     });
 
     const updatedUser = auth.currentUser;
-
 
     return {
       userName: updatedUser.displayName,

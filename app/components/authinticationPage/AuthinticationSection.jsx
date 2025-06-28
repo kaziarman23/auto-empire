@@ -73,7 +73,7 @@ function AuthinticationSection() {
           userName: data.userName,
           userEmail: data.userEmail,
           userPhoto:
-            "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.miraheze.org%2Fwindowswallpaperwiki%2F9%2F9c%2FDefaultAccountTile_(Windows_11).png&f=1&nofb=1&ipt=71744ba8b68c06ca1915a38e2c2907aa42f60522b2bf9be45b0981af30e0fc4b",
+            "https://i.pinimg.com/736x/90/d0/ad/90d0ad3daae6db158d099f7a6723ec3f.jpg",
           userIsVerified: false,
           userRole: "user",
         };
