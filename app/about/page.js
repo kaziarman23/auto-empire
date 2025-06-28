@@ -1,8 +1,8 @@
-import AboutPageFounderSection from "../pageComponents/aboutPage/AboutPageFounderSection";
-import AboutPagePrestigeSection from "../pageComponents/aboutPage/AboutPagePrestigeSection";
-import AboutPageSignatureSection from "../pageComponents/aboutPage/AboutPageSignatureSection";
-import AboutPageStorySection from "../pageComponents/aboutPage/AboutPageStorySection";
-import AboutPageTeamSection from '../pageComponents/aboutPage/AboutPageTeamSection';
+import AboutPageFounderSection from "../components/aboutPage/AboutPageFounderSection";
+import AboutPagePrestigeSection from "../components/aboutPage/AboutPagePrestigeSection";
+import AboutPageSignatureSection from "../components/aboutPage/AboutPageSignatureSection";
+import AboutPageStorySection from "../components/aboutPage/AboutPageStorySection";
+import AboutPageTeamSection from '../components/aboutPage/AboutPageTeamSection';
 
 function page() {
   return (

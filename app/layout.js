@@ -2,7 +2,7 @@ import "./globals.css";
 import { Poppins } from "next/font/google";
 import ReduxProvider from "./providers/ReduxProvider";
 import AuthStateProvider from "./providers/AuthStateProvider";
-import MainLayoutWrapper from "./pageComponents/wrappers/MainLayoutWrapper";
+import MainLayoutWrapper from "./components/wrappers/MainLayoutWrapper";
 
 const poppins = Poppins({
   subsets: ["latin"],

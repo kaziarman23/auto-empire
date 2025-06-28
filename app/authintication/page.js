@@ -1,5 +1,5 @@
 import React from "react";
-import AuthinticationSection from "../pageComponents/authinticationPage/AuthinticationSection";
+import AuthinticationSection from "../components/authinticationPage/AuthinticationSection";
 
 function page() {
   return (
