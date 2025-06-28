@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import connectDB from "@/app/lib/connectDB";
+import connectDB from "@/app/database/connectDB";
 import User from "@/app/models/user.model";
 
 // GET: Fetch all users

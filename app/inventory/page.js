@@ -1,4 +1,4 @@
-import InventoryPage from "@/app/components/inventoryPage/InventoryPage.js";
+import InventoryPage from "@/app/pageComponents/inventoryPage/InventoryPage.jsx";
 
 
 function page() {

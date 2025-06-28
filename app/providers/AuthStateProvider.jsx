@@ -29,7 +29,7 @@ const AuthStateProvider = ({ children }) => {
     });
 
     return () => unSubscribe();
-  }, [dispatch]);
+  }, [dispatch, isLoading]);
 
   if (isLoading) {
     return <Loading />;

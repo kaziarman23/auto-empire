@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import Car from "@/app/models/car.model";
-import connectDB from "@/app/lib/connectDB";
+import connectDB from "@/app/database/connectDB";
 
 // GET: Fetch all users
 export async function GET(request) {

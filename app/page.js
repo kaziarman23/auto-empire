@@ -1,10 +1,10 @@
-import EmpireServiceComponent from "./components/homePage/EmpireServiceComponent";
-import HeroComponent from "./components/homePage/HeroComponent";
-import LetestComponent from "./components/homePage/LetestComponent";
-import SpotlightComponent from "./components/homePage/SpotlightComponent";
-import StockComponent from "./components/homePage/StockComponent";
-import TopSellComponent from "./components/homePage/TopSellComponent";
-import TreasureComponent from "./components/homePage/TreasureComponent";
+import EmpireServiceComponent from "./pageComponents/homePage/EmpireServiceComponent";
+import HeroComponent from "./pageComponents/homePage/HeroComponent";
+import LetestComponent from "./pageComponents/homePage/LetestComponent";
+import SpotlightComponent from "./pageComponents/homePage/SpotlightComponent";
+import StockComponent from "./pageComponents/homePage/StockComponent";
+import TopSellComponent from "./pageComponents/homePage/TopSellComponent";
+import TreasureComponent from "./pageComponents/homePage/TreasureComponent";
 
 function Home() {
   return (

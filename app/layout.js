@@ -1,9 +1,8 @@
 import "./globals.css";
 import { Poppins } from "next/font/google";
-import Navbar from "./components/Shared/Navbar";
-import Footer from "./components/Shared/Footer";
 import ReduxProvider from "./providers/ReduxProvider";
 import AuthStateProvider from "./providers/AuthStateProvider";
+import MainLayoutWrapper from "./pageComponents/wrappers/MainLayoutWrapper";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -22,9 +21,7 @@ export default function RootLayout({ children }) {
       <body className={poppins.className}>
         <ReduxProvider>
           <AuthStateProvider>
-            <Navbar />
-            {children}
-            <Footer />
+            <MainLayoutWrapper>{children}</MainLayoutWrapper>
           </AuthStateProvider>
         </ReduxProvider>
       </body>
