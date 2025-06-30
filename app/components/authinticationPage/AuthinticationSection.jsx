@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useAddUserMutation } from "../../redux/api/usersApi";
-import useBWToast from "../Shared/useCustomToast";
+import useToast from "../Shared/useCustomToast";
 import { useDispatch } from "react-redux";
 import {
   createUser,
@@ -22,7 +22,7 @@ function AuthinticationSection() {
   const from = searchParams.get("from") || "/";
   const dispatch = useDispatch();
   const [addUser] = useAddUserMutation();
-  const { showSuccess, showError } = useBWToast();
+  const { showSuccess, showError } = useToast();
 
   // React Hook Form - Sign In
   const {

@@ -26,14 +26,14 @@ import auth from "../app/firebase/firebase.config";
 import { logoutUser } from "../app/redux/slices/userSlice";
 import { useRouter } from "next/navigation";
 import { useDispatch } from "react-redux";
-import useBWToast from "../app/components/Shared/useCustomToast";
+import useToast from "../app/components/Shared/useCustomToast";
 
 export function NavUser({ user }) {
   // states
   const { isMobile } = useSidebar();
   const router = useRouter();
   const dispatch = useDispatch();
-  const { showSuccess } = useBWToast();
+  const { showSuccess } = useToast();
 
   // Handle Logout
   const handleLogout = () => {

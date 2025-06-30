@@ -1,14 +1,36 @@
+"use client"
+
 import Image from "next/image";
-import { InventorySection } from "../../constants";
+import Link from "next/link";
+import { useGetCarsQuery } from "../../redux/api/carsApi";
+import useToast from "../Shared/useCustomToast";
+import { useEffect } from "react";
 
 function InventoryPage() {
+  // states
+  const { data: carsData, isLoading, isError, error } = useGetCarsQuery();
+  const { showError } = useToast();
+
+  // handle errors
+  useEffect(() => {
+    if (isError) {
+      console.error("Error While fetching Cars data: ", error.error);
+      showError("Error While fetching Cars data");
+    }
+  }, [isError, error, showError]);
+
+  // Handle Loading
+  if (isLoading) {
+    return <div>Loading Cars ...</div>;
+  }
+
   return (
     <div className="mx-auto h-full w-4/5 overflow-hidden">
       <h1 className="mb-10 mt-20 text-center text-5xl font-bold italic text-stone-600">
         Our Inventory
       </h1>
       <div className="grid h-full w-full grid-cols-3 gap-5">
-        {InventorySection.map((card, i) => (
+        {carsData.map((card, i) => (
           <div
             key={i}
             className="card bg-base-100 h-[28rem] w-full overflow-hidden rounded-xl border-2 border-white shadow-sm"
@@ -37,9 +59,11 @@ function InventoryPage() {
                 {card.price} BDT
               </p>
               <div className="card-actions cursor-pointer justify-end">
-                <button className="btn w-full rounded-xl border border-white bg-black p-2 text-white delay-100 hover:bg-white hover:font-bold hover:text-black">
-                  Get it Now
-                </button>
+                <Link href={`/inventory/${card._id}`}>
+                  <button className="btn w-full rounded-xl border border-white bg-black p-2 text-white delay-100 hover:bg-white hover:font-bold hover:text-black">
+                    Get it Now
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

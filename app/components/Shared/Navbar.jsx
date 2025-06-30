@@ -9,7 +9,7 @@ import auth from "../../firebase/firebase.config";
 import Link from "next/link";
 import Button from "./Button";
 import Image from "next/image";
-import useBWToast from "./useCustomToast";
+import useToast from "./useCustomToast";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../../redux/slices/userSlice";
 import { signOut } from "firebase/auth";
@@ -19,7 +19,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user.userName);
   const router = useRouter();
-  const { showSuccess } = useBWToast();
+  const { showSuccess } = useToast();
 
 
   // Links for navigation
