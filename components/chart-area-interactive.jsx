@@ -3,26 +3,26 @@
 import * as React from "react"
 import { Area, AreaChart, CartesianGrid, XAxis } from "recharts"
 
-import { useIsMobile } from "@/shadcn/hooks/use-mobile"
+import { useIsMobile } from "@/hooks/use-mobile"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/shadcn/components/ui/card"
-import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/shadcn/components/ui/chart";
+} from "@/components/ui/card"
+import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/shadcn/components/ui/select"
+} from "@/components/ui/select"
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@/shadcn/components/ui/toggle-group"
+} from "@/components/ui/toggle-group"
 const chartData = [
   { date: "2024-04-01", desktop: 222, mobile: 150 },
   { date: "2024-04-02", desktop: 97, mobile: 180 },

@@ -2,16 +2,15 @@
 
 import auth from "../firebase/firebase.config";
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { onAuthStateChanged } from "firebase/auth";
 import { logoutUser, setUser, toggleLoading } from "../redux/slices/userSlice";
-import Loading from "../loading";
 
 const AuthStateProvider = ({ children }) => {
   const dispatch = useDispatch();
-  const isLoading = useSelector((state) => state.user.isLoading);
 
   useEffect(() => {
+    dispatch(toggleLoading(true));
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
         dispatch(
@@ -29,11 +28,7 @@ const AuthStateProvider = ({ children }) => {
     });
 
     return () => unSubscribe();
-  }, [dispatch, isLoading]);
-
-  if (isLoading) {
-    return <Loading />;
-  }
+  }, [dispatch]);
 
   return <>{children}</>;
 };

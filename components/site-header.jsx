@@ -1,5 +1,5 @@
-import { Separator } from "@/shadcn/components/ui/separator"
-import { SidebarTrigger } from "@/shadcn/components/ui/sidebar"
+import { Separator } from "@/components/ui/separator"
+import { SidebarTrigger } from "@/components/ui/sidebar"
 
 export function SiteHeader() {
   return (

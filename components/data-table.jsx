@@ -46,11 +46,11 @@ import { Area, AreaChart, CartesianGrid, XAxis } from "recharts"
 import { toast } from "sonner"
 import { z } from "zod"
 
-import { useIsMobile } from "@/shadcn/hooks/use-mobile"
-import { Badge } from "@/shadcn/components/ui/badge"
-import { Button } from "@/shadcn/components/ui/button"
-import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/shadcn/components/ui/chart";
-import { Checkbox } from "@/shadcn/components/ui/checkbox"
+import { useIsMobile } from "@/hooks/use-mobile"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
+import { Checkbox } from "@/components/ui/checkbox"
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -58,17 +58,17 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/shadcn/components/ui/dropdown-menu"
-import { Input } from "@/shadcn/components/ui/input"
-import { Label } from "@/shadcn/components/ui/label"
+} from "@/components/ui/dropdown-menu"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/shadcn/components/ui/select"
-import { Separator } from "@/shadcn/components/ui/separator"
+} from "@/components/ui/select"
+import { Separator } from "@/components/ui/separator"
 import {
   Sheet,
   SheetClose,
@@ -78,7 +78,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/shadcn/components/ui/sheet"
+} from "@/components/ui/sheet"
 import {
   Table,
   TableBody,
@@ -86,13 +86,13 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/shadcn/components/ui/table"
+} from "@/components/ui/table"
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/shadcn/components/ui/tabs"
+} from "@/components/ui/tabs"
 
 export const schema = z.object({
   id: z.number(),

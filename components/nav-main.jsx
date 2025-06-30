@@ -1,5 +1,5 @@
 "use client";
-import * as React from "react"
+
 
 import {
   SidebarGroup,
@@ -7,23 +7,18 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/shadcn/components/ui/sidebar"
+} from "@/components/ui/sidebar";
 
-export function NavSecondary({
-  items,
-  ...props
-}) {
+export function NavMain({ items }) {
   return (
-    <SidebarGroup {...props}>
-      <SidebarGroupContent>
+    <SidebarGroup>
+      <SidebarGroupContent className="flex flex-col gap-2">
         <SidebarMenu>
           {items.map((item) => (
             <SidebarMenuItem key={item.title}>
-              <SidebarMenuButton asChild>
-                <a href={item.url}>
-                  <item.icon />
-                  <span>{item.title}</span>
-                </a>
+              <SidebarMenuButton tooltip={item.title}>
+                {item.icon && <item.icon />}
+                <span>{item.title}</span>
               </SidebarMenuButton>
             </SidebarMenuItem>
           ))}
