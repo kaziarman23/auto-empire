@@ -1,10 +1,11 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
 import { useGetCarsQuery } from "../../redux/api/carsApi";
 import useToast from "../Shared/useCustomToast";
 import { useEffect } from "react";
+import Loading from "../../loading";
 
 function InventoryPage() {
   // states
@@ -21,7 +22,7 @@ function InventoryPage() {
 
   // Handle Loading
   if (isLoading) {
-    return <div>Loading Cars ...</div>;
+    return Loading;
   }
 
   return (
@@ -46,15 +47,15 @@ function InventoryPage() {
               />
             </figure>
             <div className="card-body h-1/2 w-full space-y-3 p-5 text-white">
-              <h2 className="card-title text-xl font-bold hover:text-blue-500">
+              <h2 className="card-title text-xl font-bold hover:text-orange-500">
                 <span className="font-bold text-white">Model: </span>
                 {card.carName}
               </h2>
-              <p className="hover:text-blue-500">
+              <p className="hover:text-orange-500">
                 <span className="font-bold text-white">Brand: </span>
                 {card.brand}
               </p>
-              <p className="hover:text-blue-500">
+              <p className="hover:text-orange-500">
                 <span className="font-bold text-white">Price: </span>
                 {card.price} BDT
               </p>
