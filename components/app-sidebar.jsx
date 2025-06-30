@@ -2,13 +2,9 @@
 
 import * as React from "react";
 import {
-  ArrowUpCircleIcon,
   BarChartIcon,
   CameraIcon,
-  ClipboardListIcon,
-  DatabaseIcon,
   FileCodeIcon,
-  FileIcon,
   FileTextIcon,
   FolderIcon,
   HelpCircleIcon,
