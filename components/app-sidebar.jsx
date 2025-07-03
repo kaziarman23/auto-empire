@@ -30,18 +30,18 @@ import {
 import { useSelector } from "react-redux";
 import Image from "next/image";
 import logo from "@/public/images/Other_Images/logo.png";
-import Link from 'next/link';
+import Link from "next/link";
 
 const data = {
   navMain: [
     {
       title: "Dashboard",
-      url: "#",
+      url: "/dashboard",
       icon: LayoutDashboardIcon,
     },
     {
-      title: "Lifecycle",
-      url: "#",
+      title: "Users",
+      url: "/dashboard/users",
       icon: ListIcon,
     },
     {
