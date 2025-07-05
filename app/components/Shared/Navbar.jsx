@@ -4,7 +4,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { HiMenu } from "react-icons/hi";
 import { MdOutlineSpaceDashboard } from "react-icons/md";
-import { FileLock, FileLock2, LucideIdCard } from "lucide-react";
+import { FileLock, LucideIdCard } from "lucide-react";
 import auth from "../../firebase/firebase.config";
 import Link from "next/link";
 import Button from "./Button";
@@ -20,7 +20,6 @@ const Navbar = () => {
   const user = useSelector((state) => state.user.userName);
   const router = useRouter();
   const { showSuccess } = useToast();
-
 
   // Links for navigation
   const navLinks = [
@@ -163,14 +162,6 @@ const Navbar = () => {
                     </Button>
                   </Link>
                 </li>
-                <li>
-                  <Link href="/authintication">
-                    <Button className="flex w-full items-center gap-2 text-sm hover:gap-3 hover:font-bold">
-                      <FileLock2 className="text-white" size={18} />
-                      Register
-                    </Button>
-                  </Link>
-                </li>
               </ul>
             ) : null}
           </div>
@@ -228,12 +219,6 @@ const Navbar = () => {
                 <Button className="flex w-full items-center gap-2 text-sm hover:gap-3 hover:font-bold">
                   <FileLock className="text-white" size={18} />
                   Login
-                </Button>
-              </Link>
-              <Link href="/authintication">
-                <Button className="flex w-full items-center gap-2 text-sm hover:gap-3 hover:font-bold">
-                  <FileLock2 className="text-white" size={18} />
-                  Register
                 </Button>
               </Link>
             </div>

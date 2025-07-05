@@ -179,7 +179,7 @@ function AuthinticationSection() {
       >
         {/* Sign Up */}
         <div
-          className={`absolute left-0 top-0 h-full w-1/2 transition-all duration-[600ms] ease-in-out ${
+          className={`absolute left-0 top-0 h-full w-1/2 transition-all duration-700 ease-in-out ${
             isActive ? "z-[5] translate-x-full opacity-100" : "z-[1] opacity-0"
           }`}
         >
@@ -257,7 +257,7 @@ function AuthinticationSection() {
 
         {/* Sign In */}
         <div
-          className={`absolute left-0 top-0 z-[2] h-full w-1/2 transition-all duration-[600ms] ease-in-out ${
+          className={`absolute left-0 top-0 z-[2] h-full w-1/2 transition-all duration-700 ease-in-out ${
             isActive ? "translate-x-full" : ""
           }`}
         >
@@ -323,7 +323,7 @@ function AuthinticationSection() {
 
         {/* Toggle Container */}
         <div
-          className={`absolute left-1/2 top-0 z-[1000] h-full w-1/2 overflow-hidden transition-all duration-[600ms] ease-in-out ${
+          className={`absolute left-1/2 top-0 z-[1000] h-full w-1/2 overflow-hidden transition-all duration-700 ease-in-out ${
             isActive ? "-translate-x-full" : ""
           }`}
           style={{
@@ -331,13 +331,13 @@ function AuthinticationSection() {
           }}
         >
           <div
-            className={`relative -left-full h-full w-[200%] bg-white text-black transition-all duration-[600ms] ease-in-out ${
+            className={`relative -left-full h-full w-[200%] bg-white text-black transition-all duration-700 ease-in-out ${
               isActive ? "translate-x-1/2" : ""
             }`}
           >
             {/* Toggle Left */}
             <div
-              className={`absolute left-0 top-0 flex h-full w-1/2 flex-col items-center justify-center px-8 text-center transition-all duration-[600ms] ease-in-out ${
+              className={`absolute left-0 top-0 flex h-full w-1/2 flex-col items-center justify-center px-8 text-center transition-all duration-700 ease-in-out ${
                 isActive ? "translate-x-0" : "-translate-x-[200%]"
               }`}
             >
@@ -356,7 +356,7 @@ function AuthinticationSection() {
 
             {/* Toggle Right */}
             <div
-              className={`absolute right-0 top-0 flex h-full w-1/2 flex-col items-center justify-center px-8 text-center transition-all duration-[600ms] ease-in-out ${
+              className={`absolute right-0 top-0 flex h-full w-1/2 flex-col items-center justify-center px-8 text-center transition-all duration-700 ease-in-out ${
                 isActive ? "translate-x-[200%]" : ""
               }`}
             >
