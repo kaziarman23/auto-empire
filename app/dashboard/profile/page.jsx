@@ -29,8 +29,8 @@ function ProfilePage() {
   if (!user) return <p>User not found.</p>;
 
   return (
-    <div className="mt-10 flex justify-center">
-      <div className="flex max-w-sm items-center space-x-6 rounded-2xl bg-white p-6 shadow-lg">
+    <div className="mt-10 flex justify-center items-center">
+      <div className="flex w-4/5 justify-evenly items-center space-x-6 rounded-2xl bg-white p-6 shadow-lg">
         {user.userPhoto && (
           <Image
             className="h-20 w-20 rounded-full object-cover"
