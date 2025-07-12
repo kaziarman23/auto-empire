@@ -62,24 +62,28 @@ export async function POST(request) {
   }
 }
 
-// PATCH: Update a user by ID
+// PATCH: Update a user by email
 export async function PATCH(request) {
   try {
     await connectDB();
     const body = await request.json();
-    const { id, ...updates } = body;
+    const { userEmail, ...updates } = body;
 
-    if (!id) {
+    if (!userEmail) {
       return NextResponse.json(
-        { message: "User ID not found in the body" },
-        { status: 400 },
+        { message: "User email is required" },
+        { status: 400 }
       );
     }
 
-    const updatedUser = await User.findByIdAndUpdate(id, updates, {
-      new: true,
-      runValidators: true,
-    });
+    const updatedUser = await User.findOneAndUpdate(
+      { userEmail: userEmail.trim().toLowerCase() },
+      updates,
+      {
+        new: true,
+        runValidators: true,
+      }
+    );
 
     if (!updatedUser) {
       return NextResponse.json({ message: "User not found" }, { status: 404 });
@@ -90,10 +94,11 @@ export async function PATCH(request) {
     console.error("Error updating user:", error);
     return NextResponse.json(
       { message: "Failed to update user" },
-      { status: 500 },
+      { status: 500 }
     );
   }
 }
+
 
 // DELETE: Delete a user by ID
 export async function DELETE(request) {
