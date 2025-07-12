@@ -1,42 +1,96 @@
 "use client";
 
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { useGetCarsQuery } from "../../redux/api/carsApi";
 import useToast from "../../components/Shared/useCustomToast";
 import { useEffect, useMemo } from "react";
 import Image from "next/image";
 import { Button } from "../../../components/ui/button";
 import Link from "next/link";
+import { useGetUsersQuery } from "../../redux/api/usersApi";
+import { useSelector } from "react-redux";
+import { useAddOrderMutation } from "../../redux/api/orderListApi";
 
-function CarDetails(params) {
-  // states
-  const { showError } = useToast();
+function CarDetails() {
   const { id } = useParams();
-  const { data: carsData, isLoading, isError, error } = useGetCarsQuery();
+  const { showError, showSuccess } = useToast();
+  const router = useRouter();
 
-  const carInfo = useMemo(
-    () => carsData?.find((data) => data._id === id),
-    [carsData, id],
-  );
+  // Redux state
+  const currentUser = useSelector((state) => state.user);
 
-  // handle errors
+  // Queries
+  const [addOrder] = useAddOrderMutation();
+  const { data: userData, isLoading: usersLoading } = useGetUsersQuery();
+  const {
+    data: carsData,
+    isLoading: carsLoading,
+    isError,
+    error,
+  } = useGetCarsQuery();
+
+  // Get current user from users list
+  const usersArray = Array.isArray(userData) ? userData : userData?.users;
+  const user = useMemo(() => {
+    return usersArray?.find(
+      (u) =>
+        u.userEmail?.toLowerCase().trim() ===
+        currentUser?.userEmail?.toLowerCase().trim(),
+    );
+  }, [usersArray, currentUser]);
+
+  // Get car info
+  const carInfo = useMemo(() => {
+    return carsData?.find((car) => car._id === id);
+  }, [carsData, id]);
+
+  // Handle errors
   useEffect(() => {
     if (isError) {
-      console.error("Error While fetching Cars data: ", error.error);
-      showError("Error While fetching Cars data");
+      console.error("Error While fetching Cars data:", error?.error);
+      showError("Error while fetching car data.");
     }
   }, [isError, error, showError]);
 
-  // Handle Loading
-  if (isLoading) {
-    return <div>Loading Car Details ...</div>;
+  // Handle loading
+  if (carsLoading || usersLoading) {
+    return (
+      <div className="mt-20 h-1/2 text-center text-xl text-white">
+        Loading Car Details...
+      </div>
+    );
   }
 
   if (!carInfo) {
-    return <div className="mt-20 text-center text-xl">Car not found</div>;
+    return (
+      <div className="mt-20 text-center text-xl text-white">Car not found.</div>
+    );
   }
-  console.log("id: ", id);
-  console.log("carInfo: ", carInfo);
+
+  const handleSubmit = async () => {
+    const orderData = {
+      buyerName: user.userName,
+      buyerEmail: user.userEmail,
+      buyerId: user._id,
+      brand: carInfo.brand,
+      carName: carInfo.carName,
+      modelName: carInfo.modelName,
+      price: carInfo.price,
+      image: carInfo.image,
+      paymentStatus: "Unpaid",
+      orderStatus: "Pending",
+    };
+
+    try {
+      await addOrder(orderData).unwrap();
+      showSuccess("Order Taken Successfully");
+      router.push("/inventory");
+    } catch (error) {
+      console.error("Order error:", error);
+      showError("Something Went Wrong!, Try Again");
+      router.push("/inventory");
+    }
+  };
 
   return (
     <div id="hero" className="mx-auto h-[100vh] w-4/5 overflow-hidden">
@@ -86,7 +140,9 @@ function CarDetails(params) {
             <Link href="/inventory">
               <Button variant="destructive">Previous Page</Button>
             </Link>
-            <Button variant="success">Add To List</Button>
+            <Button variant="success" onClick={handleSubmit}>
+              Add To List
+            </Button>
           </div>
         </div>
       </div>
