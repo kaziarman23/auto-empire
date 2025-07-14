@@ -15,10 +15,7 @@ function ProfilePage() {
   if (isError)
     return <p>Error: {error?.message || "Failed to load user data."}</p>;
 
-  if (!currentUser?.userEmail) return <p>Loading user...</p>;
-
-  console.log("currentUser:", currentUser);
-  console.log("userData:", userData);
+  if (!currentUser?.userEmail) return <Loading/>;
 
   const usersArray = Array.isArray(userData) ? userData : userData?.users;
 

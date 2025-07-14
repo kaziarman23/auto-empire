@@ -4,14 +4,14 @@ export default function useToast() {
   const showSuccess = (message) => {
     toast.success(message, {
       style: {
-        border: "1px solid #000",
+        border: "1px solid green",
         padding: "16px",
-        color: "#000",
-        background: "#fff",
+        color: " #fff",
+        background: "#000",
       },
       iconTheme: {
-        primary: "#000",
-        secondary: "#fff",
+        primary: "#fff",
+        secondary: "#000",
       },
     });
   };

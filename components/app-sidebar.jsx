@@ -3,18 +3,13 @@
 import * as React from "react";
 import {
   BarChartIcon,
-  CameraIcon,
-  FileCodeIcon,
-  FileTextIcon,
   LayoutDashboardIcon,
   ListIcon,
   UserPen,
   UserRoundPlus,
-  UsersIcon,
 } from "lucide-react";
-
+import Loading from "@/app/loading";
 import { NavMain } from "@/components/nav-main";
-
 import { NavUser } from "@/components/nav-user";
 import {
   Sidebar,
@@ -29,6 +24,7 @@ import { useSelector } from "react-redux";
 import Image from "next/image";
 import logo from "@/public/images/Other_Images/logo.png";
 import Link from "next/link";
+import { useGetUsersQuery } from "../app/redux/api/usersApi";
 
 const data = {
   navMain: [
@@ -58,17 +54,30 @@ const data = {
       icon: UserRoundPlus,
     },
   ],
-  
 };
 
 export function AppSidebar({ ...props }) {
-  const userInfo = useSelector((state) => state.user);
+  const currentUser = useSelector((state) => state.user);
+  const { data: userInfo, isLoading, isError, error } = useGetUsersQuery();
+
+  if (isLoading) return <Loading />;
+  if (isError)
+    return <p>Error: {error?.message || "Failed to load user data."}</p>;
+
+  if (!currentUser?.userEmail) return <Loading />;
+
+  const usersArray = Array.isArray(userInfo) ? userInfo : userInfo?.users;
+
+  const user = usersArray?.find(
+    (user) =>
+      user.userEmail?.toLowerCase().trim() ===
+      currentUser.userEmail?.toLowerCase().trim(),
+  );
+
   const userData = {
-    name: userInfo.userName,
-    email: userInfo.userEmail,
-    avatar:
-      userInfo?.userPhoto ||
-      "https://i.pinimg.com/736x/b1/29/06/b12906975778b10f8a64557289d058e5.jpg",
+    name: user.userName,
+    email: user.userEmail,
+    avatar: user.userPhoto,
   };
 
   return (

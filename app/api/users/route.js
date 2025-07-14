@@ -36,6 +36,9 @@ export async function POST(request) {
       );
     }
 
+    // setting the email in small caps
+    userEmail.trim().toLowerCase();
+
     // Check if user already exists
     const existingUser = await User.findOne({ userEmail });
 
@@ -72,17 +75,17 @@ export async function PATCH(request) {
     if (!userEmail) {
       return NextResponse.json(
         { message: "User email is required" },
-        { status: 400 }
+        { status: 400 },
       );
     }
-
+    
     const updatedUser = await User.findOneAndUpdate(
       { userEmail: userEmail.trim().toLowerCase() },
       updates,
       {
         new: true,
         runValidators: true,
-      }
+      },
     );
 
     if (!updatedUser) {
@@ -94,11 +97,10 @@ export async function PATCH(request) {
     console.error("Error updating user:", error);
     return NextResponse.json(
       { message: "Failed to update user" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
-
 
 // DELETE: Delete a user by ID
 export async function DELETE(request) {

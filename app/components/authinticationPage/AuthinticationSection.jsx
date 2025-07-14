@@ -71,7 +71,7 @@ function AuthinticationSection() {
         // sending data in the server
         const userInfo = {
           userName: data.userName,
-          userEmail: data.userEmail,
+          userEmail: data.userEmail.trim().toLowerCase(),
           userPhoto:
             "https://i.pinimg.com/736x/90/d0/ad/90d0ad3daae6db158d099f7a6723ec3f.jpg",
           userIsVerified: false,
