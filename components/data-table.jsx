@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from "react";
 import {
@@ -61,7 +61,7 @@ import {
 
 function DraggableRow({ row }) {
   const { transform, transition, setNodeRef, isDragging } = useSortable({
-    id: row.original.id,
+    id: row.original._id,
   });
 
   return (
@@ -105,7 +105,7 @@ export function DataTable({ columns, data: initialData }) {
       columnFilters,
       pagination,
     },
-    getRowId: (row) => row?.id?.toString(),
+    getRowId: (row) => row?._id?.toString(),
     enableRowSelection: true,
     onRowSelectionChange: setRowSelection,
     onSortingChange: setSorting,
@@ -126,7 +126,10 @@ export function DataTable({ columns, data: initialData }) {
     useSensor(KeyboardSensor),
   );
 
-  const dataIds = React.useMemo(() => data.map(({ id }) => id), [data]);
+  const dataIds = React.useMemo(
+  () => (Array.isArray(data) ? data.map(({ _id }) => _id) : []),
+  [data]
+);
 
   function handleDragEnd(event) {
     const { active, over } = event;
@@ -205,7 +208,7 @@ export function DataTable({ columns, data: initialData }) {
                   strategy={verticalListSortingStrategy}
                 >
                   {table.getRowModel().rows.map((row) => (
-                    <DraggableRow key={row.id} row={row} />
+                    <DraggableRow key={row._id} row={row} />
                   ))}
                 </SortableContext>
               ) : (
@@ -222,7 +225,7 @@ export function DataTable({ columns, data: initialData }) {
 
       {/* Pagination */}
       <div className="flex items-center justify-between px-4">
-        <div className="text-sm text-muted-foreground hidden lg:flex">
+        <div className="hidden text-sm text-muted-foreground lg:flex">
           {table.getFilteredSelectedRowModel().rows.length} of{" "}
           {table.getFilteredRowModel().rows.length} row(s) selected.
         </div>

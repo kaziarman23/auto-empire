@@ -20,11 +20,10 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import { useSelector } from "react-redux";
 import Image from "next/image";
 import logo from "@/public/images/Other_Images/logo.png";
 import Link from "next/link";
-import { useGetUsersQuery } from "../app/redux/api/usersApi";
+import useCurrentUser from "../hooks/useCurrentUser";
 
 const data = {
   navMain: [
@@ -34,8 +33,8 @@ const data = {
       icon: LayoutDashboardIcon,
     },
     {
-      title: "Users",
-      url: "/dashboard/users",
+      title: "My Cars",
+      url: "/dashboard/myCars",
       icon: ListIcon,
     },
     {
@@ -57,22 +56,12 @@ const data = {
 };
 
 export function AppSidebar({ ...props }) {
-  const currentUser = useSelector((state) => state.user);
-  const { data: userInfo, isLoading, isError, error } = useGetUsersQuery();
+  const { user, isLoading, isError, error } = useCurrentUser();
 
   if (isLoading) return <Loading />;
-  if (isError)
+  if (isError) {
     return <p>Error: {error?.message || "Failed to load user data."}</p>;
-
-  if (!currentUser?.userEmail) return <Loading />;
-
-  const usersArray = Array.isArray(userInfo) ? userInfo : userInfo?.users;
-
-  const user = usersArray?.find(
-    (user) =>
-      user.userEmail?.toLowerCase().trim() ===
-      currentUser.userEmail?.toLowerCase().trim(),
-  );
+  }
 
   const userData = {
     name: user.userName,
