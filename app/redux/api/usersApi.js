@@ -24,16 +24,16 @@ const usersApi = baseApi.injectEndpoints({
     }),
     promoteUserRole: builder.mutation({
       query: (userInfo) => ({
-        url: "/api/users",
-        method: "PUT",
+        url: "/api/users/promote",
+        method: "PATCH",
         body: userInfo,
       }),
       invalidatesTags: ["Users"],
     }),
     demoteUserRole: builder.mutation({
       query: (userInfo) => ({
-        url: "/api/users",
-        method: "PUT",
+        url: "/api/users/demote",
+        method: "PATCH",
         body: userInfo,
       }),
       invalidatesTags: ["Users"],
