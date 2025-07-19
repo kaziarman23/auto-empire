@@ -3,13 +3,13 @@
 import * as React from "react";
 import {
   AlignStartVertical,
-  BarChartIcon,
+  ChartBarBig,
   House,
   Info,
   LayoutDashboardIcon,
   ListIcon,
+  User,
   UserPen,
-  UserRoundPlus,
 } from "lucide-react";
 import Loading from "@/app/loading";
 import { NavMain } from "@/components/nav-main";
@@ -49,12 +49,12 @@ const data = {
     {
       title: "Manage Orders",
       url: "/dashboard/manageOrders",
-      icon: BarChartIcon,
+      icon: ChartBarBig,
     },
     {
       title: "Profile",
       url: "/dashboard/profile",
-      icon: UserRoundPlus,
+      icon: User,
     },
   ],
   navSecondary: [

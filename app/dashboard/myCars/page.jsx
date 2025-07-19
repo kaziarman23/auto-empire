@@ -71,7 +71,6 @@ function MyCarsPage() {
         if (value === "Processing") styles = "bg-blue-400 text-black";
         if (value === "Delivered") styles = "bg-green-400 text-black";
         if (value === "Cancelled") styles = "bg-red-500 text-black";
-        if (value === "Rejected") styles = "bg-red-500 text-black";
 
         return (
           <button

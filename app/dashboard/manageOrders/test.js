@@ -6,7 +6,7 @@ export const rows = [
     "carName": "7 Series",
     "modelName": "740i M Sport",
     "paymentStatus": "Paid",
-    "orderStatus": "Pending"
+    "orderStatus": "Delivered"
   },
   {
     "buyerName": "Emma Taylor",
@@ -15,7 +15,7 @@ export const rows = [
     "carName": "S-Class",
     "modelName": "S 450 4MATIC",
     "paymentStatus": "Unpaid",
-    "orderStatus": "Processing"
+    "orderStatus": "Pending"
   },
   {
     "buyerName": "Oliver Martin",
@@ -33,7 +33,7 @@ export const rows = [
     "carName": "Camry",
     "modelName": "XSE V6",
     "paymentStatus": "Unpaid",
-    "orderStatus": "Cancelled"
+    "orderStatus": "Pending"
   },
   {
     "buyerName": "Noah Jackson",
@@ -42,7 +42,7 @@ export const rows = [
     "carName": "Civic",
     "modelName": "Si Coupe",
     "paymentStatus": "Paid",
-    "orderStatus": "Rejected"
+    "orderStatus": "Delivered"
   },
   {
     "buyerName": "Isabella White",
@@ -51,7 +51,7 @@ export const rows = [
     "carName": "Mustang",
     "modelName": "EcoBoost Fastback",
     "paymentStatus": "Unpaid",
-    "orderStatus": "Pending"
+    "orderStatus": "Delivered"
   },
   {
     "buyerName": "William Brown",
@@ -60,7 +60,7 @@ export const rows = [
     "carName": "Golf",
     "modelName": "R-Line",
     "paymentStatus": "Paid",
-    "orderStatus": "Processing"
+    "orderStatus": "Delivered"
   },
   {
     "buyerName": "Sophia Davis",
@@ -69,7 +69,7 @@ export const rows = [
     "carName": "Altima",
     "modelName": "SL",
     "paymentStatus": "Unpaid",
-    "orderStatus": "Delivered"
+    "orderStatus": "Pending"
   },
   {
     "buyerName": "Michael Hall",
@@ -78,7 +78,7 @@ export const rows = [
     "carName": "Optima",
     "modelName": "SXL",
     "paymentStatus": "Paid",
-    "orderStatus": "Cancelled"
+    "orderStatus": "Delivered"
   },
   {
     "buyerName": "Mia Patel",
@@ -87,7 +87,7 @@ export const rows = [
     "carName": "Malibu",
     "modelName": "LTZ",
     "paymentStatus": "Unpaid",
-    "orderStatus": "Rejected"
+    "orderStatus": "Pending"
   },
   {
     "buyerName": "Benjamin Brooks",
@@ -96,7 +96,7 @@ export const rows = [
     "carName": "Impreza",
     "modelName": "Sport",
     "paymentStatus": "Paid",
-    "orderStatus": "Pending"
+    "orderStatus": "Delivered"
   },
   {
     "buyerName": "Charlotte Martin",
@@ -105,7 +105,7 @@ export const rows = [
     "carName": "3",
     "modelName": "Grand Touring",
     "paymentStatus": "Unpaid",
-    "orderStatus": "Processing"
+    "orderStatus": "Pending"
   },
   {
     "buyerName": "Alexander Lee",
@@ -123,6 +123,6 @@ export const rows = [
     "carName": "Range Rover",
     "modelName": "SV",
     "paymentStatus": "Unpaid",
-    "orderStatus": "Cancelled"
+    "orderStatus": "Pending"
   }
 ]
