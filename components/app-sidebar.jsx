@@ -2,7 +2,10 @@
 
 import * as React from "react";
 import {
+  AlignStartVertical,
   BarChartIcon,
+  House,
+  Info,
   LayoutDashboardIcon,
   ListIcon,
   UserPen,
@@ -24,6 +27,7 @@ import Image from "next/image";
 import logo from "@/public/images/Other_Images/logo.png";
 import Link from "next/link";
 import useCurrentUser from "../hooks/useCurrentUser";
+import { NavSecondary } from "./nav-secondary";
 
 const data = {
   navMain: [
@@ -51,6 +55,23 @@ const data = {
       title: "Profile",
       url: "/dashboard/profile",
       icon: UserRoundPlus,
+    },
+  ],
+  navSecondary: [
+    {
+      title: "Home",
+      url: "/",
+      icon: House,
+    },
+    {
+      title: "Inventory",
+      url: "/inventory",
+      icon: AlignStartVertical,
+    },
+    {
+      title: "Help",
+      url: "/contact",
+      icon: Info,
     },
   ],
 };
@@ -88,6 +109,7 @@ export function AppSidebar({ ...props }) {
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
+        <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={userData} />
