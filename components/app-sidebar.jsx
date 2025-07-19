@@ -47,8 +47,8 @@ const data = {
       icon: UserPen,
     },
     {
-      title: "Analytics",
-      url: "/dashboard/analytics",
+      title: "Manage Orders",
+      url: "/dashboard/manageOrders",
       icon: BarChartIcon,
     },
     {

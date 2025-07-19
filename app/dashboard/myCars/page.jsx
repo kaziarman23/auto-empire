@@ -43,13 +43,21 @@ function MyCarsPage() {
       cell: ({ getValue }) => {
         const value = getValue();
         const isPaid = value === "Paid";
+
+        const handleClick = () => {
+          // TODO: Have To do the payment stuff
+        };
+
         return (
           <button
-            className={`rounded-full px-3 py-1 text-sm font-medium ${
-              isPaid ? "bg-green-400 text-black" : "bg-yellow-400 text-black"
+            onClick={handleClick}
+            className={`rounded-xl px-6 py-1 text-sm font-medium capitalize ${
+              isPaid
+                ? "bg-green-400 text-black hover:bg-green-600"
+                : "bg-yellow-400 text-black hover:bg-yellow-600"
             }`}
           >
-            {value}
+            {value === "paid" ? value : "pay"}
           </button>
         );
       },
@@ -60,13 +68,14 @@ function MyCarsPage() {
       cell: ({ getValue }) => {
         const value = getValue();
         let styles = "bg-gray-400 text-black";
-        if (value === "Confirmed") styles = "bg-blue-400 text-black";
+        if (value === "Processing") styles = "bg-blue-400 text-black";
         if (value === "Delivered") styles = "bg-green-400 text-black";
-        if (value === "Cancelled") styles = "bg-red-400 text-black";
+        if (value === "Cancelled") styles = "bg-red-500 text-black";
+        if (value === "Rejected") styles = "bg-red-500 text-black";
 
         return (
           <button
-            className={`rounded-full px-3 py-1 text-sm font-medium ${styles}`}
+            className={`rounded-xl px-6 py-1 text-sm font-medium capitalize ${styles}`}
           >
             {value}
           </button>
