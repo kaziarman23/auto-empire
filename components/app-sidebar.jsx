@@ -87,7 +87,7 @@ const data = {
 export function AppSidebar({ ...props }) {
   const { user, isLoading, isError, error } = useCurrentUser();
 
-  if (isLoading) return <Loading message='Loading User Data...' />;
+  if (isLoading) return <Loading />;
   if (isError) {
     return <p>Error: {error?.message || "Failed to load user data."}</p>;
   }

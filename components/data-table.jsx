@@ -84,8 +84,7 @@ function DraggableRow({ row }) {
   );
 }
 
-export function DataTable({ columns, data: initialData }) {
-  const [data, setData] = React.useState(initialData);
+export function DataTable({ columns, data }) {
   const [rowSelection, setRowSelection] = React.useState({});
   const [columnVisibility, setColumnVisibility] = React.useState({});
   const [columnFilters, setColumnFilters] = React.useState([]);
@@ -127,16 +126,16 @@ export function DataTable({ columns, data: initialData }) {
   );
 
   const dataIds = React.useMemo(
-  () => (Array.isArray(data) ? data.map(({ _id }) => _id) : []),
-  [data]
-);
+    () => (Array.isArray(data) ? data.map(({ _id }) => _id) : []),
+    [data],
+  );
 
   function handleDragEnd(event) {
     const { active, over } = event;
     if (active && over && active.id !== over.id) {
       const oldIndex = dataIds.indexOf(active.id);
       const newIndex = dataIds.indexOf(over.id);
-      setData((prev) => arrayMove(prev, oldIndex, newIndex));
+      console.log("Dragged rows, but not mutating parent data.");
     }
   }
 
