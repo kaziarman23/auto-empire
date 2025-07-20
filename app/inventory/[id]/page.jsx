@@ -10,6 +10,7 @@ import Link from "next/link";
 import { useGetUsersQuery } from "../../redux/api/usersApi";
 import { useSelector } from "react-redux";
 import { useAddOrderMutation } from "../../redux/api/orderListApi";
+import Loading from '@/app/loading';
 
 function CarDetails() {
   const { id } = useParams();
@@ -54,11 +55,7 @@ function CarDetails() {
 
   // Handle loading
   if (carsLoading || usersLoading) {
-    return (
-      <div className="mt-20 h-1/2 text-center text-xl text-white">
-        Loading Car Details...
-      </div>
-    );
+    return <Loading message="Loading User Data..." />;
   }
 
   if (!carInfo) {

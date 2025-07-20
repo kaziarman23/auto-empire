@@ -1,9 +1,10 @@
 "use client";
 
 import { DataTable } from "@/components/data-table";
-import { rows } from "./test";
+import { useGetOrdersQuery } from "../../redux/api/orderListApi";
+import Loading from "@/app/loading";
 
-function page() {
+function ManageOrderPage() {
   const columns = [
     {
       accessorKey: "buyerName",
@@ -60,7 +61,23 @@ function page() {
       },
     },
   ];
-  return <DataTable columns={columns} data={rows} />;
+
+  const { data: orderData, isLoading, isError, error } = useGetOrdersQuery();
+
+  if (isLoading) {
+    return <Loading message="Loading Orders data..." />;
+  }
+
+  if (isError) {
+    console.log("error message: ", error || error.message);
+    return error?.message || "something went wrong!";
+  }
+
+  if (!orderData) {
+    return <h1>There are No Order Data.</h1>;
+  }
+
+  return <DataTable columns={columns} data={orderData} />;
 }
 
-export default page;
+export default ManageOrderPage;

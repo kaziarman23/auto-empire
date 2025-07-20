@@ -21,7 +21,6 @@ function Home() {
 }
 
 // TODO FOR THIS PROJECT :
-// have to applay private Route 
 // payment Intregation.
 // manage order page: have to fix the order state functional according to payment status.
 

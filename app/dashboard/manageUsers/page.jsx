@@ -8,6 +8,7 @@ import {
   usePromoteUserRoleMutation,
 } from "../../redux/api/usersApi";
 import useToast from "../../components/Shared/useCustomToast";
+import Loading from "@/app/loading";
 
 function Page() {
   // states
@@ -26,11 +27,7 @@ function Page() {
 
   // handle loading
   if (isLoading) {
-    return (
-      <div>
-        <h1>Loading users...</h1>
-      </div>
-    );
+    return <Loading message="Loading Orders data..." />;
   }
 
   // handle error

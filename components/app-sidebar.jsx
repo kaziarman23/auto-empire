@@ -4,10 +4,13 @@ import * as React from "react";
 import {
   AlignStartVertical,
   ChartBarBig,
+  CopyPlus,
   House,
   Info,
   LayoutDashboardIcon,
+  LayoutList,
   ListIcon,
+  ListMinus,
   User,
   UserPen,
 } from "lucide-react";
@@ -39,7 +42,7 @@ const data = {
     {
       title: "My Cars",
       url: "/dashboard/myCars",
-      icon: ListIcon,
+      icon: ListMinus,
     },
     {
       title: "Manage Users",
@@ -50,6 +53,11 @@ const data = {
       title: "Manage Orders",
       url: "/dashboard/manageOrders",
       icon: ChartBarBig,
+    },
+    {
+      title: "Manage Cars",
+      url: "/dashboard/manageCars",
+      icon: LayoutList,
     },
     {
       title: "Profile",
@@ -79,7 +87,7 @@ const data = {
 export function AppSidebar({ ...props }) {
   const { user, isLoading, isError, error } = useCurrentUser();
 
-  if (isLoading) return <Loading />;
+  if (isLoading) return <Loading message='Loading User Data...' />;
   if (isError) {
     return <p>Error: {error?.message || "Failed to load user data."}</p>;
   }

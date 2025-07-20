@@ -91,7 +91,8 @@ function MyCarsPage() {
     error: ordersError,
   } = useGetOrdersQuery();
 
-  if (isLoading || ordersLoading) return <Loading />;
+  if (isLoading || ordersLoading)
+    return <Loading message="Loading orders data..." />;
 
   if (isError || ordersIsError || !user || !orderData) {
     return (

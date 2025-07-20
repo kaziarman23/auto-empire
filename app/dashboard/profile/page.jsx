@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useSelector } from "react-redux";
-import Loading from "../../loading";
+import Loading from "@/app/loading";
 import { useGetUsersQuery } from "../../redux/api/usersApi";
 import { Button } from "../../../components/ui/button";
 import Link from "next/link";
@@ -11,11 +11,12 @@ function ProfilePage() {
   const currentUser = useSelector((state) => state.user);
   const { data: userData, isLoading, isError, error } = useGetUsersQuery();
 
-  if (isLoading) return <Loading />;
+  if (isLoading) return <Loading message="Loading User Data..." />;
   if (isError)
     return <p>Error: {error?.message || "Failed to load user data."}</p>;
 
-  if (!currentUser?.userEmail) return <Loading/>;
+  if (!currentUser?.userEmail)
+    return <Loading message="Loading User Data..." />;
 
   const usersArray = Array.isArray(userData) ? userData : userData?.users;
 

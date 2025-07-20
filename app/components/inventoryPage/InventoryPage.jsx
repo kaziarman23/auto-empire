@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useGetCarsQuery } from "../../redux/api/carsApi";
 import useToast from "../Shared/useCustomToast";
 import { useEffect } from "react";
-import Loading from "../../loading";
+import Loading from "@/app/loading";
 
 function InventoryPage() {
   // states
@@ -22,7 +22,7 @@ function InventoryPage() {
 
   // Handle Loading
   if (isLoading) {
-    return Loading;
+    return <Loading message="Loading Cars Data..." />;
   }
 
   return (
