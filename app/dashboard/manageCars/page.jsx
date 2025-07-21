@@ -40,9 +40,9 @@ function ManageCars() {
         );
         setFilteredCars(filtered);
       }
-    }, 300); // debounce delay in ms
+    }, 300);
 
-    return () => clearTimeout(timeout); // cleanup on unmount or input change
+    return () => clearTimeout(timeout);
   }, [searchTerm, cars]);
 
   const handleClear = () => {
@@ -79,9 +79,9 @@ function ManageCars() {
         <Image
           src={getValue() || "/placeholder.jpg"}
           alt="Car"
-          width={80}
-          height={60}
-          className="rounded object-cover"
+          width={60}
+          height={40}
+          className="h-full w-full rounded object-cover"
         />
       ),
     },
@@ -121,7 +121,7 @@ function ManageCars() {
         return (
           <button
             onClick={handleClick}
-            className="cursor-pointer rounded-xl bg-yellow-400 px-6 py-1 text-sm font-medium capitalize text-black hover:bg-yellow-600"
+            className="cursor-pointer rounded-lg bg-yellow-400 px-6 py-1 text-sm font-medium capitalize text-black hover:bg-yellow-600"
           >
             Update
           </button>
@@ -132,7 +132,7 @@ function ManageCars() {
 
   return (
     <div className="p-5">
-      <div className="mb-6 w-[95%] mx-auto flex flex-wrap items-center gap-4">
+      <div className="mx-auto mb-6 flex w-[95%] flex-wrap items-center gap-4">
         <Input
           type="text"
           placeholder="Search by brand, name, or model..."
