@@ -3,7 +3,7 @@ import Car from "@/app/models/car.model";
 import connectDB from "@/app/database/connectDB";
 
 // GET: Fetch all users
-export async function GET(request) {
+export async function GET() {
   try {
     await connectDB();
 
@@ -83,15 +83,13 @@ export async function PATCH(request) {
     const body = await request.json();
     const { id, ...updates } = body;
 
-    // id validation
     if (!id) {
       return NextResponse.json(
-        { message: "Car ID is not found in the body" },
-        { status: 400 },
+        { message: "Car ID is required in request body" },
+        { status: 400 }
       );
     }
 
-    // updating the car
     const updatedCar = await Car.findByIdAndUpdate(id, updates, {
       new: true,
       runValidators: true,
@@ -101,14 +99,12 @@ export async function PATCH(request) {
       return NextResponse.json({ message: "Car not found" }, { status: 404 });
     }
 
-    // sending a successfull message
     return NextResponse.json(updatedCar, { status: 200 });
   } catch (error) {
-    // sending an error message
     console.error("Error updating car:", error);
     return NextResponse.json(
-      { message: "Failed to update the car" },
-      { status: 500 },
+      { message: "Failed to update the car", error: error.message },
+      { status: 500 }
     );
   }
 }

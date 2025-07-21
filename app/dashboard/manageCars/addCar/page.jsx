@@ -84,9 +84,9 @@ function AddCarForm() {
               name: "stockAvailable",
               type: "number",
             },
-            { label: "Image URL", name: "image", type: "text" },
-          ].map(({ label, name, type }) => (
-            <div key={name}>
+            { label: "Image URL", name: "image", type: "text", colSpan: true },
+          ].map(({ label, name, type,colSpan }) => (
+            <div key={name} className={colSpan ? "col-span-2" : ""}>
               <Label htmlFor={name}>{label}</Label>
               <Input
                 id={name}

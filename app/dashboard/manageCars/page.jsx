@@ -55,6 +55,7 @@ function ManageCars() {
     return () => clearTimeout(timeout);
   }, [searchTerm, cars]);
 
+  // handle clear
   const handleClear = () => {
     setSearchTerm("");
     setFilteredCars(cars);
