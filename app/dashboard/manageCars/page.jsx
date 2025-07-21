@@ -8,19 +8,7 @@ import { Button } from "@/components/ui/button";
 import { DataTable } from "../../../components/data-table";
 import Loading from "@/app/loading";
 import { useDeleteCarMutation, useGetCarsQuery } from "../../redux/api/carsApi";
-import { SquarePen, Trash } from "lucide-react";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog";
-import useToast from "../../components/Shared/useCustomToast";
+import ActionCell from "../../components/actionCell/page";
 
 function ManageCars() {
   // rtk querys
@@ -35,8 +23,6 @@ function ManageCars() {
 
   // states
   const router = useRouter();
-  const { showSuccess, showError } = useToast();
-
   const [searchTerm, setSearchTerm] = useState("");
   const [cars, setCars] = useState([]);
   const [filteredCars, setFilteredCars] = useState([]);
@@ -139,58 +125,7 @@ function ManageCars() {
       accessorKey: "Action",
       header: "Action",
       cell: ({ row }) => {
-        const carId = row.original._id;
-
-        const handleUpdate = () => {
-          router.push(`/dashboard/manageCars/updateCar?id=${carId}`);
-        };
-
-        const handleDelete = async () => {
-          console.log("carid :", carId);
-          await deleteCar(carId)
-            .then(() => {
-              showSuccess("Car Deleted Successfully!");
-            })
-            .catch(() => {
-              console.log("Error adding car:", error);
-              showError("Failed to delete car. Please try again.");
-            })
-            .finally(() => refetch());
-        };
-        return (
-          <div className="flex items-center justify-center gap-2">
-            {/* update button */}
-            <button
-              onClick={handleUpdate}
-              className="cursor-pointer rounded-lg bg-yellow-600 px-3 py-1 text-sm font-medium capitalize text-black hover:bg-yellow-500"
-            >
-              <SquarePen size={20} />
-            </button>
-            {/* delete button */}
-            <AlertDialog>
-              <AlertDialogTrigger asChild>
-                <button className="cursor-pointer rounded-lg bg-red-500 px-3 py-1 text-sm font-medium capitalize text-black hover:bg-red-600">
-                  <Trash size={20} />
-                </button>
-              </AlertDialogTrigger>
-              <AlertDialogContent>
-                <AlertDialogHeader>
-                  <AlertDialogTitle>Are you sure?</AlertDialogTitle>
-                  <AlertDialogDescription>
-                    This action cannot be undone. This will permanently delete
-                    the car record.
-                  </AlertDialogDescription>
-                </AlertDialogHeader>
-                <AlertDialogFooter>
-                  <AlertDialogCancel>Cancel</AlertDialogCancel>
-                  <AlertDialogAction onClick={handleDelete}>
-                    Delete
-                  </AlertDialogAction>
-                </AlertDialogFooter>
-              </AlertDialogContent>
-            </AlertDialog>
-          </div>
-        );
+        return <ActionCell carId={row.original._id} refetch={refetch} />;
       },
     },
   ];
