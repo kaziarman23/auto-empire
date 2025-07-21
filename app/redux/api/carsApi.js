@@ -31,7 +31,10 @@ const carsApi = baseApi.injectEndpoints({
       query: (bodyInfo) => ({
         url: "/api/cars",
         method: "DELETE",
-        body: bodyInfo,
+        body: JSON.stringify(bodyInfo),
+        headers: {
+          "Content-Type": "application/json",
+        },
       }),
       invalidatesTags: ["Cars"],
     }),

@@ -117,12 +117,12 @@ export async function PATCH(request) {
 export async function DELETE(request) {
   try {
     await connectDB();
-    const { id } = await request.json();
+    const id = await request.json();
 
     // id validation
     if (!id) {
       return NextResponse.json(
-        { message: "Car ID not found in the body" },
+        { message: "Car ID not found in the data" },
         { status: 400 },
       );
     }
