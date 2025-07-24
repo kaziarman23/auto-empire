@@ -9,6 +9,17 @@ import {
 } from "../../redux/api/usersApi";
 import useToast from "../../components/Shared/useCustomToast";
 import Loading from "@/app/loading";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 
 function Page() {
   // states
@@ -111,23 +122,55 @@ function Page() {
                 <td className="p-4 text-center capitalize">{user.userRole}</td>
                 <td className="p-4">
                   {user.userRole === "user" ? (
-                    <Button
-                      variant="success"
-                      onClick={() => {
-                        handlePromote(`${user._id}`);
-                      }}
-                    >
-                      Promote to Admin
-                    </Button>
+                    <AlertDialog>
+                      <AlertDialogTrigger asChild>
+                        <Button variant="success">Promote to Admin</Button>
+                      </AlertDialogTrigger>
+                      <AlertDialogContent>
+                        <AlertDialogHeader>
+                          <AlertDialogTitle>Are you sure?</AlertDialogTitle>
+                          <AlertDialogDescription>
+                            This action cannot be undone. This will permanently
+                            promote the user.
+                          </AlertDialogDescription>
+                        </AlertDialogHeader>
+                        <AlertDialogFooter>
+                          <AlertDialogCancel>Cancel</AlertDialogCancel>
+                          <AlertDialogAction
+                            onClick={() => {
+                              handlePromote(`${user._id}`);
+                            }}
+                          >
+                            Promote
+                          </AlertDialogAction>
+                        </AlertDialogFooter>
+                      </AlertDialogContent>
+                    </AlertDialog>
                   ) : (
-                    <Button
-                      variant="destructive"
-                      onClick={() => {
-                        handleDemote(`${user._id}`);
-                      }}
-                    >
-                      Demote to User
-                    </Button>
+                    <AlertDialog>
+                      <AlertDialogTrigger asChild>
+                        <Button variant="destructive">Demote to User</Button>
+                      </AlertDialogTrigger>
+                      <AlertDialogContent>
+                        <AlertDialogHeader>
+                          <AlertDialogTitle>Are you sure?</AlertDialogTitle>
+                          <AlertDialogDescription>
+                            This action cannot be undone. This will permanently
+                            demote the user.
+                          </AlertDialogDescription>
+                        </AlertDialogHeader>
+                        <AlertDialogFooter>
+                          <AlertDialogCancel>Cancel</AlertDialogCancel>
+                          <AlertDialogAction
+                            onClick={() => {
+                              handleDemote(`${user._id}`);
+                            }}
+                          >
+                            Demote
+                          </AlertDialogAction>
+                        </AlertDialogFooter>
+                      </AlertDialogContent>
+                    </AlertDialog>
                   )}
                 </td>
               </tr>
@@ -140,3 +183,4 @@ function Page() {
 }
 
 export default Page;
+
