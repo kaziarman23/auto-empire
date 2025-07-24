@@ -9,7 +9,6 @@ import {
   Info,
   LayoutDashboardIcon,
   LayoutList,
-  ListIcon,
   ListMinus,
   User,
   UserPen,
@@ -33,16 +32,16 @@ import useCurrentUser from "../hooks/useCurrentUser";
 import { NavSecondary } from "./nav-secondary";
 
 const data = {
-  navMain: [
+  navMainAdmin: [
     {
       title: "Dashboard",
       url: "/dashboard",
       icon: LayoutDashboardIcon,
     },
     {
-      title: "My Cars",
-      url: "/dashboard/myCars",
-      icon: ListMinus,
+      title: "Profile",
+      url: "/dashboard/profile",
+      icon: User,
     },
     {
       title: "Manage Users",
@@ -59,10 +58,22 @@ const data = {
       url: "/dashboard/manageCars",
       icon: LayoutList,
     },
+  ],
+  navMainUser: [
+    {
+      title: "Dashboard",
+      url: "/dashboard",
+      icon: LayoutDashboardIcon,
+    },
     {
       title: "Profile",
       url: "/dashboard/profile",
       icon: User,
+    },
+    {
+      title: "My Cars",
+      url: "/dashboard/myCars",
+      icon: ListMinus,
     },
   ],
   navSecondary: [
@@ -98,6 +109,8 @@ export function AppSidebar({ ...props }) {
     avatar: user.userPhoto,
   };
 
+  console.log("user:", user);
+
   return (
     <Sidebar collapsible="offcanvas" {...props}>
       <SidebarHeader>
@@ -116,7 +129,11 @@ export function AppSidebar({ ...props }) {
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
-        <NavMain items={data.navMain} />
+        <NavMain
+          items={
+            user.userRole === "admin" ? data.navMainAdmin : data.navMainUser
+          }
+        />
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarFooter>
