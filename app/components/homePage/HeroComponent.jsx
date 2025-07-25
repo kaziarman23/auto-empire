@@ -31,7 +31,7 @@ function HeroComponent() {
               {heroSection.secondDescription}
             </motion.span>
             <motion.h3
-              {...getAnimation("bottom", { delay: 3 })}
+              {...getAnimation("bottom", { delay: 2.5 })}
               className="text-center text-lg font-bold text-stone-600"
             >
               {heroSection.subtitle}

@@ -79,7 +79,7 @@ function TreasureComponent() {
         </motion.div>
       </div>
       <motion.div
-        {...getAnimation("bottom", { delay: 4 })}
+        {...getAnimation("bottom", { delay: 3.5 })}
         className="rok flex h-16 w-full items-center justify-center"
       >
         <h1 className="text-center font-bold">{TreasureSection.description}</h1>
