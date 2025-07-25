@@ -1,60 +1,66 @@
+"use client";
+
 import { ContactMessageSection } from "../../constants";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
-import {
-  FaXTwitter,
-} from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
 import { SiInstagram } from "react-icons/si";
+import { motion } from "framer-motion";
+import { getAnimation } from "@/utils/Animation";
 
 function ContactPageMessageSection() {
   return (
-    <div className="mx-auto h-screen w-4/5">
-      <h1 className="text-center text-4xl font-bold italic text-stone-600 mb-5">
+    <div className="mx-auto h-screen w-4/5 overflow-hidden">
+      <motion.h1
+        {...getAnimation("top")}
+        className="mb-5 text-center text-4xl font-bold italic text-stone-600"
+      >
         {ContactMessageSection.title}
-      </h1>
+      </motion.h1>
+
       <div className="flex items-start justify-center gap-2">
-        <div className="w-1/2 space-y-3">
-          <h1 className="text-5xl font-bold">
-            {ContactMessageSection.subtitle}
-          </h1>
+        {/* Left Section */}
+        <motion.div
+          {...getAnimation("left", { delay: 0.2 })}
+          className="w-1/2 space-y-3"
+        >
+          <h1 className="text-5xl font-bold">{ContactMessageSection.subtitle}</h1>
           <p className="cursor-text hover:text-orange-600">
             {ContactMessageSection.description}
           </p>
+
           {/* Social Section */}
           <div className="flex items-start justify-between">
-            <div className="w-1/2 space-y-3">
+            {/* Socials */}
+            <motion.div
+              {...getAnimation("left", { delay: 0.4 })}
+              className="w-1/2 space-y-3"
+            >
               <h1 className="text-2xl font-bold">Social Network</h1>
               <div className="flex items-center justify-start gap-2">
-                <FaFacebook
-                  className="cursor-pointer hover:text-blue-600"
-                  size={20}
-                />
-                <FaLinkedin
-                  className="cursor-pointer hover:text-blue-600"
-                  size={20}
-                />
-                <FaXTwitter
-                  className="cursor-pointer hover:text-blue-600"
-                  size={20}
-                />
-                <SiInstagram
-                  className="cursor-pointer hover:text-blue-600"
-                  size={20}
-                />
+                <FaFacebook className="cursor-pointer hover:text-blue-600" size={20} />
+                <FaLinkedin className="cursor-pointer hover:text-blue-600" size={20} />
+                <FaXTwitter className="cursor-pointer hover:text-blue-600" size={20} />
+                <SiInstagram className="cursor-pointer hover:text-blue-600" size={20} />
               </div>
-            </div>
-            <div className="w-1/2 space-y-3">
+            </motion.div>
+
+            {/* Hotline */}
+            <motion.div
+              {...getAnimation("right", { delay: 0.6 })}
+              className="w-1/2 space-y-3"
+            >
               <h1 className="text-2xl font-bold">Hot-Line</h1>
-              <p className="cursor-pointer hover:text-blue-600">
-                +880 1512345678
-              </p>
-              <p className="cursor-pointer hover:text-blue-600">
-                +880 1612345678
-              </p>
-            </div>
+              <p className="cursor-pointer hover:text-blue-600">+880 1512345678</p>
+              <p className="cursor-pointer hover:text-blue-600">+880 1612345678</p>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
+
         {/* Form Section */}
-        <div className="w-1/2 space-y-5 rounded-xl border border-white p-5">
+        <motion.div
+          {...getAnimation("right", { delay: 0.8 })}
+          className="w-1/2 space-y-5 rounded-xl border border-white p-5"
+        >
           <input
             type="text"
             className="w-full border-b-2 bg-transparent text-2xl outline-none"
@@ -69,8 +75,8 @@ function ContactPageMessageSection() {
             name="message"
             id="message"
             rows="4"
-            placeholder='Message'
-            className="w-full text-2xl bg-black text-white border-b-2 outline-none"
+            placeholder="Message"
+            className="w-full border-b-2 bg-black text-2xl text-white outline-none"
             maxLength={70}
           />
           <button
@@ -79,7 +85,7 @@ function ContactPageMessageSection() {
           >
             Submit
           </button>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
