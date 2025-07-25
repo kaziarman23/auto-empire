@@ -20,9 +20,4 @@ function Home() {
   );
 }
 
-// TODO FOR THIS PROJECT :
-// payment Intregation.
-// manage order page: have to fix the order state functional according to payment status.
-
-
 export default Home;

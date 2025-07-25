@@ -1,19 +1,26 @@
+"use client";
+
 import Image from "next/image";
 import { TreasureSection } from "../../constants";
+import { motion } from "framer-motion";
+import { getAnimation } from "@/utils/Animation";
 
 function TreasureComponent() {
   return (
-    <div
-      id="inventory"
-      className="mx-auto h-screen w-4/5 overflow-hidden"
-    >
-      <h1 className="sm:text-md md:text-md mt-20 text-center text-sm font-bold italic text-stone-600 lg:text-4xl">
+    <div id="inventory" className="mx-auto h-screen w-4/5 overflow-hidden">
+      <motion.h1
+        {...getAnimation("top")}
+        className="sm:text-md md:text-md mt-20 text-center text-sm font-bold italic text-stone-600 lg:text-4xl"
+      >
         {TreasureSection.title}
-      </h1>
+      </motion.h1>
 
       {/* image sections */}
       <div className="my-3 grid h-2/3 w-full grid-cols-5 grid-rows-4 gap-2">
-        <div className="row-span-2 h-full w-full">
+        <motion.div
+          {...getAnimation("left", { delay: 2 })}
+          className="row-span-2 h-full w-full"
+        >
           <Image
             alt="Inventory Images"
             src={TreasureSection.imageOne}
@@ -21,8 +28,11 @@ function TreasureComponent() {
             placeholder="blur"
             className="h-full w-full rounded-xl object-cover"
           />
-        </div>
-        <div className="col-start-1 row-span-2 row-start-3">
+        </motion.div>
+        <motion.div
+          {...getAnimation("left", { delay: 3 })}
+          className="col-start-1 row-span-2 row-start-3"
+        >
           <Image
             alt="Inventory Images"
             src={TreasureSection.imageTwo}
@@ -30,8 +40,11 @@ function TreasureComponent() {
             placeholder="blur"
             className="h-full w-full rounded-xl object-cover"
           />
-        </div>
-        <div className="col-span-3 col-start-2 row-span-4 row-start-1">
+        </motion.div>
+        <motion.div
+          {...getAnimation("bottom", { delay: 1 })}
+          className="col-span-3 col-start-2 row-span-4 row-start-1"
+        >
           <Image
             alt="Inventory Images"
             src={TreasureSection.imageThree}
@@ -39,8 +52,11 @@ function TreasureComponent() {
             placeholder="blur"
             className="h-full w-full rounded-xl object-cover"
           />
-        </div>
-        <div className="col-start-5 row-span-2 row-start-1">
+        </motion.div>
+        <motion.div
+          {...getAnimation("right", { delay: 2 })}
+          className="col-start-5 row-span-2 row-start-1"
+        >
           <Image
             alt="Inventory Images"
             src={TreasureSection.imageFour}
@@ -48,8 +64,11 @@ function TreasureComponent() {
             placeholder="blur"
             className="h-full w-full rounded-xl object-cover"
           />
-        </div>
-        <div className="col-start-5 row-span-2 row-start-3">
+        </motion.div>
+        <motion.div
+          {...getAnimation("right", { delay: 3 })}
+          className="col-start-5 row-span-2 row-start-3"
+        >
           <Image
             alt="Inventory Images"
             src={TreasureSection.imageFive}
@@ -57,11 +76,14 @@ function TreasureComponent() {
             placeholder="blur"
             className="h-full w-full rounded-xl object-cover"
           />
-        </div>
+        </motion.div>
       </div>
-      <div className="rok flex h-16 w-full items-center justify-center">
+      <motion.div
+        {...getAnimation("bottom", { delay: 4 })}
+        className="rok flex h-16 w-full items-center justify-center"
+      >
         <h1 className="text-center font-bold">{TreasureSection.description}</h1>
-      </div>
+      </motion.div>
     </div>
   );
 }
