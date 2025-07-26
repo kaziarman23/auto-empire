@@ -106,7 +106,9 @@ const Navbar = () => {
               width={30}
               height={30}
             />
-            <p className="text-3xl font-bold">Auto Empire</p>
+            <p className="text-xl font-bold sm:text-2xl xl:text-3xl">
+              Auto Empire
+            </p>
           </div>
         </Link>
 
