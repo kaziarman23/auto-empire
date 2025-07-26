@@ -9,30 +9,33 @@ import { getAnimation } from "@/utils/Animation";
 function HeroComponent() {
   return (
     <>
-      <div id="hero" className="mx-auto h-[100vh] w-4/5 overflow-hidden">
+      <div
+        id="hero"
+        className="mx-auto h-full w-11/12 overflow-hidden lg:h-[100vh] lg:w-4/5"
+      >
         <motion.h1
           {...getAnimation("top")}
-          className="mt-20 text-center text-4xl font-bold italic text-stone-600"
+          className="mt-20 text-center text-base font-bold italic text-stone-600 sm:text-3xl lg:text-4xl"
         >
           {heroSection.title}
         </motion.h1>
-        <div className="flex">
+        <div className="flex flex-col lg:flex-row">
           <div className="flex w-full flex-col items-center justify-center gap-10 p-5">
             <motion.span
               {...getAnimation("left", { delay: 1 })}
-              className="cursor-text text-left text-lg hover:text-orange-500"
+              className="cursor-text text-left text-sm hover:text-orange-500 sm:text-base xl:text-lg"
             >
               {heroSection.description}
             </motion.span>
             <motion.span
               {...getAnimation("left", { delay: 2 })}
-              className="cursor-text text-left text-lg hover:text-orange-500"
+              className="cursor-text text-left text-sm hover:text-orange-500 xl:text-lg sm:text-base"
             >
               {heroSection.secondDescription}
             </motion.span>
             <motion.h3
               {...getAnimation("bottom", { delay: 2.5 })}
-              className="text-center text-lg font-bold text-stone-600"
+              className="text-center text-sm font-bold text-stone-600 xl:text-lg sm:text-base"
             >
               {heroSection.subtitle}
             </motion.h3>

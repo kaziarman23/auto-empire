@@ -15,25 +15,25 @@ function LetestComponent() {
   return (
     <>
       <div>
-        <div className="mx-auto my-10 flex h-screen w-4/5 flex-col items-center justify-center gap-5 overflow-x-hidden">
+        <div className="mx-auto my-10 flex h-full w-11/12 flex-col items-center justify-center gap-5 overflow-hidden sm:h-screen xl:w-4/5">
           <motion.h1
             {...getAnimation("top")}
-            className="text-md font-bold italic text-stone-600 md:text-xl xl:text-5xl"
+            className="text-2xl font-bold italic text-stone-600 md:text-xl xl:text-5xl"
           >
             {latestSection.title}
           </motion.h1>
           <motion.span
             {...getAnimation("left", { delay: 1 })}
-            className="cursor-text text-left text-lg hover:text-orange-500"
+            className="cursor-text text-left text-base hover:text-orange-500 sm:text-lg xl:text-lg"
           >
             {latestSection.description}
           </motion.span>
-          <div className="my-5 flex flex-col items-center justify-center gap-3 xl:flex-row">
+          <div className="my-5 flex flex-col items-center justify-center gap-3 sm:flex-row">
             {latestSectionImages.map((img, index) => {
               return (
                 <motion.div
                   {...animationConfig[index]}
-                  className="h-80 w-80 object-cover"
+                  className="h-40 w-40 object-cover md:h-52 md:w-52 lg:h-72 lg:w-72"
                   key={index}
                 >
                   <Image

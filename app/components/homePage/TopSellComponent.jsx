@@ -8,20 +8,22 @@ import { getAnimation } from "@/utils/Animation";
 
 function TopSellComponent() {
   const animationConfig = TopSellSectionCards.map((_, index) =>
-    getAnimation(index % 2 === 0 ? "left" : "right", { delay: 0.5 + index * 0.3 })
+    getAnimation(index % 2 === 0 ? "left" : "right", {
+      delay: 0.5 + index * 0.3,
+    }),
   );
 
   return (
-    <div className="mx-auto flex h-[100vh] w-4/5 flex-col items-center justify-center gap-5 overflow-x-hidden">
+    <div className="mx-auto flex h-full w-11/12 flex-col items-center justify-center gap-5 overflow-x-hidden md:w-4/5 xl:h-[100vh]">
       <motion.h1
         {...getAnimation("top")}
-        className="text-4xl font-bold italic text-stone-600"
+        className="text-base font-bold italic text-stone-600 sm:text-3xl md:text-4xl"
       >
         {TopSellSection.title}
       </motion.h1>
 
       {/* Top Selling Car Section */}
-      <div className="flex h-4/5 w-full items-center justify-center gap-5">
+      <div className="flex h-4/5 w-full flex-col items-center justify-center gap-5 md:flex-row">
         {TopSellSectionCards.map((value, index) => (
           <div
             key={value.id}
