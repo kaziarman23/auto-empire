@@ -7,16 +7,19 @@ import { getAnimation } from "@/utils/Animation";
 
 function TreasureComponent() {
   return (
-    <div id="inventory" className="mx-auto h-screen w-4/5 overflow-hidden">
+    <div
+      id="inventory"
+      className="mx-auto h-screen w-11/12 overflow-hidden lg:h-full xl:h-screen xl:w-4/5"
+    >
       <motion.h1
         {...getAnimation("top")}
-        className="sm:text-md md:text-md mt-20 text-center text-sm font-bold italic text-stone-600 lg:text-4xl"
+        className="sm:text-md md:text-md mt-20 text-center text-base font-bold italic text-stone-600 sm:text-4xl"
       >
         {TreasureSection.title}
       </motion.h1>
 
       {/* image sections */}
-      <div className="my-3 grid h-2/3 w-full grid-cols-5 grid-rows-4 gap-2">
+      <div className="my-3 grid w-full grid-cols-5 grid-rows-4 gap-2 xl:h-2/3">
         <motion.div
           {...getAnimation("left", { delay: 2 })}
           className="row-span-2 h-full w-full"
@@ -80,9 +83,11 @@ function TreasureComponent() {
       </div>
       <motion.div
         {...getAnimation("bottom", { delay: 3.5 })}
-        className="rok flex h-16 w-full items-center justify-center"
+        className="flex w-full items-center justify-center xl:h-16"
       >
-        <h1 className="text-center font-bold">{TreasureSection.description}</h1>
+        <h1 className="text-left text-sm font-bold xl:text-center">
+          {TreasureSection.description}
+        </h1>
       </motion.div>
     </div>
   );
