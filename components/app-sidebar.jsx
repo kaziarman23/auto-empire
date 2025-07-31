@@ -4,6 +4,7 @@ import * as React from "react";
 import {
   AlignStartVertical,
   ChartBarBig,
+  ChartLine,
   CopyPlus,
   House,
   Info,
@@ -42,6 +43,11 @@ const data = {
       title: "Profile",
       url: "/dashboard/profile",
       icon: User,
+    },
+    {
+      title: "Analytics",
+      url: "/dashboard/analytics",
+      icon: ChartLine,
     },
     {
       title: "Manage Users",
