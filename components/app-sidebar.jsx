@@ -5,6 +5,7 @@ import {
   AlignStartVertical,
   ChartBarBig,
   ChartLine,
+  CircleDollarSign,
   CopyPlus,
   House,
   Info,
@@ -81,6 +82,11 @@ const data = {
       url: "/dashboard/myCars",
       icon: ListMinus,
     },
+    {
+      title: "Transections",
+      url: "/dashboard/transections",
+      icon: CircleDollarSign,
+    },
   ],
   navSecondary: [
     {
@@ -114,8 +120,6 @@ export function AppSidebar({ ...props }) {
     email: user.userEmail,
     avatar: user.userPhoto,
   };
-
-  console.log("user:", user);
 
   return (
     <Sidebar collapsible="offcanvas" {...props}>
