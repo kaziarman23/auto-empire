@@ -60,10 +60,10 @@ function UpdateProfile() {
   };
 
   return (
-    <div className="mt-10 flex h-full items-center justify-center">
+    <div className="mt-10 flex h-full items-center justify-center px-4">
       <form
         onSubmit={handleSubmit}
-        className="h-80 w-1/2 space-y-6 rounded-2xl bg-black p-6 text-white shadow-lg"
+        className="w-full max-w-xl space-y-6 rounded-2xl bg-black p-6 text-white shadow-lg sm:p-8"
       >
         <h2 className="text-center text-2xl font-bold">Update Profile</h2>
 
@@ -80,7 +80,7 @@ function UpdateProfile() {
             type="text"
             value={formData.userName}
             onChange={handleChange}
-            className="w-full rounded-lg p-2"
+            className="w-full rounded-lg p-2 text-white"
             required
           />
         </div>
@@ -98,11 +98,11 @@ function UpdateProfile() {
             type="text"
             value={formData.userPhoto}
             onChange={handleChange}
-            className="w-full rounded-lg p-2"
+            className="w-full rounded-lg p-2 text-white"
           />
         </div>
 
-        <div className="flex justify-end gap-3">
+        <div className="flex flex-col-reverse justify-end gap-3 sm:flex-row">
           <Button type="button" variant="destructive" onClick={handleCancel}>
             Cancel
           </Button>

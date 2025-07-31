@@ -188,7 +188,11 @@ export function DataTable({ columns, data }) {
               {table.getHeaderGroups().map((headerGroup) => (
                 <TableRow key={headerGroup.id}>
                   {headerGroup.headers.map((header) => (
-                    <TableHead key={header.id} colSpan={header.colSpan} className="text-center">
+                    <TableHead
+                      key={header.id}
+                      colSpan={header.colSpan}
+                      className="text-center"
+                    >
                       {header.isPlaceholder
                         ? null
                         : flexRender(
@@ -223,17 +227,21 @@ export function DataTable({ columns, data }) {
       </div>
 
       {/* Pagination */}
-      <div className="flex items-center justify-between px-4">
+      <div className="flex flex-col gap-4 px-4 sm:flex-row sm:items-center sm:justify-between">
+        {/* Selected rows info - only show on lg+ screens */}
         <div className="hidden text-sm text-muted-foreground lg:flex">
           {table.getFilteredSelectedRowModel().rows.length} of{" "}
           {table.getFilteredRowModel().rows.length} row(s) selected.
         </div>
-        <div className="flex items-center gap-4">
+
+        {/* Pagination controls */}
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
+          {/* Page size selector */}
           <Select
             value={`${table.getState().pagination.pageSize}`}
             onValueChange={(value) => table.setPageSize(Number(value))}
           >
-            <SelectTrigger className="w-20">
+            <SelectTrigger className="w-24 text-sm">
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
@@ -244,18 +252,22 @@ export function DataTable({ columns, data }) {
               ))}
             </SelectContent>
           </Select>
-          <div className="text-sm">
+
+          {/* Page info text */}
+          <div className="text-left text-sm sm:text-left">
             Page {table.getState().pagination.pageIndex + 1} of{" "}
             {table.getPageCount()}
           </div>
-          <div className="flex gap-2">
+
+          {/* Pagination buttons */}
+          <div className="flex items-start justify-start gap-2">
             <Button
               variant="outline"
               size="icon"
               onClick={() => table.setPageIndex(0)}
               disabled={!table.getCanPreviousPage()}
             >
-              <ChevronsLeftIcon />
+              <ChevronsLeftIcon className="h-4 w-4" />
             </Button>
             <Button
               variant="outline"
@@ -263,7 +275,7 @@ export function DataTable({ columns, data }) {
               onClick={() => table.previousPage()}
               disabled={!table.getCanPreviousPage()}
             >
-              <ChevronLeftIcon />
+              <ChevronLeftIcon className="h-4 w-4" />
             </Button>
             <Button
               variant="outline"
@@ -271,7 +283,7 @@ export function DataTable({ columns, data }) {
               onClick={() => table.nextPage()}
               disabled={!table.getCanNextPage()}
             >
-              <ChevronRightIcon />
+              <ChevronRightIcon className="h-4 w-4" />
             </Button>
             <Button
               variant="outline"
@@ -279,7 +291,7 @@ export function DataTable({ columns, data }) {
               onClick={() => table.setPageIndex(table.getPageCount() - 1)}
               disabled={!table.getCanNextPage()}
             >
-              <ChevronsRightIcon />
+              <ChevronsRightIcon className="h-4 w-4" />
             </Button>
           </div>
         </div>

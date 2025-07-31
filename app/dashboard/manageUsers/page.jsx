@@ -91,40 +91,47 @@ function Page() {
   };
 
   return (
-    <div className="p-5">
-      <div className="w-full">
-        <table className="w-full table-auto border-collapse">
+    <div className="max-w-screen overflow-x-auto p-4">
+      <div className="w-full min-w-[600px] rounded-lg border border-gray-800 shadow">
+        <table className="w-full table-auto border-collapse text-sm sm:text-base">
           <thead className="sticky top-0 z-10 bg-muted text-center">
             <tr>
-              <th className="p-4">Profile</th>
-              <th className="p-4">Name</th>
-              <th className="p-4">Email</th>
-              <th className="p-4">Role</th>
-              <th className="p-4">Action</th>
+              <th className="whitespace-nowrap p-3">Profile</th>
+              <th className="whitespace-nowrap p-3">Name</th>
+              <th className="whitespace-nowrap p-3">Email</th>
+              <th className="whitespace-nowrap p-3">Role</th>
+              <th className="whitespace-nowrap p-3">Action</th>
             </tr>
           </thead>
           <tbody className="bg-black text-center text-white">
             {usersData.map((user, i) => (
               <tr key={i} className="border-b border-gray-700">
-                <td className="p-4">
+                <td className="p-3">
                   <div className="mx-auto flex items-center justify-center">
                     <Image
                       src={user.userPhoto}
-                      width={80}
-                      height={80}
+                      width={50}
+                      height={50}
                       alt="user image"
-                      className="rounded-xl object-cover"
+                      className="rounded-lg object-cover"
                     />
                   </div>
                 </td>
-                <td className="p-4 text-center">{user.userName}</td>
-                <td className="p-4 text-center">{user.userEmail}</td>
-                <td className="p-4 text-center capitalize">{user.userRole}</td>
-                <td className="p-4">
+                <td className="p-3">{user.userName}</td>
+                <td className="max-w-[200px] break-words p-3">
+                  {user.userEmail}
+                </td>
+                <td className="p-3 capitalize">{user.userRole}</td>
+                <td className="p-3">
                   {user.userRole === "user" ? (
                     <AlertDialog>
                       <AlertDialogTrigger asChild>
-                        <Button variant="success">Promote to Admin</Button>
+                        <Button
+                          variant="success"
+                          className="whitespace-nowrap text-xs sm:text-sm"
+                        >
+                          Promote to Admin
+                        </Button>
                       </AlertDialogTrigger>
                       <AlertDialogContent>
                         <AlertDialogHeader>
@@ -137,9 +144,7 @@ function Page() {
                         <AlertDialogFooter>
                           <AlertDialogCancel>Cancel</AlertDialogCancel>
                           <AlertDialogAction
-                            onClick={() => {
-                              handlePromote(`${user._id}`);
-                            }}
+                            onClick={() => handlePromote(user._id)}
                           >
                             Promote
                           </AlertDialogAction>
@@ -149,7 +154,12 @@ function Page() {
                   ) : (
                     <AlertDialog>
                       <AlertDialogTrigger asChild>
-                        <Button variant="destructive">Demote to User</Button>
+                        <Button
+                          variant="destructive"
+                          className="whitespace-nowrap text-xs sm:text-sm"
+                        >
+                          Demote to User
+                        </Button>
                       </AlertDialogTrigger>
                       <AlertDialogContent>
                         <AlertDialogHeader>
@@ -162,9 +172,7 @@ function Page() {
                         <AlertDialogFooter>
                           <AlertDialogCancel>Cancel</AlertDialogCancel>
                           <AlertDialogAction
-                            onClick={() => {
-                              handleDemote(`${user._id}`);
-                            }}
+                            onClick={() => handleDemote(user._id)}
                           >
                             Demote
                           </AlertDialogAction>
@@ -178,9 +186,11 @@ function Page() {
           </tbody>
         </table>
       </div>
+      <p className="mt-2 text-center text-sm text-gray-400 sm:hidden">
+        Scroll right to see more →
+      </p>
     </div>
   );
 }
 
 export default Page;
-

@@ -15,32 +15,34 @@ function ProfilePage() {
   }
 
   return (
-    <div className="mt-10 flex h-full items-center justify-center">
-      <div className="h-1/2 w-1/2 space-x-6 rounded-2xl bg-black p-6 shadow-lg">
-        <div className="flex h-[85%] w-full items-center justify-evenly">
+    <div className="mt-10 flex h-full items-center justify-center px-4">
+      <div className="w-full max-w-2xl space-y-6 rounded-2xl bg-black p-6 shadow-lg sm:p-8">
+        <div className="flex flex-col space-y-6 sm:flex-row sm:items-center sm:justify-evenly sm:space-y-0">
           {user.userPhoto && (
-            <Image
-              className="h-20 w-20 rounded-full object-cover"
-              src={user.userPhoto}
-              alt={`${user.userName}'s profile`}
-              width={80}
-              height={80}
-            />
+            <div className="flex justify-center">
+              <Image
+                className="h-24 w-24 rounded-full object-cover"
+                src={user.userPhoto}
+                alt={`${user.userName}'s profile`}
+                width={96}
+                height={96}
+              />
+            </div>
           )}
-          <div className="space-y-3">
+          <div className="space-y-3 text-center sm:text-left">
             <h2 className="text-xl font-bold capitalize text-white">
-              Name: <span className="font-normal">{user.userName}.</span>
+              Name: <span className="font-normal">{user.userName}</span>
             </h2>
             <p className="text-sm font-bold text-white">
               Email: <span className="font-normal">{user.userEmail}</span>
             </p>
             <p className="text-sm font-bold capitalize text-white">
-              User Role: <span className="font-normal">{user.userRole}.</span>
+              User Role: <span className="font-normal">{user.userRole}</span>
             </p>
           </div>
         </div>
-        <div className="flex items-center justify-end">
-          <Link href={"/dashboard/updateProfile"}>
+        <div className="flex justify-center sm:justify-end">
+          <Link href="/dashboard/updateProfile">
             <Button variant="update">Update</Button>
           </Link>
         </div>
