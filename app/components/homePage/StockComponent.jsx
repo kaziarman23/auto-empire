@@ -23,13 +23,13 @@ function StockComponent() {
         </motion.h1>
         <motion.p
           {...getAnimation("left", { delay: 0.5 })}
-          className="text-left text-sm text-gray-700 sm:text-base md:text-lg"
+          className="text-left text-sm text-white sm:text-base md:text-lg"
         >
           {StockSection.description}
         </motion.p>
         <motion.p
           {...getAnimation("top", { delay: 0.8 })}
-          className="text-sm text-gray-700 text-left sm:text-base md:text-lg"
+          className="text-sm text-white text-left sm:text-base md:text-lg"
         >
           {StockSection.descriptionTwo}
         </motion.p>
