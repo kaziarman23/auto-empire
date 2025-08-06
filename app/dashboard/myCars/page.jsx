@@ -45,7 +45,6 @@ function MyCarsPage() {
         const isPaid = value === "Paid";
 
         const handleClick = () => {
-          // TODO: Have To do the payment stuff
         };
 
         return (
@@ -103,9 +102,10 @@ function MyCarsPage() {
     );
   }
 
-  // Ensure email is defined and safely filter
   const orders =
     orderData?.filter((order) => order.buyerEmail === user?.userEmail) ?? [];
+
+  console.log(orders);
 
   return <DataTable columns={columns} data={orders} />;
 }

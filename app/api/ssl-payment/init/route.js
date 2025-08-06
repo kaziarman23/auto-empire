@@ -9,24 +9,34 @@ const is_live = false; // true for production
 export async function POST(request) {
   const data = await request.json();
 
-  const { amount, customer_name, customer_email, product_name } = data;
+  const {
+    price,
+    buyerName,
+    buyerEmail,
+    carName,
+    modelName,
+    orderStatus,
+    paymentStatus,
+  } = data;
 
   const tran_id = "TXN_" + Math.random().toString(36).substring(2, 15);
 
   const sslcz = new SSLCommerzPayment(store_id, store_passwd, is_live);
 
   const post_data = {
-    total_amount: amount,
+    total_price: price,
     currency: "BDT",
     tran_id,
     success_url: "http://localhost:3000/api/ssl-payment/success",
     fail_url: "http://localhost:3000/api/ssl-payment/fail",
     cancel_url: "http://localhost:3000/api/ssl-payment/cancel",
     ipn_url: "http://localhost:3000/api/ssl-payment/ipn",
-
-    product_name,
-    cus_name: customer_name,
-    cus_email: customer_email,
+    carName,
+    modelName,
+    orderStatus,
+    paymentStatus,
+    cus_name: buyerName,
+    cus_email: buyerEmail,
     cus_add1: "Dhaka",
     cus_phone: "01711111111",
     shipping_method: "NO",
