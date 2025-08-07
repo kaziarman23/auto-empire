@@ -5,6 +5,8 @@ import useCurrentUser from "@/hooks/useCurrentUser";
 import Loading from "@/app/loading";
 import Image from "next/image";
 import { useGetOrdersQuery } from "../../redux/api/orderListApi";
+import PaymentCell from "../../components/cells/paymentCell/page";
+import OrderCell from "../../components/cells/orderCell/page";
 
 function MyCarsPage() {
   const columns = [
@@ -36,48 +38,20 @@ function MyCarsPage() {
     {
       accessorKey: "price",
       header: "Car Price",
+      cell: ({ getValue }) => `${Number(getValue()).toLocaleString()} BTD`,
     },
     {
       accessorKey: "paymentStatus",
       header: "Payment Status",
       cell: ({ getValue }) => {
-        const value = getValue();
-        const isPaid = value === "Paid";
-
-        const handleClick = () => {
-        };
-
-        return (
-          <button
-            onClick={handleClick}
-            className={`rounded-xl px-6 py-1 text-sm font-medium capitalize ${
-              isPaid
-                ? "bg-green-400 text-black hover:bg-green-600"
-                : "bg-yellow-400 text-black hover:bg-yellow-600"
-            }`}
-          >
-            {value === "paid" ? value : "pay"}
-          </button>
-        );
+        return <PaymentCell getValue={getValue} />;
       },
     },
     {
       accessorKey: "orderStatus",
       header: "Order Status",
       cell: ({ getValue }) => {
-        const value = getValue();
-        let styles = "bg-gray-400 text-black";
-        if (value === "Processing") styles = "bg-blue-400 text-black";
-        if (value === "Delivered") styles = "bg-green-400 text-black";
-        if (value === "Cancelled") styles = "bg-red-500 text-black";
-
-        return (
-          <button
-            className={`rounded-xl px-6 py-1 text-sm font-medium capitalize ${styles}`}
-          >
-            {value}
-          </button>
-        );
+        return <OrderCell getValue={getValue} />;
       },
     },
   ];

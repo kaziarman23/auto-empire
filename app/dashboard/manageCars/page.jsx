@@ -7,8 +7,8 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { DataTable } from "../../../components/data-table";
 import Loading from "@/app/loading";
-import { useDeleteCarMutation, useGetCarsQuery } from "../../redux/api/carsApi";
-import ActionCell from "../../components/actionCell/page";
+import { useGetCarsQuery } from "../../redux/api/carsApi";
+import ActionCell from "../../components/cells/actionCell/page";
 
 function ManageCars() {
   // rtk querys
@@ -19,7 +19,6 @@ function ManageCars() {
     error,
     refetch,
   } = useGetCarsQuery();
-  const [deleteCar] = useDeleteCarMutation();
 
   // states
   const router = useRouter();
