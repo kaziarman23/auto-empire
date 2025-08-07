@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import SSLCommerzPayment from "sslcommerz";
+import { SSLCommerzPayment } from "sslcommerz";
 
 // credentials
 const store_id = process.env.NEXT_PUBLIC_StoreID;
@@ -10,11 +10,12 @@ export async function POST(request) {
   const data = await request.json();
 
   const {
-    price,
+    buyerId,
     buyerName,
     buyerEmail,
     carName,
     modelName,
+    price,
     orderStatus,
     paymentStatus,
   } = data;
@@ -24,30 +25,33 @@ export async function POST(request) {
   const sslcz = new SSLCommerzPayment(store_id, store_passwd, is_live);
 
   const post_data = {
-    total_price: price,
-    currency: "BDT",
     tran_id,
+    carName,
+    modelName,
+    buyerId,
+    buyerName,
+    buyerEmail,
+    price,
+    currency: "BDT",
+    orderStatus,
+    paymentStatus,
+    shipping_method: "NO",
+    product_category: "general",
+    product_profile: "general",
     success_url: "http://localhost:3000/api/ssl-payment/success",
     fail_url: "http://localhost:3000/api/ssl-payment/fail",
     cancel_url: "http://localhost:3000/api/ssl-payment/cancel",
     ipn_url: "http://localhost:3000/api/ssl-payment/ipn",
-    carName,
-    modelName,
-    orderStatus,
-    paymentStatus,
-    cus_name: buyerName,
-    cus_email: buyerEmail,
-    cus_add1: "Dhaka",
-    cus_phone: "01711111111",
-    shipping_method: "NO",
-    product_category: "general",
-    product_profile: "general",
   };
 
   try {
     const apiResponse = await sslcz.init(post_data);
-    return NextResponse.json({ GatewayPageURL: apiResponse.GatewayPageURL });
+    return NextResponse.json({
+      GatewayPageURL: apiResponse.GatewayPageURL,
+    }).status(200);
   } catch (err) {
-    return NextResponse.json({ error: "SSLCommerz Error", detail: err });
+    return NextResponse.json({ error: "SSLCommerz Error", detail: err }).status(
+      500,
+    );
   }
 }

@@ -43,8 +43,8 @@ function MyCarsPage() {
     {
       accessorKey: "paymentStatus",
       header: "Payment Status",
-      cell: ({ getValue }) => {
-        return <PaymentCell getValue={getValue} />;
+      cell: ({ getValue, row }) => {
+        return <PaymentCell getValue={getValue} orderData={row.original} />;
       },
     },
     {
@@ -79,7 +79,6 @@ function MyCarsPage() {
   const orders =
     orderData?.filter((order) => order.buyerEmail === user?.userEmail) ?? [];
 
-  console.log(orders);
 
   return <DataTable columns={columns} data={orders} />;
 }

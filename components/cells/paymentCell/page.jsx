@@ -1,15 +1,25 @@
 import { useRouter } from "next/navigation";
 import useToast from "../../Shared/useCustomToast";
+import { useInitPaymentMutation } from "../../../app/redux/api/paymentsApi";
 
-function PaymentCell({ getValue }) {
+function PaymentCell({ getValue, orderData }) {
+  // rtk query
+  const [initPayment] = useInitPaymentMutation();
+
   const router = useRouter();
   const { showSuccess, showError } = useToast();
 
   const value = getValue();
   const isPaid = value === "Paid";
 
-  const handleClick = () => {};
-  
+  const handleClick = async () => {
+    const res = await initPayment(orderData).unwrap();
+
+    if (res?.GatewayPageURL) {
+      router.push(res.GatewayPageURL);
+    }
+  };
+
   return (
     <button
       onClick={handleClick}
