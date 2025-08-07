@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { TopSellSection, TopSellSectionCards } from "../../constants";
+import { TopSellSection, TopSellSectionCards } from "../../app/constants";
 import { motion } from "framer-motion";
 import { getAnimation } from "@/utils/Animation";
 

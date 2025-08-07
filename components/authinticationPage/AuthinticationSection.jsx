@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useAddUserMutation } from "../../redux/api/usersApi";
+import { useAddUserMutation } from "../../app/redux/api/usersApi";
 import useToast from "../Shared/useCustomToast";
 import { useDispatch } from "react-redux";
 import {
@@ -12,7 +12,7 @@ import {
   githubSignIn,
   googleSignIn,
   loginUser,
-} from "../../redux/slices/userSlice";
+} from "../../app/redux/slices/userSlice";
 
 function AuthinticationSection() {
   // State

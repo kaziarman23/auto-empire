@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ContactHeroSection } from "../../constants";
+import { ContactHeroSection } from "../../app/constants";
 import { getAnimation } from "@/utils/Animation";
 
 function ContactPageHeroSection() {

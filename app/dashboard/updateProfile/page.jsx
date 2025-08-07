@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Button } from "../../../components/ui/button";
 import { useUpdateUserProfileMutation } from "../../redux/api/usersApi";
-import useToast from "../../components/Shared/useCustomToast";
+import useToast from "../../../components/Shared/useCustomToast";
 import { useRouter } from "next/navigation";
 import { setUser } from "../../redux/slices/userSlice";
 

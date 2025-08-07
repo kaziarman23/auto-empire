@@ -7,7 +7,7 @@ import {
   useGetUsersQuery,
   usePromoteUserRoleMutation,
 } from "../../redux/api/usersApi";
-import useToast from "../../components/Shared/useCustomToast";
+import useToast from "../../../components/Shared/useCustomToast";
 import Loading from "@/app/loading";
 import {
   AlertDialog,

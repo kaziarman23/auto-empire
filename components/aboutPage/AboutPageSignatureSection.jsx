@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { AboutSignatureSection } from "../../constants";
+import { AboutSignatureSection } from "../../app/constants";
 import { motion } from "framer-motion";
 import { getAnimation } from "@/utils/Animation";
 

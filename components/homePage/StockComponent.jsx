@@ -1,6 +1,6 @@
 "use client";
 
-import { StockSection, StockCardSection } from "../../constants";
+import { StockSection, StockCardSection } from "../../app/constants";
 import { motion } from "framer-motion";
 import { getAnimation } from "@/utils/Animation";
 

@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { DataTable } from "../../../components/data-table";
 import Loading from "@/app/loading";
 import { useGetCarsQuery } from "../../redux/api/carsApi";
-import ActionCell from "../../components/cells/actionCell/page";
+import ActionCell from "../../../components/cells/actionCell/page";
 
 function ManageCars() {
   // rtk querys

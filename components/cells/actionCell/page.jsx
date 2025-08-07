@@ -13,7 +13,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useDeleteCarMutation } from "../../../redux/api/carsApi";
+import { useDeleteCarMutation } from "../../../app/redux/api/carsApi";
 import useToast from "../../Shared/useCustomToast";
 
 function ActionCell({ carId, refetch }) {

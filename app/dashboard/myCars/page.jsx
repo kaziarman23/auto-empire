@@ -5,8 +5,8 @@ import useCurrentUser from "@/hooks/useCurrentUser";
 import Loading from "@/app/loading";
 import Image from "next/image";
 import { useGetOrdersQuery } from "../../redux/api/orderListApi";
-import PaymentCell from "../../components/cells/paymentCell/page";
-import OrderCell from "../../components/cells/orderCell/page";
+import PaymentCell from "../../../components/cells/paymentCell/page";
+import OrderCell from "../../../components/cells/orderCell/page";
 
 function MyCarsPage() {
   const columns = [
@@ -17,8 +17,8 @@ function MyCarsPage() {
         <Image
           src={getValue()}
           alt="Car"
-          width={80} // 24 * 4
-          height={60} // 16 * 4
+          width={80}
+          height={60}
           className="rounded object-cover"
         />
       ),

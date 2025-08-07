@@ -5,13 +5,13 @@ import { useEffect, useRef, useState } from "react";
 import { HiMenu } from "react-icons/hi";
 import { MdOutlineSpaceDashboard } from "react-icons/md";
 import { FileLock, LucideIdCard } from "lucide-react";
-import auth from "../../firebase/firebase.config";
+import auth from "../../app/firebase/firebase.config";
 import Link from "next/link";
 import Button from "./Button";
 import Image from "next/image";
 import useToast from "./useCustomToast";
 import { useDispatch, useSelector } from "react-redux";
-import { logoutUser } from "../../redux/slices/userSlice";
+import { logoutUser } from "../../app/redux/slices/userSlice";
 import { signOut } from "firebase/auth";
 
 const Navbar = () => {

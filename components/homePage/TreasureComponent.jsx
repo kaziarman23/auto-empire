@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { TreasureSection } from "../../constants";
+import { TreasureSection } from "../../app/constants";
 import { motion } from "framer-motion";
 import { getAnimation } from "@/utils/Animation";
 

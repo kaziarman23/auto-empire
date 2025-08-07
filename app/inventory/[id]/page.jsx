@@ -2,7 +2,7 @@
 
 import { useParams, useRouter } from "next/navigation";
 import { useGetCarsQuery } from "../../redux/api/carsApi";
-import useToast from "../../components/Shared/useCustomToast";
+import useToast from "../../../components/Shared/useCustomToast";
 import { useEffect, useMemo } from "react";
 import Image from "next/image";
 import { Button } from "../../../components/ui/button";

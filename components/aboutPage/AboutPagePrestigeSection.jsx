@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { AboutPrestigeSection } from "../../constants";
+import { AboutPrestigeSection } from "../../app/constants";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { getAnimation } from "@/utils/Animation";

@@ -1,6 +1,6 @@
 "use client";
 
-import { ContactMessageSection } from "../../constants";
+import { ContactMessageSection } from "../../app/constants";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { SiInstagram } from "react-icons/si";

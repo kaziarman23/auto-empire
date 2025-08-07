@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useGetCarsQuery } from "../../redux/api/carsApi";
+import { useGetCarsQuery } from "../../app/redux/api/carsApi";
 import useToast from "../Shared/useCustomToast";
 import { useEffect } from "react";
 import Loading from "@/app/loading";

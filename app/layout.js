@@ -2,7 +2,7 @@ import "./globals.css";
 import { Poppins } from "next/font/google";
 import ReduxProvider from "./providers/ReduxProvider";
 import AuthStateProvider from "./providers/AuthStateProvider";
-import MainLayoutWrapper from "./components/wrappers/MainLayoutWrapper";
+import MainLayoutWrapper from "../components/wrappers/MainLayoutWrapper";
 import { ThemeProvider } from "./providers/theme-provider";
 
 const poppins = Poppins({
