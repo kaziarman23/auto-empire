@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { SSLCommerzPayment } from "sslcommerz";
+import { SslCommerzPayment } from "sslcommerz";
 
 // credentials
 const store_id = process.env.NEXT_PUBLIC_StoreID;
