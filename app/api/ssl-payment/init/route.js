@@ -22,7 +22,7 @@ export async function POST(request) {
 
   const tran_id = "TXN_" + Math.random().toString(36).substring(2, 15);
 
-  const sslcz = new SSLCommerzPayment(store_id, store_passwd, is_live);
+  const sslcz = new SslCommerzPayment(store_id, store_passwd, is_live);
 
   const post_data = {
     tran_id,
