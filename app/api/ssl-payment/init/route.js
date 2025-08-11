@@ -46,12 +46,15 @@ export async function POST(request) {
 
   try {
     const apiResponse = await sslcz.init(post_data);
-    return NextResponse.json({
-      GatewayPageURL: apiResponse.GatewayPageURL,
-    }).status(200);
+    console.log("working!");
+    return NextResponse.json(
+      { GatewayPageURL: apiResponse.GatewayPageURL },
+      { status: 200 },
+    );
   } catch (err) {
-    return NextResponse.json({ error: "SSLCommerz Error", detail: err }).status(
-      500,
+    return NextResponse.json(
+      { error: "SSLCommerz Error", detail: err },
+      { status: 500 },
     );
   }
 }
