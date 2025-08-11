@@ -25,28 +25,33 @@ export async function POST(request) {
   const sslcz = new SslCommerzPayment(store_id, store_passwd, is_live);
 
   const post_data = {
-    tran_id,
-    carName,
-    modelName,
-    buyerId,
-    buyerName,
-    buyerEmail,
-    price,
+    total_amount: Number(price),
     currency: "BDT",
-    orderStatus,
-    paymentStatus,
-    shipping_method: "NO",
-    product_category: "general",
-    product_profile: "general",
+    tran_id,
     success_url: "http://localhost:3000/api/ssl-payment/success",
     fail_url: "http://localhost:3000/api/ssl-payment/fail",
     cancel_url: "http://localhost:3000/api/ssl-payment/cancel",
     ipn_url: "http://localhost:3000/api/ssl-payment/ipn",
+    shipping_method: "NO",
+    product_name: carName,
+    product_category: "general",
+    product_profile: "general",
+    cus_name: buyerName,
+    cus_email: buyerEmail,
+    cus_add1: "Dhaka",
+    cus_city: "Dhaka",
+    cus_phone: "016123456789",
+    cus_postcode: "1000",
+    cus_country: "Bangladesh",
+    buyerId,
+    modelName,
+    orderStatus,
+    paymentStatus,
   };
-
   try {
     const apiResponse = await sslcz.init(post_data);
     console.log("working!");
+    console.log("GatewayPageURL: ", apiResponse);
     return NextResponse.json(
       { GatewayPageURL: apiResponse.GatewayPageURL },
       { status: 200 },

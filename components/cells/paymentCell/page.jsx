@@ -1,35 +1,44 @@
+"use client";
+
 import { useRouter } from "next/navigation";
 import useToast from "../../Shared/useCustomToast";
 import { useInitPaymentMutation } from "../../../app/redux/api/paymentsApi";
 
 function PaymentCell({ getValue, orderData }) {
-  // rtk query
   const [initPayment] = useInitPaymentMutation();
-
   const router = useRouter();
-  const { showSuccess, showError } = useToast();
+  const { showError } = useToast();
 
   const value = getValue();
-  const isPaid = value === "Paid";
+  const isPaid = value?.toLowerCase() === "paid";
 
   const handleClick = async () => {
-    const res = await initPayment(orderData).unwrap();
-
-    if (res?.GatewayPageURL) {
-      router.push(res.GatewayPageURL);
+    try {
+      const res = await initPayment(orderData).unwrap();
+      console.log("response", res);
+      console.log("response", res?.GatewayPageURL);
+      if (res?.GatewayPageURL) {
+        router.push(res.GatewayPageURL);
+      } else {
+        showError("Payment gateway link not received.");
+      }
+    } catch (err) {
+      showError("Payment initialization failed.");
+      console.error(err);
     }
   };
 
   return (
     <button
       onClick={handleClick}
+      disabled={isPaid}
       className={`rounded-xl px-6 py-1 text-sm font-medium capitalize ${
         isPaid
-          ? "bg-green-400 text-black hover:bg-green-600"
+          ? "cursor-not-allowed bg-green-400 text-black hover:bg-green-600"
           : "bg-yellow-400 text-black hover:bg-yellow-600"
       }`}
     >
-      {value === "paid" ? value : "pay"}
+      {isPaid ? value : "pay"}
     </button>
   );
 }

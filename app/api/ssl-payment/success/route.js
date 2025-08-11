@@ -9,5 +9,5 @@ export async function POST(request) {
   // Example: Save to DB or verify with validation API
   // const val_id = data.val_id;
 
-  return NextResponse.redirect("http://localhost:3000/payment-success", 302);
+  return NextResponse.redirect("http://localhost:3000/payments/success", 302);
 }
