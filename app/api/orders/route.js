@@ -39,6 +39,7 @@ export async function POST(request) {
       image,
       paymentStatus,
       orderStatus,
+      transactionId,
     } = body;
 
     // car property validation
@@ -52,7 +53,8 @@ export async function POST(request) {
       !price ||
       !image ||
       !paymentStatus ||
-      !orderStatus
+      !orderStatus ||
+      !transactionId
     ) {
       return NextResponse.json(
         { message: "Missing required order data fields" },
@@ -71,6 +73,7 @@ export async function POST(request) {
       image,
       paymentStatus,
       orderStatus,
+      transactionId,
     });
 
     console.log(newOrderList);

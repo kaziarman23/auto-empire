@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { SslCommerzPayment } from "sslcommerz";
+import Order from "@/app/models/orderList.model";
 
 // credentials
 const store_id = process.env.NEXT_PUBLIC_StoreID;
@@ -10,6 +11,7 @@ export async function POST(request) {
   const data = await request.json();
 
   const {
+    _id: orderId,
     buyerId,
     buyerName,
     buyerEmail,
@@ -21,6 +23,17 @@ export async function POST(request) {
   } = data;
 
   const tran_id = "TXN_" + Math.random().toString(36).substring(2, 15);
+
+  const updatedOrder = await Order.findByIdAndUpdate(
+    orderId,
+    {
+      transactionId: tran_id,
+      paymentStatus: "Pending",
+    },
+    { new: true },
+  );
+
+  console.log("Updated Order:", updatedOrder);
 
   const sslcz = new SslCommerzPayment(store_id, store_passwd, is_live);
 
@@ -50,8 +63,6 @@ export async function POST(request) {
   };
   try {
     const apiResponse = await sslcz.init(post_data);
-    console.log("working!");
-    console.log("GatewayPageURL: ", apiResponse);
     return NextResponse.json(
       { GatewayPageURL: apiResponse.GatewayPageURL },
       { status: 200 },

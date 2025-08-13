@@ -3,62 +3,52 @@
 import { DataTable } from "@/components/data-table";
 import useCurrentUser from "@/hooks/useCurrentUser";
 import Loading from "@/app/loading";
-import { carData } from './transectionData';
+import { useGetTransactionsQuery } from "../../redux/api/transactionListApi";
+
+
 
 function MyCarsPage() {
   const columns = [
+    { accessorKey: "transactionId", header: "Transaction ID" },
+    { accessorKey: "carName", header: "Car Name" },
+    { accessorKey: "modelName", header: "Car Model" },
+    { accessorKey: "paymentStatus", header: "Payment Status" },
+    { accessorKey: "orderStatus", header: "Order Status" },
     {
-      accessorKey: "carName",
-      header: "Car Name",
+      accessorKey: "amount",
+      header: "Amount",
+      cell: ({ getValue }) => `${Number(getValue()).toLocaleString()} BTD`,
     },
-    {
-      accessorKey: "carModel",
-      header: "Car Model",
-    },
-    {
-      accessorKey: "paymentStatus",
-      header: "Payment Status",
-      cell: ({ getValue }) => {
-        const value = getValue();
-        const isPaid = value === "Paid";
-
-        const handleClick = () => {
-          // TODO: Have To do the payment stuff
-        };
-
-        return (
-          <button
-            onClick={handleClick}
-            className={`rounded-xl px-6 py-1 text-sm font-medium capitalize ${
-              isPaid
-                ? "bg-green-400 text-black hover:bg-green-600"
-                : "bg-yellow-400 text-black hover:bg-yellow-600"
-            }`}
-          >
-            {value === "Paid" ? value : "pay"}
-          </button>
-        );
-      },
-    },
-    {
-      accessorKey: "paymentId",
-      header: "Payment Id",
-    },
+    { accessorKey: "card_issuer", header: "Card Issuer" },
   ];
+
+  // states
+  const {
+    data: transactionData,
+    isLoading: transactionLoading,
+    isError: transactionIsError,
+    error: transactionError,
+  } = useGetTransactionsQuery();
 
   const { user, isLoading, isError, error } = useCurrentUser();
 
-  if (isLoading) return <Loading message="Loading data..." />;
+  if (isLoading || transactionLoading)
+    return <Loading message="Loading data..." />;
 
-  if (isError || !user ) {
+  if (isError || !user || transactionIsError) {
     return (
       <p className="text-red-600">
-        Error: {error?.message || "Failed to load data."}
+        Error:{" "}
+        {error?.message || "Failed to load data." || transactionError?.message}
       </p>
     );
   }
 
-  return <DataTable columns={columns} data={carData} />;
+  const data = transactionData.filter(
+    (tran) => tran.buyerEmail === user.userEmail,
+  );
+
+  return <DataTable columns={columns} data={data} />;
 }
 
 export default MyCarsPage;

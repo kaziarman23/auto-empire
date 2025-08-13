@@ -10,7 +10,7 @@ import Link from "next/link";
 import { useGetUsersQuery } from "../../redux/api/usersApi";
 import { useSelector } from "react-redux";
 import { useAddOrderMutation } from "../../redux/api/orderListApi";
-import Loading from '@/app/loading';
+import Loading from "@/app/loading";
 
 function CarDetails() {
   const { id } = useParams();
@@ -76,6 +76,7 @@ function CarDetails() {
       image: carInfo.image,
       paymentStatus: "Unpaid",
       orderStatus: "Pending",
+      transactionId: "123",
     };
 
     try {

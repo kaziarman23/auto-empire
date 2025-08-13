@@ -35,6 +35,10 @@ const orderListSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    transactionId: {
+      type: String,
+      required: true,
+    },
     paymentStatus: {
       type: String,
       enum: ["Paid", "Unpaid"],

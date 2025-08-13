@@ -30,10 +30,35 @@ const transactionListSchema = new mongoose.Schema(
       enum: ["Pending", "Accepted", "Rejected"],
       default: "Pending",
     },
+    amount: {
+      type: Number,
+      required: false,
+    },
+    card_issuer: {
+      type: String,
+      required: false,
+    },
+    currency: {
+      type: String,
+      required: false,
+    },
+    brand: {
+      type: String,
+      required: true,
+    },
+    carName: {
+      type: String,
+      required: true,
+    },
+    modelName: {
+      type: String,
+      required: true,
+    },
   },
   {
     timestamps: true,
-  }
+  },
 );
 
-export default mongoose.models.transactionList || mongoose.model("transactionList", transactionListSchema);
+export default mongoose.models.transactionList ||
+  mongoose.model("transactionList", transactionListSchema);

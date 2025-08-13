@@ -15,8 +15,6 @@ function PaymentCell({ getValue, orderData }) {
   const handleClick = async () => {
     try {
       const res = await initPayment(orderData).unwrap();
-      console.log("response", res);
-      console.log("response", res?.GatewayPageURL);
       if (res?.GatewayPageURL) {
         router.push(res.GatewayPageURL);
       } else {
