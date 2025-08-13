@@ -28,55 +28,30 @@ export async function POST(request) {
     await connectDB();
     const body = await request.json();
 
-    const {
-      buyerName,
-      buyerEmail,
-      buyerId,
-      brand,
-      carName,
-      modelName,
-      price,
-      image,
-      paymentStatus,
-      orderStatus,
-      transactionId,
-    } = body;
-
-    // car property validation
-    if (
-      !buyerName ||
-      !buyerEmail ||
-      !buyerId ||
-      !brand ||
-      !carName ||
-      !modelName ||
-      !price ||
-      !image ||
-      !paymentStatus ||
-      !orderStatus ||
-      !transactionId
-    ) {
+    // validation
+    if (!body) {
       return NextResponse.json(
         { message: "Missing required order data fields" },
         { status: 400 },
       );
     }
 
-    const newOrderList = await OrderList.create({
-      buyerName,
-      buyerEmail,
-      buyerId,
-      brand,
-      carName,
-      modelName,
-      price,
-      image,
-      paymentStatus,
-      orderStatus,
-      transactionId,
+    const newOrderList = new OrderList({
+      buyerId: body.buyerId,
+      buyerName: body.buyerName,
+      buyerEmail: body.buyerEmail,
+      brand: body.brand,
+      carName: body.carName,
+      modelName: body.modelName,
+      price: body.price,
+      image: body.image,
+      paymentStatus: body.paymentStatus,
+      orderStatus: body.orderStatus,
+      transactionId: body.transactionId,
     });
 
-    console.log(newOrderList);
+    await newOrderList.save();
+
     // sending a successfull response
     return NextResponse.json(newOrderList, { status: 201 });
   } catch (error) {

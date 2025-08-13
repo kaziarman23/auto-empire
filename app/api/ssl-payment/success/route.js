@@ -6,7 +6,7 @@ export async function POST(request) {
   const formData = await request.formData();
   const data = Object.fromEntries(formData.entries());
 
-  console.log("✅ Payment Success:", data);
+  console.log("Payment Success:", data);
 
   const { tran_id, amount, card_issuer, currency } = data;
 

@@ -76,7 +76,7 @@ function CarDetails() {
       image: carInfo.image,
       paymentStatus: "Unpaid",
       orderStatus: "Pending",
-      transactionId: "123",
+      transactionId: "112233",
     };
 
     try {
