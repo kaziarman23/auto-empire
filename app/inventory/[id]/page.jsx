@@ -14,7 +14,7 @@ import Loading from "@/app/loading";
 
 function CarDetails() {
   const { id } = useParams();
-  const { showError, showSuccess } = useToast();
+  const { showError, showSuccess, showInfo } = useToast();
   const router = useRouter();
 
   // Redux state
@@ -65,6 +65,18 @@ function CarDetails() {
   }
 
   const handleSubmit = async () => {
+    if (!user) {
+      showInfo("Please Sign-In, to place an order.");
+      showError("Action not permitted!");
+      router.push("/authintication");
+      return;
+    }
+
+    if (user?.userRole === "admin") {
+      showInfo("Action not permitted in Admin Pass.");
+      return;
+    }
+
     const orderData = {
       buyerName: user.userName,
       buyerEmail: user.userEmail,

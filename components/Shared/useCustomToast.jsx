@@ -33,12 +33,11 @@ export default function useToast() {
 
   const showInfo = (message) => {
     toast(message, {
-      icon: "ℹ️",
       style: {
-        border: "1px dashed #555",
+        border: "1px solid yellow",
         padding: "16px",
-        color: "#000",
-        background: "#fff",
+        color: "white",
+        background: "black",
       },
     });
   };

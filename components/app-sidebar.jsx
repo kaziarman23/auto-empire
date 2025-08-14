@@ -9,6 +9,7 @@ import {
   CopyPlus,
   House,
   Info,
+  Landmark,
   LayoutDashboardIcon,
   LayoutList,
   ListMinus,
@@ -64,6 +65,11 @@ const data = {
       title: "Manage Cars",
       url: "/dashboard/manageCars",
       icon: LayoutList,
+    },
+    {
+      title: "All Transections",
+      url: "/dashboard/manageTransections",
+      icon: Landmark,
     },
   ],
   navMainUser: [
