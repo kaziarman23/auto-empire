@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import Order from "@/app/models/orderList.model";
-import transactionList from "../../../models/transactionList.model";
+import transactionList from "@/app/redux/api/transactionListApi";
 
 export async function POST(request) {
   const formData = await request.formData();
@@ -38,5 +38,8 @@ export async function POST(request) {
     currency,
   });
 
-  return NextResponse.redirect("http://localhost:3000/payments/success", 302);
+  return NextResponse.redirect(
+    `${process.env.NEXT_PUBLIC_BASEURL}/payments/success`,
+    302,
+  );
 }
