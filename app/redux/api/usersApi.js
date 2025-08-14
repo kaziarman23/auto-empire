@@ -49,10 +49,10 @@ const usersApi = baseApi.injectEndpoints({
     deleteAllUsers: builder.mutation({
       query: () => ({
         url: "/api/users",
-        method: "DELETE"
+        method: "DELETE",
       }),
       invalidatesTags: ["Users"],
-    })
+    }),
   }),
 });
 

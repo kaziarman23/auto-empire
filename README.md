@@ -4,6 +4,25 @@ _Auto Empire is a premium platform where users can explore, buy, and manage **ra
 
 ---
 
+## 🖼️ Screenshots
+
+> Admin Dashboard
+
+![Admin Dashboard](./public/images/Other_Images/dashboard_pic.png)
+
+---
+
+## 🧪 Admin Access
+
+> Use this account only to preview admin features.
+
+- **Email:** `admin@test.com`
+- **Password:** `123456789`
+
+> 🔐 **Security note:** This is a _real_ account with limited permissions. It can be disabled or changed at any time. Please **do not modify or delete real data for fun**.
+
+---
+
 ## 🌟 **Project Purpose**
 
 The purpose of this project is to demonstrate development skills and deliver an elegant solution for car enthusiasts and sellers. It offers a complete e-commerce flow tailored for high-end automotive purchases.
@@ -19,7 +38,7 @@ The purpose of this project is to demonstrate development skills and deliver an 
 - **Booking & Purchase:** Reserve or directly purchase cars through a secure checkout.
 - **User Dashboard:** View orders, saved cars, and manage personal information.
 - **Admin Dashboard:** Manage users, cars, and orders with advanced control.
-- **Secure Payments:** Integrated with **bKash** for safe and smooth transactions.
+- **Secure Payments:** Integrated with **SSL-COMMERZ** for safe and smooth transactions.
 - **Notifications:** Instant feedback on user actions with toasts and alerts.
 
 ---
@@ -68,6 +87,7 @@ The purpose of this project is to demonstrate development skills and deliver an 
 ## ✅ **Feature Checklist**
 
 ### **Authentication & Security**
+
 - [x] Email/password login & registration
 - [x] Google authentication
 - [x] Role-based access (user/admin)
@@ -75,16 +95,19 @@ The purpose of this project is to demonstrate development skills and deliver an 
 - [x] JWT session management
 
 ### **Car Management**
+
 - [x] Add/update/delete car listings (admin)
 - [x] Search, filter, and view cars (user)
 - [x] Responsive UI with car specs and pricing
 
 ### **Booking & Purchase**
+
 - [x] Booking cars before purchase
 - [x] Checkout with bKash payment
 - [x] View and manage past orders
 
 ### **Dashboards**
+
 - [x] Separate user and admin dashboards
 - [x] Role-specific controls and analytics
 - [x] Live order and car management
@@ -94,26 +117,31 @@ The purpose of this project is to demonstrate development skills and deliver an 
 ## 🧠 **Best Practices Followed**
 
 ### 📦 **Code Structure**
+
 - Modular, reusable components
 - Consistent naming conventions (camelCase, PascalCase)
 - Organized folder structure (components, pages, services, utils)
 
 ### 🔐 **Security**
+
 - JWT authentication and route protection
 - Server-side validation and sanitization
 - Secure environment variable management via `.env`
 
 ### 🎯 **Performance**
+
 - Lazy loading and code splitting
 - Optimized image delivery and car card rendering
 - Efficient state management with caching
 
 ### 🧪 **Testing & Reliability**
+
 - Manual testing of all major user flows
 - Validation on both frontend and backend
 - Simulated error states for robustness
 
 ### 📱 **Responsive Design**
+
 - Mobile-first design using Tailwind CSS
 - Accessible UI with ARIA roles and keyboard navigation
 
