@@ -1,6 +1,6 @@
 # 🚗 **Auto Empire**
 
-_Auto Empire is a premium platform where users can explore, buy, and manage **racing** and **luxury cars**. Built with modern technologies, it offers seamless user and admin experiences with secure payments via **bKash**._
+_Auto Empire is a premium platform where users can explore, buy, and manage **racing** and **luxury cars**. Built with modern technologies, it offers seamless user and admin experiences with secure payments via **SSL-COMMERZ**._
 
 ---
 
