@@ -2,15 +2,14 @@
 
 import { useRouter } from "next/navigation";
 import useToast from "../../Shared/useCustomToast";
-import { useInitPaymentMutation } from "../../../app/redux/api/paymentsApi";
+import { useInitPaymentMutation } from "@/app/redux/api/paymentsApi";
 
-function PaymentCell({ getValue, orderData }) {
+function PaymentCell({ getValue, orderData, disabled }) {
   const [initPayment] = useInitPaymentMutation();
   const router = useRouter();
   const { showError } = useToast();
 
   const value = getValue();
-  const isPaid = value?.toLowerCase() === "paid";
 
   const handleClick = async () => {
     try {
@@ -29,14 +28,18 @@ function PaymentCell({ getValue, orderData }) {
   return (
     <button
       onClick={handleClick}
-      disabled={isPaid}
+      disabled={value === "Paid" || disabled}
       className={`rounded-xl px-6 py-1 text-sm font-medium capitalize ${
-        isPaid
-          ? "cursor-not-allowed bg-green-400 text-black hover:bg-green-600"
-          : "bg-yellow-400 text-black hover:bg-yellow-600"
-      }`}
+        value === "Paid"
+          ? "cursor-not-allowed bg-green-500 text-black hover:bg-green-600"
+          : value === "Unpaid"
+            ? "bg-yellow-400 text-black hover:bg-yellow-600"
+            : value === "Failed"
+              ? "bg-red-500 text-black hover:bg-red-600"
+              : "bg-gray-400 text-black"
+      } ${disabled ? "cursor-not-allowed" : "cursor-pointer"}`}
     >
-      {isPaid ? value : "pay"}
+      {value === "Paid" ? "Paid" : value === "Failed" ? "Retry" : "Pay"}
     </button>
   );
 }

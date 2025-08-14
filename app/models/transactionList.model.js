@@ -22,12 +22,12 @@ const transactionListSchema = new mongoose.Schema(
     },
     paymentStatus: {
       type: String,
-      enum: ["Paid", "Unpaid", "Cancel"],
+      enum: ["Paid", "Unpaid", "Failed"],
       default: "Unpaid",
     },
     orderStatus: {
       type: String,
-      enum: ["Pending", "Accepted", "Rejected"],
+      enum: ["Pending", "Processing", "Delivered", "Failed", "Cancelled"],
       default: "Pending",
     },
     amount: {

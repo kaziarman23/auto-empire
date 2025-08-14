@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
-export default function PaymentSuccessPage() {
+export default function PaymentFailPage() {
   const router = useRouter();
 
   useEffect(() => {
@@ -16,12 +16,12 @@ export default function PaymentSuccessPage() {
 
   return (
     <main className="flex min-h-screen items-center justify-center bg-black px-4">
-      <div className="max-w-md rounded-xl border border-green-300 bg-black p-8 shadow-lg">
-        <h1 className="text-2xl font-bold text-green-600">
-          Payment Successful 🎉
+      <div className="max-w-md rounded-xl border border-red-500 bg-black p-8 shadow-lg">
+        <h1 className="text-2xl font-bold text-red-600">
+          Payment Failed ❌
         </h1>
         <p className="mt-3 text-white">
-          Thank you! Your payment has been processed successfully.
+          Oops! Something went wrong, and your payment could not be processed.
         </p>
         <p className="mt-1 text-sm text-white">
           You will be redirected shortly...
@@ -29,9 +29,9 @@ export default function PaymentSuccessPage() {
 
         <button
           onClick={() => router.push("/dashboard/transections")}
-          className="mt-6 w-full rounded-lg bg-green-600 px-4 py-2 font-medium text-white hover:bg-green-700"
+          className="mt-6 w-full rounded-lg bg-red-600 px-4 py-2 font-medium text-white hover:bg-red-700"
         >
-          Go to My Transections Page
+          Go to My Transactions Page
         </button>
       </div>
     </main>

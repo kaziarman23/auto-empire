@@ -3,23 +3,42 @@
 import { DataTable } from "@/components/data-table";
 import useCurrentUser from "@/hooks/useCurrentUser";
 import Loading from "@/app/loading";
-import { useGetTransactionsQuery } from "../../redux/api/transactionListApi";
-
-
+import { useGetTransactionsQuery } from "@/app/redux/api/transactionListApi";
+import PaymentCell from "@/components/cells/paymentCell/page";
+import OrderCell from "@/components/cells/orderCell/page";
 
 function MyCarsPage() {
   const columns = [
     { accessorKey: "transactionId", header: "Transaction ID" },
     { accessorKey: "carName", header: "Car Name" },
     { accessorKey: "modelName", header: "Car Model" },
-    { accessorKey: "paymentStatus", header: "Payment Status" },
-    { accessorKey: "orderStatus", header: "Order Status" },
+
     {
       accessorKey: "amount",
       header: "Amount",
       cell: ({ getValue }) => `${Number(getValue()).toLocaleString()} BTD`,
     },
     { accessorKey: "card_issuer", header: "Card Issuer" },
+    {
+      accessorKey: "paymentStatus",
+      header: "Payment Status",
+      cell: ({ getValue, row }) => {
+        return (
+          <PaymentCell
+            getValue={getValue}
+            orderData={row.original}
+            disabled={true}
+          />
+        );
+      },
+    },
+    {
+      accessorKey: "orderStatus",
+      header: "Order Status",
+      cell: ({ getValue }) => {
+        return <OrderCell getValue={getValue} />;
+      },
+    },
   ];
 
   // states

@@ -7,6 +7,7 @@ function OrderCell({ getValue }) {
   if (value === "Processing") styles = "bg-blue-400 text-black";
   if (value === "Delivered") styles = "bg-green-400 text-black";
   if (value === "Cancelled") styles = "bg-red-500 text-black";
+  if (value === "Failed") styles = "bg-orange-500 text-black";
 
   return (
     <button
